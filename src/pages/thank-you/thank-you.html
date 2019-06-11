@@ -1,0 +1,17 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bg-gradient ">
+    <div class="margin-tp-div" >
+        <img class="thank-you-icon" src="../assets/scbl-icons/success.svg">
+        <ion-label margin-top ion-text text-center class="h1" color="primary">{{"hamburgerMenu.thankYou"|translate}}</ion-label>
+        <ion-label ion-text text-center class="heading3-type2" color="secondary-dark">{{"hamburgerMenu.forYourConsentToReceiveDocumentThroughEmail"|translate}}</ion-label>
+        <div text-center>
+            <button round ion-button class="button-cta" (click)="toHomePage()">{{"hamburgerMenu.done"|translate}}</button>
+        </div>
+    </div>
+</ion-content>

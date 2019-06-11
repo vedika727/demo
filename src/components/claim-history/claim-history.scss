@@ -1,0 +1,47 @@
+claim-history {
+    .middle-line {
+        height: 0.2px;
+        width: 100%;
+        border: 0.5px solid $secondary-highlight;
+        margin: 10px 0;
+    }
+    .bold-text-24px {
+        font-size: $font_24px;
+        font-weight: bold;
+    }
+    .bold-text-20px {
+        font-size: $font_20px;
+        font-weight: bold;
+    }
+    .line-height-08 {
+        line-height: 0.8;
+    }
+    .margin-15{
+        margin:15px !important;
+        width:auto !important;
+    }
+    .bold-primary-26px{
+        font-size:$font_26px;
+        font-weight:bold;
+    }
+    .success-status{
+        color:$accent-success;
+    }
+    .pending-status{
+        color:$accent-highlight;
+    }
+    .BackImage {
+        background-image: url(../assets/imgs/Assets-Image-Homepage-HP4.png);
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        background-size: 250px 165px;
+        background-position: right bottom;
+        height: 27vh; 
+        /* background-position-x: 25px; */
+        padding: 8px !important;
+        text-align: left;
+    }
+    .margin-bottom2 {
+        margin: 4%;
+    }
+}

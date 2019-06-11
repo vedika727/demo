@@ -1,0 +1,30 @@
+dashboard-header {
+    .commonHeader {
+        height: 3rem;
+        width: 3rem;
+        //vertical-align: middle;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 0.5vh;
+        margin-left: 0.5vh;
+    }
+    .medPadding {
+        padding-left: 5px;
+    }
+    .medPadding1 {
+        padding: 0px 1px;
+    }
+    .marg-rgt {
+        margin-left: 10px;
+        line-height: 47px;
+        font-size: 7.55vw !important
+    }
+    .top-margin {
+        // margin-top: 3%;
+        margin-top: 1.7vh;
+    }
+    .heightTop{
+        height: 6vh;
+    }
+
+}

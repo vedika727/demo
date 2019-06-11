@@ -1,0 +1,112 @@
+page-payment-sucessful-royalty {
+
+    .SCB_Margincenter{
+      margin: 0 auto;
+    }
+    .SCB_MarginLR{
+      margin: 0 2rem;
+    }
+   .SCB_Light{
+     color:$primary-light;
+   }
+   .SCB_button{
+     display: block;
+    margin: 5rem auto;
+    }
+    .SCB_Center{
+
+      display: flex;
+      justify-content: center;
+    }
+    
+      a{
+        color: #4E2A81;
+    margin: 0 auto;
+    display: block;
+      }
+      
+      .head1 {
+        font-size: 3.2rem;
+        font-weight: bold;
+        
+    }
+    .SCB_Numeric{
+      font-size: 2.4rem;
+      font-weight: bold;
+      font-family: $ergo;
+    
+    }
+    .SCB-float-right {
+      float: right;
+  }
+  .SCB-float-left {
+      text-align: left;
+  }
+    .SCB_Head2{
+      // font-size: 2.4rem;
+      // font-weight: bold;
+      color:#A1A1A1;
+      
+    }
+    .SCB_Block2{
+      background-color: white;
+      border-bottom: 3px #A1A1A1 dashed;
+    }
+    .SCB_Block3{
+      // background: url("assets/imgs/avatar.png");
+      background-color: white;
+       border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px ;
+    }
+    .SCB_box{
+      padding: 1rem;
+      // margin: 16px;
+      border-radius: 10px;
+      border: 2px #A1A1A1 solid;
+    }
+    .contain{
+      // padding: 16px;
+    
+      padding-bottom: 1.75rem;
+      border-bottom: 2px #A1A1A1 solid;
+    }
+    .SCB_boxHead{
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+   .SCB_IconHeight{
+    height: 3rem;
+    width: 3rem;
+    padding: 0% !important;
+   }
+    .SCB_Background{
+      background-image: url(../assets/imgs/payment-successful.jpg);
+      background-repeat: no-repeat;
+
+    //   background: white;
+     display: block;
+     position: absolute;
+   
+     width: 100%;
+     height: 38%;
+    //  left: 20%;
+     z-index: -1;
+     opacity: 1;
+    // background-image: url(../assets/imgs/payment-successful.jpg);
+     background-repeat: no-repeat;
+    // -ms-background-size: cover;
+    // -ms-background-size: cover;
+     background-size: cover ;
+    //  background-position-x: -200%;
+    }
+    .SCB_BottomImage{
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: -1;
+    }
+    .SCB_setDown{
+      margin-top:1rem;
+      margin-left:1.8rem;
+    }
+}

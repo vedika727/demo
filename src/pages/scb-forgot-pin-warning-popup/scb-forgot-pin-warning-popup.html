@@ -1,0 +1,18 @@
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="callSupportModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay"  (click)="dismissModal()"  id="callSupportOverlay"></div>
+
+  <!-- Call support pop over -->
+  <ion-card class="popover-content-style">
+    <ion-card-content>
+      <div id="warningPopTopHeadMessage" class="title popup-warn">{{"login.warningPopTopHeadMessage" | translate}}</div>
+      <div id="warningPopTopHeadMessage1" class="input-content">{{"login.warningPopTopHeadMessage1" | translate}}</div>
+      <div id="warningPopTopHeadMessage2" class="input-content">{{"login.warningPopTopHeadMessage2" | translate}}</div>
+      <div id="warningPopTopHeadMessage3" class="input-content">{{"login.warningPopTopHeadMessage3" | translate}}</div>
+      <div text-center>
+        <button ion-button round id="warningPopUpBtnId" class="cta-button-primary call-button" (click)="exitApp()">{{"login.warningPopTopbtn"
+          | translate}}</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

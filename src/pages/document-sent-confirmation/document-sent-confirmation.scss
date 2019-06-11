@@ -1,0 +1,63 @@
+page-document-sent-confirmation {
+    .checkmark-span{
+        margin-top:40px;
+        display: flex;
+        justify-content: center;
+    .checkmark-icon{
+        background: $primary;
+        color: $secondary;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        text-align: center;
+        // line-height: 20px;
+        vertical-align: middle;
+        // padding: 20px;
+        font-size: $font_72px;
+    }
+}
+    .done-btn{
+        display: flex;
+        justify-content: center;
+        margin-top:60px;
+    .button{
+        padding: 25px 50px;
+        height: 25px;
+        font-size: $font_20px;
+        background-color: $primary;
+        border-radius: 25px;
+    }
+    }
+    .text-font-size{
+        font-size:$font_40px;
+        font-weight: bold;
+    }
+    .document-sent-ack{
+        padding-top: 20px;
+    }
+    .done{
+        display: block;
+        margin: auto;
+        margin-top:10vw;
+        // height:20vh;
+    }
+
+    .confirmation-button { 
+        text-align: center;
+        padding-bottom: 15pt;
+        .cta-button-primary {
+            width: 75%;
+            max-width: none;
+            font-size: $font_24px;
+            letter-spacing: 0.75pt;
+        }
+    }
+
+    .h2 { 
+        margin-bottom: 5.35vw;
+    }
+
+    .heading3-type2 { 
+        line-height: $font_24px;
+    }
+}

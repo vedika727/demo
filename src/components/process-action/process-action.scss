@@ -1,0 +1,19 @@
+process-action {
+    // .icon-md[ng-reflect-name=scbl-camera]{
+    //     // content: url("../../common/common-scss/style-guide/scbl-icons/Camera.svg");
+    //     background-image: url("../../assets/scbl-icons/Camera.svg");
+    // }
+    // ion-icon[ng-reflect-name="scbl-camera"] {
+    //     content: url("../assets/scbl-icons/Camera.svg");
+    // }
+    .margin-0-px{
+        margin:0 !important;
+    }
+    .margin-0-5vh{ 
+        margin: 0.5vh;
+    }
+    .margin-bottom-3vh{
+        margin-bottom:3vh;
+        margin-top:0 !important;
+    }
+}

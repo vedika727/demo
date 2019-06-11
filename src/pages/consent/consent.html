@@ -1,0 +1,68 @@
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+    <scb-header [in]="headerInput"></scb-header>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bg-gradient">
+  <!-- // Removed from Release 1 -->
+  <!-- <ion-label no-padding no-margin ion-text class="h1" color="secondary-dark">{{"hamburgerMenu.verifyComplete"|translate}}</ion-label> -->
+  <ion-item no-lines>
+    <img class="done " src="../assets/scbl-icons/success.svg">
+  </ion-item>
+
+
+  <ion-label margin-top ion-text text-center class="h1" color="primary">{{"hamburgerMenu.thankYouVerified"|translate}}</ion-label>
+  <ion-label ion-text text-center class="heading3-type2" color="secondary-dark">{{"hamburgerMenu.forVerifyingYourEmailAddress"|translate}}</ion-label>
+  <!-- TODO - Removed from Release 1 -->
+  <!-- <ion-card margin-bottom class="white-card loans-card-secondary">
+    <ion-card-header>
+
+    </ion-card-header>
+    <ion-card-content>
+
+     
+      <ion-item text-center>
+        <ion-item>
+          <ion-icon class="icon-center" name="envelope"></ion-icon>
+        </ion-item>
+        <span ion-text class="heading3-type2" color="primary">{{"hamburgerMenu.convenientSecureFast"|translate}}</span>
+        <br>
+        <span ion-text class="heading3-type2 whitespace-normal-class" color="primary">{{"hamburgerMenu.receiveDocumentThroughEmail"|translate}}</span>
+      </ion-item>
+      <ion-item text-center text-wrap class="activity-title">
+        <span>{{"hamburgerMenu.todayYouCanReceiveDocumentsThroughEmail"|translate}}</span>
+        <br>
+        <span>{{"hamburgerMenu.byRegisteringBelow"|translate}}</span>
+      </ion-item>
+      <ion-item no-lines class="accept-terms-item activity-title">
+        <ion-label text-wrap class="accept-terms-label" (click)="customLabelFunc($event)">
+          <span>{{"hamburgerMenu.iConsentAndAccept"|translate}}</span>
+          <span (click)="toConsentTAndC()" class="hyperlink anchor">{{"hamburgerMenu.termsAndConditions"|translate}}</span>
+          <span>{{"hamburgerMenu.toReceiveDocumentThroughEmail"|translate}}</span>
+        </ion-label>
+        <ion-checkbox [(ngModel)]="tAndC" mode="md" class="no-margin"></ion-checkbox>
+      </ion-item>
+      <div text-center>
+        <button [disabled]=!tAndC round ion-button class="button-cta" (click)="navigateToThankYouPage()">{{"hamburgerMenu.registerForService"|translate}}</button>
+      </div>
+      <ion-item text-center class="activity-title">
+        <span ion-text margin-left (click)="backToRootPage()" class="hyperlink anchor">{{"hamburgerMenu.notNow"|translate}}</span>
+      </ion-item>
+    </ion-card-content>
+  </ion-card> -->
+  <div class="bottom"></div>
+
+</ion-content>
+
+<!-- TODO - Added for Release 1 -->
+<ion-footer no-border>
+    <ion-row class="confirmation-button">
+        <ion-col>
+            <button ion-button item-end class="cta-button-primary" round (click)="backToRootPage()">
+                {{"hamburgerMenu.done"|translate}}
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

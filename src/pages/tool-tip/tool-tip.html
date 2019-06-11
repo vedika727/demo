@@ -1,0 +1,30 @@
+<ion-content padding *ngIf="arrayLength > 1" class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="callSupportModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay"  (click)="hideModal()"  id="callSupportOverlay"></div>
+
+  <!-- Call support pop over -->
+  <div class="popover-content-style" >
+    <ion-card-content class="mar-top">
+      <tooltip-overlay [in]="compData"></tooltip-overlay>
+        <div class="text-button" text-center padding *ngIf="compData.actionCTA.name" >
+          <button ion-button round color="secondary" (click)="compData.actionCTA.click()">{{compData.actionCTA.name}}</button>
+        </div>
+        <div class="skip-text" text-center >
+          <a class="underline" ion-text color="secondary" (click)="closeModal()">ข้าม</a>
+      </div>
+    </ion-card-content>
+  </div>
+  
+</ion-content>
+
+<div *ngIf="arrayLength == 1" class="fullheight">
+    <div class="overlay"  (click)="compData.actionCTA.click()"  id="callSupportOverlay"></div>
+    <div class="skip-texte" float-right padding >
+        <a class="underline" ion-text color="secondary" (click)="closeModal()">
+          <ion-icon ios="ios-close" md="md-close" class="icon-size"></ion-icon>
+        </a>
+    </div>
+    <ion-scroll scrollY="true" class="scrollPos">
+  <img [src]="compData.toolTipData[0].image" class="fullheight">
+</ion-scroll>
+</div>

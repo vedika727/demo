@@ -1,0 +1,21 @@
+<ion-row class="heightTop">
+    <ion-col col-1>
+        <ion-icon *ngIf="headerdata.icon" [name]="headerdata.icon" svgversion color="primary" class="commonHeader"></ion-icon>
+        <ion-icon *ngIf="!headerdata.icon" name="scbl-fitsense" svgversion color="primary" class="commonHeader"></ion-icon>
+    </ion-col>
+    <ion-col col-11 no-padding>
+        <div item-end *ngIf="headerdata.title" class="h1 title marg-rgt">{{"policyDashboard."+headerdata.title | translate}} </div>
+        <div item-end *ngIf="!headerdata.title" class="h1 title marg-rgt">{{"policyDashboard.headerNot" | translate}}</div>
+    </ion-col>
+</ion-row>
+
+
+<!-- <ion-list>
+    <ion-item>
+        <ion-avatar item-start>
+            <ion-icon *ngIf="headerdata.icon" [name]="headerdata.icon" svgversion color="primary" class="commonHeader"></ion-icon>
+            <ion-icon *ngIf="!headerdata.icon" name="scbl-fitsense" svgversion color="primary" class="commonHeader"></ion-icon>
+        </ion-avatar>
+        <h2>Activity</h2>
+    </ion-item>
+</ion-list> -->

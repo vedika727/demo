@@ -1,0 +1,24 @@
+<ion-content class="popover-bg-color fade-in-animate" id="supportDocBackground">
+
+  <div class="overlay" (click)="dismissEmailVerifyModal()" id="supportDocOverlay"></div>
+
+  <ion-card class="popover-content-style">
+
+    <div text-right class="close-icon-div">
+      <ion-icon color="secondary-highlight" class="close-button close-icon" (click)="dismissEmailVerifyModal()" name="scbl-close"
+        svgversion text-right></ion-icon>
+    </div>
+
+    <ion-card-content>
+      <div text-center class="heading3-type2 bold-text" text-center>
+          {{'policyDashboard.taxCertificateUnavailable' | translate}}
+      </div>
+
+      <div text-center>
+        <button round ion-button class="button-cta" (click)="dismissEmailVerifyModal()">
+          {{'policyDashboard.taxCertificateUnavailableCta' | translate}}
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,109 @@
+page-payslip {
+
+    .round-card-header {
+        width: 100%;
+        padding-top: 2%;
+        padding-bottom:7%;
+        background-color: $primary;
+        margin: 5% auto 0;
+      }
+      .round-card-content{
+        position: relative;
+        width: 100%;
+        padding: 5%;
+        background-color: white;
+        margin: 0 auto;
+        top:-15px;
+      }
+    .SCB-float-right {
+        float: right;
+    }
+    .SCB-float-left {
+        float: left;
+    }
+    .SCB_color{
+        color: color($colors, "primary") !important;
+    }
+    .SCB_Accent{
+        color: color($colors, "accent") !important;
+    }
+    .SCB_AlignCenter{
+        margin: 0 auto;
+    }
+    .SCB_CardText{
+        font-size: 2rem;
+    }
+   
+    .SCB_Gray{
+        color:gray;
+    }
+     .SCB_Padding_LR{
+        padding:16px 0px;
+    }
+
+    .SCB_Border{
+        border-bottom: 1px solid $secondary-highlight;
+    }
+    
+    .SCB_White {
+        color: white;
+    }
+
+    .SCB_Card{
+        border-radius: 20px;
+    }
+   
+    
+   .SCB_Content{
+    border-radius: 20px;
+    z-index: -1;
+   }
+ 
+   .SCB_SS{
+    border: 5px solid #365454;
+    width:70%;
+    margin-top: 3em;
+   }
+    
+  
+    .backcolor {
+        background-color: color($colors, "primary") !important;
+        position: relative;
+        h1 {
+            color: white;
+        }
+    }
+
+    .card-content-md{
+        line-height: 1 !important;
+    }
+   
+    .item-md {
+        background-color: #f6f6f6;
+    }
+    .item.item-md .checkbox-md {
+        margin: 0px 24px 16px 4px;
+    }
+    .label-md {
+        margin: 2px 8px 13px 0;
+    }
+    // ios device 
+    .item-ios {
+        background-color: #f6f6f6;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: none;
+    }
+    .label-ios {
+        margin: 2px 8px 13px 0;
+    }
+    .item.item-ios .checkbox-ios {
+        margin: 0px 24px 16px 4px;
+    }
+    .button-round-ios {
+        padding: 0px 4.6rem;
+    }
+    .button-ios {
+        height: 2.4em;
+    }
+}

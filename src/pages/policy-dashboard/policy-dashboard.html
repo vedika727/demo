@@ -1,0 +1,406 @@
+<ion-content>
+    <div [ngClass]="todayhours ">
+        <ion-navbar transparent hideBackButton>
+            <scb-header [in]="headerInput"></scb-header>
+        </ion-navbar>
+        <home-holder [in]=ActivityStateIcon></home-holder>
+        <home-slider [in]="fitsenseData"></home-slider>
+    </div>
+    <div class="stick-header">
+        <dashboard-header [in]=dashboardheader></dashboard-header>
+        <!-- Fitsense Section -->
+        <ion-row class="border-bottom" *ngIf="index==0">
+            <ion-item>
+                <div *ngIf="isRegistered" class="h3" item-left no-margin>{{"Home_Fitsense.FitsenseLevel" | translate}}
+                    <span *ngIf="fitsenseService.fitsense.numberOfConnectedDataSources > 0 && isRegistered" (click)="openFitsenseScreen('ActivityMainStatus')">
+                        {{"Home_Fitsense."+StateIcon | translate}}</span>
+                </div>
+                <div *ngIf="!isRegistered" class="h3" item-left no-margin>{{"Home_Fitsense.ComeChallenge" | translate}}
+                </div>
+                <div class="iconwidth">
+                    <ion-icon *ngIf="fitsenseService.fitsense.numberOfConnectedDataSources > 0 && isRegistered"
+                        item-left id="ActivityStateIcon" [name]=ActivityStateIcon [ngClass]="ActivityStateIcon" color="primary"></ion-icon>
+                </div>
+            </ion-item>
+        </ion-row>
+        <!-- Rewards Section -->
+        <pd-header-tabs *ngIf="index==1" (currenttab)="changetab($event)" [in]=policytabs [tabNumber]="tabNum"
+            [halfSegment]="isHalf"></pd-header-tabs>
+        <!-- challenge section  -->
+        <pd-header-tabs id="header-tabs" (currenttab)="changetab($event)" [tabNumber]="tabNum"
+        [in]=policytabs *ngIf="index==2" [halfSegment]="isHalf"></pd-header-tabs>
+
+        <ion-row *ngIf="index==3 || index==4">
+            <ion-item class="border-bottom" padding-left>
+                <div class="text-bold h3 font-size-5-4vw" no-margin>{{"Home_Challenges.challengeFriends" | translate}}</div>
+            </ion-item>
+        </ion-row>
+        <!-- Policy Dashboard Section -->
+        <!-- TODO - Removed from Release 1 -->
+        <!-- <pd-header-tabs id="header-tabs" (currenttab)="changetab($event)" [tabNumber]="tabNum" [PolicyData]="piechartAPIData"
+            [in]=policytabs *ngIf="index==4" [halfSegment]="isHalf"></pd-header-tabs> -->
+
+        <!-- Stories section -->
+        <!-- TODO - Removed from Release 1 -->
+        <!-- <pd-header-tabs *ngIf="index==5" (currenttab)="changetab($event)" [in]=policytabs [tabNumber]="tabNum"></pd-header-tabs> -->
+        <!-- <div class="SpinnerDiv" *ngIf="spinnerFlagDashboard">
+            <generic-view [In]=genericDialog></generic-view>
+        </div> -->
+    </div>
+    <!-- Activity Preview Window -->
+    <div *ngIf="index==0">
+        <!-- <div class="SpinnerDiv" *ngIf="spinnerFlag">
+            <generic-view [In]=genericDialog></generic-view>
+        </div> -->
+        <!-- User if Not Login Or registered -->
+        <ion-card *ngIf="!isRegistered" class="challenges-card home_card_height">
+            <ion-card-content class="Card-Padding backimageFitsense card-gradiant">
+                <img src="assets/imgs/Assets-Image-Homepage-HP1.jpg">
+                <div class="challenges-div line-height-margin-top">
+
+                    <div class="h3" ion-text color="primary">{{"Home_Fitsense.TodayActivityScore" | translate}}</div>
+                    <!-- <div class="h3" ion-text color="primary">{{"Home_Fitsense.timeForWorkout" | translate}}</div> -->
+                    <!-- <div class=" card-margin-top">{{"Home_Fitsense.goodHealth" | translate}}</div> -->
+                    <div class="card-margin-bottom card-margin-top">{{"Home_Fitsense.findAnswer" | translate}}</div>
+                    <ion-row>
+                        <ion-col>
+                            <button ion-button icon-start class="cta-button-primary" round (click)="gotoRegister()">
+                                {{"Home_Fitsense.GetStart" | translate}}
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-card-content>
+        </ion-card>
+       
+        <ion-card *ngIf="isRegistered && fitsenseService.fitsense.numberOfConnectedDataSources == 0" class="challenges-card home_card_height">
+            <ion-card-content class="Card-Padding backimageFitsense">
+                <img src="assets/imgs/Assets-Image-Homepage-HP1.jpg">
+                <div class="challenges-div line-height-margin-top">
+
+                    <div class="h3" ion-text color="primary">{{"Home_Fitsense.TodayActivityScore" | translate}}</div>
+                    <!-- <div class="h3" ion-text color="primary">{{"Home_Fitsense.timeForWorkout" | translate}}</div> -->
+                    <!-- <div class="h3 card-margin-top">{{"Home_Fitsense.goodHealth" | translate}}</div> -->
+                    <div class="h3 card-margin-top">{{"Home_Fitsense.findAnswer" | translate}}</div>
+                    <ion-row>
+                        <ion-col>
+                            <button  ion-button icon-start class="cta-button-primary" round (click)="openFitsenseScreen('ActivityMain')">
+                                {{"Home_Fitsense.GetStart" | translate}}
+                            </button>
+                            <!-- <button *ngIf="isSCBCustomer == false" ion-button icon-start class="cta-button-primary" round (click)="changeToStories()">
+                                {{"Home_Fitsense.GetStart" | translate}}
+                            </button> -->
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <ion-card *ngIf="!isRegistered || fitsenseService.fitsense.numberOfConnectedDataSources == 0" class="challenges-card home_card_height">
+            <ion-card-content class="Card-Padding backimageFitsense">
+                <img src="assets/imgs/Assets-Image-Homepage-HP53.jpg">
+                <div class="challenges-div padding-top-corosol max-width-and-line-height-class">
+                    <div class="h3" ion-text color="primary">{{"Home_Fitsense.speedUpScore" | translate}}</div>
+                   
+                    <div class="h3">1. {{"Home_Fitsense.connectHeath" | translate}}</div>
+                    <div class="h3">2. {{"Home_Fitsense.enjoyActivity" | translate}}</div>
+                    <div class="h3">3. {{"Home_Fitsense.dailyFitnessLevel" | translate}}</div>
+              
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <!-- Fitsense if user  login or Registered-->
+        <ion-card *ngIf="isRegistered && fitsenseService.fitsense.numberOfConnectedDataSources > 0" class="challenges-card home_card_height">
+            <ion-card-content class="Card-Padding">
+                <img src="assets/imgs/Assets-Image-Homepage-HP1.jpg">
+                <div class="challenges-div line-height-margin-top">
+                    <div class="h3" ion-text color="primary">{{"Home_Fitsense.todaysGoal" | translate}}</div>
+                    <div class="carousel-card-score">{{fitsenseService.fitsense.activityToday}}
+                        <span ion-text color="secondary-dark" class="h3">/
+                            {{fitsenseService.fitsense.activityScoreGoal}}</span>
+                    </div>
+                    <div class="range-slider">
+                        <div class="slider-container">
+                            <div class="slider-active" [style.width.%]="activeRangeWidth()">
+                            </div>
+                            <div class="slider-inactive">
+                            </div>
+                        </div>
+                        <div class="value-contains">
+                            <span class="h1 float-left">
+                                <p>0</p>
+                            </span>
+                            <span class="h1 float-right">
+                                <p>{{fitsenseService.fitsense.activityScoreGoal}}</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="heading3-type4" >{{randomSentence| translate:translationData}}</div>
+                    <ion-row>
+                        <ion-col>
+                            <button  ion-button icon-start class="cta-button-primary" round (click)="openFitsenseScreen('ActivityMain')">
+                                {{"Home_Fitsense.GetStart" | translate}}
+                            </button>
+                            <!-- <button *ngIf="isSCBCustomer == false" ion-button icon-start class="cta-button-primary" round (click)="changeToStories()">
+                                {{"Home_Fitsense.GetStart" | translate}}
+                            </button> -->
+                        </ion-col>
+                    </ion-row>
+
+                </div>
+            </ion-card-content>
+        </ion-card>
+
+        <!-- TODO - Removed from Release 1 -->
+        <!-- <div *ngFor="let weeklyContent of weeklyContentList">
+            <span padding class="heading1-type1">{{"policyDashboard.suggestedArticle"| translate}}</span>
+            <ion-card class="challenges-card home_card_height">
+                <img [src]="weeklyContent.field_image">
+                <div class="card-title2">{{weeklyContent.field_message}}</div>
+            </ion-card>
+            <div padding>
+                <span class="heading3-type2">{{weeklyContent.title}}</span>
+                <div [innerHtml]="weeklyContent.body"></div>
+            </div>
+
+        </div> -->
+    </div>
+
+
+    <!-- Rewards Preview Window -->
+    <div *ngIf="index==1">
+        <div [ngSwitch]="currenttabname" swipeSegment class="swipe-area">
+            <div *ngSwitchCase="'YourPoints'">
+                <div *ngIf="fitsenseService.fitsense.rewards > 0">
+                    <ion-card class="challenges-card home_card_height" *ngFor="let yourPoints of yourPointsRewards">
+                        <img [src]="yourPoints.field_image">
+                        <div class="challenges-div ">
+                            <div class="padding-left-corosol padding-top-corosol">
+                                <div class="h3" ion-text color="primary">{{"Home_Rewards.YourPoints" | translate}}</div>
+                                <!-- <div class="h3" ion-text color="primary">{{"Home_Rewards.YourPointsNext" | translate}}</div> -->
+                                <div marging-top class="carousel-card-score" margin-top>{{fitsenseService.fitsense.rewards}}
+                                    <span class="p" ion-text color="secondary-dark">{{"Home_Rewards.points" |
+                                        translate}}</span>
+                                </div>
+                            </div>
+                            <button ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('BalanceMain')">
+                                {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                            </button>
+                        </div>
+                    </ion-card>
+                </div>
+                <!-- ion card when Not Login -->
+                <div *ngIf="fitsenseService.fitsense.rewards == 0">
+                    <ion-card class="challenges-card home_card_height" *ngFor="let yourPoints of yourPointsRewards">
+                        <img [src]="yourPoints.field_image">
+                        <div class="card-thumbnail card-corosol3 "></div>
+                        <div class="challenges-div padding-top-corosol ">
+                            <div class="h3" ion-text color="primary"> {{"Home_Rewards.ViewPointsNow" | translate}}</div>
+                            <div class="h3" ion-text color="primary">{{"Home_Rewards.get100Points" | translate}}</div>
+                            <div class="carousel-card-score carousel-margin">100
+                                <span ion-text color="secondary-dark">{{"Home_Rewards.points" | translate}}</span>
+                            </div>
+                            <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary"
+                                round (click)="openFitsenseScreen('BalanceMain')">
+                                {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                            </button>
+                            <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary"
+                                round (click)="gotoRegister()">
+                                {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                            </button>
+                        </div>
+                    </ion-card>
+                </div>
+            </div>
+
+            <div *ngSwitchCase="'howtoEarn'">
+                <ion-card class="challenges-card home_card_height box-shadow-custom box-gradiant-custom" *ngFor="let howToEarn of howToEarnRewards">
+                    <div class="card-thumbnail card-corosol2"></div>
+                    <img [src]="howToEarn.field_image">
+                    <div class="challenges-div challenge-Margin line">
+                        <div class="reward-corosol-2-box">
+                            <div class="h3" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenGetPoint"
+                                | translate}}</div>
+                            <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary"
+                                round (click)="openFitsenseScreen('BalanceMain')">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                            <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary"
+                                round (click)="gotoRegister()">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </ion-card>
+            </div>
+
+            <div *ngSwitchCase="'howtoRedeem'">
+                <ion-card class="challenges-card home_card_height box-shadow-custom box-gradiant-custom" *ngFor="let howToSpend of howToSpendRewards">
+                    <img [src]="howToSpend.field_image">
+                    <div class="card-thumbnail card-corosol1"></div>
+                    <div class="challenges-div challenge-Margin line">
+                        <div class="reward-corosol-2-box">
+                            <div class="h3" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenExchangePoints"
+                                | translate}}</div>
+                            <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary"
+                                round (click)="openFitsenseScreen('BalanceMain')">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                            <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary"
+                                round (click)="gotoRegister()">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </ion-card>
+            </div>
+        </div>
+    </div>
+
+    <dashboard-sales *ngIf="index==2" [in]="currenttabname"></dashboard-sales>
+
+    <!-- Challenges Preview Window -->
+    <div *ngIf="index==3 || index==4">
+        <ion-card class="challenges-card home_card_height">
+            <img src="assets/imgs/Assets-Image-Homepage-HP12-1.jpg" class="full_height">
+            <div class="challenges-div ">
+                <ion-row>
+                    <ion-col>
+                        <div class="margin-top-7vh" *ngIf="isRegistered && fitsenseService.fitsense.challegesCompleted == 0">
+                            <div class="heading3-type2 max-width-55" ion-text color="primary">{{"Home_Challenges.startEarning"
+                                |
+                                translate}}
+                            </div>
+                            <div class="heading3-type2" ion-text color="primary">
+                                {{"Home_Challenges.forToday" | translate}}</div>
+                            <button ion-button icon-start round class="cta-button-primary" (click)="openFitsenseScreen('ChallengesMain')">
+                                {{"Home_Challenges.StartNow" | translate}}
+                            </button>
+                        </div>
+                        <div class="margin-top-7vh" *ngIf="!isRegistered">
+                            <div class="h3" ion-text color="primary">{{"Home_Challenges.MeetActivities" |
+                                translate}}
+                            </div>
+                            <div class="h3" ion-text color="primary">
+                                {{"Home_Challenges.liftTheGang" | translate}}</div>
+                            <div class="">{{"Home_Challenges.ActivityWaiting" | translate}}</div>
+                            <div class="carousel-card-score"> {{fitsenseService.fitsense.numberOfChallenges}}
+                                <span class="boldText" ion-text color="secondary-dark">{{"Home_Challenges.doneChallenge"
+                                    |
+                                    translate}}</span>
+                            </div>
+                            <button ion-button icon-start round class="cta-button-primary" (click)="gotoRegister()">
+                                {{"Home_Challenges.Apply" | translate}}
+                            </button>
+                        </div>
+                        <div class="margin-top-7vh" *ngIf="fitsenseService.fitsense.challegesCompleted > 0 && isRegistered">
+                            <div class="heading3-type2" ion-text color="primary">{{"Home_Challenges.Ranking" |
+                                translate}}
+                            </div>
+                            <div class="carousel-card-score"> {{fitsenseService.fitsense.challegesCompleted}}
+                                <span class="boldText" ion-text color="primary">{{"Home_Challenges.doneChallenge" |
+                                    translate}}</span>
+                            </div>
+                            <button ion-button icon-start round class="cta-button-primary" (click)="openFitsenseScreen('ChallengesMain')">
+                                {{"Home_Challenges.Apply" | translate}}
+                            </button>
+                        </div>
+
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card>
+        <ion-card class="challenges-card home_card_height" *ngFor="let challenge of challengesList">
+            <img [src]="challenge.field_image" />
+            <!-- <div *ngIf="isRegistered" class="card-title2">{{challenge.body}}</div> -->
+            <div class="challenges-div ">
+                <ion-row>
+                    <ion-col>
+                        <div class="margin-top-50">
+                            <div class="heading3-type2" ion-text color="primary">{{challenge.title}}
+                            </div>
+
+                            <button ion-button 
+                                round class="cta-button-primary" (click)="challengeRedirect()">
+                                {{challenge.body}}
+                            </button>
+                            <!-- <button  ion-button round class="cta-button-primary" (click)="gotoRegister()">
+                                {{challenge.body}}
+                            </button> -->
+                        </div>
+
+
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card>
+    </div>
+    <!-- Policy Dashboard Preview Window -->
+    <!-- <div class="SpinnerDiv" *ngIf="spinnerFlagDashboard">
+        <generic-view [In]=genericDialog></generic-view>
+    </div> -->
+    <!-- TODO - Removed from Release 1 -->
+    <!-- <home-policy-tabs-details [in]=currenttabname [isRegistered]="isRegistered" [isSCBCustomer]="isSCBCustomer" *ngIf="index==4 && piechartAPIData"
+        [PolicyData]=piechartAPIData [PolicyLoansData]="filteredData"></home-policy-tabs-details> -->
+    
+    <!-- Stories Preview Window -->
+    <!-- TODO Removed from Release 1 -->
+    <!-- <div *ngIf="index==5 || index==6">
+        <div [ngSwitch]="currenttabname">
+            <div *ngSwitchCase="'HealthyTips'">
+                <div *ngFor="let story of generalStories | slice:0:1" (click)="goToStoryDetails(story)">
+                    <div padding>
+                        <span class="activity-title line-height-85 ">{{story.title}}</span>
+                        <span class="activity-desc two-line-text-limit">{{story.body |limitTo:150}}</span>
+                    </div>
+                    <ion-card class="home_card_height PosRel">
+                        <img [src]="story.field_image" />
+                        <img *ngIf="story.field_isvdo  == 'True'" class="center-vd-card" src="../../assets/imgs/play-btn.png" />
+                        <div class="card-title2">{{story.field_tags}}</div>
+                    </ion-card>
+                </div>
+                <div margin>
+                    <stories-list margin [in]="story" *ngFor="let story of generalStories | slice:1:generalStories.length"
+                        (click)="goToStoryDetails(story)"></stories-list>
+                </div>
+            </div>
+            <div *ngSwitchCase="'Inspirer'">
+
+                <div *ngFor="let story of inspirerStories | slice:0:1" (click)="goToStoryDetails(story)">
+                    <div padding>
+                        <span class="activity-title line-height-85 ">{{story.title}}</span>
+                        <span class="activity-desc two-line-text-limit">{{story.body |limitTo:150}}</span>
+                    </div>
+                    <ion-card class="home_card_height PosRel">
+                        <img [src]="story.field_image" />
+                        <img *ngIf="story.field_isvdo  == 'True'" class="center-vd-card" src="../../assets/imgs/play-btn.png" />
+                        <div class="card-title2">{{story.field_tags}}</div>
+                    </ion-card>
+                </div>
+                <div margin>
+                    <stories-list margin [in]="story" *ngFor="let story of inspirerStories | slice:1:inspirerStories.length"
+                        (click)="goToStoryDetails(story)"></stories-list>
+                </div>
+            </div>
+            <div *ngSwitchCase="'ExclusiveCustomers'">
+                <div *ngFor="let story of exclusiveStories | slice:0:1" (click)="goToStoryDetails(story)">
+                    <div padding>
+                        <span class="activity-title line-height-85 ">{{story.title}}</span>
+                        <span class="activity-desc two-line-text-limit">{{story.body |limitTo:150}}</span>
+                    </div>
+                    <ion-card class="home_card_height PosRel">
+                        <img [src]="story.field_image" />
+                        <img *ngIf="story.field_isvdo  == 'True'" class="center-vd-card" src="../../assets/imgs/play-btn.png" />
+                        <div class="card-title2">{{story.field_tags}}</div>
+                    </ion-card>
+                </div>
+                <div margin>
+                    <stories-list margin [in]="story" *ngFor="let story of exclusiveStories | slice:1:exclusiveStories.length"
+                        (click)="goToStoryDetails(story)"></stories-list>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <tooltip-overlay  [in]=toolTipDig></tooltip-overlay> -->
+
+</ion-content>

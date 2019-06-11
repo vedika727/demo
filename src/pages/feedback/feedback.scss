@@ -1,0 +1,123 @@
+page-feedback {
+
+    .close-icon-div{
+        margin-bottom: 31px;
+        
+    }
+
+    .close-button{
+        margin-top:10px;
+        margin-right:10px;
+        float:right;
+    }
+
+    // style for header
+    .header-style{
+        color:$primary;
+    }
+
+    //  styles for the question
+    .popover-question{
+        font-size: 15px;
+        font-weight: 500;
+        color: #959595;
+        padding: 15px;
+        padding-bottom: 7px;
+    }
+
+//  styles for the star rating
+    ul {
+        padding: 1px;
+    padding-top: 0px;
+    text-align: center;
+      
+        &.rating li {
+          padding: 0px 3px !important;
+          background: none;
+          color: #959595;
+      
+          ion-icon {
+            font-size: 31px;
+          }
+        }
+      }
+
+      //input feedback style
+      ion-textarea{
+        border-bottom: 2px solid $secondary-light;
+      }
+
+      // styles to place placeholder at center
+      ::-webkit-input-placeholder {
+      text-align: center;
+     padding-top:20px;
+    }
+
+     //  send button style
+     .send-btn-mg{
+        margin-top:20px;
+    }
+
+    //  cancel button style
+    .cancel-btn-mg{
+        margin-top: 16px;
+        margin-bottom:20px;
+       
+    }  
+
+    .text-underline{
+        text-decoration: underline;
+    }
+
+    .label-ios {
+        margin:0; 
+    }
+
+    
+    .label-md {
+        margin:0; 
+    }
+
+
+          //animations
+          .fade-in-anim{
+            font-size: 21px;
+            text-align: center;
+            animation: fadein 0s;
+            -moz-animation: fadein 0s; /* Firefox */
+            -webkit-animation: fadein 0s; /* Safari and Chrome */
+            -o-animation: fadein 0s; /* Opera */
+        }
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+}
+}

@@ -1,0 +1,11 @@
+page-loan-terms-conditions {
+
+    .padd{
+        padding-left: 16px !important;
+        padding-right: 16px !important
+    }
+    p:first-child{
+        @extend %psl-primary-bold;
+        font-size: $font_28px;
+    }
+}

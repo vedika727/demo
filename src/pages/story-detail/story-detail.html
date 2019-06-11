@@ -1,0 +1,38 @@
+
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <dashboard-header [in]=dashboardheader></dashboard-header>
+    <ion-row>
+        <ion-col col-11 padding>
+            <div class="h2" ion-text color="secondary-dark">{{storyDetail.title}}</div>
+        </ion-col>
+        <ion-col col-1 (click)="share()">
+            <ion-icon item-end name="scbl-share" color="primary"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <div class="activity-img" margin-top>
+        <img *ngIf="storyDetail.field_video == ''" [src]="storyDetail.field_image">
+
+        <div *ngIf="storyDetail.field_video != ''">
+            <video height="auto" width="100%" controls="controls" [poster]="storyDetail.field_image" preload="metadata"
+                webkit-playsinline="webkit-playsinline" class="videoPlayer">
+                <source [src]="storyDetail.field_video" type="video/mp4" />
+            </video>
+
+        </div>
+        <div class="card-title2">{{storyDetail.field_message}}</div>
+    </div>
+    <div>
+
+    </div>
+    <p class="heading3-type2">{{storyDetail.field_hashtags}}</p>
+    <div class="heading3-type1 line-height-1-1em" ion-text color="secondary-dark" [innerHtml]="storyDetail.body"
+        text-wrap></div>
+
+</ion-content>

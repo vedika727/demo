@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>footer Dashboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="footer-Dashboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Icons/Activity-log" transform="translate(6.000000, 6.000000)" stroke="#D8D8D8" stroke-width="2">
+            <path d="M4,13.9739063 C4,8.46546875 8.46546875,4 13.9739063,4 C19.4823438,4 23.9478125,8.46546875 23.9478125,13.9739063 C23.9478125,19.4823438 19.4823438,23.9478125 13.9739063,23.9478125 C11.1096875,23.9478125 8.5275,22.7404688 6.70835938,20.8070313 C5.80078125,19.8422656 5.083125,18.696875 4.61523438,17.4303125" id="Stroke-1"></path>
+            <polyline id="Stroke-3" points="4 20.9725781 4.21648438 17.125 7.75992187 18.7173437"></polyline>
+            <path d="M15.8167187,14.4786719 C15.8167187,15.6060156 14.9028906,16.5198437 13.7755469,16.5198437 C12.6482813,16.5198437 11.734375,15.6060156 11.734375,14.4786719 C11.734375,13.3513281 12.6482813,12.4375 13.7755469,12.4375 C14.9028906,12.4375 15.8167187,13.3513281 15.8167187,14.4786719 Z" id="Stroke-5"></path>
+            <path d="M9.546875,11.96875 L11.5273437,13.1748437" id="Stroke-7"></path>
+            <path d="M15.796875,13.0583594 L18.6707813,11.421875" id="Stroke-9"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+page-story-detail {
+    .activity-img {
+        position: relative;
+        img {
+            border-radius: 10px;
+        }
+
+        video{
+            border-radius: 10px;
+        }
+        .card-title2 {
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            padding: 2px 15px;
+            font-size: $font_20px;
+            background-color: $primary-super-light;
+            font-weight: bold;
+            color: $secondary;
+        }
+        .line-height-1-1em{
+            line-height: 1.1em;
+        }
+    }
+
+    .h2{
+        color: $secondary-dark !important;
+    }
+}

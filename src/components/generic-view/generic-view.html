@@ -1,0 +1,32 @@
+<!-- <div text-center class="overlay" *ngIf="inputData"> -->
+
+<div text-center [ngClass]="{'margin-content':!inputData.isCompact}" *ngIf="inputData && inputData.ionSpinner == true">
+    <div class="margin-top">
+        <ion-spinner name="crescent"></ion-spinner>
+    </div>
+    
+</div>
+<div text-center class="overlay" *ngIf="inputData && !inputData.ionSpinner">
+     <div class="content-block">
+    <ion-icon class="dialog-icon" [name]="inputData.icon" *ngIf="inputData.icon"></ion-icon>
+
+    <div class="refresh-icon" (click)="inputData.positiveButton.click()" *ngIf="inputData.isCompact">
+        <ion-icon name="refresh"></ion-icon>
+    </div>
+
+    <div>
+        <ion-label *ngIf="inputData.title" class="title">{{inputData.title}}</ion-label>
+        <ion-label *ngIf="inputData.message" class="message">{{inputData.message}}</ion-label>
+        <button ion-button (click)="inputData.positiveButton.click()" class="buttons" *ngIf="(inputData.positiveButton && !inputData.isCompact)">
+            {{inputData.positiveButton.name}}
+        </button>
+        <button ion-button (click)="inputData.negativeButton.click()" class="buttons" *ngIf="(inputData.negativeButton && !inputData.isCompact)">
+            {{inputData.negativeButton.name}}
+        </button>
+        <button ion-button (click)="inputData.neutralButton.click()" class="buttons" *ngIf="(inputData.neutralButton && !inputData.isCompact)">
+            {{inputData.neutralButton.name}}
+        </button>
+    </div>
+    
+
+</div>

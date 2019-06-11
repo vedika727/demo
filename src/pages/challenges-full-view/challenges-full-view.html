@@ -1,0 +1,73 @@
+<!--
+  Generated template for the ChallengesFullViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-padding no-margin no-border>
+    <ion-navbar no-padding no-margin transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <dashboard-header [in]=challengesHeader></dashboard-header>
+    <ion-card>
+        <ion-row>
+            <img src="assets/imgs/Assets-Image-Homepage-HP12-1.jpg" class="full_height">
+            <ion-col text-left padding-left class="abs_position" margin-top>
+                <!-- <div class="h2" ion-text color="primary">{{"Home_Challenges.MeetActivities" | translate}}</div>
+    <div class="h2" ion-text color="primary">
+        {{"Home_Challenges.challengeFriends" | translate}}</div>
+    <div class="h2">{{"Home_Challenges.ActivityWaiting" | translate}}</div> -->
+                <!-- <div class="heading2-type2">{{"Home_Challenges.Ranking" | translate}} {{fitsenseService.fitsense.numberOfChallenges}} {{"Home_Challenges.doneChallenge" | translate}}</div> -->
+                <ion-row>
+                    <ion-col>
+
+                        <div *ngIf="challegegsCompleted == 0 && isRegistered">
+                            <div class="heading3-type2" ion-text color="primary">{{"Home_Challenges.startEarning" | translate}}</div>
+                            <div class="heading3-type2" ion-text color="primary">
+                                {{"Home_Challenges.forToday" | translate}}</div>
+                            <button ion-button icon-start round class="cta-button-primary" (click)="openFitsenseScreen('ChallengesMain')">
+                                                {{"Home_Challenges.StartNow" | translate}}
+                                            </button>
+                        </div>
+
+                        <div *ngIf="!isRegistered">
+                            <div class="heading3-type2" ion-text color="primary">{{"Home_Challenges.MeetActivities" | translate}}</div>
+                            <div class="heading3-type2" ion-text color="primary">
+                                {{"Home_Challenges.challengeFriends" | translate}}</div>
+                            <div class="heading3-type2">{{"Home_Challenges.ActivityWaiting" | translate}}</div>
+                            <div class="carousel-card-score"> {{challengesAvailable}}
+                                <span class="h4" ion-text color="secondary-dark">{{"Home_Challenges.doneChallenge" | translate}}</span>
+                            </div>
+                            <button ion-button icon-start round class="cta-button-primary" (click)="gotoRegister()">
+                                {{"Home_Challenges.Apply" | translate}}
+                            </button>
+                        </div>
+                        <div *ngIf="challegegsCompleted > 0 && isRegistered">
+                            <div class="heading3-type2" ion-text color="primary">{{"Home_Challenges.Ranking" | translate}}</div>
+                            <div class="carousel-card-score"> {{challegegsCompleted}}
+                                <span class="h4" ion-text color="primary">{{"Home_Challenges.doneChallenge" | translate}}</span>
+                            </div>
+                            <button ion-button icon-start round class="cta-button-primary" (click)="openFitsenseScreen('ChallengesMain')">
+                                {{"Home_Challenges.Apply" | translate}}
+                            </button>
+                        </div>
+                        <!-- <button ion-button icon-start round class="cta-button-primary" (click)="openFitsenseScreen('ChallengesMain')">
+                                {{"Home_Challenges.Apply" | translate}}
+                            </button> -->
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card *ngFor="let challenge of challenges | slice:1:3;" class="challenges-card">
+        <img src="{{challenge.img}}">
+        <div class="challenges-div">
+            <ion-label class="heading3-type2 whitespace-normal" ion-text color="primary">{{challenge.topLabel}}</ion-label>
+            <ion-label class="heading3-type1">{{challenge.bottomLabel}}</ion-label>
+            <button class="cta-button-primary" ion-button round (click)="openFitsenseScreen('ChallengesMain')">{{challenge.buttonText}}</button>
+        </div>
+    </ion-card>
+</ion-content>

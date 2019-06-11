@@ -1,0 +1,96 @@
+page-my-account {
+    .item-avatar {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 80px !important; //any size
+        max-height: 80px !important;
+    }
+    .underline {
+        border-bottom: 1px solid $secondary-light !important;
+    }
+    .edit-margin {
+        margin-top: 50px !important;
+        margin-right: -16px !important;
+    }
+    .ac-input button {
+        position: absolute;
+        bottom: 0px !important;
+        text-decoration: underline;
+        right: 20px;
+    }
+    .placeholder {
+        font-family: $psl;
+        font-size: $font_20px;
+        color: $secondary-highlight;
+        padding-left: 0px;
+    }
+    .field-error{
+        background: transparent !important;
+      }
+   
+    .ac-label {
+        padding-top: 16px;
+        padding-left: 16px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    .button-alignment .right {
+        position: absolute;
+        width: 22px;
+        bottom: 12px;
+        right: 0px;
+    }
+    .secondary-title {
+        width: 40px;
+    }
+    .button-alignment button {
+        position: absolute !important;
+        right: 10px !important;
+    }
+    .align-text {
+        padding-top: 50px;
+        margin: 0px !important;
+    }
+    .cal-margin {
+        margin-top: 40px !important;
+        margin-right: -5px !important;
+    }
+    .datetime-btm-margin {
+        margin-bottom: 8px;
+    }
+    .cal-icon-pos {
+        position: absolute;
+        bottom: 0px !important;
+    }
+    .new-margin {
+        margin: 11px 12px 10px 4px !important;
+    }
+    .radius {
+        border: 2px solid $secondary;
+        margin-top: 4px;
+    }
+    .shadow {
+        -webkit-box-shadow: 3px 4px 5px 0px rgba(159, 181, 204, 1);
+        -moz-box-shadow: 3px 4px 5px 0px rgba(159, 181, 204, 1);
+        box-shadow: 3px 4px 5px 0px rgba(159, 181, 204, 1);
+    }
+    .margin-tp {
+        margin-top: 50px !important;
+    }
+    .margin-btm {
+        margin-bottom: 25px;
+    }
+    .pd-left{
+        margin-top: 26px !important;
+        padding-left: 22px !important;
+    }
+    .mg-btm{
+        margin-bottom:8px;
+    }
+    .avatar{
+        width:  62px !important;
+        height:  62px !important;
+    }
+
+    
+}

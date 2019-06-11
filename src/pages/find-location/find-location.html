@@ -1,0 +1,37 @@
+<!-- scb life header -->
+
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="overlay" (click)="clearSearchBar()"></div>
+    <!-- hospitals -->
+    <div class="h1 padd-btm">{{"hamburgerMenu.findLocation" | translate}}</div>
+    <div class="carousel-card-title bold-text" color="primary"> {{"hamburgerMenu.hospital" | translate}}</div>
+    <hr color="primary">
+
+    <!-- searchbar -->
+        <ion-searchbar color="primary" [(ngModel)]="searchTerm"  mode="md" (ionInput)="setFilteredItems()" (ionClear)="showNearbyMarkers()" placeholder="{{'hamburgerMenu.searchPlace'|translate}}" ></ion-searchbar>
+    
+    <!-- suggestion list of places -->
+    <ion-list *ngIf="autocomplete">
+        <ion-item *ngFor="let item of items" tappable (click)="selectSearchResult(item)">
+            {{ item.field_hospitalname }}
+        </ion-item>
+    </ion-list>
+
+    <!-- map -->
+    <div id='map' class="map-style">
+    </div>
+
+
+    <!-- hospital list button -->
+    <div text-center (click)="clearSearchBar()">
+        <button ion-button round (click)="goToPlacesList()" id="hospitalListButton" class="cta-button-primary marg-top-16"> {{"hamburgerMenu.hospitalList" | translate}}</button>
+    </div>
+
+
+</ion-content>

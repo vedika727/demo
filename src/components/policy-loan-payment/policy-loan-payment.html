@@ -1,0 +1,87 @@
+
+<ion-card class="border-radius backcolor" margin-bottom>
+    <div text-center class="heading3-type3" margin>{{'Payments.PolicyNumber' | translate}} <span class="heading3-type3">{{policyLoan.policyNumber}}</span></div>
+    <div text-center class="input-round">
+        <div class="h4 padding-top-amount ">
+            <div *ngIf="rpl">
+                {{'Payments.AmountfromRPLloan' | translate}}
+            </div>    
+            <div *ngIf="apl">
+                {{'Payments.AmountfromAPLloan' | translate}}
+            </div>
+        </div>
+        <div id="TotalAmount">
+            <span class="message-type3">{{totalAmount.toFixed(2) | currencyConvert}}</span>
+            <span class="color-accent">  {{'Payments.baht' | translate}}</span>
+        </div>
+    </div>
+    
+    <div padding class="card-body border-radius">
+        <div *ngIf="rpl" class="rpl">
+                <ion-row class="paymentDueData secondary-light" padding-bottom>
+                        <ion-col col-7>
+                            {{'Payments.PrincipleloanAmount'|translate}}
+                        </ion-col>
+                        <ion-col col-5 text-right>
+                            {{policyLoan.loanAmount | currencyConvert}} {{'Payments.baht' | translate}}
+                        </ion-col>
+                </ion-row>
+                <ion-row class="paymentDueData secondary-light" padding-bottom>
+                        <ion-col col-7>
+                            {{'Payments.interestAmountAsOf'|translate}}
+                        </ion-col>
+                        <ion-col col-5 text-right>
+                            {{policyLoan.loanInterest | currencyConvert}} {{'Payments.baht' | translate}}
+                        </ion-col>
+                </ion-row>
+                <ion-row padding-top>
+                    <div>
+                        {{'Payments.PleaseEnterAmountYouWishToPay'|translate}}
+                    </div>
+                    <div col-10>
+                        <ion-input class="round-input" margin-top margin-bottom placeholder="Ex.: 5,000" [(ngModel)]="loanAmount"></ion-input>
+                    </div>
+                    <div col-2 margin-top padding-top float-center text-center>
+                        {{'Payments.baht' | translate}}
+                    </div>
+                </ion-row>
+                <div text-center padding-left padding-right margin-bottom>
+                    <button ion-button round class="cta-button-accent" padding (click)="paynow()">{{'Payments.PayNow' | translate}}</button>
+                </div></div>
+        <div *ngIf="apl" class="apl">
+            <ion-row class="paymentDueData secondary-light" padding-bottom>
+                    <ion-col col-7>
+                        {{'Payments.APLamount'|translate}}
+                    </ion-col>
+                    <ion-col col-5 text-right>
+                        {{policyLoan.loanAmount | currencyConvert}} {{'Payments.baht' | translate}}
+                    </ion-col>
+            </ion-row>
+            <ion-row class="paymentDueData secondary-light" padding-bottom>
+                    <ion-col col-7>
+                        {{'Payments.interest'|translate}}
+                    </ion-col>
+                    <ion-col col-5 text-right>
+                        {{policyLoan.loanInterest | currencyConvert}} {{'Payments.baht' | translate}}
+                    </ion-col>
+                    <ion-col col-8 class="field-error">
+                            {{'Payments.errorText'|translate}}
+                    </ion-col>
+            </ion-row>
+            <ion-row padding-top>
+                <div>
+                    {{'Payments.PleaseEnterAmountYouWishToPay'|translate}}
+                </div>
+                <div col-10>
+                    <ion-input class="round-input" margin-top margin-bottom placeholder="Ex.: 5,000"></ion-input>
+                </div>
+                <div col-2 margin-top padding-top float-center text-center>
+                    {{'Payments.baht' | translate}}
+                </div>
+            </ion-row>
+            <div text-center padding-left padding-right margin-bottom>
+                <button ion-button round class="cta-button-accent" padding (click)="paynow()">{{'Payments.PayNow' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ion-card>

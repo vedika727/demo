@@ -1,0 +1,29 @@
+<!-- Generated template for the PolicyDetailsComponent component -->
+<div class="padding-left-15">
+    <span class="title-font">{{'policyDashboard.allbenefitsandcoverage' | translate}}</span>
+    <div>{{'policyDashboard.lastUpdate' | translate}} : {{thaiDateConverter.convertIsoToDate(todaysDate,true,2)}}</div>
+    <div>
+        <ion-grid item-width="1px" class="padding-left-0">
+            <ion-row>
+                <ion-col col-3 class="link-font margin-to-text padding-left-0">{{'policyDashboard.insurancetype' | translate}}</ion-col>
+                <ion-col col-2 class="link-font margin-to-text">{{'policyDashboard.Code' | translate}}</ion-col>
+                <ion-col col-3 class="link-font margin-to-text">{{'policyDashboard.Amountofinsurance' | translate}}</ion-col>
+                <ion-col col-2 class="link-font margin-to-text">{{'policyDashboard.insurancepremium' | translate}}</ion-col>
+                <ion-col col-2 class="link-font margin-to-text" text-center>{{'policyDashboard.endOfcontract' | translate}}</ion-col>
+            </ion-row>
+            <ion-row class="row-text-size">
+                <ion-col col-3 class="padding-left-0 heading5-type3" text-left>{{policyDetail.policyName}}</ion-col>
+                <ion-col col-2 class="heading5-type3" text-center>{{policyDetail.planCode}}</ion-col>
+                <ion-col col-3 class="heading5-type3" text-center>{{policySumInsured}}</ion-col>
+                <ion-col col-2 class="heading5-type3" text-center>{{policyDetail.policyPremium}}</ion-col>
+                <ion-col col-2 class="heading5-type3" text-right> {{policyDetail.policyMaturityDate | date: 'dd/MM/yy'}}</ion-col>
+            </ion-row>
+            <ion-row class="row-text-size" *ngFor="let policy of policyInfoData">
+                <ion-col col-3 class="padding-left-0 heading5-type3" text-left>{{policy.riderProductName}}</ion-col>
+                <ion-col col-2 class="heading5-type3" text-center>{{policy.riderPlanCode}}</ion-col>
+                <ion-col col-3 class="heading5-type3" text-center>{{policy.riderSumInsured}}</ion-col>
+                <ion-col col-2 class="heading5-type3" text-center>{{policy.riderPremium}}</ion-col>
+                <ion-col col-2 class="heading5-type3" text-right>{{policy.riderMaturityDate | date: 'dd/MM/yy'}}</ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>

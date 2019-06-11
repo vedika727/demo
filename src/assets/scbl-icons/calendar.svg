@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(7.000000, 8.000000)">
+            <rect id="Rectangle-2" stroke="#4E2683" stroke-width="2" x="1" y="5.44444444" width="39.1111111" height="33.5555556" rx="4"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="8.88888889" y="15.5555556" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="17.7777778" y="15.5555556" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="26.6666667" y="15.5555556" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="8.88888889" y="22.2222222" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="17.7777778" y="22.2222222" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="26.6666667" y="22.2222222" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="8.88888889" y="28.8888889" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="17.7777778" y="28.8888889" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-3" fill="#4E2683" x="26.6666667" y="28.8888889" width="5.55555556" height="3.33333333"></rect>
+            <rect id="Rectangle-4" fill="#4E2683" x="11.1111111" y="0" width="2.22222222" height="10" rx="1.11111111"></rect>
+            <rect id="Rectangle-4" fill="#4E2683" x="20" y="0" width="2.22222222" height="10" rx="1.11111111"></rect>
+            <rect id="Rectangle-4" fill="#4E2683" x="28.8888889" y="0" width="2.22222222" height="10" rx="1.11111111"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="callSupportModalBackground">
+    <!-- div which closes modal onclick behind the content -->
+    <div class="overlay"  (click)="hideModal()"  id="callSupportOverlay"></div>
+
+        <!-- Call support pop over -->
+        <ion-card class="popover-content-style">
+            <ion-card-content>
+                <generic-view [In]=genericDialog></generic-view>
+            </ion-card-content>
+            </ion-card>
+            </ion-content>

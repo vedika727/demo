@@ -1,0 +1,149 @@
+page-register-user {
+  .item {
+    padding-left: 0px;
+  }
+  .input-field {
+    width: 100%;
+  }
+  .registration-form {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    background-color: #f2f2f266;
+  }
+  .radiobtn-margin {
+    // margin-bottom:0px !important;
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .existing-customer-label {
+    margin-bottom: 0px;
+    margin-top: 15px;
+  }
+  .accept-Terms {
+    margin-top: 33px;
+  }
+  // .label-margin-top{
+  //     margin-top:15px !important;
+  // }
+  .apply-header {
+    margin-top: 5px;
+  }
+  .skip-margin-top-bottom {
+    // margin-top:60px;
+    margin-top: 7.45vh;
+    margin-bottom: 20px;
+  }
+  .padding-0 {
+    padding: 0px !important;
+  }
+  .accept-terms-label {
+    margin-left: 10px !important;
+  }
+  .radio-item-margin {
+    margin-left: -120px;
+  }
+  .accept-terms-checkbox {
+    margin-right: 7px !important;
+  }
+  .radio-label {
+    font-weight: bold;
+  }
+  .accept-terms-item {
+    margin-top: 5px;
+  }
+  .radio-icon-margin {
+    margin-left: 0px !important;
+  }
+  //overridden android and ios input styles for page
+  .text-input-ios {
+    margin: 0px !important;
+  }
+  .text-input-md {
+    margin: 0px !important;
+  }
+  // override android classes by ios classes for radio buttons
+  .item-md .radio-md[item-left],
+  .item-md .radio-md[item-start] {
+    margin: 11px 16px 8px 0px;
+  }
+  .item.item-md .checkbox-md {
+    position: relative;
+    display: inline-block;
+    margin: 9px 5px 9px 4px;
+  }
+  .label-margin {
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+  }
+  .input-content {
+    margin-bottom: 10px !important;
+  }
+  .div-containing-register-button {
+    margin-top: 1.8vh;
+  }
+  .no-wrap-important {
+    //changing white-space to normal for this particular page so that error message is shown on next line if too big
+    white-space: normal !important;
+  }
+  .checkbox-icon:after {
+    background-color: $primary;
+  }
+  .item-checkbox-checked {
+    background-color: $primary;
+  }
+  .checkbox-checked {
+    background-color: $primary;
+  }
+  .item-cover-default-activated {
+    background-color: $primary;
+  }
+  .word-wrap-break-word {
+    word-wrap: break-word;
+  }
+  ion-label {
+    margin: 0;
+    display: block;
+    // overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: inherit;
+    // text-overflow: ellipsis;
+    white-space: normal !important;
+  }
+  // .checkbox-md .checkbox-icon {
+  //     //     border-color: #4d2b80 !important;
+  //     //     border-radius: 4px !important;
+  //     //     border-width: 1px !important;
+  //     //     background: transparent !important;
+  //         border-width: 1px;
+  //         border-style: solid;
+  //         border-color: $primary;
+  //         background-color: unset !important;
+  //     //     color:$primary;
+  //     }
+  //     // // checkbox overriden ios
+  //     .checkbox-ios .checkbox-icon {
+  //         border-width: 1px;
+  //         border-style: solid;
+  //         border-color: $primary;
+  //         background-color: unset !important;
+  //     //     border-color: #4d2b80 !important;
+  //     //     border-radius: 4px !important;
+  //     //     border-width: 1px !important;
+  //     //     background: transparent !important;
+  //     //     color:$primary;
+  //     }
+  .label-ios {
+    margin: 0px;
+  }
+  .label-md {
+    margin: 0px;
+  }
+
+  .mt-34 {
+    margin-top: 34px !important;
+  }
+}

@@ -1,0 +1,32 @@
+<!-- 
+<ion-header no-border>
+  <div class="relative">
+    <scb-header-icon [in]=headerConfig></scb-header-icon>
+  </div>
+</ion-header> -->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+<ion-content padding class="scb-background-contain">
+    <div text-left class="h1">
+        {{"login.forgotPIN"| translate}}
+    </div>
+    <form novalidate [formGroup]="forgotPin" (ngSubmit)="getOTP()">
+        <div class="margin-top-30 padding">
+            <div class="h3">
+                {{"login.pleaseEnterPassportNumber" | translate}}
+            </div>
+            <ion-item class="no-padding">
+                <ion-input (keyup)="validateThaiId()" placeholder="{{placeholderValue | translate}}" formControlName="thaiID" maxlength="13"></ion-input>
+            </ion-item>
+            <div class="field-error error-msg">{{genericErrorMessage | translate}}</div>
+            <div text-center>
+                <button ion-button [disabled]="forgotPin.invalid" round class="margin-top-50 cta-button-primary">{{"login.getOtpNum" | translate}}</button>
+            </div>
+        </div>
+
+    </form>
+</ion-content>

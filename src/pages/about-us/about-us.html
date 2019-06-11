@@ -1,0 +1,31 @@
+<!-- 
+* @author Ayush Vyas
+* @description AboutUs Page provides the details of the company with there branch
+ -->
+ <ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+<ion-content padding>
+
+    <div class="h1">{{"hamburgerMenu.aboutUs"|translate}}</div>
+    <!-- image on the top of the page -->
+    <!-- <img src="../../assets/imgs/2.png" alt="Italian Trulli"> -->
+    <div *ngFor="let topic of topicList" class="image">
+            <img *ngIf="topic.field_image != ''" [src]="topic.field_image">
+        <div no-lines class="h2 font-color" [innerHtml]="topic.Title"></div>
+        <div class="p" [innerHtml]="topic.body"></div>
+    </div>
+
+    <div class="h2 font-color">{{"hamburgerMenu.SCBLIFEBranch"|translate}}</div>
+    <!-- cards to show the details of branch with address,contact,phone no. and operation hours -->
+    <ion-card *ngFor="let address of addressList" class="about-us-card">
+        <div no-lines>
+            <div class="h3 font-color" text-wrap padding>{{address.field_branchname}}</div>
+            <div text-wrap padding-left padding-right>{{address.field_branchaddress}}</div>
+            <div text-wrap padding-left padding-right>{{address.field_telephone}}</div>
+            <div text-wrap padding-left padding-right padding-bottom>{{address.field_branchofficetiming}}</div>
+        </div>
+    </ion-card>
+</ion-content>

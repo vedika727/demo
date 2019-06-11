@@ -1,0 +1,42 @@
+<div class="container" [style.height.px]="deviceHeight/1.5">
+  <div class="date-container">
+      <div class="cashback-date-node">
+        <div class="date-label">{{cashbackArray[0].label | translate}}</div>
+        <div class="heading5-type3 font-18px">{{this.thaiDateConverter.convertIsoToDate(cashbackArray[0].date,false,2)}}</div>
+      </div>
+      <div class="cashback-date-node-dynamic" [style.height.px]="(deviceHeight/1.5)-100">
+        <div class="internal-node-dynamic" [style.top.px]="rangePosition" *ngIf="isShow">
+          <div class="date-label">{{cashbackTitle | translate}}</div>
+          <div class="heading5-type3 font-18px">{{this.thaiDateConverter.convertIsoToDate(cashbackDate,false,2)}}</div>
+        </div>
+      </div>
+      <div class="cashback-date-node">
+        <div class="date-label">{{cashbackArray[cashbackArray.length-1].label | translate}}</div>
+        <div class="heading5-type3 font-18px">{{this.thaiDateConverter.convertIsoToDate(cashbackArray[cashbackArray.length-1].date,false,2)}}</div>
+      </div>
+      <div [style.margin-top.px]="-lastPaymentTermPosition" class="cashback-date-node internal-node">
+          <div class="date-label">{{cashbackArray[lastPaymentTerm].label | translate}}</div>
+          <div class="heading5-type3 font-18px">{{this.thaiDateConverter.convertIsoToDate(cashbackArray[lastPaymentTerm].date,false,2)}}</div>
+      </div>
+  </div>
+
+  <div class="range-slider-container">
+    <ng5-slider [(value)]="verticalSlider.value" [options]="verticalSlider.options" (valueChange)="getCashBack(verticalSlider.value)">
+    </ng5-slider>
+  </div>
+
+  <div class="value-container">
+    <div class="value-container-dynamic" [style.height.px]="(deviceHeight/1.5)-100" padding-top>
+      <div class="hyperlink-primary" *ngIf="isShow" [style.padding-top.px]="rangePosition">
+          <div>{{"interactiveTimeline.moneyBack" | translate}}</div>
+          <div>{{value}} {{"interactiveTimeline.baht"|translate}}</div>
+      </div>
+    </div>
+ </div>
+
+</div>
+
+
+
+
+

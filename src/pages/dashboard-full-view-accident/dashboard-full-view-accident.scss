@@ -1,0 +1,250 @@
+page-dashboard-full-view-accident {
+    // .title {
+    //     text-align: center;
+    // }
+    h2>span {
+        float: right;
+    }
+    .iconsCard {
+        margin: 11% auto;
+        display: block;
+        margin-bottom: 0%;
+        width: 33px;
+        height: 39px;
+        //background-color: transparent;
+    }
+    ion-card {
+        position: relative;
+        text-align: center;
+        border: 1px gray;
+        border-radius: 1rem !important;
+        // height: 70%;
+    }
+    
+    .SCB-test-align {
+        padding-left: 28px;
+        margin: 0% !important;
+    }
+    .card-text {
+        padding-top: 10px;
+    }
+    .item-inner {
+        margin-left: 0% !important;
+    }
+    .scb-gradient {
+        background: linear-gradient(180deg, #ffffff 84%, #553286 198%);
+    }
+    .FontBold {
+        font-weight: bolder;
+    }
+    // .card-ios {
+    //     // padding: 8px !important;
+    //     //height: 120px !important;
+    //     margin: 12px;
+    //     border-radius: 2px;
+    //     width: calc(100% - 24px);
+    //     font-size: 1.4rem;
+    //     //background: #fff;
+    //     // -webkit-box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15);
+    //     // box-shadow: 0px 1px 5px 10px rgba(0, 0, 0, 0.15)
+    // }
+    // .card-md {
+    //     // padding: 8px !important;
+    //     //height: 120px !important;
+    //     margin: 12px;
+    //     border-radius: 2px;
+    //     width: calc(100% - 24px);
+    //     font-size: 1.4rem;
+    //     background: #fff;
+    //     -webkit-box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15);
+    //     box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15)
+    // }
+    .SpinnerDiv {
+        height: 20vh;
+        margin-top: 10vh;
+        margin-bottom: 4vh;
+    }
+    .no-top-bottom-padding{
+        padding-top:0px !important;
+        padding-bottom: 0px !important;
+    }
+    .padding-top-20{
+        padding-top:1.5vh;
+    }
+    .padding-20{
+        padding-top:1.5vh;
+        padding-bottom:1.5vh;
+    }
+    .padding-bottom-10{
+        padding-bottom: 0.7vh;
+    }
+    .margin-10{
+        margin:0.7vh;
+        // padding-bottom:1.0vh;
+    }
+    .padding-30{
+        padding:3.7vh;
+    }
+    .padding-15{
+        padding:1vh;
+    }
+    .extra-margin{
+        margin-bottom: 1vh
+    }
+    .margin-20{
+        margin:20px;
+    }
+    .padding-top-10{
+        padding-top: 10px;
+    }
+    .input-padding{
+        padding:0px 20px 0px 40px;
+    }
+    .text-input-ios {
+        margin: 0px; 
+        text-align: center !important;
+        font-weight: normal;
+    }
+    .text-input-md {
+        margin: 0px; 
+        text-align: center !important;
+        font-weight: normal;
+    }
+    .loan-input-card{
+        margin:0px !important;
+    }
+    .select-account{
+        color:$secondary-dark !important;
+        border-radius: 25px;
+        border:1px solid $secondary-dark;
+        margin-top:0.5vh
+    }
+    .select-ios {
+        padding: 1vh;
+    }
+    ion-select{
+        max-width:100%;
+    }
+    .item-ios{
+        background: transparent !important;
+        padding-left: 0px
+    }
+    .select-md .select-icon .select-icon-inner{
+        color:$primary;
+        left: -1vh;
+        margin-top: 0px;        
+    }
+    .item-md{
+        background: transparent !important;
+        padding-left: 0px
+    }
+    .loan-amount{
+        border:1px solid $primary;
+        border-radius:30px;
+        background: $secondary;
+        // width:50%;
+        text-align: center !important;
+        // height:50px;
+        font-size: $font_40px;
+        padding:0.5vh
+    }
+    .item-ios.item-block .item-inner {
+        padding-right:0px;
+    }
+    .item-md.item-block .item-inner {
+        padding-right:0px;
+    }
+    .text-input-md {
+        margin: 0px;
+        text-align: center;
+    }
+    .text-input-ios {
+        margin: 0px;
+        text-align: center;
+    }
+    .baht-text{
+        padding-top:3.5vh;
+        padding-left:0.5vh;
+        text-align: left !important;
+    }
+    [col-10] {
+        padding: 0px;
+    }
+    .col{
+        padding: 2px;
+    }
+    .white-card{
+        margin-top:-1vh !important;
+    }
+    .view-policy-details{
+        text-align: right !important
+    }
+    .loan-number{
+        line-height: 0.5
+    }
+    .hr-line{
+        border-bottom: 1px solid $secondary-light
+    }
+    .payout-acc-no{
+        padding-top:5px;
+    }
+    .bank-accounts{
+        border:1px solid $secondary-highlight;
+        border-radius: 25px;
+        min-width:100%;
+    }
+    .select-ios .select-icon{
+        color:$primary;
+        margin:auto 10px
+    }
+    .payout-account {
+        display:flex;
+        height: inherit;
+        line-height: 1
+    }
+    .temporary{
+        margin:auto
+    }
+    .flex-div{
+        display: flex;
+    }
+    .margin-10-loans{
+        margin: auto 1vh
+    }
+    .margin-20-loans{
+        margin: 2.5vh
+    }
+    .loan-card {
+        border-radius: 5px;
+        margin:3vh auto
+    }
+    .loan-card-content {
+        padding: 5px 16px;
+        line-height: 1;
+    }
+    .margin-40-20{
+        margin:5.5vh 2.5vh
+    }
+    .margin-auto{
+        margin: auto;
+    }
+    .BackImage {
+        background-image: url('../assets/imgs/Assets-Image-Homepage-HP4.png');
+        // background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 28vh;
+        background-position-x: 27px;
+        padding: 8px!important;
+        text-align: left;
+    }
+    .marginTopest {
+        margin-top: 3.6vh;
+    }
+    .margin-bottom1 {
+        margin-bottom: 28%;
+    }
+    .margin-bottom2 {
+        margin-bottom: 16%;
+    }
+}

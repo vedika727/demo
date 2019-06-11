@@ -1,0 +1,24 @@
+{
+    "image": "assets/imgs/Assets-Sales-Product-DetailDummy.jpg",
+    "title": "EasyLIFE Saving 10/5",
+    "benefitHeader": "ผลประโยชน​์",
+    "benefits": [
+        {
+            "icon": "scbl-cashback",
+            "text": "ทางเลือกคุ้มค่า ลดหย่อนภาษี"
+        },
+        {
+            "icon": "scbl-tax-saving",
+            "text": "การันตีมีเงิน คืนทุกปี"
+        },
+        {
+            "icon": "scbl-sales-premiumPaymentMode",
+            "text": "ซื้อก็ง่าย จ่ายก็สั้น"
+        }
+    ],
+    "description": [
+        "ทางเลือกคุ้มค่า เพื่อออมพร้อมลดหย่อนภาษี(เงื่อนไขตามประกาศของกรมสรรพากร)",
+        "ซื้อง่ายไม่ยุ่งยาก คุ้มครองทันที"
+    ],
+    "online": false
+}

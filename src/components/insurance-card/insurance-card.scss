@@ -1,0 +1,74 @@
+insurance-card {
+    .card-md,
+    .card-ios {
+        border-radius: 2rem;
+        margin: 7.5%;
+        width: 85%;
+    }
+    .left-button{
+        color: #333333 !important;
+    }
+    .ion-card-header {
+        background-color: $primary;
+        // height: 60px;
+        padding: 5px;
+        span {
+            margin-top: 30px;
+            font-style: italic;
+        }
+        img {
+            padding-top: 0px !important;
+            height: 80%;
+            width: 100%;
+        }
+    }
+    .card-header-text {
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    .fax-claim {
+        p {
+            font-size: $font_16px;
+            font-weight: 900;
+        }
+    }
+   
+    .float-right {
+        p {
+            float: right;
+            padding-left: 0 !important;
+        }
+    }
+    .first-row {
+        border-bottom: 1px solid $secondary-highlight;
+        // height:  12vh;
+       padding-bottom: 1vh ;
+    }
+
+    .first-row .col {
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    .second-row {
+        padding: 8px 2px;
+        // border-bottom: 1px solid $secondary-highlight;
+        p {
+            color: $secondary-highlight;
+        }
+    }
+   
+
+    .SCB_Col_LPadding{
+        padding-bottom: 0px !important;
+        padding-left: 16px !important;
+
+    }
+    .SCB_Col_RPadding{
+        padding-bottom: 0px !important;
+        padding-right: 16px !important;
+
+    }
+    .SCB_LineHight{
+        line-height: 2.5vh !important;
+    }
+}

@@ -1,0 +1,23 @@
+<ion-content center text-center>
+    <ion-row class="confirmation-text" align-items-center>
+        <ion-icon name="ios-checkmark-circle" class="checked-circle"></ion-icon>
+        <ion-col col-12 class="h1">
+            {{"confirmation.header" | translate}}
+        </ion-col>
+
+        <ion-col col-12>
+            {{"confirmation.information" | translate}}
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-row class="confirmation-button">
+            <ion-col>
+                <button ion-button item-end class="cta-button-primary" round (click)="navigateToHomePage()">
+                    {{"confirmation.cta" | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

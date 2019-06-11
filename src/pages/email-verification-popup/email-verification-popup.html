@@ -1,0 +1,22 @@
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="wrongPinModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay" (click)="dismissModal()"  id="verifyEmailOverlay" text-right></div>
+
+  <!-- Call support pop over -->
+  <ion-card class="popover-content-style">
+    <ion-card-content>
+        <div text-center>
+          <div ion-text id="verifyEmailHeading" class="section-header">{{"emailVerification.verifyEmail" | translate}}</div>
+          <div id="verifyEmailLabel" class="input-content">{{"emailVerification.verifyEmailLabel" | translate}}</div>
+          <div id="verifyEmailOtpText" class="input-content whitespace-normal-class">{{"emailVerification.otpToEmail" | translate}} {{email}}</div>
+          <div id="verifyEmail200Points" class="input-content getPoints">{{"emailVerification.get" | translate}}
+            <span ion-text color="primary">{{"emailVerification.200" | translate}}</span> {{"emailVerification.points" |
+            translate}}
+          </div>
+          <div text-center>
+            <button ion-button round id="verifyEmailButton" (click)="verifyEmail()">{{"emailVerification.verifyEmailButton" | translate}}</button>
+          </div>
+        </div>
+    </ion-card-content>
+    </ion-card>
+    </ion-content>

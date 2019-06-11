@@ -1,0 +1,25 @@
+<ion-content padding class="popover-bg-color" [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="
+  callSupportModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay" (click)="dismissModal()" id="callSupportOverlay"></div>
+
+  <!-- Call support pop over -->
+  <ion-card class="popover-content-style">
+    <ion-card-content>
+        <ion-row>
+            <ion-col col-2>
+            </ion-col>
+            <ion-col>
+                <div text-center class="header heading3-type2">{{header}}</div> 
+                <div text-center class="heading3-type2">{{message}}</div>
+                <button ion-button round block (click)="dismissModal()">ตกลง</button>
+                 
+            </ion-col>
+            <ion-col col-2>
+    
+            </ion-col >
+          </ion-row>
+   
+    </ion-card-content>
+  </ion-card>
+</ion-content>

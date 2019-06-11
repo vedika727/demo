@@ -1,0 +1,94 @@
+page-find-location {
+    /* overlay styles, all needed */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+    }
+    .padd-btm {
+        padding-bottom: 20px;
+    }
+    .primary {
+        color: $primary;
+    }
+    hr {
+        width: 62px;
+        background-color: $primary !important;
+        margin-bottom: 25px;
+    }
+    #map {
+        height: 70%;
+        position: relative;
+        z-index: -2;
+    }
+    .list-md {
+        position: absolute;
+        margin: -1px 9px 16px;
+        width: 86%;
+        z-index: 200;
+    }
+    .list-ios {
+        position: absolute;
+        margin: -1px 9px 16px;
+        width: 86%;
+        z-index: 200;
+    }
+    .searchbar-md {
+        padding: 0px !important;
+    } //  .searchbar-md .searchbar-input{
+    // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0) !important;
+    //  }
+    ion-searchbar {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 95%;
+        /* float: right; */
+        /* margin: 9px; */
+        margin-left: 8px;
+    }
+    .searchbar-md .searchbar-ios .searchbar-input {
+        border-radius: 15px;
+    }
+    .searchbar-ios {
+        background: transparent !important;
+    }
+    .margin-btm-10 {
+        margin-bottom: 10px;
+    }
+    .marg-top-16 {
+        margin-top: 16px;
+    }
+    .hospital-name-bold {
+        font-weight: bold;
+    }
+    .direction-icon {
+        margin-left: 10px
+    }
+    .map-style {
+        position: relative;
+        overflow: hidden;
+        margin-top: -47px;
+    }
+    .searchbar-md .searchbar-input {
+        border-radius: 8px !important;
+    }
+    .searchbar-search-icon {
+        color: $accent;
+    }
+    .gmnoprint {
+        display: none;
+    }
+    button >.gm-control-active .gm-fullscreen-control {
+        display: none !important;
+    }
+}

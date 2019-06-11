@@ -1,0 +1,12 @@
+<ion-row>
+    <ion-item no-padding class="border-bottom">
+        <ion-segment id="policyTabsSegment" [(ngModel)]="insTypes" color="primary" mode="md" (ionChange)="onSegmentChange(insTypes)" [ngClass]="halfSegment ?'half-segment':''">
+            <ion-segment-button id="policyTabsSegment1 segment-section-no-padding" *ngFor="let tab of policytabs" value={{tab}}>
+                <div ion-text class="bold-text">{{"PD_Home."+tab | translate}}</div>
+            </ion-segment-button>
+        </ion-segment>
+        <!-- <ion-icon id="expandPageIcon" *ngIf="!PolicyTabsFlags.iconhideflag && isRegistered" padding item-right name="Zoom-in" color="primary" (click)="gotodetailpage()"></ion-icon>
+        <ion-icon id="expandPageIcon" *ngIf="!PolicyTabsFlags.iconhideflag && !isRegistered" padding item-right name="Zoom-in" color="primary" (click)="gotoRegister()"></ion-icon> -->
+
+    </ion-item>
+</ion-row>

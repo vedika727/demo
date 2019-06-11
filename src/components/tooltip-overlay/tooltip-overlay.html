@@ -1,0 +1,14 @@
+<!-- Generated template for the TooltipOverlayComponent component -->
+<div class="overlay">
+  <div class="slider">
+    <ion-slides pager>
+      <ion-slide *ngFor="let item of inputData.toolTipData">
+        <img class="toolImage" [src]="item.image">
+        <div class="text-desc padding-left-right" text-center *ngIf="item.imageDesc">
+          <h3 class="padding-left-right" ion-text >{{item.imageDesc}}</h3>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+</div>

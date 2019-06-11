@@ -1,0 +1,21 @@
+<!--
+  Generated template for the PolicyLoanDashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+  </ion-header> 
+  
+
+<ion-content padding>
+    <ion-row>
+        <div class="h1" >{{'PD_Home.PaymentDetails' | translate}}{{" "+loanType}}</div > 
+    </ion-row>
+    <div *ngFor="let policyLoan of policyLoanArray">
+        <policy-loan-payment [in]="policyLoan"></policy-loan-payment>
+    </div>
+</ion-content>

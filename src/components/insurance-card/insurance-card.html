@@ -1,0 +1,65 @@
+<!-- Generated template for the InsuranceCardComponent component -->
+<div *ngIf="insuranceShow" >
+      
+    <ion-card>
+
+        <div class="ion-card-header">
+            
+            <ion-row no-padding>
+                <ion-col col-6 class="card-header-text  SCB_Col_LPadding">
+                    <span class="h5" ion-text color="accent">
+                        <b item-left>{{'policyDashboard.privilegeCard' | translate}}</b>
+                    </span>
+                </ion-col>
+                <ion-col class="SCB_Col_RPadding" col-6>
+                    <img src="assets/imgs/SCBLife-horizontal-logo.png">
+                </ion-col>
+            </ion-row>
+       
+        </div>
+        <div padding>
+                <ion-list>
+                    <ion-grid>
+            <div class="first-row">
+                <ion-row>
+                    <ion-col col-8>
+                        <div class="heading3-type2">
+                           {{insuranceCardData.assured.assuredFirstName}} {{insuranceCardData.assured.assuredLastName}}
+                        </div>
+
+                    </ion-col>
+                    <ion-col col-4 >
+                        <div class="card-no right"> 
+                            {{insuranceCardData.policyNumber}}
+                        </div>
+                    </ion-col>
+                </ion-row>
+              
+               
+                    <ion-row >
+                        <div class="input-content left">
+                             {{insuranceCardData.policyName}}
+                        </div>
+                    </ion-row>
+                    <ion-row class="right">
+                        <div class="right placeholder"> 
+                            {{"policyDashboard.ExpiryDate"|translate}}  {{insuranceCardData.insuranceMaturityDate | date: 'dd/MM/yyyy'}}
+                              
+                        </div>
+                    </ion-row>
+              
+            </div> 
+
+         <div class="SCB_LineHight" padding-top>
+                <div  *ngFor="let rider of insuranceCardData.policyRiders">
+                    <div class="placeholder">  {{rider.riderDescription}}  </div>
+                </div>
+            </div>
+     </ion-grid>
+        </ion-list>
+       
+            
+        </div>
+    </ion-card>
+   
+</div>

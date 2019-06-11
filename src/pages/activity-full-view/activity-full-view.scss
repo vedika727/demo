@@ -1,0 +1,108 @@
+page-activity-full-view {
+  .card-ios {
+    border-radius: 2vw;
+  }
+
+  .card-md {
+    border-radius: 2vw;
+  }
+
+  .state-icon {
+    content: url(../assets/scbl-icons/silver-state.svg);
+    height: 25px;
+  }
+
+  .challenges-card .challenges-div {
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    // padding: 5px;
+  }
+
+  .backimageFitsense {
+    padding: 0px;
+  }
+
+  .challenges-card {
+    position: relative;
+    margin-bottom: 3rem !important;
+  }
+
+  .max-width-and-line-height-class {
+    max-width: 66%;
+    line-height: 1.2;
+  }
+
+  .newLightBlack {
+    color: #333333;
+    font-size: 5.6vw;
+    font-weight: bolder;
+  }
+
+  .slider-container {
+    flex: 6;
+    margin: 0 auto;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .slider-active {
+    width: 0%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9E9E9E;
+    position: relative;
+    top: 10px;
+  }
+
+  .slider-inactive {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: lightgrey;
+  }
+
+  .range-slider-value {
+    margin: 3% 5%;
+  }
+
+  .range-slider {
+    display: flex;
+    //margin: 5% auto;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #80808066;
+  }
+
+  .item-ios.item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .bold-text {
+    font-weight: bold;
+  }
+
+  .line-height-margin-top {
+    line-height: 1;
+    margin-top: 3.7vh; //UME-199
+  }
+
+  .card-margin-top {
+    margin-top: 9%;
+  }
+
+  .padding-top-corosol {
+    // UME-203 EXTRA PADDING TO MATCH GUIDELINE
+    padding-top: 3rem !important;
+  }
+
+  .h3 {
+    font-size: 5.4vw !important;  //UME-199
+  }
+
+}

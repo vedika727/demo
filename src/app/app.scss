@@ -1,0 +1,376 @@
+// http://ionicframework.com/docs/theming/
+//global styles as per style guide
+@import "../common/common-scss/style-guide/scb-icons";
+@import "../common/common-scss/style-guide/basic-styles";
+@import "../common/common-scss/modal-style.scss";
+@import "../common/common-scss/style-guide/color-variables.scss";
+@import '../theme/global.scss';
+// @import "../common/pretty-checkbox/src/pretty-checkbox.scss";
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// @import '~pretty-checkbox/src/pretty-checkbox.scss';
+.right {
+    float: right !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.center {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h1 {
+    font-family: $psl;
+    font-weight: bold !important;
+    font-size: $font_32px !important; //32px
+}
+
+.h2 {
+    font-family: $psl;
+    font-weight: bold !important;
+    font-size: $font_28px !important; //28px
+}
+
+.h3 {
+    font-family: $psl;
+    font-weight: bold !important;
+    font-size: $font_24px !important; //24px
+}
+
+.h4 {
+    font-family: $ergo !important;
+    font-size: $font_20px !important; //20px
+}
+
+.h5 {
+    font-family: $psl;
+    font-weight: bold !important;
+    font-size: $font_16px !important; //16px
+}
+
+.p {
+    font-family: $psl;
+    font-weight: bold !important;
+    font-size: $font_20px !important; //20px
+}
+
+.toolbar-background-ios {
+    background: #ffffff00 !important;
+}
+
+hr {
+    margin: 0px;
+    padding: 0px;
+}
+
+// .button {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     border-radius: 20px !important;
+//     height: 2.5rem !important;
+//     text-transform: uppercase;
+// }
+// .button-large {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     width: 10.75rem;
+//     text-transform: uppercase;
+// }
+// .button-small {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     width: 8.875rem;
+//     text-transform: uppercase;
+// }
+// .outline {
+//     border: solid 1px !important;
+// }
+// checkbox overriden md
+// .checkbox-md .checkbox-icon {
+// //     border-color: #4d2b80 !important;
+// //     border-radius: 4px !important;
+// //     border-width: 1px !important;
+// //     background: transparent !important;
+//     border-width: 1px;
+//     border-style: solid;
+//     border-color: $primary;
+//     background-color: transparent !important; 
+// //     color:$primary;
+// }
+// // // checkbox overriden ios
+// .checkbox-ios .checkbox-icon {
+//     border-width: 1px;
+//     border-style: solid;
+//     border-color: $primary;
+//     background-color: transparent !important; 
+// //     border-color: #4d2b80 !important;
+// //     border-radius: 4px !important;
+// //     border-width: 1px !important;
+// //     background: transparent !important;
+// //     color:$primary;
+// }
+// radio overriden md
+.radio-md .radio-icon {
+    border-color: #4E2A81;
+}
+
+// side menu scss
+.profile-menu {
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    border-top: 0.5px solid #ebebeb !important;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.scb-background-contain {
+    background: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;
+    background-size: 100% 100%;
+    background-position: center !important;
+    background: url("../assets/imgs/registration_bg_v1.jpg");
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover; // background-position: 53% 89%;
+    -ms-background-size: cover;
+    background-position-y: 90%;
+}
+
+.scb-background-contain:before {
+    content: " ";
+}
+
+.scb-background-contain .item-md {
+    background: transparent !important;
+    background-color: transparent;
+}
+
+.scb-background-contain .item-ios {
+    background: transparent !important;
+    background-color: transparent;
+}
+
+ion-content.content-md[padding] .scroll-content {
+    padding-bottom: 16px !important;
+}
+
+ion-content.content-md:not([padding]) .scroll-content {
+    padding-bottom: 0 !important;
+}
+
+.close-position {
+    position: absolute; // font-size: $font_22px !important;
+    right: 20px;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.avatar {
+    border-radius: 50% !important;
+    width:  80px !important;
+    height:  80px !important;
+}
+
+.avatar-profile {
+    border-radius: 50% !important;
+    width: 80px !important;
+    height: 80px !important;
+}
+
+// ion-label {
+//     font-size: 2rem !important;
+// }
+.scbl-icons {
+    width: 22px !important;
+    min-width: 22px !important;
+    max-width: 22px !important;
+}
+
+.name {
+    color: $primary;
+}
+
+.item>ion-icon,
+.item-inner>ion-icon {
+    min-height: 20px !important;
+    font-size: 2rem;
+    min-width: 20px !important;
+    line-height: 1;
+}
+
+.bg-gradient {
+    background: linear-gradient(to top, $primary-super-light -110%, #fff 40%);
+}
+
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/imgs/splash_screen.png') no-repeat center center fixed;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.picker-ios .picker-toolbar-button:last-child .picker-button {
+    //call me back styling
+    font-weight: normal !important;
+}
+
+// .ion-icon {
+//     background-color: black!important;
+// }
+.appUpdateLoading {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $accent;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.ion-md-Zoom-in {
+    background-color: black;
+}
+
+.ion-ios-Zoom-in {
+    background-color: black;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.underline-class {
+    text-decoration: underline;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.action-sheet-ios .action-sheet-button {
+    color: $primary !important;
+    font-weight: bold !important;
+}
+
+ion-icon {
+    &[ng-reflect-name*="scbl-"] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        // background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    &[ng-reflect-name*="scbl-policydash"] {
+        mask-image: url("../assets/scbl-icons/Policy.svg");
+        color: $secondary-highlight ;
+        .tab-button[aria-selected=true] & {
+            // mask-image: url("../assets/cust-icons/accident.svg");
+            color: $primary ;
+        }
+    }
+    &[ng-reflect-name*="scbl-fitness"] {
+        mask-image: url("../assets/scbl-icons/fitness-grey.svg");
+        color: $secondary-highlight ;
+        .tab-button[aria-selected=true] & {
+            color: $primary ;
+        }
+    }
+    &[ng-reflect-name*="scbl-home"] {
+        mask-image: url("../assets/scbl-icons/Home-grey.svg");
+        color: $secondary-highlight;
+        .tab-button[aria-selected=true] & {
+            color: $primary ;
+        }
+    }
+    &[ng-reflect-name*="scbl-rewardtab"] {
+        mask-image: url("../assets/scbl-icons/Reward-grey.svg");
+        color: $secondary-highlight ;
+        .tab-button[aria-selected=true] & {
+            color: $primary ;
+        }
+    }
+    &[ng-reflect-name*="scbl-more"] {
+        mask-image: url("../assets/scbl-icons/More-grey.svg");
+        color: $secondary-highlight ;
+        .tab-button[aria-selected=true] & {
+            color: $primary ;
+        }
+    }
+}
+.whitespace-normal-class{
+    white-space:normal;
+  }

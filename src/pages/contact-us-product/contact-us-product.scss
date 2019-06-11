@@ -1,0 +1,234 @@
+contact-us-product {
+
+    .toolbar-md { 
+        min-height: 44px;
+    }
+
+    scb-header { 
+        button-ios { 
+            color: black;
+        }
+    }
+    .border-top { 
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .card { 
+        margin-bottom: -10pt;
+        position: relative;
+    }
+
+    .col-input { 
+        position: initial;
+    }
+
+    .item-ios.item-block .item-inner {
+        border-bottom: none;
+    }
+    .item-md.item-block .item-inner {
+        border-bottom: none;
+    }
+ 
+    .list-ios > .item-block:first-child {
+        border: 0;
+    }
+    .list-ios > .item-block:last-child {
+        border: 0;
+    }
+
+    .header { 
+        .text { 
+            font-size: $font_20px;
+            font-weight: bold;
+            line-height: normal;
+        }
+    }
+
+    .input-label[floating] { 
+        font-size: $font_28px;
+        font-family: $psl;
+        color: $secondary-highlight;
+        font-weight: bold;
+        margin-bottom: -10px;
+    }
+
+    .comments-area { 
+        .label[stacked] { 
+            color: $secondary-highlight;
+        }
+        ion-textarea { 
+            font-size: $font_24px;
+            padding: 10pt;
+            font-weight: bold;
+            margin: 0
+        }
+    }
+
+    .label-md[floating] { 
+        color: $secondary-highlight !important;
+    }
+
+    .label[stacked] { 
+        font-size: $font_24px;
+        color: $secondary-highlight;
+        font-weight: bold;
+        margin-top: 15pt;
+    }
+
+    .item-label-floating { 
+        .text-input { 
+            margin-top: 0 !important;
+            margin-bottom: 4px !important;
+            font-family: $psl;
+            font-weight: bold;
+            font-size: $font_24px;
+            color: $secondary-dark;
+        }    
+    }
+
+    .item {
+        .checkbox {
+            &.checkbox-md, &.checkbox-ios {
+                margin-right: 10px;
+                .checkbox-icon {
+                    border-radius: 25%;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .checkbox-md { 
+        .checkbox-inner { 
+            left: 6px;
+            top: 2px;
+        
+        }
+    }
+
+ 
+    ion-textarea { 
+        border: 1px solid rgba(128,128,128,.66);
+        border-radius: 8pt;
+    }
+    ion-card-content { 
+        padding: 15pt;    
+    }
+
+    .invalid {
+        color: $accent-danger;
+        font-weight: bold;
+        margin-bottom: 0;
+        font-size: inherit;
+
+        .text-input { 
+            color: $accent-danger;
+        }
+    }
+
+    .checkbox-ios, .checkbox-md { 
+        .checkbox-checked { 
+            border-color: white !important;
+            background-color: white !important;
+            .checkbox-inner { 
+                border-color: $primary !important;
+                width: 6px;
+                height: 11px;
+                top: 2px;
+            }
+        }
+    }
+
+    .bottom-part { 
+        padding-top: 25pt;
+        color: white;
+        background-color: $primary;
+        ion-item {
+            color: inherit;
+            background-color: inherit;
+        }
+
+        .separator { 
+            padding: 10pt;
+            .border-top {
+                min-height: unset;
+            }        
+        }
+
+        ion-list { 
+            margin: 0;
+        }
+
+        .invalid {
+            padding-left: 16px;
+            margin-top: 0;
+            ion-card-content { 
+                padding: 0;
+                font-size: inherit;
+                .information-text { 
+                    min-height: 10vw;
+
+                    ion-icon { 
+                        margin-right: 2vw;
+                    }
+                }
+            }
+        }
+
+        .label { 
+            font-size: $font_24px;
+            font-weight: bold;
+            line-height: normal;
+        }
+
+        .text { 
+            font-size: $font_28px;
+            font-weight: bold;
+        }
+
+        .button-contact-us { 
+            padding: 10pt 10pt 20pt 10pt;
+            .button { 
+                background-color: white;
+                color: rgb(78, 38, 131);
+            }
+        }
+    }
+
+    .button { 
+        text-align: center;
+        .cta-button-primary {
+            width: 90%;
+            max-width: none;
+        }
+    }
+ 
+    .card-ios {
+        border-radius: 2vw;
+    }
+    .card-md {
+        border-radius: 2vw;
+    }
+    .border-bottom {
+        border-bottom: 1px solid rgba(128,128,128,.66);
+    }
+    .card-content-ios {
+        padding: 13px 16px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+    
+    .SpinnerDiv {
+        height: 20vh;
+        margin-top: 10vh;
+        margin-bottom: 4vh;
+    }
+ 
+    .label-md {
+        margin: 0px 0px 3px 0;
+    }
+    .label-ios {
+        margin: 0px 0px 3px 0;
+    }
+}

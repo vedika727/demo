@@ -1,0 +1,123 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInputs"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+
+<ion-content padding>
+
+    <div class="h1">{{"hamburgerMenu.createAccount" | translate}}</div>
+
+    <!-- Edit Address Form -->
+    <form [formGroup]="editAddressForm" id="editAddressForm">
+
+        <!-- select policy -->
+        <ion-item class="select-item" no-lines>
+            <ion-label stacked color="secondary-dark">{{"hamburgerMenu.selectPolicyToSelectAddress" | translate}}</ion-label>
+            <ion-select placeholder="{{'hamburgerMenu.selectPolicy' | translate}}" interface="popover" formControlName="selectpolicy" id="selectpolicy">
+                <ion-option value="ok">ok</ion-option>
+                <ion-option value="ok1">olk</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item no-lines>
+            <div class="h3 name">{{"hamburgerMenu.address" | translate}}</div>
+        </ion-item>
+
+        <!-- Home Address -->
+        <ion-item>
+            <ion-label stacked color="secondary-dark">{{"hamburgerMenu.homeAddress" | translate}}</ion-label>
+            <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="homeaddress" id="homeaddress"></ion-input>
+        </ion-item>
+
+        <!-- Building -->
+        <ion-item>
+            <ion-label stacked color="secondary-dark">{{"hamburgerMenu.building" | translate}}</ion-label>
+            <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="building" id="building"></ion-input>
+        </ion-item>
+
+        <!-- Road -->
+        <ion-item>
+            <ion-label stacked color="secondary-dark">{{"hamburgerMenu.road" | translate}}</ion-label>
+            <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="road" id="road"></ion-input>
+        </ion-item>
+
+        <ion-grid>
+            <ion-row>
+
+                <!-- Village -->
+
+                <ion-col col-6 no-padding>
+
+                    <ion-item>
+                        <ion-label stacked color="secondary-dark">{{"hamburgerMenu.village" | translate}}</ion-label>
+                        <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="village" id="village"></ion-input>
+                    </ion-item>
+
+                </ion-col>
+
+                <!-- District -->
+
+                <ion-col col-6 no-padding>
+                    <ion-item>
+                        <ion-label stacked color="secondary-dark">{{"hamburgerMenu.district" | translate}}</ion-label>
+                        <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="district" id="district"></ion-input>
+                    </ion-item>
+                </ion-col>
+
+            </ion-row>
+
+            <ion-row>
+
+                <ion-col col-6 no-padding>
+
+                    <!-- SubDistrict -->
+                    <ion-item>
+                        <ion-label stacked color="secondary-dark">{{"hamburgerMenu.subDistrict" | translate}}</ion-label>
+                        <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="subdistrict" id="subdistrict"></ion-input>
+                    </ion-item>
+
+                </ion-col>
+
+
+                <ion-col col-6 no-padding>
+
+                    <!-- Postcode -->
+                    <ion-item>
+                        <ion-label stacked color="secondary-dark">{{"hamburgerMenu.postCode" | translate}}</ion-label>
+                        <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="postcode" id="postcode"></ion-input>
+                    </ion-item>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+
+        <!-- Province -->
+        <ion-item>
+            <ion-label stacked color="secondary-dark">{{"hamburgerMenu.province" | translate}}</ion-label>
+            <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="province" id="province"></ion-input>
+        </ion-item>
+
+        <!-- Country -->
+
+        <ion-item>
+            <ion-label stacked color="secondary-dark">{{"hamburgerMenu.country" | translate}}</ion-label>
+            <ion-input type="" placeholder="{{'hamburgerMenu.fillAnswer' | translate}}" formControlName="country" id="country"></ion-input>
+        </ion-item>
+
+        <!-- PolicyDeliveryAddress -->
+        <ion-item class="padding-left-0"  no-lines text-wrap>
+            <ion-label stacked class="name">{{"hamburgerMenu.policyDeliveryAddress" | translate}}</ion-label>
+                <ion-checkbox  class="margin-right-10" checked="true" id="policyDeliveryAddress"></ion-checkbox>
+                    </ion-item>
+
+                    <!-- Confirm Button -->
+
+                    <div text-center class="mar-top-15">
+                        <button class="button" ion-button round id="confirmButton">{{"hamburgerMenu.confirm" | translate}}</button>
+
+                    </div>
+    </form>
+
+</ion-content>

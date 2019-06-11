@@ -1,0 +1,53 @@
+<!-- transparent background -->
+<ion-content class="popover-bg-color fade-in-anim" id="feedbackModalBackground">
+
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay" id="feedbackOverlay"></div>
+
+  <!-- ion-card containing all the content -->
+  <ion-card class="popover-content-style" id="feedbackCard">
+
+    <!-- close icon -->
+    <div text-right class="close-icon-div">
+      <ion-icon id="feedbackCloseIcon" class="close-button close-icon" (click)="dismissFeedbackModal()" name="scbl-close" svgversion text-right></ion-icon>
+    </div>
+
+   
+    <div text-center id="feedbackCardHeader" class="heading1-type2">{{"hamburgerMenu.doYouLikeThisApplication" | translate}}</div>
+    
+
+    <ion-card-content id="feedbackCardContent">
+      <div text-center id="feedbackQuestion" class="heading3-type2">{{"hamburgerMenu.giveRating" | translate}}</div>
+
+      <!-- component for star rating -->
+      <rating [(ngModel)]="feedback.rating" id="feedbackRating" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half"
+        starIconName="star" nullable="false">
+
+      </rating>
+
+      <!-- text area to write feedback -->
+      <ion-item>
+        <ion-textarea maxLength="300" placeholder="{{'hamburgerMenu.fillInFeedback' | translate}}" [(ngModel)]="feedback.comment" id="feedbackComment" [disabled]="feedback.rating==null">
+        </ion-textarea>
+      </ion-item>
+
+
+      <!-- Submit feedback button -->
+      <div class="send-btn-mg" text-center>
+        <button ion-button round (click)="sendFeedback()" id="feedbackSubmitBtn" class="cta-button-primary" small>{{"hamburgerMenu.send" | translate}}</button>
+      </div>
+
+      <!-- cancel button to dismiss modal -->
+      <div class="cancel-btn-mg" text-center>
+      <a class="hyperlink-primary text-underline" (click)="dismissFeedbackModal()" id="feedbackCancelBtn" color="primary" no-padding>{{"hamburgerMenu.nextTime" | translate}}
+
+      </a>
+    </div>
+      
+
+    </ion-card-content>
+  </ion-card>
+  <!-- close of card -->
+
+</ion-content>
+<!-- close of transparent background -->

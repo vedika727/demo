@@ -1,0 +1,90 @@
+<!--
+  Generated template for the PayslipPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-grid>
+            <ion-row>
+                <div class="h1">{{"Payments.viewPayslip"| translate}} </div>
+            </ion-row>
+            <ion-row margin-top>
+                <div class="rounded-card-div round-card-header">
+                    <div text-center class="backcolor">
+                        <div class="h3  SCB_White">{{"Payments.payslipOnline"| translate}}</div>
+                    </div>
+                </div>    
+                    <div class="rounded-card-div round-card-content">
+
+                        <div padding-top>
+                            <div class="hyperlink-primary-big">
+                                {{"Payments.paymentName"| translate}}
+                                <span class=" right p">1 มิถุนา 61</span>
+                            </div>
+
+                            <div class="p"> {{"Payments.policyNumber"| translate}}:
+                                <span class="p"> ABC123456789</span>
+                                <span class=" right">{{"Payments.paid"| translate}}
+                                    <ion-icon style="color: green; font-size: 0.99em" name="add-circle"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="p">{{"Payments.paymentID"| translate}}:
+                                <span class="p"> 12345678 </span>
+                            </div>
+                            <div class="p"> {{"Payments.taxID"| translate}}:
+                                <span class="p"> 1234567890123</span>
+                            </div>
+                        </div>
+                        <div padding-top>
+                            <div class="p">{{"Payments.sCBLifeCoLTD"| translate}}</div>
+                            <div class="p"> {{"Payments.taxReferenceID"| translate}}
+                                <span class="p"> 1072306069012</span>
+                            </div>
+
+
+                        </div>
+
+                        <div padding-top>
+                            <div class="user-profile-name">{{"Payments.policyName"| translate}}</div>
+                            <div class="p"> {{"Payments.coverageTerm"| translate}}: </div>
+                            <div class="p"> {{"Payments.paymentMode"| translate}} :
+                                <span class="p">1 เดือน</span>
+                            </div>
+                            <div class="p"> {{"Payments.lastPaymentDate"| translate}}:
+                                <span class="p"> 16 มิถุนา 61</span>
+                            </div>
+                            <div class="p"> {{"Payments.paidMethod"| translate}}
+                                <span class="p"> XXXX XXXX XXXX 1234 </span>
+                            </div>
+                        </div>
+
+                        <div padding-top class="SCB_Border">
+                            <div class="placeholder">{{"Payments.details"| translate}}
+                                <span class="SCB-float-right placeholder">{{"Payments.amount"| translate}} </span>
+                            </div>
+                        </div>
+                        <div class="SCB_Padding_LR">
+                            <div class="h3 " ion-text color="primary">{{"Payments.premiumPaidTime"| translate}}
+                                <span class="right h3 " ion-text color="accent">5,000,00 วดนี้</span>
+                            </div>
+                        </div>
+
+                    </div>
+                
+            </ion-row>
+            <ion-row padding>
+                <button class="button SCB_AlignCenter " (click)="screenShot()" ion-button round>{{"Payments.save"| translate}}</button>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+    <img class="SCB_SS" src="{{ screen }}" *ngIf="state">
+</ion-content>

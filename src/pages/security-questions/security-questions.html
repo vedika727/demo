@@ -1,0 +1,41 @@
+<!--
+  Generated template for the SecurityQuestionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+        <ion-navbar transparent hideBackButton>
+            <scb-header [in]="headerInput"></scb-header>
+        </ion-navbar>
+    </ion-header> 
+<ion-content padding class="scb-background-contain">
+    <div class="bodyContaint">
+        <h1 text-wrap id="securityHeading">{{"registration.sequrityQuestionsCannotUsePhone" | translate}}</h1>
+        <ion-list>
+            <ion-item id="securityItem" no-lines text-wrap>{{"registration.sequrityQuestionsAnswerTheQuestions" | translate}}</ion-item>
+            <ion-item padding>
+                <ion-label stacked id="securityLabel1">{{"registration.sequrityQuestionsYourBirthday" | translate}}</ion-label>
+                <ion-datetime placeholder='{{"registration.date_placeholder" | translate}}' displayFormat="DD-MMM-YYYY" pickerFormat="DD-MMM-YYYY"></ion-datetime>
+                <ion-icon item-right class="dateIcon" name="scbl-calendar" svgversion></ion-icon>
+            </ion-item>
+            <ion-item padding>
+                <ion-label stacked id="securityLabel2">{{"registration.securityQuestionsPolicyNumber" | translate}}</ion-label>
+                <ion-input id="securityInput" placeholder='{{"registration.policy_number_placeholder" | translate}}'></ion-input>
+            </ion-item>
+            <ion-item padding>
+                <ion-label stacked id="securityLabel3">{{"registration.sequrityQuestionsNextPremiumDate" | translate}}</ion-label>
+                <ion-input id="securityInput" placeholder='{{"registration.next_pre_date_label" | translate}}'></ion-input>
+                <ion-icon item-right class="QuestionIcon" name="scbl-refresh" svgversion></ion-icon>
+            </ion-item>
+            <div text-center>
+                <button id="securityButton" class="button" ion-button round>
+          {{"registration.sequrityQuestionsOkayButton" | translate}}
+        </button>
+            </div>
+            <div id="securityLabel5">
+                <a (click)="contactSupport()"> {{"registration.sequrityQuestionsContactSupport" | translate}} </a>
+            </div>
+        </ion-list>
+    </div>
+</ion-content>

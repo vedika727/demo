@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="83px" viewBox="0 0 83 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>add_image</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="37.5" cy="37.5" r="37.5"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LM2.Menu-MyAccount-NotLoggedIn" transform="translate(-16.000000, -163.000000)">
+            <g id="add_image" transform="translate(20.000000, 167.000000)">
+                <g id="Group-3">
+                    <g id="achievement-adult-asian-937481">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FFFFFF" stroke-width="8" fill="#D8D8D8" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Group-16" transform="translate(25.000000, 23.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="3">
+                        <path d="M13,0.322222222 L13,28.6777778" id="Line-2"></path>
+                        <path d="M25.6908524,14 L0.317073171,14" id="Line-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

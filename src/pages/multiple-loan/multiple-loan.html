@@ -1,0 +1,60 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding>
+    <div class="margin-20">
+        <div ion-text color="primary">{{"multiple-loan.maxLoanableAmount" | translate}}</div>
+        <div class="flex-div">
+            <div ion-text class="number-pad" color="primary">{{loanData.totalLoanAmount+" "}}</div>
+            <div class="h3 margin-10" ion-text color="primary">{{"multiple-loan.baht" | translate}}</div>
+        </div>
+    </div>
+    <!-- Loanable policies with payout account -->
+    <div class="flex-div margin-20">
+        <img src="../assets/scbl-icons/loan-cash.svg" />
+        <div ion-text class="h3 margin-10" color="secondary-highlight">{{"multiple-loan.selectPolicy" | translate}}</div>
+    </div>
+    <div *ngIf="loanData">
+        <ion-card *ngFor="let data of loanData.LoanDetails" class="loan-card">
+            <ion-card-content class="loan-card-content">
+                <ion-row>
+                    <ion-col col-8 class="section-header">{{"multiple-loan.policyNumber" | translate}}{{data.policyNumber}}</ion-col>
+                    <ion-col col-4 text-right class="margin-auto">{{data.loanAmount+" "}}{{"multiple-loan.baht" | translate}}</ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <!-- Loanable policies without payout account -->
+    <div class="flex-div margin-20">
+        <img src="../assets/scbl-icons/Loan-information.svg">
+        <div class="margin-10">{{"multiple-loan.addAccountLabel" | translate}}</div>
+    </div>
+    <div *ngIf="loanData.policiesWithoutPayoutAcc">
+        <ion-card *ngFor="let data of loanData.LoanDetails" class="loan-card">
+            <ion-card-content class="loan-card-content">
+                <ion-row>
+                    <ion-col col-8>
+                        <div class="h3" ion-text color="secondary-light">{{data.policyNumber}}</div>
+                        <div ion-text color="primary" class="anchor">{{"multiple-loan.addAccount" | translate}}</div>
+                    </ion-col>
+                    <ion-col col-4 text-right ion-text class="p" color="secondary-light">{{data.loanAmount+" "}}{{"multiple-loan.baht" | translate}}</ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div class="margin-40-20">
+        <div class="hr-full margin-10"></div>
+    </div>
+    <!-- Non-Loanable policies -->
+    <ion-card class="loan-card">
+        <ion-card-content class="loan-card-content">
+            <ion-row>
+                <ion-col col-10 class="heading3-type2">{{"multiple-loan.nonLoanablePolicy" | translate}}</ion-col>
+                <ion-col col-2 text-right class="margin-auto">
+                    <ion-icon name="ios-arrow-forward"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

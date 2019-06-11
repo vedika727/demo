@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Download</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tick-mark" transform="translate(9.000000, 9.000000)">
+            <circle id="base" fill="#4E2B81" cx="19" cy="19" r="19"></circle>
+            <g id="icon-/-tick" transform="translate(11.000000, 12.000000)" fill="#FFFFFF">
+                <path d="M17.2651226,0.385614493 C16.9243162,0.0731773745 16.3717714,0.0731773745 16.0308968,0.385614493 L5.57509138,9.97019654 L1.55605083,6.28607604 C1.21524443,5.97363892 0.662699648,5.97367017 0.321825064,6.28607604 C-0.0190154291,6.59848191 -0.0190154291,7.10498129 0.321825064,7.41741841 L4.9579785,11.6671632 C5.29868262,11.9795691 5.8516365,11.9793503 6.19220426,11.6671632 L17.2651226,1.51698811 C17.6059631,1.20458224 17.605929,0.698051612 17.2651226,0.385614493 L17.2651226,0.385614493 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

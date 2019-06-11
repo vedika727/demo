@@ -1,0 +1,143 @@
+<ion-header no-padding no-margin no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <dashboard-header [in]=dashboardheader></dashboard-header>
+    <pd-header-tabs (currenttab)="changetab($event)" [in]=policytabs [expand]=PolicyTabsFlagsinputs [tabNumber]="tabNum" [halfSegment]="isHalf"></pd-header-tabs>
+    <div *ngIf="!isRegistered || !isSCBCustomer">
+        <home-policy-tabs-details [in]=currenttabname [isRegistered]="isRegistered" [isSCBCustomer]="isSCBCustomer" [PolicyData]=piechartAPIData></home-policy-tabs-details>
+    </div>
+    <div *ngIf="isRegistered && isSCBCustomer">
+        <div [ngSwitch]="currenttabname">
+            <div *ngSwitchCase="'Information'">
+                <div padding class="scb-gradient" *ngIf="totalcoverage">
+                    <div *ngIf="!isCreditLife">
+                        <detail-policy-piechart id="policypiechart" [inn]="totalcoverage" [coverageData]="pieChartData"></detail-policy-piechart>
+                    </div>
+                </div>
+                <div class="SpinnerDiv" *ngIf="spinnerFlag">
+                    <generic-view [In]=genericDialog></generic-view>
+                </div>
+                <allpolicy-detail-tabs *ngIf="policyDetailsFull" id="allpolicydetails" [in]=policyLists [polStatus]="pdStatus" [creditLife]="isCreditLife"
+                    [DetailPolicy]=policyDetailsFull></allpolicy-detail-tabs>
+            </div>
+            <div *ngSwitchCase="'Claim'">
+                <claim-history></claim-history>
+            </div>
+            <div *ngSwitchCase="'Loan'">
+                <!-- If user has single policy -->
+                <single-policy [PolicyLoanDetails]="singlePolicyDetails" [ThaiDate]="thaiDateToConfirmationPage" (submitPage)="submitToConfirmationPage($event)"
+                    (toPolicyDetails)="toPolicyDetails()" *ngIf="singlePolicyDetails"></single-policy>
+
+                <!-- Pre registarion loan window -->
+                <!-- User When Not Login or Pre-Registration -->
+                <ion-card *ngIf="!isRegistered" class="marginTopest">
+                    <ion-card-content padding class="BackImage">
+                        <ion-row>
+                            <ion-col col-9 class="margin-bottom2">
+                                <div class="h2" ion-text color="primary">สถานะการกู้เงิน</div>
+                                <div class="h2" ion-text color="primary">กรุณาเข้าสู่ระบบ </div>
+                                <div class="heading2-type2">เพื่อดูข้อมูลของคุณ </div>
+                                <button ion-button color="primary" (click)="toregister()" round>เข้าสู่ระบบ</button>
+
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+                <!-- If user has no policy for for Loan credit life flow -->
+                <ion-card *ngIf="isRegistered && isSCBCustomer && !singlePolicyDetails && (!multipleLoansData || multipleLoansData.eligibleLoanPolicies.length==0)" class="marginTopest">
+                    <ion-card-content padding class="BackImage">
+                        <ion-row>
+                            <ion-col col-9 class="margin-bottom2">
+                                <div class="h2" ion-text color="primary">สถานะการกู้เงิน</div>
+                                <div class="h2" ion-text color="primary">ขออภัยในความไม่สะดวก</div>
+                                <div class="heading2-type2">คุณไม่มีกรมธรรม์ที่สามารถกู้เงินได้</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+
+                <!-- Non SCb Customer -->
+                <ion-card class="BackImage marginTopest" *ngIf="isRegistered && !isSCBCustomer">
+                    <ion-card-content padding>
+                        <ion-row>
+                            <ion-col col-8 class="margin-bottom1">
+                                <div class="heading3-type3" ion-text color="primary">สถานะการกู้เงิน</div>
+                                <div class="heading3-type3" ion-text color="primary">ขออภัยในความไม่สะดวก </div>
+                                <div class="heading2-type2">คุณไม่มีกรมธรรม์ที่สามารถกู้เงินได้</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+
+                <!-- If user has multiple policies -->
+                <div *ngIf="multipleLoansData && !isSinglePolicy">
+                    <!-- Total Loanable Amount -->
+                    <div class="margin-20-loans" *ngIf="multipleLoansData.eligibleLoanPolicies && multipleLoansData.eligibleLoanPolicies.length>1">
+                        <div ion-text color="primary">{{"multiple-loan.maxLoanableAmount" | translate}}</div>
+                        <div class="flex-div">
+                            <div ion-text class="number-pad" color="primary">{{multipleLoansData.totalLoanAmount.toFixed(2)+" "}}</div>
+                            <div class="h3 margin-10-loans" ion-text color="primary">{{"multiple-loan.baht" | translate}}</div>
+                        </div>
+                    </div>
+                    <!-- Loanable policies with payout account -->
+                    <div *ngIf="multipleLoansData.eligibleLoanPolicies && multipleLoansData.eligibleLoanPolicies.length>1">
+                        <div class="flex-div margin-20-loans" *ngIf="withPayout">
+                            <img src="../assets/scbl-icons/loan-cash.svg" />
+                            <div ion-text class="h3 margin-10-loans" color="secondary-highlight">{{"multiple-loan.selectPolicy" | translate}}</div>
+                        </div>
+                        <div *ngFor="let data of multipleLoansData.eligibleLoanPolicies" (click)="submitToSingleLoan(data)">
+                            <ion-card *ngIf="data.preferPayoutBankAccount" class="loan-card">
+                                <ion-card-content class="loan-card-content">
+                                    <ion-row>
+                                        <ion-col col-8 class="section-header" text-left>{{"multiple-loan.policyNumber" | translate}}{{data.policyNumber}}</ion-col>
+                                        <ion-col col-4 text-right class="margin-auto">{{data.loanAmount+" "}}{{"multiple-loan.baht" | translate}}</ion-col>
+                                    </ion-row>
+                                </ion-card-content>
+                            </ion-card>
+                        </div>
+
+                    <!-- Loanable policies without payout account -->
+                    
+                        <div class="flex-div margin-20-loans" *ngIf="withoutPayout">
+                            <img src="../assets/scbl-icons/Loan-information.svg">
+                            <div class="margin-10-loans">{{"multiple-loan.addAccountLabel" | translate}}</div>
+                        </div>
+                        <div *ngFor="let data of multipleLoansData.eligibleLoanPolicies">
+                            <ion-card *ngIf="!data.preferPayoutBankAccount" class="loan-card">
+                                <ion-card-content class="loan-card-content">
+                                    <ion-row>
+                                        <ion-col col-8>
+                                            <div class="h3" ion-text color="secondary-light">{{data.policyNumber}}</div>
+                                            <div ion-text color="primary" class="anchor">{{"multiple-loan.addAccount" | translate}}</div>
+                                        </ion-col>
+                                        <ion-col col-4 text-right ion-text class="p" color="secondary-light">{{data.loanAmount+" "}}{{"multiple-loan.baht" | translate}}</ion-col>
+                                    </ion-row>
+                                </ion-card-content>
+                            </ion-card>
+                        </div>
+                        
+                    </div>
+                    <div *ngIf="multipleLoansData.nonEligibleLoanPolicies && multipleLoansData.nonEligibleLoanPolicies.length>=1">
+                        <div class="margin-40-20">
+                            <div class="hr-full margin-10-loans"></div>
+                        </div>
+                        <!-- Non-Loanable policies -->
+                        <ion-card class="loan-card" (click)="nonEligiblePolicyList()">
+                            <ion-card-content class="loan-card-content">
+                                <ion-row>
+                                    <ion-col col-10 class="heading3-type2">{{"multiple-loan.nonLoanablePolicy" | translate}}</ion-col>
+                                    <ion-col col-2 text-right class="margin-auto">
+                                        <ion-icon name="ios-arrow-forward"></ion-icon>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,50 @@
+tooltip-overlay {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    z-index: -100;
+  }
+
+  .swiper-pagination {
+    margin: 15% 0;
+  }
+
+  .slider {
+    text-align: center;
+    margin-top: 20%;
+  }
+
+  .swiper-slide .toolImage {
+    height: 58vh;
+  }
+
+  .text-desc {
+    color: $secondary;
+    font-weight: bold;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #ffffff;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .padding-left-right {
+    padding: 0px 16px 0px 16px;
+    margin-top: 28px;
+
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,74 @@
+<!-- Generated template for the SinglePolicyComponent component -->
+<div padding>
+    <div text-center ion-text color="secondary-dark" class="heading2-type1 padding-30">
+        {{"Policy_Loan.policyLoanInfo" | translate}}
+      </div>
+      <form novalidate [formGroup]="singleLoan" (ngSubmit)="submissionPage()">
+        <ion-card class="loan-input-card loans-card-primary" text-center>
+          <ion-card-content class="no-top-bottom-padding">
+            <div class="heading3-type3 padding-15">
+              {{"Policy_Loan.loanInput" | translate}}
+            </div>
+            <div text-center class="input-padding">
+              <ion-row>
+                <ion-col col-10>
+                  <ion-item>
+                    <ion-input type="number" class="loan-amount" required [placeholder]="totalLoanAmount" formControlName="loanAmount"></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <div class="hyperlink-secondary baht-text">
+                    {{"Policy_Loan.baht" | translate}}
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+            <div class="field-summary padding-15 extra-margin">
+              <span>{{"Policy_Loan.loanEligibility" | translate}} {{loanEligibilityAmount}} </span>
+              <span *ngIf="PolicyLoanDetails.loanAmount > 2000000">{{"2,000,000"}}</span>
+              <span *ngIf="PolicyLoanDetails.loanAmount <= 2000000">{{totalLoanAmount}}</span>
+              <span>{{"Policy_Loan.baht" | translate}}</span>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="white-card loans-card-secondary">
+          <ion-card-content class="no-top-bottom-padding">
+            <ion-row class="padding-top-20">
+              <ion-col class="input-content" text-left>{{"Policy_Loan.policyNumber" | translate}}</ion-col>
+              <ion-col class="anchor hyperlink-primary view-policy-details" (click)="policyDetails()">{{"Policy_Loan.viewPolicyDetails" | translate}}</ion-col>
+            </ion-row>
+            <div class="user-profile-name loan-number" text-left>{{PolicyLoanDetails.policyNumber}}</div>
+            <div class="padding-20" text-left>
+              <div class="hyperlink-primary">
+                {{"Policy_Loan.interestRate" | translate}} {{PolicyLoanDetails.loanInterestRate + "%"}} {{"Policy_Loan.PerYear" |
+                translate}}
+              </div>
+              <div class="hyperlink-primary" *ngIf="PolicyLoanDetails.outstandingLoan.policyLoanAmount > 0">
+                {{"Policy_Loan.debt" | translate}} {{PolicyLoanDetails.outstandingLoan.policyLoanAmount}} {{"Policy_Loan.baht" | translate}} {{"Policy_Loan.fromDate" | translate}} {{ThaiDate + ")"}}
+              </div>
+            </div>
+            <div class="hr-line"></div>
+            <ion-row class="payout-account padding-20">
+              <ion-col class="input-content payout-acc-no" col-5>
+                {{"Policy_Loan.payoutAccNo" | translate}}
+              </ion-col>
+              <ion-col>
+                <div class="user-profile-name">
+                  {{PolicyLoanDetails.preferPayoutBankAccount}}
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <div text-center>
+
+              <button class="margin-10" ion-button round [disabled]="!singleLoan.valid" [ngClass]="singleLoan.valid ?'cta-button-primary':'cta-button-disabled'">{{"Policy_Loan.confirm" | translate}} </button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <div text-center class="padding-20">
+          <div class="heading5-type3">{{"Policy_Loan.message1" | translate}}</div>
+          <div class="heading5-type3">{{"Policy_Loan.message2" | translate}}</div>
+        </div>
+      </form>
+</div>

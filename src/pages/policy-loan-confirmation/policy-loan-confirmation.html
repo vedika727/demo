@@ -1,0 +1,24 @@
+<ion-header no-border transparent>
+  <ion-navbar hideBackButton transparent>
+    <scb-header [in]="headerInput"></scb-header>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- Page heading -->
+  <div class="h1 padding-bottom">{{"PolicyLoan.confirmLoan" | translate}}</div>
+
+  <!-- policy-loan-component -->
+  <policy-loan [loanDetails]="loanData"  [loanRequestDate]="data" *ngIf="loanData"></policy-loan>
+  <form novalidate [formGroup]="validateCheckbox" (ngSubmit)="confirmLoan()">
+    <ion-item no-lines class="accept-terms-item" (click)="goToLoanTermsAndConditions()">
+      <ion-label class=" anchor accept-terms-label input-content">{{"PolicyLoan.terms" | translate}}</ion-label>
+      <ion-checkbox mode="md" formControlName="acceptTerms"></ion-checkbox>
+    </ion-item>
+
+    <div align="center">
+      <button ion-button class="cta-button-primary margin-20" round [disabled]="!validateCheckbox.valid">{{"PolicyLoan.otp"
+        | translate}}</button>
+    </div>
+  </form>
+</ion-content>

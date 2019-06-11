@@ -1,0 +1,20 @@
+<!--
+  Generated template for the ConfirmPinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+        <ion-navbar transparent hideBackButton>
+            <scb-header [in]="headerInput"></scb-header>
+        </ion-navbar>
+    </ion-header> 
+    
+<ion-content padding class="scb-background-contain">
+    <ion-label id="confirmPinHeaderText" class="header h1">{{header | translate}}</ion-label>
+    <div text-center id="confirmPinLabel1" class="text h2">{{label1 | translate}}</div>
+    <!-- Pin Pad component -->
+    <div class="keypad-component">
+        <pin-pad id="confirmPinKeypadComponent" (keyPress)="keypadButtonPress($event)" [pinNotMatched]="pinNotMatchedFlag"></pin-pad>
+    </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <!-- <policy-title [In]=PolicyTitle></policy-title> -->
+
+    <!-- TODO - Not Part of Release 1 -->
+    <!-- <ion-row>
+        <div text-wrap class="h1">{{"policyDashboard.PolicyDocuments"|translate}}</div>
+    </ion-row> -->
+
+    <!-- TODO - Not Part of Release 1 -->
+    <!-- <ion-row padding-top class="SCB_Padding_LR Scb_Bottom_Border">
+
+        
+        <ion-col col-6>
+            <div class="p SCB_SColor">Treasure plus 25/12 </div>
+
+        </ion-col>
+        <ion-col>
+            <div class="SCB-float-right">
+                <div class="heading3-type2">
+                    {{"policyDashboard.policy"|translate}}:
+                </div>
+                <div class="card-no">
+                    {{policyNumber}}
+                </div>
+            </div>
+        </ion-col>
+    </ion-row> -->
+
+
+    <!-- TODO - Not Part of Release 1 -->
+    <!-- <ion-row *ngFor="let document of documentName" class="sd-cl-docRow" (click)="downloadDocument(document.name)">
+        <ion-col no-padding col-11 class="p">
+            <span id="documentName">{{document.name}}</span>
+        </ion-col>
+        <ion-col no-padding col-1 class="sd-cl-arrow">
+            <ion-icon class="Scb_Icon_Color" name="ios-arrow-forward"></ion-icon>
+        </ion-col>
+    </ion-row> -->
+
+    <ion-grid *ngIf="documentName">
+        <ion-row *ngFor="let document of documentName.policies" class="sd-cl-docRow" (click)="downloadDocument(document.policyCommercialName, document.policyNumber)">
+            <ion-col no-padding col-11 class="p">
+                <div>{{"policyDashboard.policyNo" | translate}} {{document.policyNumber}}</div>
+                <div>{{"policyDashboard.policyName" | translate}}: {{document.policyCommercialName}}</div>
+            </ion-col>
+            <ion-col no-padding align-self-center col-1 class="sd-cl-arrow">
+                <ion-icon class="Scb_Icon_Color" name="ios-arrow-forward"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

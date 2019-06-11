@@ -1,0 +1,166 @@
+<!--
+  Generated template for the RewardsFullViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <dashboard-header [in]=rewardsheader></dashboard-header>
+    <pd-header-tabs id="current-tab" (currenttab)="changetab($event)" [expand]=PolicyTabsFlagsinputs [in]=policytabs [tabNumber]="tabNum"></pd-header-tabs>
+
+    <div [ngSwitch]="currenttabname" *ngIf="!isRegistered">
+        <div *ngSwitchCase="'howtoRedeem'">
+            <!-- <ion-card class="challenges-card">
+                <div class="card-thumbnail card-corosol1"></div>
+                <img src="assets/imgs/Assets-Image-Homepage-HP10.jpg">
+                <div class="challenges-div">
+                    <div class="reward-corosol-2-box">
+                        <div class="h3" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenExchangePoints" | translate}}</div>
+                        <button ion-button icon-start small round class="cta-button-primary" round (click)="openFitsenseScreen('BalanceMain')">
+                            {{"Home_Rewards.viewMore" | translate}}
+                        </button>
+                    </div>
+                </div>
+            </ion-card> -->
+
+            <ion-card class="challenges-card home_card_height margin-top-30" *ngFor="let howToSpend of howToSpendRewards">
+                    <img [src]="howToSpend.field_image">
+                    <div class="challenges-div challenge-Margin">
+                        <div class="reward-corosol-2-box">
+                            <div class="h3 set-width" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenExchangePoints" | translate}}</div>
+                            <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('howtoRedeem')">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                            <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="gotoRegister()">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </ion-card>
+
+        </div>
+
+
+         <!-- <div *ngSwitchCase="'howtoEarn'">
+                <ion-card class="challenges-card home_card_height" *ngFor="let howToEarn of howToEarnRewards">
+                    <div class="card-thumbnail card-corosol2"></div>
+                    <img [src]="howToEarn.field_image">
+                    <div class="challenges-div challenge-Margin">
+                        <div class="reward-corosol-2-box">
+                            <div class="h3" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenGetPoint" | translate}}</div>
+                            <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('BalanceMain')">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                            <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="gotoRegister()">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </ion-card>
+            </div> -->
+        <div *ngSwitchCase="'howtoEarn'">
+            <!-- <ion-card class="challenges-card">
+                <img src="assets/imgs/Assets-Image-Homepage-HP10.jpg">
+                <div class="card-thumbnail card-corosol2"></div>
+                <div class="challenges-div">
+                    <div class="reward-corosol-2-box">
+                        <div class="h3" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenExchangePoints" | translate}}</div>
+                        <button ion-button icon-start small round class="cta-button-primary" round (click)="openFitsenseScreen('BalanceMain')">
+                            {{"Home_Rewards.viewMore" | translate}}
+                        </button>
+                    </div>
+                </div>
+
+            </ion-card> -->
+            <ion-card class="challenges-card home_card_height" *ngFor="let howToEarn of howToEarnRewards">
+                    <img [src]="howToEarn.field_image">
+                    <div class="challenges-div challenge-Margin">
+                        <div class="reward-corosol-2-box">
+                            <div class="h3" ion-text color="primary" margin-top>{{"Home_Rewards.rewardSecondScreenGetPoint" | translate}}</div>
+                            <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('howtoEarn')">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                            <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="gotoRegister()">
+                                {{"Home_Rewards.viewMore" | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </ion-card>
+        </div>
+        <div *ngSwitchCase="'YourPoints'">
+            <!-- <ion-card class="challenges-card" *ngIf="fitsenseService.fitsense.rewards != 0">
+                <img src="assets/imgs/Assets-Image-Homepage-HP10.jpg">
+                <div class="challenges-div ">
+                    <div class="padding-left-corosol">
+                        <div class="h3" ion-text color="primary">{{"Home_Rewards.YourPoints" | translate}}</div>
+                        <div class="h3" ion-text color="primary">{{"Home_Rewards.YourPointsNext" | translate}}</div>
+                        <div marging-top class="carousel-card-score" margin-top>{{fitsenseService.fitsense.rewards}}
+                            <span class="p" ion-text color="secondary-dark text-bold">{{"Home_Rewards.points" | translate}}</span>
+                        </div>
+                    </div>
+                    <button ion-button icon-start class="cta-button-primary" round (click)="openFitsenseScreen('BalanceMain')">
+                                {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                            </button>
+                </div>
+            </ion-card> -->
+            <div *ngIf="fitsenseService.fitsense.rewards > 0">
+                    <ion-card class="challenges-card home_card_height" *ngFor="let yourPoints of yourPointsRewards">
+                        <img [src]="yourPoints.field_image">
+                        <div class="challenges-div ">
+                            <div class="padding-left-corosol">
+                                <div class="h3" ion-text color="primary">{{"Home_Rewards.YourPoints" | translate}}</div>
+                                <div class="h3" ion-text color="primary">{{"Home_Rewards.YourPointsNext" | translate}}</div>
+                                <div marging-top class="carousel-card-score" margin-top>{{fitsenseService.fitsense.rewards}}
+                                    <span class="p" ion-text color="secondary-dark">{{"Home_Rewards.points" |
+                                        translate}}</span>
+                                </div>
+                            </div>
+                            <button ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('YourPoints')">
+                                {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                            </button>
+                        </div>
+                    </ion-card>
+                </div>
+            
+            <!-- <ion-card class="challenges-card" *ngIf="fitsenseService.fitsense.rewards == 0">
+                <ion-card-content> comment
+                <img src="assets/imgs/Assets-Image-Homepage-HP10.jpg">
+                <div class="challenges-div ">
+                    <div class="h3" ion-text color="primary"> {{"Home_Rewards.ViewPointsNow" | translate}}</div>
+                   <div class="h3" ion-text color="primary">{{"Home_Rewards.get100Points" | translate}}</div> -->
+                    <!-- <div class="carousel-card-score" margin-top>100
+                        <span ion-text color="secondary-dark text-bold">{{"Home_Rewards.points" | translate}}</span>
+                    </div>
+                    <button ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('BalanceMain')">
+                            {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                        </button>
+                </div>
+                </ion-card-content> comment
+            </ion-card> --> 
+            <div *ngIf="fitsenseService.fitsense.rewards == 0">
+                    <ion-card class="challenges-card home_card_height" *ngFor="let yourPoints of yourPointsRewards">
+                            <img [src]="yourPoints.field_image">
+                            <div class="challenges-div ">
+                                <div class="h3" ion-text color="primary"> {{"Home_Rewards.ViewPointsNow" | translate}}</div>
+                                <div class="h3" ion-text color="primary">{{"Home_Rewards.get100Points" | translate}}</div>
+                                <div class="carousel-card-score">100
+                                    <span ion-text color="secondary-dark">{{"Home_Rewards.points" | translate}}</span>
+                                </div>
+                                <button *ngIf="isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="openFitsenseScreen('YourPoints')">
+                                    {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                                </button>
+                                <button *ngIf="!isRegistered" ion-button margin-top icon-start class="cta-button-primary" round (click)="gotoRegister()">
+                                    {{"Home_Rewards.HowtoEarnMorePoints" | translate}}
+                                </button>
+                            </div>
+                        </ion-card>
+                        </div>
+        </div>
+    </div>
+</ion-content>

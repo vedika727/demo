@@ -1,0 +1,40 @@
+page-no-internet {
+    .close-button{
+        font-weight: bold;
+        font-size: $font_30px;
+        position: relative;
+        bottom:10px;
+    }
+    .title{
+        font-size: 24px;
+        color: red;
+        position: relative;
+        bottom:30px;
+    }
+    // .number{
+    //     font-size: 35px;
+    //     font-weight: bold;
+    //     margin: 15px;
+    // }
+    .button-block-ios{
+        margin:auto
+    }
+    .cta-button{
+        width: 40%;
+        border-radius: 25px;
+        height: 45px;
+        text-transform: capitalize;
+    }
+    .errmsg1{
+        position: relative;
+        bottom:20px;
+    }
+    .errmsg2{
+        position: relative;
+        bottom:20px;
+    }
+    .center-no-internet{
+        display:block;
+        margin:auto;
+    }
+}

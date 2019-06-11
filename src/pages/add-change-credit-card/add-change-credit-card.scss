@@ -1,0 +1,96 @@
+page-add-change-credit-card {
+    .SCB_Margin{
+        margin-bottom: 3vh !important;
+    }
+
+    .SCB_Border{
+        border-bottom: 1px solid $secondary-light;
+    }
+    .cb-card{
+        margin-top:40px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        width: 100% !important;
+        border-radius: !important;
+        padding: 10px 0px!important;
+    }
+    // .text-input-md {
+    //     border-bottom: 1px solid grey;
+    // }
+    // .text-input-ios {
+    //     border-bottom: 1px solid grey;
+    // }
+    /** Styling for ion-select */
+    .selectOpt{
+        border: 1px solid $secondary-light;
+        border-radius: 50px; 
+        max-width: 100% !important;
+        padding: 8px 16px !important ;
+        .select-icon{
+        .select-icon-inner{
+            right: 10px !important;
+            left: unset;
+            top:65%;
+            color: $primary;
+            font-size:$font_14px;
+        }   
+        }
+    }
+    /** Styling for ion-select */
+
+   .checkbox-row{
+       margin-top: 20px;
+       margin-bottom: 40px;
+   }
+    .expiry-datetime{
+        margin-left: 16px;
+        // margin:auto 5px;
+        ion-datetime{
+           padding-top: 15px;
+           padding-left: 16px;
+           border-bottom: 1px solid grey;   
+        }
+    }
+
+    .expiry-date-style{
+        border-bottom: 1px solid $secondary-light !important;
+        padding : 5%;
+    }
+
+    /** Styling for ion-input*/
+
+    .input-border-bottom{
+        border-bottom: 1px solid $secondary-light !important;
+        width:100%;
+    }
+
+    .credit-card-select{
+        border: 1px solid $secondary-light;
+        border-radius: 25px;
+        width:100% !important;
+        max-width:100%;
+    }
+
+    .card-row .label{
+        padding-left: 5px;
+    }
+
+    .cb-card .text-input-md{
+        padding-left: 10px;
+        border-bottom: 1px solid $secondary-light;
+    }
+    .cb-card  .text-input-ios{
+        padding-left: 10px;
+        border-bottom: 1px solid $secondary-light;
+    }
+    .checkbox-icon:after {
+        background-color: $primary;
+    }
+    .item-checkbox-checked{
+        background-color: $primary;
+    }
+    .checkbox-checked{
+        background-color: $primary;
+    }
+
+}

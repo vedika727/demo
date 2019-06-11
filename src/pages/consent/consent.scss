@@ -1,0 +1,58 @@
+page-consent {
+    .accept-terms-label{
+        margin-left:10px !important;
+    }
+
+    // TODO - added for Release 1
+    .activity-title { 
+      background-color: transparent;
+      color: $primary;
+    }
+    
+    .button-cta{
+        @extend  #{'.cta-button-primary'};
+        white-space: normal;
+        height: auto;
+        position: relative;
+        padding: 10px 40px;
+        overflow-x:hidden;
+        word-wrap:break-word;
+      }
+      .done{
+          display: block;
+          margin: auto;
+          margin-top:10vw;
+          // height:20vh;
+      }
+      .bottom{
+        height: 10vw;
+      }
+
+      .activity-title {
+        margin-top: 0 !important;
+        margin-bottom: 5px !important;
+        font-weight: bold;
+        padding: 0 5px;
+        font-size: $font_20px;
+      }
+      .no-margin{
+        margin:0px 0px 22px !important;
+      }
+      .icon-center{
+        display: block;
+        margin: auto;
+      }
+      ion-checkbox .item-cover{
+        display:none;
+      }
+
+       // Added fro Release 1
+       .confirmation-button { 
+        text-align: center;
+        padding-bottom: 15pt;
+        .cta-button-primary {
+            width: 75%;
+            max-width: none;
+        }
+    }
+}

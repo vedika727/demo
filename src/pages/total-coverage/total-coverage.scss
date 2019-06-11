@@ -1,0 +1,42 @@
+page-total-coverage {
+    .SCB_IC{
+        height: 3.5rem;
+        width: 3.5rem;
+        display: block;
+        vertical-align: middle;
+    }
+
+    .SCB_Text{
+        text-align: start !important;
+    }
+     
+    // .SCB_Border{
+    //     border-bottom: 2px solid $secondary-highlight;
+    // }
+    .SCB_Header_padding{
+        // padding: 16px 16px 0px 16px !important;
+    }
+    .SCB-Height{
+        height: 5vh !important;
+    }
+    
+    .SCB_ICon{
+        width: 10vw !important;
+        height: 10vw !important;
+    }
+    .SCB-left-padd{
+        padding-left: 6vw !important;
+    }
+   .SCB_Border{
+       border-bottom: 1px solid $secondary-highlight;
+       padding-bottom: 2vh !important;
+   }
+   .SCB_Border:last-child {
+       border-bottom: none  !important;
+   }
+   .close-button{
+       margin: 1.5vh !important;
+       color:  #A1A1A1 !important;
+   }
+   
+}

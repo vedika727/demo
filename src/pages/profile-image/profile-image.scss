@@ -1,0 +1,13 @@
+page-profile-image {
+    ion-content {
+        text-align: center;
+      }
+      ion-avatar img,
+      ion-thumbnail img {
+        display: block;
+        margin: 0 auto;
+        width: 50vh;
+        height: auto;
+      }
+}
+

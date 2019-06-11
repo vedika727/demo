@@ -1,0 +1,44 @@
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="callSupportModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay"  (click)="dismissModal()"  id="callSupportOverlay"></div>
+    <!-- Call support pop over -->
+    <ion-card *ngIf="!EmailAlredyExist"  class="popover-content-style">
+      <ion-card-content>
+        <div text-right class="close-icon-div">
+          <ion-icon class="close-button close-icon" (click)="dismissModal()" name="scbl-close" svgversion text-right></ion-icon>
+        </div>
+        <div id="registerUserConsentMszeader1" class="heading1-type2">{{"login.registerUserConsentMszHeader1" | translate}}</div>
+        <div id="registerUserConsentMszeader2" class="title heading1-type2">{{"login.registerUserConsentMszHeader2" | translate}}</div>
+        <div id="registerUserConsentMsz1" class="heading3-type2">{{"login.registerUserConsentMsz1" | translate}}</div>
+        <div id="registerUserConsentMsz2" class="heading3-type2">{{"login.registerUserConsentMsz2" | translate}}</div>
+        <div id="registerUserConsentMsz3" class="heading3-type2">{{"login.registerUserConsentMsz3" | translate}}</div>
+        <div id="registerUserConsentMsz4" class="heading3-type2">{{"login.registerUserConsentMsz4" | translate}}</div>
+        <div text-center>
+          <button ion-button round id="btnRegisterUserConsentMsz" class="cta-button-primary call-button" (click)="callBackTrigger(true)">{{"login.btnRegisterUserConsentMsz"
+          | translate}}</button>
+          <p class="hyperlink-primary underline text-bold mb-40 anchor">
+            <a id="linkRegisterUserConsentMsz" (click)="callBackTrigger(false)">{{"login.linkRegisterUserConsentMsz" | translate}}</a>
+          </p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="EmailAlredyExist"  class="popover-content-style">
+      <ion-card-content>
+        <div text-right class="close-icon-div">
+          <ion-icon class="close-button close-icon" (click)="dismissModal()" name="scbl-close" svgversion text-right></ion-icon>
+        </div>
+        <div id="registerUserConsentMsz" class="title heading1-type2">{{"login.registerUserConsentMszEmail" | translate}} </div>
+        <div id="registerUserConsentMsz1" class="heading3-type2">{{"login.registerUserConsentMsz1Email" | translate}} </div>
+        <div id="registerUserConsentMsz2" class="heading3-type2">{{"login.registerUserConsentMsz2Email" | translate}} </div>
+        <div id="registerUserConsentMsz3" class="heading3-type2">{{"login.registerUserConsentMsz3Email" | translate}} </div>
+        <div id="registerUserConsentMsz4" class="heading3-type2">{{"login.registerUserConsentMsz4Email" | translate}} </div>
+        <div text-center>
+          <button ion-button round id="btnRegisterUserConsentMsz" class="cta-button-primary call-button" (click)="callBackTrigger(true)">{{"login.btnRegisterUserConsentMsz"
+          | translate}}</button>
+          <p class="hyperlink-primary underline text-bold mb-40">
+            <a id="linkRegisterUserConsentMsz" (click)="callBackTrigger(false)">{{"login.linkRegisterUserConsentMsz" | translate}}</a>
+          </p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    </ion-content>

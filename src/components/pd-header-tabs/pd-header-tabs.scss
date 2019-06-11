@@ -1,0 +1,45 @@
+pd-header-tabs {
+    
+    .segment {
+        width: fit-content;
+        padding: 0 16px;
+    }
+    .segment-md-primary .segment-button {
+        color: #8c8c8c;
+    }
+    .segment-md .segment-button {
+        border-bottom-style: unset;
+        text-align: center;
+        flex: 0 0 auto;
+        width: auto;
+        margin-right: 10pt;
+    }
+    .segment-md-primary .segment-button.activated,
+    .segment-md-primary .segment-button.segment-activated {
+        border-bottom: 4px solid $primary;
+    }
+    .label-ios {
+        margin: 0px 7px -3px 0;
+    }
+    .item-ios [item-right],
+    .item-ios [item-end] {
+        margin: 0px;
+        padding: 0px!important;
+    }
+    .label-md {
+        margin: 0px 7px -3px 0;
+    }
+    .item-md [item-right],
+    .item-md [item-end] {
+        margin: 0px;
+        padding: 0px!important;
+    }
+    #expandPageIcon {
+        padding-right: 3%!important;
+        // background: black;
+        // min-height: $font_22px !important;
+    }
+    .segment-section-no-padding{
+        padding:0;
+    }
+}

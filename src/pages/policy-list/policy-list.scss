@@ -1,0 +1,13 @@
+page-policy-list {
+    .policylist_row{
+        border-bottom: 1px solid $secondary-light;
+        line-height: 1.6;
+        font-size: $font_10px;
+    }
+    .poliylist_col{
+        a{
+            float: right;            
+        }
+    }
+   
+}

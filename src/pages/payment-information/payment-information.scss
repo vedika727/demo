@@ -1,0 +1,152 @@
+page-payment-information {
+    .SCB-float-right {
+        float: right;
+    }
+    .SCB_Padding_LR {
+        padding: 0px 5%;
+    }
+    .SCB-date-font {
+        color: color($colors, "primary") !important;
+    }
+    .card-no{
+        font-size: 5.4vw !important;
+    }
+    .SCB_CardDetail {
+        font-family: $ergo !important;
+        font-size: $font_24px !important;
+        color: color($colors, "secondary-dark") !important;
+    }
+    .SCB_cardName {
+        font-family: $psl;
+        //  font-weight: bold !important;
+        font-size: $font_24px !important;
+    }
+    .SCBL-Margin{
+        margin: auto !important;
+        margin-bottom: 0px !important;
+    }
+    
+    .SCB_h2 {
+        font-family: $psl;
+        font-weight: bold !important;
+        font-size: $font_28px !important;
+    }
+    .SCB_P {
+        font-family: $psl;
+        font-weight: bold !important;
+        font-size: $font_20px !important;
+    }
+    .SCB_label {
+        color: color($colors, "secondary-dark");
+        font-family: $psl;
+        font-size: $font_20px;
+    }
+    .SCB_AmountDate {
+        color: color($colors, "primary");
+        font-family: $psl;
+        font-size: $font_28px;
+        // font-weight: bold;
+    }
+    .SCB_SColor {
+        color: color($colors, "secondary-highlight") !important;
+    }
+    .SCB_Bold {
+        font-weight: bold;
+    }
+    .SCB-float-right {
+        float: right;
+    }
+    .SCB-float-left {
+        float: left;
+    }
+    .SCB-Text-Align {
+        text-align: center;
+    }
+    .SCB-Text-Align-left {
+        text-align: left;
+    }
+    .SCB-Text-Align-right {
+        text-align: right;
+    }
+    .SCB_Payment_info {
+        display: block;
+    }
+    .SCB_AlignCenter {
+        margin: 0 auto;
+    }
+    .SCB_Head {
+        font-weight: bold;
+        font-size: 3.2rem;
+    }
+    .Card_text {
+        display: block;
+        margin: 75px auto;
+    }
+    .SCB_CardIcon {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .head2 {
+        font-weight: bold;
+        font-size: $font_24px;
+    }
+    .numeric-figure {
+        font-family: $ergo;
+        font-size: $font_24px;
+    }
+    ion-card {
+        position: relative;
+        border: 1px $secondary-highlight;
+        border-radius: 10px !important;
+        height: 200px;
+    }
+    .switch {
+        position: relative;
+        margin: 0px auto;
+        height: 4.928vh;
+        width: 57.6vw;
+        background: #F3F3F3 !important;
+        border-radius: 30px;
+    }
+    .switch-label {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 28.8vw;
+        line-height: 4.928vh;
+        font-size: $font_12px;
+        color: $secondary;
+        text-align: center;
+        font-size: $font_18px;
+    }
+    .SCB_Bcol {
+        color: #777777 !important;
+    }
+    .switch-label:active {
+        font-weight: bold;
+    }
+    .switch-selection {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 28.8vw;
+        height: 4.928vh;
+        background: $primary;
+        border-radius: 30px;
+        background-image: -webkit-linear-gradient(top, $primary, $primary);
+        background-image: -moz-linear-gradient(top, $primary, $primary);
+        background-image: -o-linear-gradient(top, $primary, $primary);
+        background-image: linear-gradient(to bottom, $primary, $primary);
+        -webkit-transition: left 1s ease-out;
+        -moz-transition: left 1s ease-out;
+        -o-transition: left 1s ease-out;
+        transition: left 1s ease-out;
+    }
+    .section {
+        left: 28.8vw;
+    }
+    .rounded-card-div{
+        height: 25vh !important;
+        margin-top: 1vh !important;
+    }
+}

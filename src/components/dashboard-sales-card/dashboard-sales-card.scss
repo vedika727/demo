@@ -1,0 +1,29 @@
+dashboard-sales-card {
+    .products-tab { 
+        text-align: center;
+        .marginTopest { 
+            text-align: left;
+        }
+    }
+    .description { 
+        line-height: 5.35vw;
+        margin-bottom: 1rem;
+    }
+    .product-card.card-content { 
+        background-size: cover;
+        height: 56vw;
+        padding: 10px !important;
+        background-repeat: no-repeat;
+        align-items: center;
+        display: flex;
+
+        ion-row { 
+            max-width: 53%;
+        }
+
+        .h2 { 
+            line-height: 7.35vw;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

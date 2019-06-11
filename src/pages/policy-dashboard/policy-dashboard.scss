@@ -1,0 +1,332 @@
+page-policy-dashboard {
+    .card-ios {
+        border-radius: 2vw;
+    }
+    .card-md {
+        border-radius: 2vw;
+    }
+    .border-bottom {
+        border-bottom: 1px solid rgba(128,128,128,.66);
+    }
+    .item-ios.item-block .item-inner {
+        border-bottom: none;
+    }
+    .item-md.item-block .item-inner {
+        border-bottom: none;
+    }
+    .card-content-ios {
+        padding: 0px !important;
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+    .tbl {
+        display: table;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        .up {
+            display: table-row;
+            height: 0;
+        }
+        .down {
+            display: table-row;
+        }
+    }
+    .challenges-value {
+        text-align: center;
+        width: 100%;
+        margin: 6%;
+        font-weight: bold;
+    }
+    .challenges-card .challenges-div {
+        position: absolute;
+        top: 0px;
+        left: 16px;
+        // padding: 5px;
+        font-size: 5.4vw !important;
+    }
+    .challenge-Margin {
+        margin-top: 6.5vh;   //UME-193
+    }
+    .challenges-card {
+        position: relative;
+        margin-bottom: 3rem !important ;  // UME-203 FIX FOR CARD MARGIN
+    }
+    .challenges-div{
+        width:100%;
+    }
+    .reward-corosol-2-box{
+        // margin-left: 2rem;         // UME-203 FIX FOR CARD MARGIN
+        // margin-right: 5rem;
+        max-width: 77% !important;    // UME-196 FIX FOR CARD MARGIN
+        line-height: 1.2 !important;
+    }
+    .newMargin{
+        margin: 25px 0px 0px 7px;
+    }
+    .margin-topLatst{
+        margin-top: 1.6vh;
+        color: #333333;
+    }
+    .newLightBlack{
+        color:#333333;
+        font-size: 6.4vw;
+                font-weight: bolder;
+    }
+    .day {
+        //background: linear-gradient($secondary -6%, #673AB7 73%, $secondary 91%);
+        //background-image: url("../../assets/imgs/dash_night_bg.png");
+        background-image: url("../assets/imgs/dash_day_bg.jpg");
+        background-position-y: 1%;
+        // background-position-x: 63%;
+        background-size: cover;
+    }
+    .night {
+        //background: linear-gradient($secondary -6%, #673AB7 73%, $secondary 91%);
+        background-image: url("../assets/imgs/dash_night_bg.jpg");
+        //background-image: url("../assets/imgs/dash_day_bg.png");
+        background-position-y: 26%;
+        background-size: cover;
+    }
+    .slider-container {
+        margin: 0 auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .slider-active {
+        width: 0%;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #9E9E9E;
+        position: relative;
+        top: 10px;
+    }
+    .slider-inactive {
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background-color: lightgrey;
+    }
+    .range-slider {
+        width:50%;
+        margin: 3% 0px;
+    }
+    .value-contains{
+        margin: 1% auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .backImage {
+        background-image: url("../../assets/imgs/Assets-Image-Homepage-HP1.jpg");
+        background-size: contain;
+    }
+    .card-title2 {
+        width: 40%;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        font-size: 1.5em;
+        /* width: 100%; */
+        background-color: #a080aa;
+        font-weight: bold;
+        color: $secondary;
+        padding-left: 3%
+    }
+    .PosRel {
+        position: relative;
+        height: 26vh;
+        z-index: 0;
+    }
+    .Fitsense-bages-Silver {
+        content: url(../assets/scbl-icons/Fitsense-bages-Silver.svg);
+    }
+    .Fitsense-bages-Gold {
+        content: url(../assets/scbl-icons/Fitsense-bages-Gold.svg);
+    }
+    .Fitsense-bages-Bronze {
+        content: url(../assets/scbl-icons/Fitsense-bages-Bronze.svg);
+    }
+    .stick-header {
+        margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        width: 100%;
+        top: -1px;
+        background-color: white;
+        z-index: 999;
+        margin-bottom: 21px;
+    }
+    .boldText{
+        font-weight: bolder;
+        font-size: 7vw;
+    }
+    #FItsensEexpandIcon {
+        padding-right: 3%!important;
+        margin: 0px;
+        padding: 0px !important;
+    }
+    .line-height-margin-top {
+        line-height: 1;
+        margin-top: 3.7vh;       // UME-203 UPDATED
+    }
+    .card-margin-top {
+        margin-top: 9%;
+    }
+    .card-gradiant {
+        background: rgba(255, 255, 255, 1);
+        background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 71%, rgba(250, 250, 250, 1) 87%, rgba(242, 242, 242, 1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(40%, rgba(255, 255, 255, 1)), color-stop(71%, rgba(255, 255, 255, 1)), color-stop(87%, rgba(250, 250, 250, 1)), color-stop(100%, rgba(242, 242, 242, 1)));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 71%, rgba(250, 250, 250, 1) 87%, rgba(242, 242, 242, 1) 100%);
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 71%, rgba(250, 250, 250, 1) 87%, rgba(242, 242, 242, 1) 100%);
+        background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 71%, rgba(250, 250, 250, 1) 87%, rgba(242, 242, 242, 1) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 71%, rgba(250, 250, 250, 1) 87%, rgba(242, 242, 242, 1) 100%);
+        //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=1);
+    }
+    .iconwidth {
+        width: 5vh;
+    }
+    .SpinnerDiv {
+        height: 20vh;
+        margin-top: 10vh;
+        margin-bottom: 4vh;
+    }
+    .card-margin-bottom {
+        margin-bottom: 2vh;
+    }
+    .margin-top-7vh {
+        margin-top: 3vh;   // UME-203 UPDATED
+        line-height: 1 !important;
+    }
+    .font-size-5-35vh {
+        font-size: 5.35vh;
+    }
+
+    .story-heading{
+        display: block;
+        font-family: $psl !important;
+        color: $secondary-dark !important;
+        font-weight: bold !important;
+        font-size: $font_26px;
+    }
+    .story-body{
+        font-family: $psl !important;
+        color: $secondary-dark !important;
+        font-size: $font_26px;
+    }
+    .activity-title {
+        display: block;
+        margin-top: 0 !important;
+        margin-bottom: 5px !important;
+        font-weight: bold;
+        padding: 0 5px;
+        font-size: $font_20px;
+      }
+      .activity-desc {
+        margin-top: 0 !important;
+        padding: 0 5px;
+        font-weight: bold;
+        font-size: $font_16px;
+        color: $secondary-highlight;
+      }
+      .two-line-text-limit {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .center-vd-card{
+        width: 20%;
+        height:auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .font-size-5-4vw{
+        font-size:5.4vw !important;
+    }
+    .max-width-and-line-height-class{
+        max-width: 66%;
+                line-height: 1.2;
+    }
+      .margin-top-50{
+        margin-top:33%;
+      }
+
+      .box-shadow-custom {
+        -webkit-box-shadow: 1px 1px 14px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 1px 14px -2px rgba(0,0,0,0.75);
+        box-shadow: 1px 1px 14px -2px rgba(0,0,0,0.75);
+      }
+      .box-gradiant-custom {
+        background: rgba(255,255,255,1);
+        background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(240,240,240,1) 84%, rgba(237,237,237,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(84%, rgba(240,240,240,1)), color-stop(100%, rgba(237,237,237,1)));
+        background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(240,240,240,1) 84%, rgba(237,237,237,1) 100%);
+        background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(240,240,240,1) 84%, rgba(237,237,237,1) 100%);
+        background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(240,240,240,1) 84%, rgba(237,237,237,1) 100%);
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(240,240,240,1) 84%, rgba(237,237,237,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+      }
+      .max-width-55{
+          max-width:55%;
+      }
+
+    .right{
+        float: right;
+    }
+
+    .range-text{
+        color: $primary !important;
+    }
+    .top-padding-10px{
+        padding-top: 10px;
+    }
+    .set-width{
+        width:45%;
+    }
+    
+        /*
+        ion-segment-button.segment-button {
+            display: inline-block!important;
+            min-width: 100px!important;
+            width: auto!important;
+            }*/
+            .swipe-area {
+                height:100%;
+                width:100%;
+              }
+    .padding-top-corosol {               // UME-203 EXTRA PADDING TO MATCH GUIDELINE
+        padding-top: 3rem !important;
+    }
+    .img{
+        max-height: 100% !important;
+    }
+    .line{
+        line-height: 1 !important;
+    }
+    .heading3-type2{
+        line-height: 1 !important;
+    }
+    .carousel-margin{
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .actual-score{
+        color:$primary !important;
+        font-size: $font_36px !important;
+    }
+    .total-score{
+        color:$secondary-highlight !important;
+        font-size: $font_20px !important;
+    }
+    .float-right{
+        float:right !important;
+    }
+    .float-left{
+        float:left !important;
+    }
+}
+

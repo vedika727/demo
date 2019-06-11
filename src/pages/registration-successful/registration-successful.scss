@@ -1,0 +1,75 @@
+page-registration-successful {
+  .hr {
+    position: relative;
+    height: 2px !important;
+    width: 50% !important;
+    background: #ccc !important;
+    display: block !important;
+    font-size: 2em !important;
+    visibility: visible !important;
+    // top: -8px;
+    left: 25%;
+    right: 25%;
+  }
+
+  .span {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .margin-0{
+    @extend #{'.heading3-type2'};
+    margin: 0px;
+  }
+  .title-message{
+    @extend #{'.heading1-type2'};
+    margin: 10px 0px 0px 0px;
+    line-height: 28px;
+  }
+  .reg-success-bottom-link{
+    // margin-top: 40px;
+    text-decoration: underline;
+  }
+  
+  .hyperlink-secondary{
+    text-decoration: none;
+  }
+  .hyperlink-primary{
+    // padding-top: 5%;   
+    margin-top: 30px;
+  }
+  .top-header-text{
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
+  .hyperlink-text-decoration{
+    text-decoration: underline;
+  }
+  .thank-you-icon{
+    display: block;
+    margin: auto;
+    margin-top:50px;
+    height: 102px;
+    width: 102px;
+}
+.underline{
+  text-decoration: underline;
+}
+.line-height-0-8{
+  line-height:0.8;
+}
+.margin-top-3vh{
+  margin:0px !important;
+  margin-top: 3vh !important;
+}
+.margin-bottom-3vh{
+  margin:0px !important;
+  margin-bottom:3vh !important;
+}
+
+//reducing font size of 2nd big purple text on registration-successful.html page so it fits in 2 lines
+.font-size-8-vw{
+  font-size:8vw !important;
+}
+
+}

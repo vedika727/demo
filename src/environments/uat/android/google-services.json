@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "316399287609",
+    "firebase_url": "https://scblifeeasy-uat.firebaseio.com",
+    "project_id": "scblifeeasy-uat",
+    "storage_bucket": "scblifeeasy-uat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316399287609:android:3c59abadf1b4766c",
+        "android_client_info": {
+          "package_name": "th.co.scblife.easy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316399287609-gm4c0q8m9pb3m8du4u7ddtvgsvcn5r0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo226Sc40F6CgVwf_FddmHW7NQ_pYPeP8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

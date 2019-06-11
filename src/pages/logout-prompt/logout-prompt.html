@@ -1,0 +1,32 @@
+
+
+<!-- transparent background -->
+<ion-content class="popover-bg-color fade-in-animate"  id="logoutBackground">
+  
+  <!-- div which closes modal onclick behind the content -->
+    <div class="overlay" (click)="dismissLogoutModalOverlay()" id="logoutOverlay"></div>
+    
+     <!-- ion-card containing all the content -->
+    <ion-card class="popover-content-style" id="logoutCard">
+
+     
+       <ion-card-header class="heading1-type2" text-center id="logoutCardHeader" text-center>{{"hamburgerMenu.doYouNeedToLogout" | translate}}</ion-card-header>
+        
+       <ion-card-content id="logoutCardContent">
+       <div text-center id="logoutQuestion" class="heading3-type2" text-center>{{"hamburgerMenu.areYouSureToLogout" | translate}}</div>
+    
+        <!-- Logout button -->
+        <div class="logout-btn-mg" text-center>
+       <button ion-button round (click)="logout()"  id="logoutBtn" class="cta-button-primary" small>{{"hamburgerMenu.okay" | translate}}</button>   
+      </div>
+
+       <!-- cancel button to dismiss modal -->
+       <div class="cancel-btn-mg" text-center>
+         <button round ion-button outline small outline class="cta-button-secondary" (click)="cancel()" id="logoutCancelBtn">{{"hamburgerMenu.cancel" | translate}}</button>
+
+       </div>
+     </ion-card-content>  
+     </ion-card>
+       <!-- close of card -->
+    </ion-content>
+      <!-- close of transparent background -->

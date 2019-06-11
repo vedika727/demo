@@ -1,0 +1,60 @@
+<!--
+  Generated template for the HomeDashboardCreditlifePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <dashboard-header [in]=dashboardheader></dashboard-header>
+    <pd-header-tabs (currenttab)="changetab($event)" [in]=policytabs [halfSegment]="policySegment" [expand]=boolval></pd-header-tabs>
+    <!-- <allpolicy-detail-tabs id="allpolicydetails" [in]=policyData (addPolicy)="addNewPolicy()"></allpolicy-detail-tabs> -->
+    <div *ngFor="let policy of policyData">
+    <div class="policyTabs">
+        <ion-row class="policy-segment">
+            <ion-col text-center>
+               {{policy.policyDetails.policynumber}}
+            </ion-col>
+        </ion-row>
+    </div>
+    
+        <!-- <ion-row class="pd-cl-headRow">
+            <ion-col col-6>
+                <span class="pd-cl-span"><strong>{{"policyDashboard.policy"| translate}} :</strong> <br> {{policy.policyDetails.policynumber}}</span>
+            </ion-col>
+            <ion-col col-6>
+                <ion-row>
+                    <ion-col>
+                        <div class="info">
+                            <div class="pd-cl-staus">{{"policyDashboard.status"| translate}} : {{policy.status}}
+                                <span class="indicator green" *ngIf="policy.status == 'paid'"></span>
+                                <span class="indicator red" *ngIf="policy.status == 'unpaid'"></span>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row> -->
+        <div class="timeline-box">
+            <policy-timeline [in]="policy.policyDetails" [policyType]="policy.type"></policy-timeline>
+        </div>
+    </div>
+    <!-- <policy-timeline></policy-timeline> -->
+
+    <ion-row class="pd-cl-support-doc-card">
+        <ion-col col-6>
+            <ion-card class="pd-cl-card" (click)="openSupportDocumentPage()" id="support-document">
+                <ion-icon name="scbl-document" svgversion></ion-icon>
+                <ion-label text-center text-wrap>{{'policyDashboard.otherDocuments' | translate}}</ion-label>
+            </ion-card>
+        </ion-col>
+        <ion-col col-6>
+
+        </ion-col>
+    </ion-row>
+</ion-content>

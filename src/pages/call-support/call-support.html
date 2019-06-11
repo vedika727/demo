@@ -1,0 +1,20 @@
+<ion-content padding class="popover-bg-color" [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="
+  callSupportModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay" (click)="dismissModal()" id="callSupportOverlay"></div>
+
+  <!-- Call support pop over -->
+  <ion-card class="popover-content-style">
+    <ion-card-content>
+      <div id="callSupportincorrectPin" class="title popup-error">{{"login.apologizeForIncovenience" | translate}}</div>
+      <div id="callSupportincorrectPin3Times" class="input-content">{{"login.wrongThai3Times" | translate}}</div>
+      <div id="callSupportcontactCustomerServiceCenter" class="input-content">{{"login.wait24Hours" | translate}}</div>
+      <div id="callSupportnumber" class="input-content">{{"login.loginAgain" | translate}}</div>
+      <div id="callSupportnumber1" class="input-content">{{"login.loginAgain1" | translate}}</div>
+      <div text-center>
+        <button ion-button round id="callSupportCallButton" class="cta-button-primary call-button" (click)="closeModal()">{{"login.okay"
+          | translate}}</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

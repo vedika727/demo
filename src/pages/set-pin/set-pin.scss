@@ -1,0 +1,82 @@
+page-set-pin {
+    .pin-header{
+        padding-left: 16px !important;
+    }
+    .set-pin-text{
+        padding-top:25% !important;
+    }
+    .keypad-component{
+        position: absolute;
+        bottom: 3%;
+    }
+    .scroll-content{
+        overflow-y: hidden;
+    }
+    .container-input {
+        margin-bottom: 30%;
+    }
+    @media screen and(max-height: 519px) {
+        .container-input {
+            margin-bottom: 0%;
+        }
+        .set-pin-text{
+            padding-top:0% !important;
+        }
+        .h1{
+            font-size:$font_28px !important; 
+        }
+        .heading2-type1{
+            font-size:$font_24px !important;
+        }
+        .keypad-component{
+            position: absolute;
+            bottom: 2%;
+        }
+        .pin-header{
+            padding: 0px 16px !important;
+        }
+        .label-md {
+            margin: 0px 8px 13px 0;
+        }
+    }
+    @media screen and(min-height: 520px) and (max-height: 619px) {
+        .container-input {
+            margin-bottom: 0%;
+        }
+        .set-pin-text{
+            padding-top:0% !important;
+        }
+        .h1{
+            font-size:$font_28px !important; 
+        }
+        .heading2-type1{
+            font-size:$font_24px !important;
+        }
+        .keypad-component{
+            position: absolute;
+            bottom: 2%;
+        }
+    }
+
+    @media screen and (min-height: 620px) and (max-height: 680px) {
+        .container-input {
+            margin-bottom: 5%;
+        }
+        .set-pin-text{
+            padding-top:5% !important;
+        }
+        .h1{
+            font-size:$font_28px !important; 
+        }
+
+
+    } 
+    @media screen and (min-height: 681px) and (max-height: 800px) {
+        .container-input {
+            margin-bottom: 15%;
+        }
+        .set-pin-text{
+            padding-top:10% !important;
+        }
+    }      
+}

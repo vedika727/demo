@@ -1,0 +1,75 @@
+page-scb-later-process {
+    .otp-button {
+        border-radius: 25px;
+        width: 40%;
+        height: 2.1em
+    }
+    .register-input {
+        font-size: 20px;
+    }
+    
+    .img {
+        // position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+
+    .bck{
+        background-image: url("../assets/imgs/LaterProcess.jpg");
+        background-position-y: 12%;
+        background-size: cover;
+        height:50%
+        
+    }
+    .register {
+        // position: relative;
+        // z-index:500;
+        // top:35%;
+        padding: 0px 15px;
+    }
+    .heading {
+        color: $primary;
+        padding: 15px;
+        font-weight: bold;
+    }
+    ion-label {
+        font-size: 23px !important
+    }
+    .item-ios {
+        padding-right: 16px;
+    }
+    .item-md {
+        padding-right: 16px;
+    }
+    .item-input .label-md {
+        color: black;
+        font-weight: bold
+    }
+    .checkbox-ios .checkbox-icon {
+        border-radius: 3px 3px 2px 2px;
+        border-color: $primary;
+    }
+    .item.item-ios .checkbox-ios {
+        margin-left: 15%
+    }
+    .item.item-md .checkbox-md {
+        margin-left: 15%
+    }
+    .padding {
+        padding: 20px 0px;
+    }
+    .error-msg {
+        text-align: left !important;
+        padding: 5px 15px;
+    }
+    .enter-thai {
+        padding-left: 25px;
+        font-size: 23px !important
+    }
+    .padding-terms {
+        padding-left: 5px;
+    }
+    .margin-top-30 {
+        margin-top: 30px;
+    } 
+}

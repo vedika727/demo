@@ -1,0 +1,62 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+<ion-content padding class="scb-background-contain" [ngClass]=" show == true ? 'blur' : 'normal' ">
+    <!-- title -->
+        <div class="h1 bold-font">
+            {{"login.identifyTheOTP"|translate}}
+        </div>
+
+        <div text-center class="padding-top-10 SCB_Scroll">
+            <!-- otp sending confirmation text -->
+            <div class="p bold-font" *ngIf="isSCBLifeCust && (userData.type != 'myAccount') ">
+                {{"login.weSendAnOTPNumberToThePhone"|translate}}
+            </div>
+            <div class="p bold-font" *ngIf="!isSCBLifeCust || (userData.type == 'myAccount')">
+                    {{"login.forSecurityPurposeWeSendOTPNumberToEmail"|translate}}
+                </div>
+            <div class="p bold-font" *ngIf="isSCBLifeCust && (userData.type != 'myAccount') ">
+                {{"login.phoneNumber" | translate:lastdigits}}
+            </div>
+            <div class="p bold-font" *ngIf="!isSCBLifeCust || (userData.type == 'myAccount')">
+                {{email}}
+            </div>
+            <!-- reference number -->
+            <div class="padding-top-5 ref-num p">
+                {{"login.referenceNo"|translate}} {{refCode}}
+            </div>
+            <div class="padding-top-10 h3">{{"login.pleaseEnterAnOTPNumber" | translate}}</div>
+            <ion-row text-center>
+                <div class="set-margin">
+                    <div class="otp-input">{{arrayOfNumbers[0]}}</div>
+                    <div class="otp-input">{{arrayOfNumbers[1]}}</div>
+                    <div class="otp-input">{{arrayOfNumbers[2]}}</div>
+                    <div class="otp-input">{{arrayOfNumbers[3]}}</div>
+                    <div class="otp-input">{{arrayOfNumbers[4]}}</div>
+                    <div class="otp-input">{{arrayOfNumbers[5]}}</div>
+                </div>
+            </ion-row>
+            <div class="error-box">
+                <div text-center *ngIf="!otpIsWrong || !emailOtpIsWrong" class="error-msg" ion-text color="accent-danger">
+                    {{"login.invalidOtpMessage"|translate}}
+                </div>
+            </div>
+            <div class="resend-otp hyperlink-primary" (click)="resendOtp()">
+                {{"login.resendTheOTP"|translate}}
+            </div>
+            <div class="padding-top-5" *ngIf="!showLoanFlowButton">
+                <button ion-button [ngClass]="enableOtpButton ?'button otp-button cta-button-primary':'button otp-button cta-button-secondary-highlight'" (click)="confirmOTP()" [disabled]="!enableOtpButton">{{"login.enterOtpConfirm"|translate}}</button>
+            </div>
+            <div class="padding-top-5" *ngIf="showLoanFlowButton">
+                    <button ion-button [ngClass]="enableOtpButton ?'button otp-button cta-button-primary':'button otp-button cta-button-secondary-highlight'" (click)="confirmOTP()" [disabled]="!enableOtpButton">{{"login.newConfirmOTPButtonInLoanFlow"|translate}}</button>
+            </div>
+        </div>
+        <div class="keypadComponent">
+            <!-- Pin pad component -->
+            <pin-pad-input id="otpPinPadComponent" (keyPress)="keypadButtonPress($event)" [keypad]='displayKeypadOnly'></pin-pad-input>
+            <!-- End of Pin pad component -->
+        </div>
+</ion-content>

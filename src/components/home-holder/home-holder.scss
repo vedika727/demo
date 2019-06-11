@@ -1,0 +1,44 @@
+home-holder {
+    .pd-greetings {
+        font-size: $font_20px;
+    }
+    .padding-top {
+        padding-top: 0%;
+    }
+    .badgeIcon {
+        position: relative;
+        .Fitsense-bages-Silver {
+            content: url(../assets/scbl-icons/Fitsense-bages-Silver.svg);
+            top: 50%;
+            left: 53%;
+            position: absolute;
+            height: 40%;
+        }
+        .Fitsense-bages-Gold {
+            content: url(../assets/scbl-icons/Fitsense-bages-Gold.svg);
+            top: 50%;
+            left: 53%;
+            position: absolute;
+            height: 40%;
+        }
+        .Fitsense-bages-Bronze {
+            content: url(../assets/scbl-icons/Fitsense-bages-Bronze.svg);
+            top: 50%;
+            left: 53%;
+            position: absolute;
+            height: 40%;
+        }
+    }
+    .banner-text {
+        border-radius: 50%;
+        border: 3px solid $secondary;
+        height: 9vh;
+        width: 9vh;
+    }
+    .lineHeight {
+        line-height: 70%;
+    }
+    .top-margin-0-5vh{
+        margin-top:0.5vh;
+    }
+}

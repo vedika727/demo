@@ -1,0 +1,60 @@
+page-notifications {
+        .panel-body{
+            width: 100%;
+            left: 0%;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+        }
+        .padding-right{
+            padding-left: 14px !important;
+        }
+        .padding-10{
+            padding: 10px;
+        }
+        .activity-unread{
+            background-color: $secondary-light;
+        }
+        .activity-read{
+            background-color:white;
+        }
+        .scroll-content{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+        .bottom-border{
+            border-bottom: 0.3px solid $secondary-light;
+            padding: 10px 5px; 
+        }
+        .no-bottom-border{
+            padding: 10px 5px; 
+        }
+        .history-log-div{
+            padding: 10px 5px;
+        }
+        .activity-log-subheading{
+            color: $primary;
+            margin-top:30px;
+        }
+        .activity-log-time{
+            color:$primary;
+        }
+        .log-style{
+            padding-left: 0px !important;
+            padding: 5px 5px; 
+        }
+        .log-style .log-title{
+            padding-left: 0px !important;
+            font-size: $font_26px;
+        }
+        ion-col{
+            padding:0px !important;
+        }
+        .padding{
+            padding-left:4px !important;
+        }
+        .padding-top-1vh{
+            padding-top: 1vh;
+        }
+    }
+    

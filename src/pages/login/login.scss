@@ -1,0 +1,28 @@
+page-login {
+    .bg-color{
+        background-color: white;
+    }
+    .content{
+        background-image: url('../assets/imgs/login_bg.jpg') ;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .scroll-content{
+        overflow-y: hidden;
+    }
+   .fixed-bottom{
+       position: absolute;
+       bottom:0px;
+   }
+   .scb-header-logo-blur {
+    opacity: 0.4;
+    margin-top: 20%;
+  }
+  .center {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 35%;
+    }
+}

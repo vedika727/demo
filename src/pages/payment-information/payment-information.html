@@ -1,0 +1,184 @@
+<!--
+  Generated template for the PaymentInformationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-grid>
+            <ion-row>
+                <div text-wrap class="h1">{{"policyDashboard.changePaymentMethodReceived"|translate}}</div>
+            </ion-row>
+            <ion-row padding-top class="SCB_Padding_LR">
+                <ion-col col-6>
+                    <div class="p SCB_SColor"> {{policyDetails.policyNumber}}</div>
+
+                </ion-col>
+                <ion-col>
+                    <div class="SCB-float-right">
+                        <div class="heading3-type2">
+                            {{"policyDashboard.policy"|translate}}:
+                        </div>
+                        <div class="heading-type-no">
+                            {{policyDetails.policyNumber}}
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row padding>
+
+
+                <div class="switch">
+                    <ion-segment-button id="setactive-payin" text-wrap [ngClass]="switchStatus ?'switch-label SCB_Bold button':'switch-label SCB_Bcol button'" (click)="setActive()" value="">
+                        {{"policyDashboard.payPremium"|translate}}
+                    </ion-segment-button>
+                    <span *ngIf="switchStatus" class="switch-selection"></span>
+                    <ion-segment-button id="setactive-payout" text-wrap [ngClass]="switchStatus ?'switch-label SCB_Bcol  button':'switch-label SCB_Bold button'" (click)="setActive1()" value="">
+                        {{"policyDashboard.moneyBack"|translate}}
+                    </ion-segment-button>
+                    <span *ngIf="!switchStatus" class="switch-selection section"></span>
+                </div>
+            </ion-row>
+
+            <ion-row class="SCB_Padding_LR" *ngIf="switchStatus">
+                <ion-col class="SCB-float-right">
+                    <div class="SCB-Text-Align-left message-type2">
+                        {{"policyDashboard.dueDate"|translate}}
+                    </div>
+                    <div class="SCB-Text-Align-left user-profile-name">
+                        {{JsonData.payments.dueDate}}
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div class="SCB-Text-Align-right message-type2">
+                        {{"policyDashboard.amount"|translate}}
+                    </div>
+                    <div class=" SCB-Text-Align-right user-profile-name">
+                        {{JsonData.payments.paymentAmount}} {{"policyDashboard.baht"|translate}}
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="SCB_Padding_LR"  *ngIf="!switchStatus">
+                <ion-col class="SCB-float-right">
+                    <div class="SCB-Text-Align-left message-type2 ">
+                        {{"policyDashboard.dueDate"|translate}}
+                    </div>
+                    <div class="SCB-Text-Align-left user-profile-name">
+                        {{JsonData.payments.lastPaidDate}}
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div class="SCB-Text-Align-right message-type2">
+                        {{"policyDashboard.amount"|translate}}
+                    </div>
+                    <div class=" SCB-Text-Align-right user-profile-name">
+                        {{JsonData.payments.lastPaidAmount}} {{"policyDashboard.baht"|translate}}
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row margin-top no-padding>
+                <div class="SCB_Padding_LR message-type2">{{"policyDashboard.paymentType"|translate}}</div>
+            </ion-row>
+
+            <ion-row class="SCB_Padding_LR">
+
+                <!-- For credit card -->
+
+
+                <div  class="rounded-card-div" *ngIf="CR" no-padding>
+                    <div padding class="hyperlink-primary">{{"policyDashboard.deductionAccount"|translate}}</div>
+                    <ion-row padding-left>
+                        <!-- <ion-item no-padding no-lines> -->
+                        <ion-col class="SCBL-Margin" col-2>
+                            <ion-icon item-start class="SCB_CardIcon" name="paymentInfo-Creditcard" svgversion></ion-icon>
+                        </ion-col>
+                        <ion-col>
+                            <div class="heading3-type2">{{"policyDashboard.nameAcc"|translate}}</div>
+
+                            <div text-wrap class="card-no">{{JsonData.payments.paymentDetails.cardNumber}}</div>
+                        </ion-col>
+                        <!-- </ion-item> -->
+                    </ion-row>
+                </div>
+
+
+                <!-- For credit card -->
+
+
+                <div class="rounded-card-div" *ngIf="AC" no-padding>
+                    <div padding class="hyperlink-primary">{{"policyDashboard.deductionAccount"|translate}}</div>
+                    <ion-row padding-left>
+                        <!-- <ion-item no-padding no-lines> -->
+                        <ion-col class="SCBL-Margin" col-2>
+                            <ion-icon item-start class="SCB_CardIcon" name="paymentInfo-Passbook" svgversion></ion-icon>
+                        </ion-col>
+                        <ion-col>
+                            <div class="heading3-type2">{{"policyDashboard.nameAcc"|translate}}</div>
+                            <div text-wrap class="card-no">{{JsonData.payments.paymentDetails.accountNumber}}</div>
+
+                        </ion-col>
+                        <!-- </ion-item> -->
+                    </ion-row>
+                </div>
+
+
+                <!-- For NO setting card -->
+
+
+                <div class="rounded-card-div" *ngIf="NS" no-padding>
+                    <div padding class="hyperlink-primary">{{"policyDashboard.deductionAccount"|translate}}</div>
+                    <ion-row padding-left> 
+                        <!-- <ion-item no-padding no-lines> -->
+                        <ion-col class="SCBL-Margin" col-2>
+                            <ion-icon item-start class="SCB_CardIcon" name="paymentInfo-Cash" svgversion></ion-icon>
+                        </ion-col>
+                        <ion-col>
+                            <div class="heading3-type2">{{"policyDashboard.cash"|translate}}</div>
+
+
+                        </ion-col>
+                        <!-- </ion-item> -->
+                    </ion-row>
+                </div>
+
+            </ion-row>
+            <ion-row margin *ngIf="CR && switchStatus">
+                <ion-item  no-lines>
+                    <div class="SCB-Text-Align h3">
+                        <a (click)="paymentChangeCreditCard()">
+                            <u>{{"policyDashboard.changePaymentType"|translate}}</u>
+                        </a>
+                    </div>
+                </ion-item>
+            </ion-row>
+            <ion-row *ngIf="NS && switchStatus">
+                <ion-item padding no-lines>
+                    <div class="SCB-Text-Align h3">
+                            <button id="changepaymentbook" class="button SCB_AlignCenter" ion-button round (click)="paymentChangeCreditCard()">{{"policyDashboard.changePaymentType"|translate}}</button>
+                       
+                    </div>
+                </ion-item>
+            </ion-row>
+            <ion-row margin *ngIf="AC && !switchStatus">
+                    <a (click)="paymentChangeBook()">
+                            <u>{{"policyDashboard.changePaymentType"|translate}}</u>
+                        </a>
+            </ion-row>
+            <ion-row margin *ngIf="Cheaque && !switchStatus">
+                
+                    <button id="changepaymentbook" class="button SCB_AlignCenter" ion-button round (click)="paymentChangeBook()">{{"policyDashboard.changePaymentType"|translate}}</button>
+               
+                </ion-row>
+
+        </ion-grid>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,26 @@
+page-login-popup {
+    .overlay{
+        background-color: rgba(255, 255, 255, 0.12)
+    }
+    // .modalstyle .popover-bg-color {
+    //     background-color: rgba(0, 0, 0, 0) !important;
+    // }
+    .popover-bg-color{
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+    .scbl-icon{
+        width:70px;
+        margin:10px auto;
+    }
+    .title{
+        color:$primary;
+        margin: 20px auto;
+    }
+    .button{
+        font-weight: none;
+        text-transform: capitalize;
+    }
+    login-button{
+        margin:20px;
+    }
+}

@@ -1,0 +1,21 @@
+<!-- SCB HEADER ICON  -->
+
+<!-- <ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> -->
+
+<ion-content text-center>
+    <img class="center scb-header-logo-blur" src="assets/imgs/SCBLife-logo.png">
+    <div  class="fullscreen">
+        <!-- <scb-header-icon id="confirmPinHeader" [in]="headerConfig"></scb-header-icon> -->
+        <div class="fixed-bottom">
+            <!-- <ion-icon name="finger-print" *ngIf="showFingerprintIcon" class="fingerprint" (click)="loginWithFingerprint()"></ion-icon> -->
+            <!-- Pin pad component -->
+            <pin-pad-input id="loginPinPadComponent" (keyPress)="keypadButtonPress($event)" [forgotPin]="forgotPinFlag" (forgotPinFunction)="callbackForgotPin($event)"></pin-pad-input>
+            <!-- End of Pin pad component -->
+        </div>
+    </div> 
+    <generic-view [In]=genericDialog *ngIf="genericDialog" ></generic-view>
+</ion-content>

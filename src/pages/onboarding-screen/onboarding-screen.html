@@ -1,0 +1,73 @@
+<ion-content class="no-scroll">
+  <ion-slides pager>
+    <ion-slide class="diag1">
+      <div >
+        <div id="1slideHeadText" class="slideImageHeader  ">
+          <div class="head-top-text splash-title width-60-vw">
+            {{"registration.slideHeadText1" | translate}}
+          </div>
+          <div class="line">
+            <div class="primary-line"></div>
+            <div class="accent-line"></div>
+          </div>
+          <div id="1slideHeadTextbottomText1" class="slideImageHeaderBottomText heading1-type1 font-size-7-55vw">
+            {{"registration.slideHead2Text1" | translate}}
+          </div>
+        </div>
+        <!-- <img src="assets/imgs/onboarding_1.png"> -->
+      </div>
+    </ion-slide>
+    <ion-slide class="diag2">
+      <div >
+        <div id="2slideHeadText" class="slideImageHeader  ">
+          <div class="splash-title">
+            {{"registration.slideHeadText2" | translate}}
+          </div>
+          <div class="splash-title">
+              {{"registration.slideHeadText2-2" | translate}}
+          </div>
+          <div class="line">
+              <div class="primary-line"></div>
+              <div class="accent-line"></div>
+            </div>
+          <div id="1slideHeadTextbottomText2" class="slideImageHeaderBottomText heading1-type1 line-height-4vh">
+            {{"registration.slideHead2Text2" | translate}}
+          </div>
+        </div>
+        <!-- <img src="assets/imgs/onboarding_2.png"> -->
+      </div>
+    </ion-slide>
+
+    <ion-slide class="diag3">
+      <div>
+        <div id="3slideHeadText" class="slideImageHeader  ">
+          <div class="splash-title">
+            {{"registration.slideHeadText3" | translate}}
+          </div>
+          <div class="line">
+              <div class="primary-line"></div>
+              <div class="accent-line"></div>
+            </div>
+          <div id="1slideHeadTextbottomText3" class="slideImageHeaderBottomText heading1-type1 line-height-4vh">
+            {{"registration.slideHead3Text3" | translate}}
+          </div>
+        </div>
+        <!-- <img src="assets/imgs/onboarding_3.png"> -->
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="button-container" align="center">
+    <button id="btnApply" ion-button round (click)="Apply()" class="button-cta">
+      {{"registration.onBoardingapply" | translate}}
+    </button>
+    <!-- <br/>
+    <br/> -->
+    <p class="forcing-margin-bottom-5-percent">
+    <a id="bottomLink" (click)="gotopage()" class="cta-link" style="margin-top:20px">
+      <span class="h5 underline-class"> {{"registration.onBoardingCannotUsePhone" | translate}}
+      </span>
+    </a>
+  </p>
+  </div>
+</ion-content>
+<!-- <generic-view  [In]=genericDialog *ngIf="showGenericView" ></generic-view> -->

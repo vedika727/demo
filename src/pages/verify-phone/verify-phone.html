@@ -1,0 +1,31 @@
+<!--
+  Generated template for the VerifyPhonePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInputs"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="scb-background-contain">
+    <form novalidate [formGroup]="verifyPhone" (ngSubmit)="navigateToVerifyOTPPage()">
+        <ion-label class="h1"> {{"registration.selectMobileNumber"|translate}} </ion-label>
+        <!-- select mobile number -->
+        <div class="input-alignment">
+            <ion-label class="heading3-type2" stacked text-wrap text-center>{{"registration.selectPhoneLabel"|translate}}</ion-label>
+            <ion-item no-lines>
+                <ion-label stacked text-wrap text-center></ion-label>
+                <ion-select interface="popover" class="select-item placeholder" formControlName="phoneNum" multiple="false" [placeholder]="'login.pleaseSelectAPhoneNumber' | translate">
+                    <ion-option [value]="i" *ngFor="let phone of maskedArr; let i= index">{{phone.phoneNumber}}</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <!-- button -->
+            <div align="center" class="padding-top-20">
+                <button class="cta-button-primary" (click)="sendOtp()" ion-button round [disabled]="!verifyPhone.valid" [ngClass]="verifyPhone.valid ?'cta-button-primary':'cta-button-disabled'">{{"registration.verifyPhoneokayButton"|translate}}</button>
+            </div>
+        </div>
+    </form>
+</ion-content>

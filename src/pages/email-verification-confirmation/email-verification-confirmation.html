@@ -1,0 +1,29 @@
+
+
+<!-- transparent background -->
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"  id="feedbackModalBackground">
+    <!-- div which closes modal onclick behind the content -->
+    <div class="overlay"  (click)="dismissModal()"  id="feedbackOverlay"></div>
+    
+    <!-- ion-card containing all the content -->
+    <ion-card class="popover-content-style"> 
+    <ion-card-content>
+    
+        <ion-item no-lines>
+            <!-- Confirm Email -->
+            <div class="h3"text-center>{{"hamburgerMenu.confirmyouremail"|translate}}</div><br>
+            <div class="p"text-wrap text-center>{{"hamburgerMenu.confirmEmail"|translate}}</div>
+
+            <!-- Ok Button -->
+           <div text-center> <button class="button" ion-button round id="okButton">{{"hamburgerMenu.okay"|translate}}</button>
+            </div>  
+          </ion-item>
+    
+    </ion-card-content>
+    </ion-card>
+    </ion-content> 
+      
+   
+    
+
+

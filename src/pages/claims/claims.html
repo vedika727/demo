@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar no-border transparent hideBackButton>
+        <scb-header [in]="headerInputs"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="margin-top-50">
+        <span class="user-profile-name padding-left-10">{{"claims.claimStatus" | translate}}</span>
+        <claim-history [in]="dataForClaimsHistory" class="claim-history-div"></claim-history>
+    </div>
+</ion-content>

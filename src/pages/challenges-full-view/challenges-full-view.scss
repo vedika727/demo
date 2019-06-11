@@ -1,0 +1,32 @@
+page-challenges-full-view {
+    .abs_position {
+        position: absolute;
+    }
+    .full_height {
+        height: 100%;
+    }
+    .challenges-card {
+        border-radius: 5px;
+        position: relative;
+        .challenges-div {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            padding: 5px;
+            .top-label {
+                font-size: $font_12px;
+                color: $primary;
+                font-weight: bold;
+            }
+            .bottom-label {
+                font-size: $font_10px;
+            }
+            .btn-text {
+                background-color: $primary;
+                color: $secondary;
+                border-radius: 20px;
+                padding: 7px 30px;
+            }
+        }
+    }
+}

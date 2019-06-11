@@ -1,0 +1,101 @@
+<!-- <div *ngIf="showSplash" class="splash" >
+</div> -->
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-menu side="right" type="overlay" [content]="content">
+  <ion-content padding>
+    <div no-padding class="profile-menu">
+      <ion-icon id="close" class="right close-icon close-position" color="" menuClose name="close"></ion-icon>
+      <div *ngIf="loginService.isLoggedIn else notLoogedIn">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-5>
+              <ion-item class="center" no-lines no-padding>
+                <ion-avatar id="profile-pic" menuClose (click)="openPage('ProfileImagePage')">
+                  <img class="avatar" [src]="loginService.profilePic || placeholder">
+                </ion-avatar>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div>
+          <div id="edit" ion-text menuClose color="secondary-light" class="h5 anchor right" (click)="openPage('MyAccountPage')">{{"hamburgerMenu.edit"|translate}}</div>
+          <div id="user-name" ion-text class="section-header">{{userInfo.firstName}} {{userInfo.lastName}}</div>
+        </div>
+        <div id="scb-client-link" *ngIf="isScblifeCustomer != true" ion-text menuClose color="secondary-light"
+          class="h5 anchor" (click)="openPage('ScbLaterProcessPage')">{{"hamburgerMenu.areYouSCBLifeClient?" | translate}}</div>
+      </div>
+      <ng-template #notLoogedIn>
+        <div class="h1">เข้าสู่ระบบเพื่อเริ่มใช้งาน</div>
+        <button id="login" ion-button round class="center" menuClose (click)="openPage('RegisterUserPage')">{{"login.login"|translate}}</button>
+      </ng-template>
+    </div>
+
+    <ion-list>
+
+      <ion-item id="my-account" *ngIf="loginService.isLoggedIn" no-lines menuClose class="menu-item" (click)="openPage('MyAccountPage')">
+        <ion-icon class="hamburger-menu-icons" name="scbl-my-account" item-start></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.myAccount"|translate}}</div>
+      </ion-item>
+
+      <ion-item id="last-active" *ngIf="loginService.isLoggedIn" no-lines menuClose class="menu-item" (click)="openPage('ActivityLogPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-activity-log"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.lastActived"|translate}}</div>
+      </ion-item>
+
+      <ion-item id="find-location" *ngIf="loginService.isLoggedIn" no-lines menuClose class="menu-item" (click)="openPage('FindLocationPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-locator-tool"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.findLocaton"|translate}}</div>
+      </ion-item>
+
+      <ion-item id="contact-us" no-lines menuClose class="menu-item" (click)="openPage('ContactUsPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-call-us"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.contactUs"|translate}}</div>
+      </ion-item>
+
+      <ion-item id="setting" *ngIf="loginService.isLoggedIn" no-lines menuClose class="menu-item" (click)="openPage('SettingsPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-setting"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.setting"|translate}}</div>
+      </ion-item>
+
+      <!-- TODO - Removed from Release 1 -->
+      <!-- <ion-item id="feedback" *ngIf="loginService.isLoggedIn" no-lines menuClose class="menu-item" (click)="openMoal('FeedbackPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-feedback"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.feedback"|translate}}</div>
+      </ion-item> -->
+
+      <ion-item id="about-us" no-lines menuClose class="menu-item" (click)="openPage('AboutUsPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-terms-conditions"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.aboutUs"|translate}}</div>
+      </ion-item>
+
+      <ion-item id="security-tips" no-lines menuClose class="menu-item" (click)="openPage('SecurityTipsPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-privacy-policy"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.securityTips"|translate}}</div>
+      </ion-item>
+
+      <ion-item id="logout" *ngIf="loginService.isLoggedIn" no-lines menuClose class="menu-item" (click)="openMoal('LogoutPromptPage')">
+        <ion-icon class="hamburger-menu-icons" item-start name="scbl-logout"></ion-icon>
+        <div color="secondary-dark" class="h3" ion-text>{{"hamburgerMenu.logout"|translate}}</div>
+      </ion-item>
+      <hr>
+    </ion-list>
+
+    <!-- <div id="footer-div" class="footer" padding>
+      <a id="terms-and-conditions" class="h5 anchor left" menuClose (click)="openPage('TermsAndConditionsPage')">{{"hamburgerMenu.termAndCondition"|translate}}</a>
+      <a id="privacy-policy" class="h5 anchor right" menuClose (click)="openPage('PrivacyPolicyPage')">{{"hamburgerMenu.privacyPolicy"|translate}}</a>
+    </div> -->
+
+  </ion-content>
+     <ion-footer padding  no-border>
+      <div id="footer-div" class="footer" padding>
+        <a id="terms-and-conditions" class="hyperlink-primary-small left" menuClose (click)="openPage('TermsAndConditionsPage')">{{"hamburgerMenu.termAndCondition"|translate}}</a>
+        <a id="privacy-policy" class="hyperlink-primary-small right" menuClose (click)="openPage('PrivacyPolicyPage')">{{"hamburgerMenu.privacyPolicy"|translate}}</a>
+      </div>
+     </ion-footer>
+
+</ion-menu>
+

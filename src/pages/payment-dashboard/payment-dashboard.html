@@ -1,0 +1,25 @@
+<!--
+  Generated template for the PaymentDashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+  </ion-header> 
+  
+
+<ion-content padding>
+    <ion-row>
+        <div class="h1" >{{'PD_Home.PaymentDetails' | translate}}</div >
+    </ion-row>
+    <ion-item *ngIf="policyPaymentArray.length>1" no-border margin-top class="highlighttotal">
+        <div padding-left class="h3" ion-text color="primary">{{'Payments.TotalAmount' | translate}}</div>
+        <div item-end ion-text color="primary" id="TotalAmount"><span class="total-payable">{{policyPaymentDetails.totalPaymentDue.toFixed(2)}}</span> <span class="font-small-size">{{'Payments.baht' | translate}}</span></div>
+    </ion-item>
+    <div *ngFor="let paymentDue of policyPaymentArray">
+        <policy-payment-due [in]="paymentDue"></policy-payment-due>
+    </div>
+</ion-content>

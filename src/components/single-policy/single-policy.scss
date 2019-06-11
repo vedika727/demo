@@ -1,0 +1,158 @@
+single-policy {
+    .no-top-bottom-padding{
+        padding-top:0px !important;
+        padding-bottom: 0px !important;
+    }
+    .padding-top-20{
+        padding-top:1.5vh;
+    }
+    .padding-20{
+        padding-top:1.5vh;
+        padding-bottom:1.5vh;
+    }
+    .padding-bottom-10{
+        padding-bottom: 0.7vh;
+    }
+    .margin-10{
+        margin:1.7vh;
+        // padding-bottom:1.0vh;
+    }
+    .padding-30{
+        padding:3.7vh;
+    }
+    .padding-15{
+        padding:1vh;
+    }
+    .extra-margin{
+        margin-bottom: 1vh
+    }
+    .margin-20{
+        margin:20px;
+    }
+    .padding-top-10{
+        padding-top: 10px;
+    }
+    .input-padding{
+        padding:0px 20px 0px 40px;
+    }
+    .text-input-ios {
+        margin: 0px; 
+        text-align: center !important;
+        font-weight: normal;
+    }
+    .text-input-md {
+        margin: 0px; 
+        text-align: center !important;
+        font-weight: normal;
+    }
+    .loan-input-card{
+        margin:0px !important;
+    }
+    .select-account{
+        color:$secondary-dark !important;
+        border-radius: 25px;
+        border:1px solid $secondary-dark;
+        margin-top:0.5vh
+    }
+    .select-ios {
+        padding: 1vh;
+    }
+    ion-select{
+        max-width:100%;
+    }
+    .item-ios{
+        background: transparent !important;
+        padding-left: 0px
+    }
+    .select-md .select-icon .select-icon-inner{
+        color:$primary;
+        left: -1vh;
+        margin-top: 0px;        
+    }
+    .item-md{
+        background: transparent !important;
+        padding-left: 0px
+    }
+    .loan-amount{
+        border:1px solid $primary;
+        border-radius:30px;
+        background: $secondary;
+        // width:50%;
+        text-align: center !important;
+        // height:50px;
+        font-size: $font_40px;
+        padding:0.5vh
+    }
+    .item-ios.item-block .item-inner {
+        padding-right:0px;
+    }
+    .item-md.item-block .item-inner {
+        padding-right:0px;
+    }
+    .text-input-md {
+        margin: 0px;
+        text-align: center;
+    }
+    .text-input-ios {
+        margin: 0px;
+        text-align: center;
+    }
+    .baht-text{
+        padding-top:3.5vh;
+        padding-left:0.5vh;
+        text-align: left !important;
+    }
+    [col-10] {
+        padding: 0px;
+    }
+    .col{
+        padding: 2px;
+    }
+    .white-card{
+        margin-top:-1vh !important;
+    }
+    .view-policy-details{
+        text-align: right !important
+    }
+    .loan-number{
+        line-height: 0.5
+    }
+    .hr-line{
+        border-bottom: 1px solid $secondary-light
+    }
+    .payout-acc-no{
+        padding-top:5px;
+    }
+    .bank-accounts{
+        border:1px solid $secondary-highlight;
+        border-radius: 25px;
+        min-width:100%;
+    }
+    .select-ios .select-icon{
+        color:$primary;
+        margin:auto 10px
+    }
+    .payout-account {
+        display:flex;
+        height: inherit;
+        line-height: 1
+    }
+    .temporary{
+        margin:auto
+    }
+
+    .text-input::-moz-placeholder {
+        font-weight: bold;
+    }
+      
+    .text-input:-ms-input-placeholder {
+        font-weight: bold;
+    }
+      
+    .text-input::-webkit-input-placeholder {
+        font-weight: bold;
+    }
+    .text-input {
+        font-weight: bold !important;
+    }
+}

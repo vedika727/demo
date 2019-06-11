@@ -1,0 +1,41 @@
+<!-- /**
+* @author Ayush Vyas
+* @description CallMeBack Page is used to request a callback from customercare
+*/ -->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+<ion-content padding>
+    <ion-item no-lines>
+        <div class="h1">{{"hamburgerMenu.contactUs"|translate}}</div>
+        <br>
+        <div class="section-header">{{"hamburgerMenu.callMe"|translate}}</div>
+        <div class="message-type1" text-wrap>{{"hamburgerMenu.topicDescription"|translate}}</div>
+    </ion-item>
+    <!-- User can enter question  -->
+    <ion-item no-margin>
+        <ion-textarea id="callMeBack_input" maxLength="100"class="input" placeholder="{{ 'hamburgerMenu.pleaseEnterQuestion' |translate }}"></ion-textarea>
+    </ion-item>
+    <br>
+    <ion-item no-lines margin-top>
+        <div class="heading3-type2" text-center>{{"hamburgerMenu.weWillContactYou"|translate}}</div>
+        <div class="message-type1" text-center>{{"hamburgerMenu.specifyDateAndTime"|translate}}</div>
+    </ion-item>
+    <!-- User can select date and time when to get a callback -->
+    <ion-item class="date-picker" no-lines>
+        <ion-label id="CallMeBack_Label" stacked class="heading3-type2" text-center>
+            <ion-icon name="scbl-calendar"></ion-icon>
+            {{"hamburgerMenu.pleaseSelectADateAndTime"|translate}}
+        </ion-label>
+        <ion-datetime cancelText="{{'hamburgerMenu.cancel' | translate}}" doneText="{{'hamburgerMenu.okay' | translate}}" id="CallMeBack_Calendar"
+            [(ngModel)]="date" displayFormat="DD MM YYYY HH:mm A" [max]="3100" [min]="minTime" placeholder="DD/MM/YYYY: HH:MM">
+        </ion-datetime>
+    </ion-item>
+    <br>
+    <!-- Button is used to submit the desired date & time to get call -->
+    <div text-center>
+        <button class="cta-button-primary" id="CallMeBack_btn" (click)="callMeLater()" ion-button round>{{"hamburgerMenu.confirm"|translate}}</button>
+    </div>
+</ion-content>

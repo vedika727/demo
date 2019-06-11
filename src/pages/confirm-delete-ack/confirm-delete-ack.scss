@@ -1,0 +1,33 @@
+page-confirm-delete-ack {
+    %commonScss{
+        padding: 12px 30px;
+        height: 25px;
+        font-size: $font_20px;
+        border-radius: 25px;
+    }
+    .icon{
+        float: right;
+        font-size:$font_24px;
+        font-weight: bold;
+    }
+    p{
+        color: $primary;
+        font-weight: bold;
+        font-size: $font_24px;
+    }
+    .confim-btn{
+        .button{
+            @extend %commonScss;
+            background-color: $primary;
+            color: $secondary;
+        }
+    }
+    .cancel-btn{
+        .button{
+            @extend %commonScss;
+            background-color: $secondary;
+            color:  $primary;
+            border: 1px solid  $primary;
+        }
+    }
+}

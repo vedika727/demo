@@ -1,0 +1,34 @@
+<!-- /**
+* @author Ayush Vyas
+* @description PrivacyPolicy Page is used to know the privacy policy of company
+*/ -->
+<!-- <ion-header no-border>
+  <scb-header-icon [in]="headerInputs"></scb-header-icon>
+  <ion-navbar no-border>
+    <ion-title>
+      <img src="assets/imgs/SCBLife-logo.png" style="height: 27px;width: 97px;">
+    </ion-title>
+  </ion-navbar>
+</ion-header>  -->
+
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInputs"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+<ion-content padding>
+  <div class="h1 name">{{"hamburgerMenu.privacyPolicy"|translate}}</div><br>
+  <!--<p class="p" text-wrap>
+
+    ตอนนี้นุ่มไม่มีการบ้านคาสิโนทางเข้า, ฟุตบอลอุณหภูมิก๊าซกลางแจ้ง แต่มันจะกลายเป็นหม้อและเครื่องดื่มแอลกอฮอล์ ฟุตบอลหรือฟุตบอลหม้อหรือเกตเวย์องค์ประกอบ
+    dui จำเป็น นวดประโยชน์จากการที่ออกมาจากปากของ
+    <p class="p" text-wrap>
+      ตอนนี้นุ่มไม่มีการบ้านคาสิโนทางเข้า, ฟุตบอลอุณหภูมิก๊าซกลางแจ้ง แต่มันจะกลายเป็นหม้อและเครื่องดื่มแอลกอฮอล์ ฟุตบอลหรือฟุตบอลหม้อหรือเกตเวย์องค์ประกอบ
+      dui จำเป็น นวดประโยชน์จากการที่ออกมาจากปากของ
+    </p>
+    <p class="p" text-wrap>
+      ตอนนี้นุ่มไม่มีการบ้านคาสิโนทางเข้า, ฟุตบอลอุณหภูมิก๊าซกลางแจ้ง แต่มันจะกลายเป็นหม้อและเครื่องดื่มแอลกอฮอล์ ฟุตบอลหรือฟุตบอลหม้อหรือเกตเวย์องค์ประกอบ
+      dui จำเป็น นวดประโยชน์จากการที่ออกมาจากปากของ </p> -->
+  <div [innerHtml]="privacy | safeHtml"></div>
+</ion-content>

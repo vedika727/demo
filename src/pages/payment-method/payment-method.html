@@ -1,0 +1,100 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="h1">{{'Payments.PolicyPayment' | translate}}</div>
+    <ion-row margin-top>
+        <ion-col no-padding col-4 text-center>
+            <ion-card  (click)="navigate('card')" id="payment_card" [ngClass]="isPolicyLoan?'disabledbutton danger':card1 ? 'success' : 'danger'">
+                <ion-icon class="icons-card" [name]="card1 ? 'scbl-creditcard-secondary' : 'scbl-creditcard-primary'" svgversion></ion-icon>
+                <div class="h5" text-wrap text-center>{{'Payments.CreditCard' | translate}}</div>
+            </ion-card>
+        </ion-col>
+        <ion-col no-padding col-4 text-center>
+            <ion-card (click)="navigate('qr')" id="payment_qrcode" [ngClass]="card2 ? 'success' : 'danger'">
+                <ion-icon class="icons-card" [name]="card2 ? 'scbl-qrcode-secondary' : 'scbl-qrcode-primary'" svgversion></ion-icon>
+                <div class="h5" text-wrap text-center>{{'Payments.QR' | translate}}</div>
+            </ion-card>
+        </ion-col>
+        <ion-col no-padding col-4 text-center>
+            <ion-card (click)="navigate('easy')" id="payment_scbeasy" [ngClass]="card3 ? 'success' : 'danger'">
+                <ion-icon class="icons-card" [name]="card3 ? 'scbl-computer-secondary' : 'scbl-computer-primary'" svgversion></ion-icon>
+                <div class="h5" text-wrap text-center>{{'Payments.SCBNET' | translate}}</div>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <div [ngSwitch]="paymenttype">
+        <div *ngSwitchCase="'card'">
+                <ion-row margin-top class="highlighttotal">
+                    <ion-col col-8>
+                        <div ion-text color="primary" class="hyperlink-primary">{{'Payments.TotalAmount' | translate}}</div>
+                    </ion-col>
+                    <ion-col col-4 right>
+                        <div ion-text color="primary" class="hyperlink-primary">{{totalAmount.toFixed(2)}} {{'PD_Home.Baht' | translate}}</div>
+                    </ion-col>
+                </ion-row>
+                    <ion-col text-center>
+                        <div ion-text class="h3">{{'Payments.payViaCC' | translate}}</div>
+                    </ion-col>
+                <ion-row>
+                    <ion-col col-1>                    
+                        <ion-checkbox id="Payments.AgreewithTermsandPolicy" required color="dark" [(ngModel)]="isCCChecked" name="termsAndCondition"></ion-checkbox>
+                     </ion-col>
+                    <ion-col col-11>
+                        <div class="terms">{{'Payments.AgreewithTermsAndPolicyCreditCard' | translate}}</div>
+                    </ion-col>
+                </ion-row>
+                <div text-center>
+                    <button ion-button id="Payments.PayNow" type="submit" id="submitbtn" [disabled]="!isCCChecked" class="cta-button-accent" (click)="payByCC()" round>{{'Payments.PayViaCredit' | translate}}</button>
+                </div>
+        </div>
+        <div *ngSwitchCase="'qr'">
+            <ion-row margin-top class="highlighttotal">
+                    <ion-col col-8>
+                        <div ion-text color="primary" class="hyperlink-primary">{{'Payments.TotalAmount' | translate}}</div>
+                    </ion-col>
+                    <ion-col col-4 right>
+                        <div ion-text color="primary" class="hyperlink-primary">{{totalAmount.toFixed(2)}} {{'PD_Home.Baht' | translate}}</div>
+                    </ion-col>
+            </ion-row>
+            <ion-row text-center padding>
+                <div *ngIf="createdCode" class="qrdiv">
+                    <span>
+                        <ngx-qrcode [qrc-value]="createdCode" [qrc-element-type]="elementType"></ngx-qrcode>
+                    </span>
+                </div>
+            </ion-row>
+            <div text-center>
+                <div class="qr-terms">{{'Payments.qrcodeNote' | translate}}</div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'easy'">
+            <ion-row margin-top class="highlighttotal">
+                    <ion-col col-8>
+                        <div ion-text color="primary" class="hyperlink-primary">{{'Payments.TotalAmount' | translate}}</div>
+                    </ion-col>
+                    <ion-col col-4 right>
+                        <div ion-text color="primary" class="hyperlink-primary">{{totalAmount.toFixed(2)}} {{'PD_Home.Baht' | translate}}</div>
+                    </ion-col>
+            </ion-row>
+                    <ion-col text-center>
+                        <div ion-text class="h3">{{'Payments.payViaSCBNet' | translate}}</div>
+                    </ion-col>
+                <ion-row>
+                    <ion-col col-1>
+                        <ion-checkbox id="Payments.AgreewithTermsandPolicy" required color="dark" [(ngModel)]="isEasyChecked" name="termsAndCondition"></ion-checkbox>
+                    </ion-col>
+                    <ion-col col-11>
+                        <div class="terms">{{'Payments.AgreewithTermsAndPolicySCBNet' | translate}}</div>
+                    </ion-col>
+                </ion-row>
+                <div text-center>
+                    <button ion-button class="cta-button-primary" id="Payments.PayNow" type="submit" id="submitbtn" [disabled]="!isEasyChecked" (click)="payByEasy()" round>{{'Payments.enter' | translate}}</button>
+                </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,115 @@
+<!-- Generated template for the ClaimHistoryComponent component -->
+
+<!-- ongoing claim status div -->
+<div *ngIf="claimItemsData?.length != 0">
+    <ion-label class="bold-primary-26px margin-15" color="primary">{{"claims.history" | translate}}</ion-label>
+</div>
+<div *ngIf="claimItemsData?.length != 0">
+    <div class="rounded-card-div margin-15" *ngFor="let claim of claimItemsData">
+        <div class="claimHeader">
+            <div class="col-sm-12">
+                <span class="bold-text-24px">{{"claims.policyInformation" | translate}}</span>:
+                <span class="bold-text-24px"> {{claim?.ClaimType}}</span>
+            </div>
+            <div class="col-sm-12">
+                <span class="bold-text-24px">{{"claims.status" | translate}} </span>:
+                <span ion-text class="bold-text-24px" [color]="claim.Status=='อนุมัติเรียบร้อยแล้ว'?'accent-success':(claim.Status=='ได้รับเอกสารและอยู่ระหว่างการพิจารณา'?'accent':'secondary-dark')">{{claim?.Status}}</span>
+            </div>
+            <div class="col-sm-12">
+                <span class="bold-text-24px">{{"claims.issueDate" | translate}} </span>:
+                <!-- <span class="bold-text-24px"> {{claim?.IssueDate}}</span> -->
+
+                <span class="bold-text-24px"> {{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+            </div>
+        </div>
+        <div class="middle-line"></div>
+        <div class="claimBody">
+            <ion-grid>
+                <ion-row class="">
+                    <ion-col col-5>
+                        <div class="bold-text-20px">{{"claims.issueDate" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+                    </ion-col>
+                    <ion-col col-7>
+                        <div class="bold-text-20px">{{"claims.accidentDate" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.AccidentDate,true,2)}}</span>
+                    </ion-col>
+                </ion-row>
+                <!-- <ion-row>
+                    <ion-col col-5>
+                        <div class="bold-text-20px">{{"claims.approvalAmount" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{claimStatus.approvalAmount}} {{"claims.Baht" | translate}}</span>
+                    </ion-col>
+                    <ion-col col-7>
+                        <div class="bold-text-20px">{{"claims.paymentChannel" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{claimStatus.paymentChannel}}</span>
+                    </ion-col>
+                </ion-row> -->
+            </ion-grid>
+        </div>
+    </div>
+</div>
+
+
+<!-- claim history div -->
+<div *ngIf="claimHistoriesData?.length != 0">
+    <ion-label class="bold-primary-26px margin-15" color="primary">{{"claims.claimStatus" | translate}}</ion-label>
+</div>
+<div *ngIf="claimHistoriesData?.length != 0">
+    <div class="rounded-card-div margin-15" *ngFor="let claim of claimHistoriesData">
+        <div class="claimHeader">
+            <div class="col-sm-12">
+                <span class="bold-text-24px">{{"claims.policyInformation" | translate}}</span>:
+                <span class="bold-text-24px"> {{claim?.ClaimType}}</span>
+            </div>
+            <div class="col-sm-12">
+                <span class="bold-text-24px">{{"claims.status" | translate}} </span>:
+                <span ion-text class="bold-text-24px" [color]="claim.Status=='อนุมัติเรียบร้อยแล้ว'?'accent-success':(claim.Status=='ได้รับเอกสารและอยู่ระหว่างการพิจารณา'?'accent':'secondary-dark')">{{claim?.Status}}</span>
+                <!-- <span ion-text color="accent-success" class="bold-text-24px">{{inputFromPage.b}}</span> -->
+            </div>
+            <div class="col-sm-12">
+                <span class="bold-text-24px">{{"claims.issueDate" | translate}} </span>:
+                <span class="bold-text-24px"> {{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+            </div>
+        </div>
+        <div class="middle-line"></div>
+        <div class="claimBody">
+            <ion-grid>
+                <ion-row class="">
+                    <ion-col col-5>
+                        <div class="bold-text-20px">{{"claims.issueDate" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+                    </ion-col>
+                    <ion-col col-7>
+                        <div class="bold-text-20px">{{"claims.accidentDate" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.AccidentDate,true,2)}}</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row [hidden]="claim.Status === 'โปรดติดต่อบริษัทฯ'">
+                    <ion-col col-5>
+                        <div class="bold-text-20px">{{"claims.approvalAmount" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{claim?.ApprovalAmount}}
+                            {{"claims.Baht" | translate}}</span>
+                    </ion-col>
+                    <ion-col col-7>
+                        <div class="bold-text-20px">{{"claims.paymentChannel" | translate}}:</div>
+                        <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{claim?.PaymentChannel}}</span>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</div>
+
+<ion-card *ngIf="(claimHistoriesData?.length == 0) && (claimItemsData?.length == 0) " class="marginTopest">
+        <ion-card-content padding class="BackImage">
+            <ion-row>
+                <ion-col col-9 class="margin-bottom2">
+                    <div class="h3" ion-text color="primary">สถานะการเรียกร้องสินไหม</div>
+                    <div class="h3" ion-text color="primary">ขออภัยในความไม่สะดวก </div>
+                    <div class="heading2-type2 ">คุณไม่มีกรมธรรม์</div>
+                    <div class="heading2-type2">ที่สามารถเรียกร้องสินไหมได้</div>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>

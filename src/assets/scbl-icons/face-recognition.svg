@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" stroke="#4E2683" stroke-width="3">
+            <rect id="Rectangle-2" x="1.5" y="1.5" width="123" height="123" rx="10"></rect>
+            <path d="M36.5,44.25 L36.5,55.75" id="Line-6" stroke-linecap="round"></path>
+            <path d="M89.5,44.25 L89.5,55.75" id="Line-6" stroke-linecap="round"></path>
+            <path d="M65.2533938,52.2393096 L65.2533938,71.035168 C63.6260811,75.331856 61.280447,78.0174515 58.2164913,79.0919545" id="Path-5" stroke-linecap="round"></path>
+            <path d="M36.9220659,97.1578829 C54.0657848,107.424253 71.5785952,107.424253 89.460497,97.1578829" id="Path-6" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

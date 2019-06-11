@@ -1,0 +1,29 @@
+<!-- /**
+* @author Ayush Vyas
+* @description Contact us page with two options either to call directly to call centre or request a callback
+*/ -->
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+      <scb-header [in]="headerInput"></scb-header>
+  </ion-navbar>
+</ion-header> 
+<ion-content padding>
+  <ion-item no-lines>
+  <div class="h1" text-left no-lines>{{"hamburgerMenu.contactUs"|translate}}</div>
+  </ion-item>
+  <!-- This is used to call the customer care -->
+  <ion-item  id="CallPrompt"(click)="callSCB()" no-lines >
+      <ion-icon class="hamburger-menu-icons font-big" color="primary" item-start name="scbl-call-us"></ion-icon>
+     <span class="section-header">{{"hamburgerMenu.callCentrePhoneNumber"|translate}}</span>
+     <div class=" heading5-type3">{{"hamburgerMenu.centerNumber"|translate}}</div>
+    </ion-item>
+    <hr>
+    <!-- This is used to  request a callback -->
+    <!-- <ion-item id="CallMeBack"(click)="CallMe()" no-lines >
+        <ion-icon class="hamburger-menu-icons" color="primary" item-start name="scbl-call"></ion-icon>
+       <span class="section-header"> {{"hamburgerMenu.callMe"|translate}}</span>
+        <div class=" heading5-type3">{{"hamburgerMenu.date3"|translate}}</div>
+        <ion-icon class="hamburger-menu-icons" item-right name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+      <hr> -->
+</ion-content>

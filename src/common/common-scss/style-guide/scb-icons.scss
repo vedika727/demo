@@ -1,0 +1,418 @@
+@import "color-variables.scss";
+
+ion-icon {
+    &[ng-reflect-name*="scbl-"] {
+        mask-size: contain;
+        mask-position: 20% 20% 20% 20%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    &[ng-reflect-name*="scbl-accident"] {
+        mask-image: url("../assets/scbl-icons/accident.svg");
+    }
+    &[ng-reflect-name*="scbl-accident-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/accident.svg");
+    }
+    &[ng-reflect-name="scbl-accident-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/accident.svg");
+    }
+    &[ng-reflect-name="scbl-activity-log"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/activity-log.svg");
+    }
+    &[ng-reflect-name="scbl-activityLog"] {
+        mask-image: url("../assets/scbl-icons/activitylog-footer.svg");
+    }
+    &[ng-reflect-name="scbl-activity-log-footer-menu"] {
+        mask-image: url("../assets/scbl-icons/activitylog-footer.svg");
+    }
+    &[ng-reflect-name="scbl-add-image"] {
+        mask-image: url("../assets/scbl-icons/add.svg");
+    }
+    &[ng-reflect-name="scbl-barcode-icon"] {
+        mask-image: url("../assets/scbl-icons/qrcode.svg");
+    }
+    &[ng-reflect-name="scbl-calendar-primary"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/calendar.svg");
+    }
+    &[ng-reflect-name="scbl-calendar"] {
+        mask-image: url("../assets/scbl-icons/calendar.svg");
+    }
+    &[ng-reflect-name="scbl-call-me-back"] {
+        mask-image: url("../assets/scbl-icons/call-me-back.svg");
+    }
+    &[ng-reflect-name="scbl-call-us"] {
+        mask-image: url("../assets/scbl-icons/call-us.svg");
+    }
+    &[ng-reflect-name="scbl-call"] {
+        mask-image: url("../assets/scbl-icons/call.svg");
+    }
+    &[ng-reflect-name="scbl-camera"] {
+        mask-image: url("../assets/scbl-icons/camera.svg");
+    }
+    &[ng-reflect-name="scbl-cancer"] {
+        mask-image: url("../assets/scbl-icons/cancer.svg");
+    }
+    &[ng-reflect-name="scbl-cancer-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/cancer.svg");
+    }
+    &[ng-reflect-name="scbl-cancer-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/cancer.svg");
+    }
+    &[ng-reflect-name="scbl-cancle-grey"] {
+        mask-image: url("../assets/scbl-icons/cancle.svg");
+    }
+    &[ng-reflect-name="scbl-cancle-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/cancle.svg");
+    }
+    &[ng-reflect-name="scbl-close"] {
+        mask-image: url("../assets/scbl-icons/Close.svg");
+    }
+    &[ng-reflect-name="scbl-cash"] {
+        mask-image: url("../assets/scbl-icons/cash.svg");
+    }
+    &[ng-reflect-name="scbl-challenge"] {
+        mask-image: url("../assets/scbl-icons/challenge.svg");
+    }
+    &[ng-reflect-name="scbl-change-payment"] {
+        background: transparent;
+        content: url("../assets/scbl-icons/payment.svg");
+    }
+    &[ng-reflect-name="scbl-contact-us"] {
+        mask-image: url("../assets/scbl-icons/contact-us.svg");
+    }
+    &[ng-reflect-name="scbl-credit-card-icon"] {
+        mask-image: url("../assets/scbl-icons/credit-card.svg");
+    }
+    &[ng-reflect-name="scbl-dash-profile-image"] {
+        mask-image: url("../assets/scbl-icons/profile.svg");
+    }
+    &[ng-reflect-name="scbl-debt"] {
+        mask-image: url("../assets/scbl-icons/debt.svg");
+    }
+    &[ng-reflect-name="scbl-document"] {
+        mask-image: url("../assets/scbl-icons/document.svg");
+    }
+    &[ng-reflect-name="scbl-download-primary"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/download.svg");
+    }
+    &[ng-reflect-name="scbl-download"] {
+        mask-image: url("../assets/scbl-icons/download.svg");
+    }
+    &[ng-reflect-name="scbl-due-date"] {
+        mask-image: url("../assets/scbl-icons/date.svg");
+    }
+    &[ng-reflect-name="scbl-edit-payment"] {
+        mask-image: url("../assets/scbl-icons/edit-payment.svg");
+    }
+    &[ng-reflect-name="scbl-edit"] {
+        mask-image: url("../assets/scbl-icons/edit.svg");
+    }
+    &[ng-reflect-name="scbl-face-recognition"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/face-recognition.svg");
+    }
+    &[ng-reflect-name="scbl-feedback"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/feedback.svg");
+    }
+    &[ng-reflect-name="scbl-fingerprint"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/fingerprint.svg");
+    }
+    &[ng-reflect-name="scbl-fitsense"] {
+        mask-image: url("../assets/scbl-icons/fitsense.svg");
+    }
+    &[ng-reflect-name="scbl-folder"] {
+        mask-image: url("../assets/scbl-icons/folder.svg");
+    }
+    &[ng-reflect-name="scbl-home-footer-menu-active"] {
+        mask-image: url("../assets/scbl-icons/home.svg");
+    }
+    &[ng-reflect-name="scbl-home-footer-menu"] {
+        mask-image: url("../assets/scbl-icons/home.svg");
+    }
+    &[ng-reflect-name="scbl-hospital"] {
+        mask-image: url("../assets/scbl-icons/hospital.svg");
+    }
+    &[ng-reflect-name="scbl-hospital-opd"] {
+        mask-image: url("../assets/scbl-icons/hospital.svg");
+    }
+    &[ng-reflect-name="scbl-hospital-opd-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/hospital.svg");
+    }
+    &[ng-reflect-name="scbl-hospital-opd-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/hospital.svg");
+    }
+    &[ng-reflect-name="scbl-illness"] {
+        mask-image: url("../assets/scbl-icons/illness.svg");
+    }
+    &[ng-reflect-name="scbl-illness-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/illness.svg");
+    }
+    &[ng-reflect-name="scbl-illness-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/illness.svg");
+    }
+    &[ng-reflect-name="scbl-insurance-card"] {
+        mask-image: url("../assets/scbl-icons/insurance-card.svg");
+    }
+    &[ng-reflect-name="scbl-ipd"] {
+        mask-image: url("../assets/scbl-icons/ipd.svg");
+    }
+    &[ng-reflect-name="scbl-ipd-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/ipd.svg");
+    }
+    &[ng-reflect-name="scbl-ipd-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/ipd.svg");
+    }
+    &[ng-reflect-name="scbl-life-coverage"] {
+        mask-image: url("../assets/scbl-icons/life-coverage.svg");
+    }
+    &[ng-reflect-name="scbl-life-coverage-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/life-coverage.svg");
+    }
+    &[ng-reflect-name="scbl-life-coverage-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/life-coverage.svg");
+    }
+    &[ng-reflect-name="scbl-loan"] {
+        mask-image: url("../assets/scbl-icons/loan.svg");
+    }
+    &[ng-reflect-name="scbl-locator-tool"] {
+        background: transparent;
+        content: url("../assets/scbl-icons/locator-tool.svg");
+    }
+    &[ng-reflect-name="scbl-logout"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/logout.svg");
+    }
+    &[ng-reflect-name="scbl-medicine"] {
+        mask-image: url("../assets/scbl-icons/medicine.svg");
+    }
+    &[ng-reflect-name="scbl-medicine-grey"] {
+        color: $secondary-highlight;
+        mask-image: url("../assets/scbl-icons/medicine.svg");
+    }
+    &[ng-reflect-name="scbl-medicine-white"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/medicine.svg");
+    }
+    &[ng-reflect-name="scbl-my-account"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/my-account.svg");
+    }
+    &[ng-reflect-name="scbl-my-money"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/My-money.svg");
+    }
+    &[ng-reflect-name="scbl-notification-footer-menu-active"] {
+        mask-image: url("../assets/scbl-icons/notification-fill.svg");
+    }
+    &[ng-reflect-name="scbl-notification-footer-menu"] {
+        mask-image: url("../assets/scbl-icons/notification-fill.svg");
+    }
+    &[ng-reflect-name="scbl-pay-time"] {
+        mask-image: url("../assets/scbl-icons/time.svg");
+    }
+    &[ng-reflect-name="scbl-payment-method"] {
+        mask-image: url("../assets/scbl-icons/payment-method.svg");
+    }
+    &[ng-reflect-name="scbl-payment-download"] {
+        mask-image: url("../assets/scbl-icons/payment-download.svg");
+    }
+    &[ng-reflect-name="scbl-pd-home-footer-menu"] {
+        mask-image: url("../assets/scbl-icons/pd-home-footer-menu.svg");
+    }
+    &[ng-reflect-name="scbl-pin-blank"] {
+        mask-image: url("../assets/scbl-icons/pin-blank.svg");
+    }
+    &[ng-reflect-name="scbl-pin-entered"] {
+        mask-image: url("../assets/scbl-icons/pin-entered.svg");
+    }
+    &[ng-reflect-name="scbl-policy-dashboard"] {
+        mask-image: url("../assets/scbl-icons/policy-dashboard.svg");
+               
+    }
+    
+    &[ng-reflect-name="scbl-policy-details"] {
+        mask-image: url("../assets/scbl-icons/policy-details.svg");
+    }
+    &[ng-reflect-name="scbl-policy-i-have"] {
+        mask-image: url("../assets/scbl-icons/policy-i-have.svg");
+    }
+    &[ng-reflect-name="scbl-privacy-policy"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/privacy-policy.svg");
+    }
+    &[ng-reflect-name="scbl-profile-footer-menu-active"] {
+        mask-image: url("../assets/scbl-icons/profile.svg");
+    }
+    &[ng-reflect-name="scbl-profile-footer-menu"] {
+        mask-image: url("../assets/scbl-icons/profile.svg");
+    }
+    &[ng-reflect-name="scbl-refresh"] {
+        mask-image: url("../assets/scbl-icons/refresh.svg");
+    }
+    &[ng-reflect-name="scbl-reward"] {
+        mask-image: url("../assets/scbl-icons/reward.svg");
+    }
+    &[ng-reflect-name="scbl-scbeasy-net"] {
+        mask-image: url("../assets/scbl-icons/computer.svg");
+    }
+    &[ng-reflect-name="scbl-scblife-logo"] {
+        mask-image: url("../assets/scbl-icons/scblife-logo.svg");
+    }
+    &[ng-reflect-name="scbl-setting"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/settings.svg");
+    }
+    &[ng-reflect-name="scbl-share"] {
+        mask-image: url("../assets/scbl-icons/share.svg");
+    }
+    &[ng-reflect-name="scbl-silver-state"] {
+        mask-image: url("../assets/scbl-icons/silver-state.svg");
+    }
+    &[ng-reflect-name="scbl-star-selected"] {
+        mask-image: url("../assets/scbl-icons/star.svg");
+    }
+    &[ng-reflect-name="scbl-star-unselected"] {
+        mask-image: url("../assets/scbl-icons/star.svg");
+    }
+    &[ng-reflect-name="scbl-story"] {
+        mask-image: url("../assets/scbl-icons/story.svg");
+    }
+    &[ng-reflect-name="scbl-success"] {
+        mask-image: url("../assets/scbl-icons/success.svg");
+    }
+    &[ng-reflect-name="scbl-terms-conditions"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/terms-conditions.svg");
+    }
+    &[ng-reflect-name="scbl-trash"] {
+        mask-image: url("../assets/scbl-icons/trash.svg");
+    }
+    &[ng-reflect-name="scbl-time"] {
+        mask-image: url("../assets/scbl-icons/time.svg");
+    }
+    &[ng-reflect-name="scbl-upload-photo"] {
+        mask-image: url("../assets/scbl-icons/upload-photo.svg");
+    }
+    &[ng-reflect-name="scbl-verified-icon"] {
+        mask-image: url("../assets/scbl-icons/verified-icon.svg");
+    }
+    &[ng-reflect-name="scbl-creditcard-primary"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/credit-card.svg");
+    }
+    &[ng-reflect-name="scbl-computer-primary"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/computer.svg");
+    }
+    &[ng-reflect-name="scbl-qrcode-primary"] {
+        color: $primary;
+        mask-image: url("../assets/scbl-icons/qrcode.svg");
+    }
+    &[ng-reflect-name="scbl-creditcard-secondary"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/credit-card.svg");
+    }
+    &[ng-reflect-name="scbl-computer-secondary"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/computer.svg");
+    }
+    &[ng-reflect-name="scbl-qrcode-secondary"] {
+        color: $secondary;
+        mask-image: url("../assets/scbl-icons/qrcode.svg");
+    }
+    &[ng-reflect-name="scbl-touch-id"] {
+        mask-image: url("../assets/scbl-icons/fingerprint.svg");
+    }
+    &[ng-reflect-name="scbl-Face-scan"] {
+        mask-image: url("../assets/scbl-icons/face-recognition.svg");
+    }
+    &[ng-reflect-name="Zoom-in"] {
+        mask-image: url("../assets/scbl-icons/Zoom-in.svg");
+    }
+    &[ng-reflect-name="Fitsense-bages-Bronze"] {
+        mask-image: url("../assets/scbl-icons/Fitsense-bages-Bronze.svg");
+    }
+    &[ng-reflect-name="Fitsense-bages-Gold"] {
+        mask-image: url("../assets/scbl-icons/Fitsense-bages-Gold.svg");
+    }
+    &[ng-reflect-name="Fitsense-bages-Silver"] {
+        mask-image: url("../assets/scbl-icons/Fitsense-bages-Silver.svg");
+    }
+    &[ng-reflect-name="error"] {
+        content: url("../assets/scbl-icons/error.svg");
+    }
+    &[ng-reflect-name="no-internet"] {
+        mask-image: url("../assets/scbl-icons/no-internet.svg");
+    }
+    &[ng-reflect-name="envelope"] {
+        content: url("../assets/scbl-icons/envelope.svg");
+    }
+    &[ng-reflect-name="home-notification"] {
+        content: url("../assets/scbl-icons/Notification-Purple.svg");
+    }
+    &[ng-reflect-name="home-notification-grey"] {
+        content: url("../assets/scbl-icons/Notification-grey.svg");
+    }
+    &[ng-reflect-name="Profile-purple"] {
+        content: url("../assets/scbl-icons/Profile-Purple.svg");
+    }
+    &[ng-reflect-name="Profile-grey"] {
+        content: url("../assets/scbl-icons/Profile-grey.svg");
+    }
+    &[ng-reflect-name="Payin-card"] {
+        content: url("../assets/scbl-icons/payin-card.svg");
+    }
+    &[ng-reflect-name="paymentInfo-Cash"] {
+        content: url("../assets/scbl-icons/paymentInfo-Cash.svg");
+    }
+    &[ng-reflect-name="paymentInfo-Cheque"] {
+        content: url("../assets/scbl-icons/paymentInfo-Cheque.svg");
+    }
+    &[ng-reflect-name="paymentInfo-Creditcard"] {
+        content: url("../assets/scbl-icons/paymentInfo-Creditcard.svg");
+    }
+    &[ng-reflect-name="paymentInfo-Passbook"] {
+        content: url("../assets/scbl-icons/paymentInfo-Passbook.svg");
+    }
+    &[ng-reflect-name="scbl-sales-cashback"] {
+        mask-image: url("../assets/scbl-icons/Sales-product-cashback.svg");
+    }
+    &[ng-reflect-name="scbl-sales-capital"] {
+        mask-image: url("../assets/scbl-icons/Sales-product-capital.svg");
+    }
+    &[ng-reflect-name="scbl-sales-premiumPaymentMode"] {
+        mask-image: url("../assets/scbl-icons/Sales-product-premiumPaymentMode.svg");
+    }
+    &[ng-reflect-name="scbl-sales"] {
+        mask-image: url("../assets/scbl-icons/Sales-umbrella.svg");
+    }
+    &[ng-reflect-name="scbl-terms"] {
+        mask-image: url("../assets/scbl-icons/icon-terms.svg");
+    }
+    &[ng-reflect-name="scbl-cashback"] {
+        mask-image: url("../assets/scbl-icons/cashback.svg");
+    }
+    &[ng-reflect-name="scbl-tax-saving"] {
+        mask-image: url("../assets/scbl-icons/tax-saving.svg");
+    }
+}

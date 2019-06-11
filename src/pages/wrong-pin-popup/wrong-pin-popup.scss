@@ -1,0 +1,30 @@
+page-wrong-pin-popup {
+    .title{ 
+        font-weight: bold;
+        font-size: $font_30px;
+    }
+    .forgot-pin{
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    .set-pin{
+        width: 150px;
+        margin-top:10px;
+        font-weight: bold
+    }
+    .close-button{
+        width:18.22px;
+        height: 20.36px;
+    }
+    .overlay {
+        background-color: rgba(0, 0, 0, 0) !important; 
+    }
+    ion-card img{
+        display: inline;
+    }
+
+    .modalstyle .popover-content-style {
+        border-radius: 10px;
+    }
+    
+}

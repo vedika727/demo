@@ -1,0 +1,69 @@
+<!-- /**
+* @author Ayush Vyas
+* @description for Single and multiple loan submission
+*/ -->
+<ion-header no-border>
+</ion-header>
+<ion-content padding>
+  <ion-item no-lines text-center>
+    <img class="thank-you-icon" src="../assets/scbl-icons/success.svg">
+    <div class="h1" text-center>{{"MultipleLoanSubmission.heading" | translate}}</div>
+    <div class="placeholder align-title"text-center>{{"MultipleLoanSubmission.Dateofrequest" | translate}}</div>
+    <div class="heading3-type2"text-center>2 July 2018</div>
+  </ion-item>
+    <ion-label padding-left class="section-header">{{"MultipleLoanSubmission.Details" | translate}}</ion-label>
+    <hr>
+  <div padding-left>
+    <ion-item no-lines no-padding *ngFor="let loan of loanList.loanPolicies">
+    <ion-row >
+      <ion-col class="placeholder" col-6>{{"MultipleLoanSubmission.referencenumber"|translate}}</ion-col>
+      <ion-col text-end class="heading3-type2" col-6>{{loan.transactionNumber}}</ion-col>
+      <ion-col class="placeholder" col-6>{{"MultipleLoanSubmission.policynumber" | translate}}</ion-col>
+      <ion-col text-end class="heading3-type2" col-6>{{loan.policyNumber}}</ion-col>
+      <ion-col class="placeholder" col-6>{{"MultipleLoanSubmission.InterestRate" | translate}}</ion-col>
+      <ion-col text-end class="heading3-type2" col-6>{{loan.loanInterestRate}}%</ion-col>
+    </ion-row><hr>
+      <!-- <hr *ngIf="!isSingleLoan"> -->
+    </ion-item>
+    <!-- <ion-item no-lines class="multiple-loan" [ngClass]=" !isSingleLoan ? '' : 'margin-top-neg' "> -->
+    <ion-row>
+      <ion-col class="placeholder" col-6>
+          {{"MultipleLoanSubmission.AmountLoan" | translate}}
+      </ion-col>
+      <ion-col col-6 text-right class="heading3-type2">
+        {{loanList.totalAvailedLoanAmount}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="placeholder" col-6>
+          {{"MultipleLoanSubmission.servicefees" | translate}}
+      </ion-col>
+      <ion-col col-6 text-right class="heading3-type2">
+        {{loanList.stampDuty}}
+        <span class="hr span" align="center"> </span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="placeholder"col-6>
+          {{"MultipleLoanSubmission.AmountReceive" | translate}}
+      </ion-col>
+      <ion-col col-6 text-right class="heading3-type2">
+        {{loanList.totalAvailedLoanAmountWithStampDuty}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="scb-account-box">
+      <ion-col col-12 class="heading3-type2">
+          {{"MultipleLoanSubmission.Accountnumber" | translate}}
+      </ion-col>
+      <ion-col col-12 class="placeholder">
+        {{loanList.loanPayoutAccount}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="loan-accept h3"text-wrap text-center>
+        {{"MultipleLoanSubmission.condition1" | translate}} {{length}} {{"MultipleLoanSubmission.condition2" | translate}}
+    </ion-row>
+    <div text-center>
+      <button id="buttonText" ion-button round class=" cta-button-primary" (click)="action()">{{"MultipleLoanSubmission.finish" | translate}}</button>
+    </div>
+  </div>
+</ion-content>

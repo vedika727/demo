@@ -1,0 +1,69 @@
+<ion-header no-border>
+        <ion-navbar transparent hideBackButton>
+            <scb-header [in]="headerInput"></scb-header>
+        </ion-navbar>
+    </ion-header> 
+
+<ion-content>
+    <form (ngSubmit)="changeBook()">
+        <ion-item class="changeBookHeader" no-lines>
+            <ion-label class="h1">{{ 'policyDashboard.changeBankAccount' | translate}}</ion-label>
+        </ion-item>
+        <ion-row class="cb-selectBox">
+            <ion-col col-3>
+                <ion-label class="font-bold">{{ 'policyDashboard.bank' | translate}}</ion-label>
+            </ion-col>
+            <ion-col col-9>
+                <ion-select name="bank" class="font-bold" id="bankName" [(ngModel)]="paymentBook.bank" placeholder="{{ 'policyDashboard.pleaseSelectBankAccount' | translate}}" class="selectOpt" interface="popover">
+                    <ion-option class="font-bold" *ngFor="let bank of banks" value="bank.name">{{bank.name}}</ion-option>
+                    <!-- <ion-option (ionSelect)="showOtherDetails()">SCB 2</ion-option> -->
+                </ion-select>
+            </ion-col>
+        </ion-row>
+
+        <ion-card margin-horizontal padding-horizontal class="cb-card">
+            <ion-row>
+                <ion-col col-4 class="font-bold">{{ 'policyDashboard.accountName' | translate}}</ion-col>
+                <ion-col col-8 class="input-padding">
+                    <ion-input no-margin class="font-bold" type="text" id="accountholderName" name="accountholder" [(ngModel)]="paymentBook.accountHolder"
+                        placeholder="{{ 'policyDashboard.PleasefilltheAccountHolderName' | translate}}">
+                    </ion-input>
+                    </ion-col>
+            </ion-row>
+
+            <ion-row margin-top>
+                <ion-col col-4 class="font-bold">{{ 'policyDashboard.accountNumber' | translate}}</ion-col>
+                <ion-col col-8 class="input-padding">
+                    <ion-input no-margin class="font-bold" type="text" id="accountNumber" name="accountNumber" [(ngModel)]="paymentBook.accountNumber" 
+                    placeholder="{{ 'policyDashboard.pleasefilltheAccountNumber' | translate}}">
+                </ion-input>
+                </ion-col>
+            </ion-row>
+
+            <div>
+                <ion-label margin-top class="font-bold">{{ 'policyDashboard.Uploadpicture' | translate}}</ion-label>
+                <ion-row>
+                    <ion-col class="cb-upload-pic">
+                        <a href="" class="anchor font-bold" (click)="getPicture()">{{ 'policyDashboard.uploadAction' | translate}}</a>
+                        <!-- <input type="text" placeholder="" id="bankAccountPic" name="bankAccountPic" [(ngModel)]="paymentBook.bankAccountPic"> -->
+                    </ion-col>
+                    <ion-col col-2 class="delete-anchor-link">
+                        <a href="" class="anchor font-bold">{{ 'policyDashboard.delete' | translate}}</a>
+                        <!-- <span class="cb-camera-icon" (click)="getPicture()"><ion-icon name="camera"></ion-icon></span> -->
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card>
+        <p class="star-terms-condition">
+            <span class="tandC">*{{'policyDashboard.IacceptthisAccountastheprimaryaccountforthisandnextinstallments' | translate}}</span>
+        </p>
+        <ion-item no-lines>
+            <ion-label margin-top class="font-bold pd-top" text-wrap>{{ 'policyDashboard.iAcceptTerms&Condition' | translate}}</ion-label>
+            <ion-checkbox margin-right mode="md" class="cb-checkbox"></ion-checkbox>
+        </ion-item>
+
+        <ion-item no-lines text-center class="anp-submit-btn">
+            <button ion-button type="submit" class="cta-button-primary">{{ 'policyDashboard.save' | translate}}</button>
+        </ion-item>
+    </form>
+</ion-content>

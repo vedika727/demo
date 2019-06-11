@@ -1,0 +1,16 @@
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="wrongPinModalBackground">
+    <!-- div which closes modal onclick behind the content -->
+    <div class="overlay"   id="wrongPinOverlay"></div>
+  
+      <!-- Call support pop over -->
+      <ion-card class="popover-content-style">
+        <ion-card-content>
+            <div (click)="dismissModal()" text-right><img class="close-button" src="../assets/scbl-icons/Close.svg" /></div>
+          <div ion-text id="wrongPinApologizeForIncovenience" color="accent-danger" class="title">{{"login.apologizeForIncovenience" | translate}}</div>
+          <div id="wrongPinForgotPIN" class="h3 forgot-pin">{{"login.wrongPinForgotPin" | translate}}</div>
+          <div text-center>
+            <button ion-button round id="wrongPinCallButton" class="set-pin" (click)="setPin()">{{"login.wrongPinSetPin" | translate}}</button>
+          </div>
+        </ion-card-content>
+        </ion-card>
+        </ion-content>

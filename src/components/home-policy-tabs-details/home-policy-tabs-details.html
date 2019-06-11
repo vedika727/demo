@@ -1,0 +1,352 @@
+<div [ngSwitch]="insTypes">
+    <div *ngSwitchCase="'Information'">
+        <!-- <div class="SpinnerDiv" *ngIf="spinnerFlag">
+            <generic-view [In]=genericDialog></generic-view>
+        </div> -->
+        <ion-card *ngIf="isSCBCustomer || !isRegistered" class="marginTopest">
+            <ion-card-content>
+                <ion-row no-padding>
+                    <ion-col col-6 (click)="redirectDetail()">
+                        <home-pie-chart [isLoggedIn]="isRegistered" [PolicyPieData]="totalcoverage"></home-pie-chart>
+                    </ion-col>
+                    <ion-col col-6>
+                        <!-- WHEN SCB CUSTOMER HAS Standard Policy -->
+                        <div *ngIf="isRegistered && isSCBCustomer" class="">
+                                <ion-item class="cashbackButton margin-top" text-center *ngIf="paymentDue">
+                                    <div class="p">{{"PD_Home.MoreInfo" | translate}}</div>
+                                    <button ion-button color="primary" (click)="moreInfo(paymentDue.policyNumber)" round>{{"PD_Home.MoreInfo" | translate}}</button>
+                                </ion-item>
+                                <ion-item class="cashbackdet margin-top" text-center *ngIf="CashBack">
+                                    <div class="hyperlink-primary">{{thaiDateConverter.convertIsoToDate(CashBack.cashBackDueDate,false,4)}}</div>
+                                    <div class="message-type1 no-wrap">{{"PD_Home.cashbackText1" | translate}} {{CashBack.cashBackAmount}} {{"PD_Home.cashbackText2" | translate}} {{CashBack.cashBackMethod}}</div>
+                                </ion-item>
+                            </div>
+
+                        <!-- Pre-Register Window -->
+                        <div *ngIf="!isRegistered" class="margin-top">
+                            <div text-center>
+                                <div class="smallFont">{{"PD_Home.ChartNotLoginLabel" | translate}}</div>
+                                <button ion-button color="cta-button-primary" round (click)="toregister()">
+                                    <span class="text-bold">{{"PD_Home.ChartNotLoginButton" | translate}}</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- <div *ngIf="isRegistered" margin-top>
+                            <ion-item text-center>
+                                <button ion-button color="primary" round>{{"PD_Home.login" | translate}}</button>
+                            </ion-item>
+                        </div> -->
+
+                        <!-- WHEN HAS Credit Life Policy -->
+                        <div *ngIf="isRegistered && creditLifeData" class="LineHeight margin-top">
+
+                            <div class="p">{{"PD_Home.CreditLifePolicyName" | translate}} :</div>
+                            <div>
+                                <b class="heading3-type2">{{creditLifeData.policyNumber}}</b>
+                            </div>
+                            <div class="p">{{"PD_Home.CreditLifeStatus" | translate}}
+                                <span>{{creditLifeData.policyStatus}}
+                                    <span class="dot"></span>
+                                </span>
+                            </div>
+                            <button ion-button color="primary" round class="cta-button-primary text-bold" margin-top (click)="redirectDetail()">{{"PD_Home.CreditLifeButton" | translate}}</button>
+
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+            </ion-card-content>
+        </ion-card>
+        <!-- policy when non SCb Customer -->
+        <ion-card *ngIf="isRegistered && !isSCBCustomer" class="marginTopest">
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-9 class="margin-bottom2 marginTopest">
+                        <div class="h3 marginTopest" ion-text color="primary">{{"PD_Home.notFoundPolicy" | translate}}</div>
+                        <button ion-button color="primary" (click)="gotoStories()" round class="cta-button-primary text-bold margin-bottom">{{"PD_Home.viewFullStory" | translate}}</button>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div *ngSwitchCase="'Claim'">
+        <!-- User When Not Login or Pre-Registration -->
+        <!-- <ion-card *ngIf="!isRegistered" class="marginTopest">
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-9 class="margin-bottom2">
+                        <div class="h3" ion-text color="primary">สถานะการเรียกร้องสินไหม</div>
+                        <div class="h2" ion-text color="primary">กรุณาเข้าสู่ระบบ</div>
+                        <div class="heading2-type2 text-bold margin-topLatst newLightBlack">เพื่อดูข้อมูลของคุณ</div>
+                        <button ion-button color="primary" (click)="toregister()" round>เข้าสู่ระบบ</button>
+
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card> -->
+
+        <!-- If user has no policy for for claim  credit life flow -->
+        <!-- <ion-card *ngIf="isRegistered && isSCBCustomer" class="marginTopest"> -->
+        <ion-card *ngIf="notClaimItemsAndNotClaimHistories" class="marginTopest">
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-9 class="margin-bottom2">
+                        <div class="h3" ion-text color="primary">{{"PD_Home.claimStatusText" | translate}}</div>
+                        <div class="h3" ion-text color="primary">{{"PD_Home.sorryMessage" | translate}}</div>
+                        <div class="heading2-type2 ">{{"PD_Home.dontHaveIncPolicy" | translate}}</div>
+                        <div class="heading2-type2">{{"PD_Home.damageClaim" | translate}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <!-- Claim when non SCb Customer -->
+        <ion-card *ngIf="isRegistered && !isSCBCustomer" class="marginTopest">
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-9 class="margin-bottom2 marginTopest">
+                        <div class="h3" ion-text color="primary">{{"PD_Home.claimStatusText" | translate}}</div>
+                        <div class="h3 marginTopest" ion-text color="primary">{{"PD_Home.sorryMessage" | translate}}</div>
+                        <div class="heading2-type2 newLightBlack">{{"PD_Home.dontHaveIncPolicy" | translate}}</div>
+                        <div class="heading2-type2 newLightBlack">{{"PD_Home.damageClaim" | translate}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+
+        <!-- single card of claims will come here -->
+        <!-- claim items -->
+        <div *ngIf="showClaimItems">
+            <div class="rounded-card-div margin-15" *ngFor="let claim of claimItemsData">
+                <div class="claimHeader">
+                    <div class="col-sm-12">
+                        <span class="bold-text-24px">{{"claims.policyInformation" | translate}}</span>:
+                        <span class="bold-text-24px"> {{claim?.ClaimType}}</span>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="bold-text-24px">{{"claims.status" | translate}} </span>:
+                        <span ion-text class="bold-text-24px" [color]="claim.Status=='อนุมัติเรียบร้อยแล้ว'?'accent-success':(claim.Status=='ได้รับเอกสารและอยู่ระหว่างการพิจารณา'?'accent':'secondary-dark')">{{claim?.Status}}</span>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="bold-text-24px">{{"claims.issueDate" | translate}} </span>:
+                        <!-- <span class="bold-text-24px"> {{claim?.IssueDate}}</span> -->
+
+                        <span class="bold-text-24px"> {{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+                    </div>
+                    <button ion-button class="cta-button-primary">{{"claims.claimInformation" | translate}}</button>
+                </div>
+                <!-- <div class="middle-line"></div>
+                <div class="claimBody">
+                    <ion-grid>
+                        <ion-row class="">
+                            <ion-col col-5>
+                                <div class="bold-text-20px">{{"claims.issueDate" | translate}}:</div>
+                                <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+                            </ion-col>
+                            <ion-col col-7>
+                                <div class="bold-text-20px">{{"claims.accidentDate" | translate}}:</div>
+                                <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.AccidentDate,true,2)}}</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div> -->
+            </div>
+        </div>
+        <!-- claim items end -->
+
+        <!-- histories start -->
+        <div *ngIf="showClaimHistories">
+            <div class="rounded-card-div margin-15" *ngFor="let claim of claimHistoriesData">
+                <div class="claimHeader">
+                    <div class="col-sm-12">
+                        <span class="bold-text-24px">{{"claims.policyInformation" | translate}}</span>:
+                        <span class="bold-text-24px"> {{claim?.ClaimType}}</span>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="bold-text-24px">{{"claims.status" | translate}} </span>:
+                        <span ion-text class="bold-text-24px" [color]="claim.Status=='อนุมัติเรียบร้อยแล้ว'?'accent-success':(claim.Status=='ได้รับเอกสารและอยู่ระหว่างการพิจารณา'?'accent':'secondary-dark')">{{claim?.Status}}</span>
+                        <!-- <span ion-text color="accent-success" class="bold-text-24px">{{inputFromPage.b}}</span> -->
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="bold-text-24px">{{"claims.issueDate" | translate}} </span>:
+                        <span class="bold-text-24px"> {{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+                    </div>
+                    <button ion-button class="cta-button-primary margin-15" round>{{"claims.claimInformation" | translate}}</button>
+                </div>
+                <!-- <div class="middle-line"></div>
+                <div class="claimBody">
+                    <ion-grid>
+                        <ion-row class="">
+                            <ion-col col-5>
+                                <div class="bold-text-20px">{{"claims.issueDate" | translate}}:</div>
+                                <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.IssueDate,true,2)}}</span>
+                            </ion-col>
+                            <ion-col col-7>
+                                <div class="bold-text-20px">{{"claims.accidentDate" | translate}}:</div>
+                                <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{thaiDateConverter.convertIsoToDate(claim?.AccidentDate,true,2)}}</span>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row [hidden]="claim.Status === 'โปรดติดต่อบริษัทฯ'">
+                            <ion-col col-5>
+                                <div class="bold-text-20px">{{"claims.approvalAmount" | translate}}:</div>
+                                <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{claim?.ApprovalAmount}} {{"claims.Baht" | translate}}</span>
+                            </ion-col>
+                            <ion-col col-7>
+                                <div class="bold-text-20px">{{"claims.paymentChannel" | translate}}:</div>
+                                <span ion-text color="primary" class="bold-text-24px margin-bottom-10 line-height-08">{{claim?.PaymentChannel}}</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div> -->
+            </div>
+        </div>
+        <!-- histories end -->
+
+        <!-- end single card of claims -->
+
+        <!-- Screen For when User is BlackListed for claim-->
+        <!-- <ion-card>
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-8 class="margin-bottom2">
+                        <div class="h2" ion-text color="primary">สถานะการเรียกร้องสินไหม</div>
+                        <div class="h2" ion-text color="primary">ขออภัยในความไม่สะดวก</div>
+                        <div class="heading2-type2">ไม่สามารถทำรายการนี้ได้</div>
+                        <button ion-button color="primary" (click)="toregister()" round>โทรหาเรา </button>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card> -->
+
+
+
+        <!-- <div>
+            <ion-item>
+                <div class="h1" ion-text color="primary">{{"PD_Home.premiumPay" | translate}}</div>
+            </ion-item>
+            <ion-card >
+                <ion-card-content padding>
+                    <div class="heading3-type3" ion-text color="primary">{{"PD_Home.ClaimDate" | translate}}</div>
+                    <div class="heading3-type3" class="font-bold">{{"PD_Home.claimId" | translate}} : <span ion-text color="primary">12345654</span></div>
+                    <div class="p">{{"PD_Home.claimStatus" | translate}} <span ion-text color="accent">{{"PD_Home.Inprocess" | translate}}</span></div>
+                    <div class="p">{{"PD_Home.claimWarning" | translate}}</div>
+                </ion-card-content>
+            </ion-card>
+        </div> -->
+        <!-- Not Login -->
+        <!-- <div>
+            <ion-item>
+                <div class="h2" ion-text color="primary">{{"PD_Home.claimEmptyHeader" | translate}}</div>
+            </ion-item>
+            <ion-card>
+                <ion-card-content padding>
+                    <div class="h2" ion-text color="primary">{{"PD_Home.claimEmptyErrorMsg" | translate}}</div>
+                    <button ion-button color="primary" round>{{"PD_Home.ContactSupportDept" | translate}}</button>
+                </ion-card-content>
+            </ion-card>
+        </div> -->
+
+
+
+    </div>
+    <div *ngSwitchCase="'Loan'">
+        <!-- Pre registarion loan window -->
+        <!-- User When Not Login or Pre-Registration -->
+        <ion-card *ngIf="!isRegistered" class="marginTopest">
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-9 class="margin-bottom2">
+                        <div class="h3" ion-text color="primary">{{"PD_Home.loanStatus" | translate}}</div>
+                        <div class="h2" ion-text color="primary">{{"PD_Home.loginPlease" | translate}}</div>
+                        <div class="heading2-type2 text-bold margin-topLatst newLightBlack"> {{"PD_Home.toSeeData" | translate}}</div>
+                        <button ion-button color="primary" (click)="toregister()" round>{{"PD_Home.logIn" | translate}}</button>
+
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <!-- If user has no policy for for Loan credit life flow -->
+        <ion-card *ngIf="isRegistered && isSCBCustomer && (!PolicyLoansData || PolicyLoansData.eligibleLoanPolicies.length==0)" class="marginTopest">
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-9 class="margin-bottom2">
+                        <div class="h3" ion-text color="primary">{{"PD_Home.loanStatus" | translate}}</div>
+                        <div class="h3" ion-text color="primary">{{"PD_Home.sorryMessage" | translate}}</div>
+                        <div class="heading2-type2 text-bold">{{"PD_Home.dontHaveIncPolicy" | translate}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+
+        <!-- Screen For when User is BlackListed -->
+        <!-- <ion-card>
+            <ion-card-content padding class="BackImage">
+                <ion-row>
+                    <ion-col col-8 class="margin-bottom2">
+                        <div class="h2" ion-text color="primary">สถานะการกู้เงิน</div>
+                        <div class="h2" ion-text color="primary">ขออภัยในความไม่สะดวก</div>
+                        <div class="heading2-type2">ไม่สามารถทำรายการนี้ได้</div>
+                        <button ion-button color="primary" (click)="toregister()" round>โทรหาเรา </button>
+
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card> -->
+        <!-- Screen When User loan has no Money -->
+        <!-- <ion-card>
+            <ion-card-content padding>
+                <ion-row>
+                    <ion-col col-12 class="margin-bottom2">
+                        <div class="h2" ion-text color="primary">สถานะการกู้เงิน</div>
+                        <div class="h2" ion-text color="primary">มูลค่าเงินสดของคุณ ณ วันนี้ คือ 200 บาท</div>
+                        <div class="heading2-type2">หากต้องการกู้เงินจากกรมธรรม์</div>
+                        <div class="heading2-type2">กรุณาติดต่อศูนย์บริการลูกค้า</div>
+                        <button ion-button color="primary" (click)="toCustomerCars()" round>ติดต่อศูนย์บริการลูกค้า
+                            </button>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card> -->
+
+
+
+        <!-- When Registerd -->
+        <div *ngIf="isRegistered && isSCBCustomer && PolicyLoansData && PolicyLoansData.eligibleLoanPolicies.length>0">
+            <ion-card padding>
+                <ion-card-content>
+                    <div class="heading3-type3" ion-text color="primary">{{"PD_Home.MaxLoanAmount" | translate}}</div>
+                    <div class="loan-amount" ion-text>{{PolicyLoansData.totalLoanAmount.toFixed(2)}} {{"PD_Home.Baht" | translate}}</div>
+                    <ion-row *ngIf="showPayoutAcount">
+                        <ion-col col-8 class="heading2-type2" ion-text>{{"PD_Home.loanAccount" | translate}}{{PolicyLoansData.eligibleLoanPolicies[0].preferPayoutBankAccount}}</ion-col>
+                        <ion-col col-4 class="heading2-type2 anchor" ion-text color="primary" text-right (click)="changePayoutAccount()">{{"PD_Home.changeAccount" | translate}}</ion-col>
+                    </ion-row>
+                    <button ion-button color="primary" (click)="toLoans()" round>{{"PD_Home.MoreInfo" | translate}}</button>
+                </ion-card-content>
+            </ion-card>
+        </div>
+        <!-- Non SCb Customer -->
+        <ion-card class="BackImage marginTopest" *ngIf="isRegistered && !isSCBCustomer">
+            <ion-card-content padding>
+                <ion-row>
+                    <ion-col col-8 class="margin-bottom1 marginTopest">
+                        <div class="heading3-type3" ion-text color="primary">{{"PD_Home.loanStatus" | translate}}</div>
+                        <div class="heading3-type3 marginTopest newLightBlack" ion-text color="primary"> {{"PD_Home.sorryMessage" | translate}}</div>
+                        <div class="heading2-type2 newLightBlack">{{"PD_Home.dontHaveIncPolicy" | translate}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <!-- Not Login -->
+        <!-- <div>
+            <ion-item>
+                <div ion-text color="primary" class="h1">{{"PD_Home.LoanEmptyHeader" | translate}}</div>
+            </ion-item>
+            <ion-card>
+                <ion-card-content padding>
+                    <div class="h1" ion-text color="primary">{{"PD_Home.LoanEmptyErrorMsg" | translate}}</div>
+                    <button ion-button color="primary" round>{{"PD_Home.ContactSupportDept" | translate}}</button>
+                </ion-card-content>
+            </ion-card>
+        </div> -->
+    </div>
+</div>

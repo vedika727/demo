@@ -1,0 +1,165 @@
+page-payment-method {
+    .icons-card{
+        font-size:$font_44px;
+    }
+
+    .terms{
+        font-weight:bold;
+        font-size:$font_18px;
+    }
+    .qr-terms{
+        margin:0 auto !important;
+        width:50%;
+        font-weight:bold;
+        font-size:$font_18px;
+    }
+
+    ion-card{
+        padding:5% !important;
+    }
+    .success {
+        background-color: #4e2a81;
+        .h5 {
+            color: white;
+            font-size:$font_20px !important;
+        }
+    }
+    .danger {
+        background-color: white;
+        .h5 {
+            font-size:$font_20px !important;
+        }
+    }
+    .text-input-md {
+        border-bottom: 1px solid grey;
+    }
+    .select-md {
+        padding: 7px 55px 7px 19px;
+        border: 1px solid grey;
+        border-radius: 500px;
+        width: 100%;
+    }
+    ion-select {
+        max-width: none;
+    }
+    ion-label {
+        white-space: normal;
+    }
+    ion-label[fixed] {
+        min-width: 21px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 71px;
+        white-space: normal;
+        .cvv {
+            -webkit-flex: 0 0 30px!important;
+        }
+    }
+    .list-md .item-input:last-child {
+        border-bottom: none;
+    }
+    .highlighttotal {
+        background-color: #F3F3F3;
+        border-radius: 8px;
+        padding: 2%;
+    }
+
+    .scroll-content{
+        padding: 0 3% !important;
+    }
+    
+    // ios device css
+    .button-round-ios {
+        padding: 0px 4.6rem;
+    }
+    .button-ios {
+        height: 2.4em;
+    }
+    .list-ios .item-input,
+    .list-ios .item-block:last-child {
+        border-bottom: none;
+    }
+    .card-ios {
+        margin: 0px;
+        width: 88%;
+        padding: 14%;
+        border-radius: 15%;
+    }
+    .card-md {
+        margin: 0 auto !important;
+        width: 90%;
+        padding: 14%;
+        border-radius: 10%;
+    }
+    .text-input-ios {
+        border-bottom: 1px solid $secondary-highlight;
+    }
+    .select-ios {
+        padding: 7px 55px 7px 19px;
+        border: 1px solid $secondary-highlight;
+        border-radius: 500px;
+        width: 100%;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: none;
+    }
+    .custom-text-input-md{
+        input{
+            width: calc(100% - 2px - 2px);
+        }
+    }
+
+
+.qrdiv {
+    position: relative;
+    margin: 5% auto;
+
+    span:before {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        border-bottom: 1px solid rgba(78, 42, 129, 0.4);
+        border-left: 1px solid rgba(78, 42, 129, 0.4);
+    }
+    span:after {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        border-bottom: 1px solid rgba(78, 42, 129, 0.4);
+        border-right: 1px solid rgba(78, 42, 129, 0.4);
+    }
+}
+.qrdiv:before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-top: 1px solid rgba(78, 42, 129, 0.4);
+    border-left: 1px solid rgba(78, 42, 129, 0.4);
+}
+.qrdiv:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-top: 1px solid rgba(78, 42, 129, 0.4);
+    border-right: 1px solid rgba(78, 42, 129, 0.4);
+}
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+}

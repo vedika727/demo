@@ -1,0 +1,51 @@
+<!--
+  Generated template for the RegistrationSuccessfulPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+    <scb-header [in]="headerInput"></scb-header>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="scb-background-contain">
+  <p id="regSuccessHeaderText" class="text-bold h1 top-header-text">
+    {{"registration.regSuccessHeaderText"|translate}}
+  </p>
+  <div text-center>
+    <div>
+      <img class="thank-you-icon" src="../assets/scbl-icons/success.svg">
+      <p id="title" class="title-message heading1-type2" ion-text color="primary">
+        {{"registration.thankyouForRegistration" | translate}}
+      </p>
+      <p *ngIf="show200points" class="title-message heading1-type2 line-height-0-8" ion-text color="primary">
+        {{"registration.youGet200Points" | translate}}
+      </p>
+      <p *ngIf="!show200points" class="title-message heading1-type2 line-height-0-8" ion-text color="primary">
+        {{"registration.youGet100Points" | translate}}
+      </p>
+      <div class="margin-top-3vh">
+        <p id="" class="title-message font-size-8-vw" ion-text color="primary">
+          {{"registration.regSuccessHeadMessage2" | translate}}
+        </p>
+        <p class="title-message heading1-type2 line-height-0-8" ion-text color="primary">
+        </p>
+      </div>
+      <p id="headMessage4" class="heading2-type1" ion-text>
+        {{"registration.youCanTakePartInVariousFitsenseChallenges" | translate}}
+      </p>
+      <div class="reg-success-bottom-link">
+        <button id="buttonText" ion-button round class="button cta-button-primary hyperlink-secondary" (click)="toFitsenseRegistration()">
+          {{dataForProcessActionComponent.buttonText | translate}}
+        </button>
+      </div>
+      <p class="hyperlink-primary underline text-bold">
+        <a (click)="navigatePage()">
+          {{"registration.registrationSuccessfullink" | translate}}
+        </a>
+      </p>
+    </div>
+  </div>
+</ion-content>

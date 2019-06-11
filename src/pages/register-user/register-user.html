@@ -1,0 +1,94 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content class="scb-background-contain">
+    <form novalidate class="registration-form" [formGroup]="registerSCBLifeCustomer" (ngSubmit)="registrationSCBLifeCustomer()" padding>
+        <div class="form-group">
+            <!-- black label -->
+            <ion-item class="item " no-lines id="registerHeader">
+                <ion-label class=" apply-header heading1-type1">{{"registration.registerHeader"|translate}}</ion-label>
+            </ion-item>
+            <!-- purple label -->
+            <ion-item class="item label-margin" no-lines id="registerHeaderLabel">
+                <ion-label class=" apply-header heading1-type2">{{"registration.registerHeaderLabel"|translate}}</ion-label>
+            </ion-item>
+            <!-- email field -->
+            <ion-label stacked class="heading3-type2 mt-34" text-wrap>{{"registration.enterEmail"|translate}}</ion-label>
+            <ion-item class="item">
+                <ion-input type="email" formControlName="email" class="form-control input-field input-content" placeholder="{{'registration.registertextbox'|translate}}" (blur)="validateEmail()"></ion-input>
+            </ion-item>
+            <div [hidden]="!emailInvalid">
+                <ion-label ion-text text-wrap class="text-bold" color="accent-danger" [hidden]="registerSCBLifeCustomer.controls.email.valid">{{"registration.emailError"|translate}}</ion-label>
+            </div>
+            <!-- radio buttons field -->
+            <ion-list radio-group class="radiobtn-margin" formControlName="existingCustomer">
+                <ion-label class="existing-customer-label  mt-34 heading3-type2">{{"registration.isExistingSCBCustomer"|translate}}</ion-label>
+                <ion-grid class="padding-0">
+                    <ion-row>
+                        <ion-col class="padding-0">
+                            <ion-item no-lines>
+                                <ion-label class="radio-label ">{{"registration.yes"|translate}}</ion-label>
+                                <ion-radio (click)="fbaLogTnCEvent('Yes')" mode="md" value="Yes" item-start class="radiobtn-margin"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col class="padding-0 radio-item-margin">
+                            <ion-item no-lines>
+                                <ion-label class="radio-label ">{{"registration.no"|translate}}</ion-label>
+                                <ion-radio (click)="fbaLogTnCEvent('No')" mode="md" value="No" item-start color="primary" class="radiobtn-margin"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-label *ngIf="existingCustomerInvalid">{{"registration.radioButtonError"|translate}}</ion-label>
+            </ion-list>
+
+            <!-- authentication Id field-->
+            <div [hidden]="!(registerSCBLifeCustomer.controls['existingCustomer'].value=='Yes')">
+                <ion-label stacked class="heading3-type2 label-margin mt-34" text-wrap>{{"registration.enterIDOrPasskeyLabel"|translate}}</ion-label>
+                <ion-item class="item">
+                    <ion-input (keyup)="validateThaiId()" (keydown)="valid()" formControlName="authenticationID" maxlength="13" type="text" class="form-control input-field input-content"
+                        placeholder="{{'registration.enterId'|translate}}"></ion-input>
+                </ion-item>
+                <!-- <div [hidden]="!(registerSCBLifeCustomer.controls.authenticationID.touched || registerSCBLifeCustomer.controls.authenticationID.dirty)"> -->
+                <div>
+                    <ion-label color="accent-danger" class="text-bold">{{genericErrorMessage|translate}}</ion-label>
+                </div>
+                <!-- <div *ngIf="authenticationIDInvalidWarning">
+                    <ion-label color="accent-danger" class="text-bold">{{"registration.authIdWarning"|translate}}</ion-label>
+                </div> -->
+            </div>
+            <!-- Accept Terms field -->
+            <ion-item no-lines class="accept-terms-item" [hidden]="!(registerSCBLifeCustomer.controls['existingCustomer'].value=='Yes' || registerSCBLifeCustomer.controls['existingCustomer'].value=='No')">
+                <ion-label class="accept-terms-label hyperlink-primary anchor">
+                    <span (click)="showTerms()">
+                        {{"registration.acceptTerms"|translate}}
+                    </span>
+                </ion-label>
+                <ion-checkbox mode="md" formControlName="acceptTerms" (ionChange)="markAcceptTermsValid($event)"></ion-checkbox>
+            </ion-item>
+            <ion-label *ngIf="(registerSCBLifeCustomer.controls.acceptTerms.dirty && registerSCBLifeCustomer.controls.acceptTerms.errors) || (acceptTermsInvalid)"
+                color="accent-danger">{{"registration.acceptTermsError"|translate}}</ion-label>
+            <!-- <div>{{registerSCBLifeCustomer.controls['acceptTerms'].errors.required}}</div> -->
+            <!-- next button -->
+            <div align="center" *ngIf="registerSCBLifeCustomer.controls['existingCustomer'].value=='Yes'">
+                <button [disabled]="!(registerSCBLifeCustomer.controls.email.valid && registerSCBLifeCustomer.controls.existingCustomer.valid
+                 && registerSCBLifeCustomer.controls.authenticationID.valid)" type="submit" class="cta-button-primary" ion-button
+                    round>{{"registration.nextButton"|translate | limitTo:20}} </button>
+            </div>
+            <!-- next button for non scb customer -->
+            <div align="center" class="mt-34" *ngIf="registerSCBLifeCustomer.controls['existingCustomer'].value=='No'">
+                <button [disabled]="!(registerSCBLifeCustomer.controls.email.valid && registerSCBLifeCustomer.controls.existingCustomer.valid) "
+                    type="submit" class="cta-button-primary" ion-button round>{{"registration.applyNonSCB"|translate
+                    | limitTo:20}}</button>
+            </div>
+        </div>
+    </form>
+    <!-- apply later -->
+    <div text-center class="skip-margin-top-bottom">
+        <a (click)="applyLater()" ion-text align="center" class="hyperlink-primary anchor"> {{"registration.registerApplyLater"|translate}}
+        </a>
+    </div>
+    <generic-view *ngIf="genericDialog" [In]=genericDialog></generic-view>
+</ion-content>

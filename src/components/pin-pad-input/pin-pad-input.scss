@@ -1,0 +1,141 @@
+pin-pad-input {
+    @import '../../theme/variables.scss';
+    @import "../../common/common-scss/style-guide/color-variables.scss";
+    .round{
+        border-radius: 30px;
+    }
+    .container-input{
+        margin-bottom:12%;
+        width: 100%;
+    }
+    .circle-input{
+        width:16px;
+        height:16px;
+        border-radius:25px;
+        border:2px solid $primary;
+        margin:8px
+    }
+    .conditional-circle-input{
+        background-color:$primary;
+    }
+
+    .column-width{
+        display:flex;
+        margin:auto
+    }
+    .error-msg{
+        color:red;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+    .forgot-pin{
+        color:$primary;
+        text-decoration: underline;
+        height: 30px;
+    }
+    .keypad-container{
+        height:16.25rem
+    }
+    .keypad-button{
+        width: 31%;
+        height:50px
+    }
+    .keypad-otp{
+        width: 30%;
+        height: 50px
+    }
+    .keypad-button .button-inner{
+        font-size: $font_40px !important;
+        font-weight: bold;
+      
+    }
+    .keypad-otp .button-inner{
+        font-size: $font_40px !important;
+        font-weight: bold;
+      
+    }
+    .back-keypad{
+        width: 28%;
+        height:50px;
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    .back-keypad-otp{
+        width: 28%;
+        height:50px;
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    .back-icon{
+        font-weight: bold;
+        
+    }
+    .error-box{
+        height:60px;
+        margin:5px 20px;
+    }
+    .input-scroll{
+        min-height: 50px;
+        height:150px;
+    }
+    .margin-10{
+        margin-top:10%
+    }
+
+    @media screen and (max-height: 499px) {
+        .input-scroll{
+            min-height: 50px;
+            height:50px;
+        }
+        .keypad-otp {
+            height: 30px;
+        }
+        .back-keypad-otp {
+            width: 28%;
+            height: 30px;
+            font-size: 34px;
+            font-weight: bold;
+            margin-left: 0px;
+        }
+        .margin-10{
+            margin-top:0%
+        }
+    }
+
+    @media screen and (min-height: 500px) and (max-height: 549px) {
+        .keypad-otp {
+            height: 40px;
+        }
+        .back-keypad-otp {
+            width: 28%;
+            height: 37px;
+            font-size: 34px;
+            font-weight: bold;
+            margin-left: 4px;
+        }
+        .margin-10{
+            margin-top:5%
+        }
+        .input-scroll{
+            min-height: 50px;
+            height:100px;
+        }
+    }
+
+    @media screen and (min-height: 550px) and (max-height: 599px){
+        .input-scroll{
+            min-height: 50px;
+            height:100px;
+        }
+        .margin-10{
+            margin-top:5%
+        }
+        .error-box{
+            height:50px;
+            margin:5px 20px;
+        }
+    }
+
+}

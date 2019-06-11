@@ -1,0 +1,34 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <dashboard-header [in]=dashboardheader></dashboard-header>
+    <pd-header-tabs (currenttab)="changetab($event)" [in]=policytabs [expand]=PolicyTabsFlagsinputs></pd-header-tabs>
+    <!-- <story-header [in]=storiesHeader></story-header>
+        <pd-header-tabs (currenttab)="changetab($event)" [in]=policytabs></pd-header-tabs> -->
+    <div *ngFor="let str of activities | slice:0:1">
+        <p class="activity-title line-height-85 ">{{str.title}}</p>
+        <div class="activity-img" (click)="readStory(str)">
+            <img src="{{str.field_image}}">
+            <div class="card-title2">{{str.field_tags}}</div>
+        </div>
+
+        <p no-margin class="activity-desc two-line-text-limit">{{str.body}}</p>
+    </div>
+    <div *ngFor="let str of activities | slice:1:5">
+        <ion-list no-margin>
+            <ion-item no-lines class="list-img list-border-bottom" no-padding no-margin (click)="readStory(str)">
+                <p class="activity-title-small line-height-85 ">{{str.title}}</p>
+                <!-- <ion-thumbnail item-start no-padding no-margin> -->
+                <img float-left src="{{str.field_image}}">
+                <!-- </ion-thumbnail> -->
+                <div class="text-right">
+
+                    <p text-wrap class=" activity-desc-small line-height-85 two-line-text-limit">{{str.body}}</p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

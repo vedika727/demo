@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-11" transform="translate(4.000000, 4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <circle stroke="#F8F8F8" stroke-width="4" cx="40" cy="40" r="42"></circle>
+            <g id="Group-5" mask="url(#mask-2)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="3">
+                <g transform="translate(22.000000, 20.000000)" id="Line-2">
+                    <path d="M17.5,0.444444444 L17.5,39.5555556"></path>
+                    <path d="M35.5719495,19.5 L0.43902439,19.5"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

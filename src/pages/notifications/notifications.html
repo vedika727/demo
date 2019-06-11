@@ -1,0 +1,40 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="padding-10">
+        <ion-row>
+            <ion-col class="padding" col-1>
+                <ion-icon name="notifications" class="padding-top-1vh" color="primary"></ion-icon>
+            </ion-col>
+            <ion-col col-11 class="h1 padding"> {{'hamburgerMenu.ActivityLog' | translate}} </ion-col>
+        </ion-row>
+    </div>
+    <div class="section-header padding-right padding-10">{{'hamburgerMenu.LatestToday' | translate}}</div>
+    <div padding>
+        <div *ngFor="let activity of activityLog" class="panel-body" (click)="callPage(activity)" [ngClass]="activity.isRead == false ? 'activity-unread' : 'activity-read' ">
+            <div class="panel-body-contain">
+                <ion-row>
+                    <ion-col col-6 class="heading3-type2">{{activity.messageTitle}}</ion-col>
+                    <ion-col col-6 text-end  class="message-type2"><span ion-text color="primary">{{getTime(activity.createdDate)}}</span></ion-col>
+                </ion-row>
+                <ion-row>
+                    <div class="message-type2 bold-text"  text-wrap>{{activity.messageBody}}</div>
+                </ion-row>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="section-header padding-right padding-10">{{'hamburgerMenu.History' | translate}}</div>
+    <div *ngFor="let history of historyLog" class="panel-body" (click)="callPage(history)" [ngClass]="history.isRead == true ? 'activity-unread' : 'activity-read' ">
+        <div class="panel-body-contain">
+            <ion-row>
+                <ion-col col-6 class="heading3-type2">{{history.messageTitle}}</ion-col>
+                <ion-col col-6 text-end class="placeholder">{{getDate(history.createdDate)}}</ion-col>
+            </ion-row>
+            <div class="message-type2" text-wrap>{{history.messageBody}}</div>
+        </div>
+    </div>
+</ion-content>

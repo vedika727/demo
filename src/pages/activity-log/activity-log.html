@@ -1,0 +1,85 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-row>
+        <ion-col class="padding" col-1>
+            <ion-icon color="primary" name="scbl-notification-footer-menu"></ion-icon>
+        </ion-col>
+        <ion-col col-11 class="h1 padding"> {{'hamburgerMenu.ActivityLog' | translate}} </ion-col>
+    </ion-row>
+
+    <div ion-text margin-bottom class="section-header sectionClass">{{'hamburgerMenu.LatestToday' | translate}}</div>
+    <div padding>
+        <!-- (click)="callPage(activity)" -->
+        <div *ngFor="let activity of activityLog" class="panel-body activity-read">
+            <div class="panel-body-contain">
+                <ion-row>
+                    <ion-col col-6 class="heading3-type2">{{activity.messageTitle}}</ion-col>
+                    <ion-col col-6 text-end class="message-type2"><span ion-text color="primary">{{getTime(activity.createdDate)}}</span></ion-col>
+                </ion-row>
+                <ion-row>
+                    <div class="message-type2 bold-text" text-wrap>{{activity.messageBody}}</div>
+                </ion-row>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- No history found in vd so commneting it SCBLIFE-1346 -->
+    <!-- <div class="section-header padding sectionClass">{{'hamburgerMenu.History' | translate}}</div>
+    <div *ngFor="let history of historyLog" class="history-log-div">
+        <ion-row>
+            <ion-col col-6 class="heading3-type2">{{history.title}}</ion-col>
+            <ion-col col-6 text-end class="placeholder">{{history.time}}</ion-col>
+        </ion-row>
+        <div class="message-type2" text-wrap>{{history.details}}</div>
+    </div> -->
+
+
+</ion-content>
+
+<!-- <ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+<ion-content padding>
+<div>
+    <ion-row>
+            <ion-col class="padding"col-1> -->
+<!-- previously this icon name was scbl-xyz, changed it to proper icon, but all other pages 
+                of hamburger menu dont show icon, so for now I am commenting it out. -->
+<!-- <ion-icon  name ="scbl-activity-log"></ion-icon></ion-col> -->
+<!-- </ion-col>
+            <ion-col col-11 class="h1 padding"> {{'hamburgerMenu.ActivityLog' | translate}} </ion-col>
+         
+    </ion-row>
+    </div>
+
+    <div class="section-header padding sectionClass">{{'hamburgerMenu.LatestToday' | translate}}</div>
+
+    <div *ngFor="let activity of activityLog" [ngClass]="activity.bottomBorder">
+
+        <ion-row>
+            <ion-col col-6 class="heading3-type2">{{activity.title}}</ion-col>
+            <ion-col text-end col-6 class="placeholder">Hhiii</ion-col>
+        </ion-row>
+
+        <div class="message-type2"text-wrap>{{activity.details}}</div>
+    </div>
+
+    <div class="section-header padding sectionClass">{{'hamburgerMenu.History' | translate}}</div> 
+
+    <div *ngFor="let activity of activityLog" class="history-log-div">
+
+        <ion-row>
+            <ion-col col-6 class="heading3-type2">{{activity.messageTitle}}</ion-col>
+            <ion-col col-6 text-end class="placeholder">{{getDateFromDate(activity.createdDate)}}</ion-col>
+        </ion-row>
+
+        <div class="message-type2"text-wrap>{{activity.details}}</div>
+    </div>
+</ion-content> -->

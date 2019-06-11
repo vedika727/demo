@@ -1,0 +1,131 @@
+<!-- Generated template for the PolicyTimelineComponent component -->
+
+
+<div>
+    <ion-grid class="SCB_PDGray">
+        <ion-row padding-left>
+            <ion-col col-6>
+                <div  text-wrap class="input-content">{{"policyDashboard.policy"| translate}} :</div>
+            </ion-col>
+            <ion-col col-6 text-right>
+                <div *ngIf="data.policyStatus=='Premium Due'" class="FontBold heading5-type1">{{"policyDashboard.status"| translate}} :{{"policyDashboard.effective"| translate}}</div>
+                <div *ngIf="data.policyStatus=='paid'" class="FontBold heading5-type1">{{"policyDashboard.status"| translate}} :{{"policyDashboard.paidStatus"| translate}}</div>
+                <div *ngIf="data.policyStatus=='active' || data.policyStatus=='Premium Due_Active'" class="FontBold heading5-type1">{{"policyDashboard.status"| translate}} :{{"policyDashboard.activeStatus"| translate}}</div>
+                <div *ngIf="data.policyStatus=='matured'" class="FontBold heading5-type1">{{"policyDashboard.status"| translate}} :{{"policyDashboard.greyStatus"| translate}}</div>
+                <div *ngIf="data.policyStatus=='inactive' || data.policyStatus=='lapsed' ||  data.policyStatus=='surrender'" class="FontBold heading5-type1">{{"policyDashboard.status"| translate}} :{{"policyDashboard.redStatus"| translate}}</div>
+               
+                <span *ngIf="data.policyStatus=='Premium Due'" class="indicatorStatus"></span>
+                <span *ngIf="data.policyStatus=='matured'" class="indicatorStatus gray"></span>
+                <span *ngIf="data.policyStatus=='paid' || data.policyStatus=='active' || data.policyStatus=='Premium Due_Active'" class="indicatorStatus green"></span>
+                <span *ngIf="data.policyStatus=='inactive' || data.policyStatus=='lapsed' ||  data.policyStatus=='surrender'" class="indicatorStatus red"></span>
+                <!-- <span *ngIf="data.policyStatus=='lapsed'" class="indicatorStatus red"></span> -->
+
+            </ion-col>
+        </ion-row>
+        <ion-row padding-left>
+                <div text-wrap class="heading3-type2"> {{data.policyName}}</div>
+        </ion-row>
+    </ion-grid>
+    <div text-center *ngIf="data.policyStatus =='Premium Due'" class="field-alert">{{"policyDashboard.premiumPerYear"| translate}}</div>
+    <div text-center *ngIf="data.policyStatus=='inactive' || data.policyStatus=='lapsed' ||  data.policyStatus=='surrender'" class="field-error">{{"policyDashboard.timelineHeader"| translate}}</div>
+
+    <!-- <div text-center *ngIf="data.policyStatus =='lapsed'" class="field-error">{{"policyDashboard.timelineHeader"| translate}}</div> -->
+
+
+</div>
+
+<div margin-top>
+    <!-- Start Date======================================= -->
+
+    <div *ngIf="data.policyIssueDate" [ngClass]="isIndented ?'timeline comline':'timeline comline SCB_PDBackCol'">
+        <div [ngClass]="isIndented ?'indicator ':'indicator  SCB_PDBackCol'">
+            <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.policyEffectiveDate,false,2)}}</span>
+            <span [ngClass]="isIndented ?'tlabel input-content':'tlabel input-content SCB_PDGray'">{{"policyDashboard.policyStartDate"| translate}}</span>
+        </div>
+    </div>
+
+    <!-- Payment Due Date======================================= -->
+    <div *ngIf="data.policyNextDueDate" [ngClass]="(isIndented ?'timeline ':'timeline  SCB_PDBackCol')+' '+ (payBtn ?'box':'minBox')" >
+
+        <div [ngClass]="isIndented ?'indicator flagdiv active':'indicator SCB_PDBackCol'">
+            <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.policyNextDueDate,false,2)}}</span>
+            <div class="pay-box">
+                <div [ngClass]="isIndented ?'pay-head':'pay-head-gray'">
+                    <ion-row>
+                        <ion-col class="padd-top">
+                            <div [ngClass]="isIndented ?'SCB_TimeLineFont':'SCB_TimeLineFont SCB_PDGray'">{{"policyDashboard.premiumYearlyPayment"| translate}}</div>
+                        </ion-col>
+                        <ion-col no-padding><span [ngClass]="isIndented ?'SCB_TimeLineFont':'SCB_TimeLineFont SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.policyNextDueDate,false,2)}}</span></ion-col>
+                    </ion-row>
+                </div>
+                <div text-center padding [ngClass]="(isIndented ?'MiddlePadding':'MiddlePadding-gray')+' '+(payBtn ?'Nopadd':'padd')">
+                    <span [ngClass]="isIndented ?'SCB_TimeLineFont float-left':'SCB_TimeLineFont float-left SCB_PDGray'">{{"policyDashboard.premiumPerYear"| translate}}  </span>
+                    <button ion-button *ngIf="data.policyStatus=='Premium Due'" [ngClass]="isIndented ?'cta-button-accent':'cta-button-accent SCB_PDBackCol'" small (click)="paymentNow()">{{"policyDashboard.payPremiumOnline"| translate}} </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CashBack Date======================================= -->
+    <div *ngIf="data.cashBacks.length > 0" [ngClass]="isIndented ?'timeline cashBack':'timeline cashBack SCB_PDBackCol'">
+        <div [ngClass]="isIndented ?'indicator three':'indicator three SCB_PDBackCol'">
+            <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.currentCashBack.cashDateReturnNext,false,2)}}</span>
+            <!-- <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'"></span>
+     -->
+
+
+            <span [ngClass]="isIndented ?'tlabel input-content':'tlabel input-content SCB_PDGray'">{{"policyDashboard.moneyBack"| translate}} {{data.currentCashBack.cashReturn | currencyConvert}} {{"policyDashboard.baht"|translate}}</span><br>
+            <!-- <span [ngClass]="isIndented ?'tlabel input-content':'tlabel input-content SCB_PDGray'">{{"policyDashboard.moneyBack"| translate}} {{"policyDashboard.baht"|translate}}</span><br>
+     -->
+            <a [ngClass]="isIndented ?'':'SCB_PDGray'" (click)="viewDetailedTimeline(data.policynumber)">{{"policyDashboard.viewDetails"| translate}}</a>
+        </div>
+
+    </div>
+
+    <!-- Term Date Date======================================= -->
+    <div *ngIf="data.policyLastPaymentTermDate" [ngClass]="isIndented ?'timeline comline':'timeline comline SCB_PDBackCol'">
+
+        <div [ngClass]="isIndented ?'indicator four':'indicator four SCB_PDBackCol'">
+            <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.policyLastPaymentTermDate,false,2)}}</span>
+
+            <span [ngClass]="isIndented ?'tlabel input-content':'tlabel input-content SCB_PDGray'">{{"policyDashboard.lastPremium"| translate}} </span>
+        </div>
+
+    </div>
+
+    <!-- End Date======================================= -->
+    <div *ngIf="data.policyStatus != 'matured'" >
+    <div *ngIf="data.policyMaturityDate" [ngClass]="isIndented ?'timeline endDate':'timeline endDate SCB_PDBackCol'">
+        <div [ngClass]="isIndented ?'indicator five':'indicator five SCB_PDBackCol'">
+            <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.policyMaturityDate,false,2)}}</span>
+
+            <span [ngClass]="isIndented ?'tlabel input-content':'tlabel input-content SCB_PDGray'">{{"policyDashboard.policyEndDate"| translate}}</span>
+        </div>
+    </div>
+</div>
+    <!-- Maturity Date -->
+    <div *ngIf="data.policyStatus=='matured'" >
+        <div *ngIf="data.policyMaturityDate" [ngClass]="isIndented ?'timeline ':'timeline  SCB_PDBackCol'">
+
+            <div [ngClass]="isIndented ?'indicator flagdiv active':'indicator SCB_PDBackCol'">
+                <span [ngClass]="isIndented ?'date input-content':'date input-content SCB_PDGray'">{{thaiDateConverter.convertIsoToDate(data.policyMaturityDate,false,2)}}</span>
+                <div class="pay-box">
+                    <div [ngClass]="isIndented ?'pay-head':'pay-head-gray'">
+                        <ion-row>
+                            <div class="padd-top">
+                                <div [ngClass]="isIndented ?'SCB_TimeLineFont':'SCB_TimeLineFont SCB_PDGray'">{{"policyDashboard.policyEndDate"| translate}}</div>
+                            </div>
+                            
+                        </ion-row>
+                    </div>
+                    <div text-center padding [ngClass]="isIndented ?'MiddlePadding':'MiddlePadding-gray'">
+                        <span [ngClass]="isIndented ?'SCB_TimeLineFont float-left':'SCB_TimeLineFont float-left SCB_PDGray'">{{"policyDashboard.moneyBack"| translate}}  </span>
+                        <span [ngClass]="isIndented ?'SCB_TimeLineFont float-right':'SCB_TimeLineFont float-right SCB_PDGray'">{{data.policyPremium}} {{"policyDashboard.baht"|translate}}</span>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

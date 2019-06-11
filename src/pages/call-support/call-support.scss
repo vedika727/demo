@@ -1,0 +1,35 @@
+page-call-support {
+    .close-button{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .title{ 
+        margin-top:10px;
+    }
+    .number{
+        font-size: 35px;
+        font-weight: bold;
+        margin: 15px;
+    }
+    .button-block-ios{
+        margin:auto
+    }
+    .call-button{
+        margin-top:10px
+        
+    }
+    div{
+        line-height: 1.2
+    }
+    .card-content-md{
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    .card-content-ios{
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    .modalstyle .popover-content-style {
+        border-radius: 10px;
+    }
+}

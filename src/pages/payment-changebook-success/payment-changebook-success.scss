@@ -1,0 +1,30 @@
+page-payment-changebook-success {
+    .checkmark-span{
+        display: flex;
+        justify-content: center;
+    .checkmark-icon{
+        background: $primary;
+        color: $secondary;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        text-align: center;
+        // line-height: 20px;
+        vertical-align: middle;
+        // padding: 20px;
+        font-size: $font_72px;
+    }
+}
+.done-btn{
+    display: flex;
+    justify-content: center;
+    margin-top:60px;
+.button{
+    padding: 15px 40px;
+    height: 25px;
+    font-size: $font_20px;
+    background-color: $primary;
+    border-radius: 25px;
+}
+}
+}

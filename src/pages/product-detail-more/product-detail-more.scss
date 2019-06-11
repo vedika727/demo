@@ -1,0 +1,46 @@
+product-detail-more {
+
+    ion-content { 
+        background-image: linear-gradient(#f3f0f6, white);
+        font-weight: bold;
+        .section-title { 
+            font-size: $font_20px;
+            color: rgb(161,161,161);
+            line-height: $font_16px;
+        }
+
+        .card { 
+            border-radius: 10px;
+        }
+     }    
+
+    .toolbar-md { 
+        min-height: 44px;
+    }
+
+    .section { 
+        border-bottom: 1px solid rgba(128,128,128, .5);
+        margin-top:13px;
+    }
+    .margin-top{
+        margin-top: 10px;
+    }
+
+    .section-value { 
+        font-size: $font_24px;
+        line-height: $font_24px;
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+
+    scb-header { 
+        button-ios { 
+            color: black;
+        }
+    }
+    .content{
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+   
+}

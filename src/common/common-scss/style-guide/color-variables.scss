@@ -1,0 +1,85 @@
+$primary: #4E2A81;
+$primary-mild:#6B43A3;
+$primary-light:#A573EA;
+$primary-super-light:#A68CCC;
+$secondary: #FFFFFF;
+$secondary-light:#D8D8D8;
+$secondary-highlight:#A1A1A1;
+$secondary-mild:#3A3A3A;
+$secondary-dark:#333333;
+$accent: #F8B100;
+$accent-highlight: #FEAC00;
+$accent-danger: #D0021B;
+$accent-success: #55AA10;
+$gray:#F3F3F3;
+// fonts constant
+$ergo:'Ergo Com Condensed';
+$psl:'PSL Kittithada Pro ()';
+// Font variables px to rem values
+
+// $font_8px: .8rem;
+$font_8px: 2.1vw;
+
+// $font_10px: 1rem;
+$font_10px: 2.7vw;
+
+// $font_12px: 1.2rem;
+$font_12px:3.2vw;
+
+// $font_13px: 1.3rem;
+$font_13px:3.5vw;
+
+// $font_14px: 1.4rem;
+$font_14px:3.7vw;
+
+// $font_16px: 1.6rem;
+$font_16px:4.2vw;
+
+// $font_18px: 1.8rem;
+$font_18px:4.8vw;
+
+// $font_20px: 2rem;
+$font_20px:5.35vw;
+
+// $font_22px: 2.2rem;
+$font_22px:5.85vw;
+
+// $font_24px: 2.4rem;
+$font_24px: 6.4vw;
+
+// $font_26px: 2.6rem;
+$font_26px:6.95vw;
+
+// $font_28px: 2.8rem;
+$font_28px:7.45vw;
+ 
+// $font_30px: 3rem;
+$font_30px:8vw;
+
+// $font_32px: 3.2rem;
+$font_32px:8.55vw;
+
+// $font_36px: 3.6rem;
+$font_36px: 9.60vw;
+
+// $font_40px: 4rem;
+$font_40px: 8.6vw;
+
+// $font_44px: 4.4rem;
+$font_44px:11.75vw;
+
+// $font_48px: 4.8rem;
+$font_48px:12.8vw;
+
+// $font_60px: 6rem;
+$font_60px:16vw;
+
+// $font_72px: 7.2rem;
+$font_72px:19.2vw;
+
+//icon sizes
+$icon-medium: 2.4rem;
+$icon-small: 1.8rem;
+$icon-big: 3.2rem;
+$action-sheet-ios-button-text-color:color($colors,primary);
+$action-sheet-md-button-text-color:color($colors,primary);

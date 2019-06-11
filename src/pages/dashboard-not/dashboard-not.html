@@ -1,0 +1,12 @@
+<ion-header no-padding no-margin no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <dashboard-header [in]=dashboardheader></dashboard-header>
+    <pd-header-tabs (currenttab)="changetab($event)" [in]=policytabs [expand]=PolicyTabsFlagsinputs [halfSegment]="isHalf"></pd-header-tabs>
+    <!-- policy when non SCb Customer -->
+    <home-policy-tabs-details [in]=currenttabname [isRegistered]="isRegistered" [isSCBCustomer]="isSCBCustomer" [PolicyData]=piechartAPIData></home-policy-tabs-details>
+
+</ion-content>

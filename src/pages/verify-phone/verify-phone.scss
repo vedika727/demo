@@ -1,0 +1,83 @@
+@import "../../common/common-scss/style-guide/color-variables.scss";
+page-verify-phone {
+    .padding-top-20{
+        padding-top:20px;
+    }
+    .select-item{
+        border-radius: 24px;
+        border: 1px solid;
+    }
+    .select-text{
+        padding-left: 5%;
+    }
+    .select-icon{
+        padding: 0% 12% 8% 0%;
+    }
+    .select-icon-inner{
+        color:$primary !important;
+        left: 12px !important;
+    }
+    // .select-phone{
+    //     color:black;
+    //     font-weight: bold;
+    //     font-size:2.3rem !important
+    // }
+    // .select-item ion-select .select-icon{
+    //     color:$primary
+    // }
+    // .otp-input{
+    //     border:1px solid $secondary-light;
+    //     border-radius: 25px; 
+    // }
+    // .select-ios .select-icon .select-icon-inner{
+    //     color:$primary-mild;
+    // }
+    // .select-item ion-select .select-placeholder {
+    //     padding-left: 15px;
+    //     font-size: 2rem;
+    //     padding-top: 2px;
+    //     width: 100%;
+    // }
+    .input-alignment{
+        position: relative;
+        top:30%;
+    }
+    // .okay-button{
+    //     width:40%;
+    // }
+    // .select-icon-inner{
+    //     color: #4E2A81 !important;
+    // }
+    // @media screen and (max-height: 499px) {
+    //     .input-alignment{
+    //         top:10%;
+    //     }
+    // }
+    // @media screen and (min-height: 500px) and (max-height: 569px) {
+    //     .input-alignment{
+    //         top:15%;
+    //     }
+    //     .select-phone{
+    //         font-size:2.0rem !important
+    //     }
+    // }
+    // @media screen and (min-height: 570px) and (max-height: 639px) {
+    //     .input-alignment{
+    //         top:25%;
+    //     }
+    // }
+    // @media screen and (min-height: 640px) and (max-height: 670px) {
+    //     .input-alignment{
+    //         top:25%;
+    //     }
+    //     .select-phone{
+    //         font-size:2.1rem !important
+    //     }
+    // }
+    // @media screen and (min-height: 670px) and (max-height: 800px) {
+    //     .input-alignment{
+    //         top:30%;
+    //     }
+    // }
+
+}

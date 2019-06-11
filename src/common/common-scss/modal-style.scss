@@ -1,0 +1,75 @@
+.modalstyle
+{
+       //  style to get the card at center
+       .scroll-content{
+        display: -webkit-box;
+        justify-content: center;
+        align-items: center;
+    }
+   
+// style for transparent background
+      .popover-bg-color{
+       background-color: rgba(161, 161, 161, 0.486);
+      }
+
+      //  styles applied on ion-card
+   .popover-content-style{
+       border-radius:8px;
+   }
+
+   
+         /* overlay styles, all needed */
+         .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            opacity:0.8;
+            z-index: -100;
+          }
+
+           //animations
+        .fade-in-animate{
+            font-size: 21px;
+            text-align: center;
+            animation: fadein 0.4s;
+            -moz-animation: fadein 0.4s; /* Firefox */
+            -webkit-animation: fadein 0.4s; /* Safari and Chrome */
+            -o-animation: fadein 0.4s; /* Opera */
+        }
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+}

@@ -1,0 +1,366 @@
+{
+        id: 1223344,
+        policyName: "Tresure plus 25/15",
+        status: true,
+        policyID: "1234",
+        payoutDate: "12/12/12",
+        payoutType: "Cheque",
+        accountDetails: {
+          cashcouponDate: "12/12/12",
+          amount: "40000THB"
+        },
+        policyDetails: {
+          policynumber: "ABCD12345678",
+          status: false,
+          startDate: "8 มิถุนายน 12",
+          endDate: "8 มิถุนายน 20",
+          cashbackDate: "12 มิถุนายน 17"
+          ,
+          nextPremiumDueDate: "23 มิถุนายน 08",
+          annualPremium: 30000,
+          cashback: 3000
+        },
+        coverageItemInputs: [
+          {
+            icon: "scbl-hospital",
+            title: "ค่ารักษาตัวในโรงพยาบาล (OPD)",
+            details:
+              "กรณีเจ็บป่วยนอนรักษาตัวในโรงพยาบาล รับค่ารักษา 200,000 บาท ต่อวัน",
+            value: "200,000 baht"
+          },
+          {
+            icon: "scbl-accident",
+            title: "ค่ารักษาตัวจากอุบัติเหตุ",
+            details:
+              "กรณีเสียชีวิตจากอุบัติเหตุรับความคุ้มครองเพิ่ม 50,000 บาทต่อวัน",
+            value: "200,000 baht"
+          }
+        ],
+        accountInformation: {
+          start: {
+            date: "12/12/12",
+            premiumAmt: "20000",
+            nextPremium: "12/12/12"
+          },
+          lastPremiumPayment: {
+            date: "13/12/12",
+            premiumAmt: "570000",
+            nextPremium: "12/12/12"
+          },
+          paymentTerm: {
+            date: "14/12/12",
+            premiumAmt: "40000",
+            nextPremium: "12/12/12"
+          },
+          endDate: {
+            date: "15/12/12",
+            premiumAmt: "560000",
+            nextPremium: "12/12/12"
+          }
+        }
+      },
+      {
+        id: 1223345,
+        policyName: "เพราะอุ่นใจ 2",
+        status: true,
+        policyID: "4567",
+        payoutDate: "01/12/12",
+        payoutType: "Debit Card",
+        accountDetails: {
+          cashcouponDate: "31/12/12",
+          amount: "270000THB"
+        },
+        policyDetails: {
+          policynumber: "BDSC12345678",
+          status: false,
+          startDate: "8 มิถุนายน 12",
+          endDate: "8 มิถุนายน 20",
+          cashbackDate: "8 มิถุนายน 17"
+          ,
+          nextPremiumDueDate: "34 มิถุนายน 08",
+          annualPremium: 30000,
+          cashback: 3000
+        },
+        coverageItemInputs: [
+          {
+            icon: "scbl-hospital",
+            title: "ค่ารักษาตัวในโรงพยาบาล (OPD)",
+            details:
+              "กรณีเจ็บป่วยนอนรักษาตัวในโรงพยาบาล รับค่ารักษา 200,000 บาท ต่อวัน",
+            value: "200,000 baht"
+          },
+          {
+            icon: "scbl-accident",
+            title: "ค่ารักษาตัวจากอุบัติเหตุ",
+            details:
+              "กรณีเสียชีวิตจากอุบัติเหตุรับความคุ้มครองเพิ่ม 50,000 บาทต่อวัน",
+            value: "200,000 baht"
+          }
+        ],
+        accountInformation: {
+          start: {
+            date: "01/03/04",
+            premiumAmt: "5000",
+            nextPremium: "23/12/12"
+          },
+          lastPremiumPayment: {
+            date: "23/04/13",
+            premiumAmt: "570000",
+            nextPremium: "12/12/12"
+          },
+          paymentTerm: {
+            date: "14/12/12",
+            premiumAmt: "40000",
+            nextPremium: "12/12/12"
+          },
+          endDate: {
+            date: "15/12/12",
+            premiumAmt: "670000",
+            nextPremium: "19/12/12"
+          }
+        }
+      },
+      {
+        id: 1223346,
+        policyName: "กรมธรรม์ 3",
+        status: false,
+        policyID: "9876",
+        payoutDate: "12/12/12",
+        payoutType: "Cheque",
+        accountDetails: {
+          cashcouponDate: "12/12/12",
+          amount: "78000THB"
+        },
+        policyDetails: {
+          policynumber: "SCB12746678",
+          status: true,
+          startDate: "8 มิถุนายน 12",
+          endDate: "8 มิถุนายน 20",
+          cashbackDate: "8 มิถุนายน 17"
+          ,
+          nextPremiumDueDate: "8 มิถุนายน 08",
+          annualPremium: 30000,
+          cashback: 3000
+        },
+        coverageItemInputs: [
+          {
+            icon: "scbl-hospital",
+            title: "ค่ารักษาตัวในโรงพยาบาล (OPD)",
+            details:
+              "กรณีเจ็บป่วยนอนรักษาตัวในโรงพยาบาล รับค่ารักษา 200,000 บาท ต่อวัน",
+            value: "200,000 baht"
+          },
+          {
+            icon: "scbl-accident",
+            title: "ค่ารักษาตัวจากอุบัติเหตุ",
+            details:
+              "กรณีเสียชีวิตจากอุบัติเหตุรับความคุ้มครองเพิ่ม 50,000 บาทต่อวัน",
+            value: "200,000 baht"
+          }
+        ],
+        accountInformation: {
+          start: {
+            date: "9/12/92",
+            premiumAmt: "20000",
+            nextPremium: "12/12/12"
+          },
+          lastPremiumPayment: {
+            date: "15/12/08",
+            premiumAmt: "50000",
+            nextPremium: "18/12/09"
+          },
+          paymentTerm: {
+            date: "13/12/04",
+            premiumAmt: "40000",
+            nextPremium: "12/12/82"
+          },
+          endDate: {
+            date: "15/03/12",
+            premiumAmt: "560000",
+            nextPremium: "06/12/81"
+          }
+        }
+      },
+      {
+        id: 1223346,
+        policyName: "กรมธรรม์ 4",
+        status: false,
+        policyID: "9876",
+        payoutDate: "12/12/12",
+        payoutType: "Cheque",
+        accountDetails: {
+          cashcouponDate: "12/12/12",
+          amount: "78000THB"
+        },
+        policyDetails: {
+          policynumber: "SCB866345678",
+          status: true,
+          startDate: "8 มิถุนายน 12",
+          endDate: "8 มิถุนายน 20",
+          cashbackDate: "8 มิถุนายน 17"
+          ,
+          nextPremiumDueDate: "8 มิถุนายน 08",
+          annualPremium: 30000,
+          cashback: 2000
+        },
+        coverageItemInputs: [
+          {
+            icon: "scbl-hospital",
+            title: "ค่ารักษาตัวในโรงพยาบาล (OPD)",
+            details:
+              "กรณีเจ็บป่วยนอนรักษาตัวในโรงพยาบาล รับค่ารักษา 200,000 บาท ต่อวัน",
+            value: "200,000 baht"
+          },
+          {
+            icon: "scbl-accident",
+            title: "ค่ารักษาตัวจากอุบัติเหตุ",
+            details:
+              "กรณีเสียชีวิตจากอุบัติเหตุรับความคุ้มครองเพิ่ม 50,000 บาทต่อวัน",
+            value: "200,000 baht"
+          }
+        ],
+        accountInformation: {
+          start: {
+            date: "9/12/92",
+            premiumAmt: "20000",
+            nextPremium: "12/12/12"
+          },
+          lastPremiumPayment: {
+            date: "15/12/08",
+            premiumAmt: "50000",
+            nextPremium: "18/12/09"
+          },
+          paymentTerm: {
+            date: "13/12/04",
+            premiumAmt: "40000",
+            nextPremium: "12/12/82"
+          },
+          endDate: {
+            date: "15/03/12",
+            premiumAmt: "560000",
+            nextPremium: "06/12/81"
+          }
+        }
+      },
+      {
+        id: 1223346,
+        policyName: "กรมธรรม์ 5",
+        status: false,
+        policyID: "9876",
+        payoutDate: "12/12/12",
+        payoutType: "Cheque",
+        accountDetails: {
+          cashcouponDate: "12/12/12",
+          amount: "78000THB"
+        },
+        policyDetails: {
+          policynumber: "JHT12345678",
+          status: false,
+          startDate: "8 มิถุนายน 12",
+          endDate: "8 มิถุนายน 20",
+          cashbackDate: "8 มิถุนายน 17"
+          ,
+          nextPremiumDueDate: "8 มิถุนายน 08",
+          annualPremium: 30000,
+          cashback: 4000
+        },
+        coverageItemInputs: [
+          {
+            icon: "scbl-hospital",
+            title: "ค่ารักษาตัวในโรงพยาบาล (OPD)",
+            details:
+              "กรณีเจ็บป่วยนอนรักษาตัวในโรงพยาบาล รับค่ารักษา 200,000 บาท ต่อวัน",
+            value: "200,000 baht"
+          },
+          {
+            icon: "scbl-accident",
+            title: "ค่ารักษาตัวจากอุบัติเหตุ",
+            details:
+              "กรณีเสียชีวิตจากอุบัติเหตุรับความคุ้มครองเพิ่ม 50,000 บาทต่อวัน",
+            value: "200,000 baht"
+          }
+        ],
+        accountInformation: {
+          start: {
+            date: "9/12/92",
+            premiumAmt: "20000",
+            nextPremium: "12/12/12"
+          },
+          lastPremiumPayment: {
+            date: "15/12/08",
+            premiumAmt: "50000",
+            nextPremium: "18/12/09"
+          },
+          paymentTerm: {
+            date: "13/12/04",
+            premiumAmt: "40000",
+            nextPremium: "12/12/82"
+          },
+          endDate: {
+            date: "15/03/12",
+            premiumAmt: "560000",
+            nextPremium: "06/12/81"
+          }
+        }
+      },
+      {
+        id: 1223346,
+        policyName: "กรมธรรม์ 6",
+        status: false,
+        policyID: "9876",
+        payoutDate: "12/12/12",
+        payoutType: "Cheque",
+        accountDetails: {
+          cashcouponDate: "12/12/12",
+          amount: "78000THB"
+        },
+        policyDetails: {
+          policynumber: "NHGF12345678",
+          status: true,
+          startDate: "8 มิถุนายน 12",
+          endDate: "8 มิถุนายน 20",
+          cashbackDate: "8 มิถุนายน 17"
+          ,
+          nextPremiumDueDate: "8 มิถุนายน 08",
+          annualPremium: 30000,
+          cashback: 3000
+        },
+        coverageItemInputs: [
+          {
+            icon: "scbl-hospital",
+            title: "ค่ารักษาตัวในโรงพยาบาล (OPD)",
+            details:
+              "กรณีเจ็บป่วยนอนรักษาตัวในโรงพยาบาล รับค่ารักษา 200,000 บาท ต่อวัน",
+            value: "200,000 baht"
+          },
+          {
+            icon: "scbl-accident",
+            title: "ค่ารักษาตัวจากอุบัติเหตุ",
+            details:
+              "กรณีเสียชีวิตจากอุบัติเหตุรับความคุ้มครองเพิ่ม 50,000 บาทต่อวัน",
+            value: "200,000 baht"
+          }
+        ],
+        accountInformation: {
+          start: {
+            date: "9/12/92",
+            premiumAmt: "20000",
+            nextPremium: "12/12/12"
+          },
+          lastPremiumPayment: {
+            date: "15/12/08",
+            premiumAmt: "50000",
+            nextPremium: "18/12/09"
+          },
+          paymentTerm: {
+            date: "13/12/04",
+            premiumAmt: "40000",
+            nextPremium: "12/12/82"
+          },
+          endDate: {
+            date: "15/03/12",
+            premiumAmt: "560000",
+            nextPremium: "06/12/81"
+          }
+        }
+      }

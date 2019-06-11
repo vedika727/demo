@@ -1,0 +1,124 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton class="border-bottom">
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="contactUs">
+        <ion-card>
+            <ion-card-content>
+                <ion-row class="header">
+                    <ion-col col-12 class="h2">
+                        {{"contactUsProduct.staffCall" | translate}}
+                    </ion-col>
+                    <ion-col class="text" col-12>
+                        {{"contactUsProduct.staffCall2" | translate}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="col-input">
+                        <ion-item no-padding>
+                            <ion-label class="input-label" for="FirstName" floating>{{"contactUsProduct.name" |
+                                translate}}</ion-label>
+                            <ion-input id="FirstName" pattern="^[\u0E01-\u0E5Ba-zA-Z\s]+$" formControlName="FirstName"
+                                class="border-bottom" required type="text" name="FirstName" value=""></ion-input>
+                        </ion-item>
+                        <p *ngIf="contactUs.controls['FirstName'].errors && (contactUs.controls['FirstName'].touched || submitted)"
+                            class="invalid">{{"contactUsProduct.nameValidation" | translate}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="col-input">
+                        <ion-item no-padding>
+                            <ion-label class="input-label" for="LastName" floating>{{"contactUsProduct.lastName" |
+                                translate}}</ion-label>
+                            <ion-input id="LastName" pattern="^[\u0E01-\u0E5Ba-zA-Z\s]+$" formControlName="LastName"
+                                class="border-bottom" required type="text" name="LastName" value=""></ion-input>
+                        </ion-item>
+                        <p *ngIf="contactUs.controls['LastName'].errors && (contactUs.controls['LastName'].touched || submitted)"
+                            class="invalid">{{"contactUsProduct.lastNameValidation" | translate}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="col-input">
+                        <ion-item no-padding>
+                            <ion-label class="input-label" for="Email" floating>{{"contactUsProduct.email" |
+                                translate}}</ion-label>
+                            <ion-input id="Email" formControlName="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+                                class="border-bottom" type="email" name="Email" value=""></ion-input>
+                        </ion-item>
+                        <p *ngIf="contactUs.controls['Email'].errors && (contactUs.controls['Email'].touched || submitted)"
+                            class="invalid">{{"contactUsProduct.emailValidation" | translate}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="col-input">
+                        <ion-item no-padding>
+                            <ion-label class="input-label" for="Phone" floating>{{"contactUsProduct.phone" |
+                                translate}}</ion-label>
+                            <ion-input id="Phone" pattern="^[+]?[0-9]{9,}" formControlName="Phone" class="border-bottom"
+                                required type="text" name="Phone" value="" [class.invalid]="contactUs.controls['Phone'].errors && (contactUs.controls['Phone'].touched || submitted)"></ion-input>
+                        </ion-item>
+                        <p *ngIf="contactUs.controls['Phone'].errors && (contactUs.controls['Phone'].touched || submitted)"
+                            class="invalid">{{"contactUsProduct.phoneValidation" | translate}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="col-input">
+                        <ion-item class="comments-area" no-padding>
+                            <ion-label stacked>{{"contactUsProduct.specifyQuestion" | translate}}</ion-label>
+                            <ion-textarea formControlName="Comment__c" rows="4" cols="50" maxlength="255" placeholder="กรุณาระบุข้อสงสัยของคุณที่นี่">
+                                {{"contactUsProduct.typeTextHere" | translate}}
+                            </ion-textarea>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <ion-row class="bottom-part">
+            <ion-col>
+                <ion-item class="text">
+                    {{"contactUsProduct.timeCallback" | translate}}
+                </ion-item>
+                <ion-card *ngIf="!checkboxValid" class="invalid">
+                    <ion-card-content>
+                        <ion-row class="information-text" align-items-center>
+                            <ion-icon name="ios-alert"></ion-icon>
+                            {{"contactUsProduct.timeCallBackValidation" | translate}}
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+                <ion-list>
+                    <ion-item no-border>
+                        <ion-label>{{"contactUsProduct.timeCall1" | translate}}</ion-label>
+                        <ion-checkbox formControlName="Time08_12__c" (ionChange)="checkboxValidation()"></ion-checkbox>
+                    </ion-item>
+                    <ion-item no-border>
+                        <ion-label>{{"contactUsProduct.timeCall2" | translate}}</ion-label>
+                        <ion-checkbox formControlName="Time12_17__c" (ionChange)="checkboxValidation()"></ion-checkbox>
+                    </ion-item>
+                    <ion-item no-border>
+                        <ion-label>{{"contactUsProduct.timeCall3" | translate}}</ion-label>
+                        <ion-checkbox formControlName="Time17_21__c" (ionChange)="checkboxValidation()"></ion-checkbox>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+            <ion-col col-12 class="separator">
+                <ion-item class="border-top">
+
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item text-wrap>
+                    <ion-label>{{"contactUsProduct.timeCallWeekend" | translate}}</ion-label>
+                    <ion-checkbox formControlName="Holiday_Available__c"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col col-12 class="button-contact-us button">
+                <button ion-button item-end class="cta-button-primary" round (click)="submitContactUs()">
+                    {{"contactUsProduct.cta" | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

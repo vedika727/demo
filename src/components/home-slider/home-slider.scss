@@ -1,0 +1,28 @@
+home-slider {
+    .card-title {
+        position: absolute;
+        top: $font_20px;
+        width: 88%;
+    }
+    .hide {
+        visibility: hidden;
+    }
+    .hide>.swiper-slide-prev {
+        opacity: 1!important;
+    }
+    .swiper-slide {
+        left: 23%;
+    }
+    .swiper-slide-active {
+        opacity: 1;
+    }
+    .swiper-slide-next,
+    .swiper-slide-prev {
+        opacity: 0.7;
+    }
+    .slide-values {
+        text-align: center;
+        width: 100%;
+        //margin: 0% auto;
+    }
+}

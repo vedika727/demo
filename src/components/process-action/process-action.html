@@ -1,0 +1,18 @@
+<!-- Generated template for the ProcessActionComponent component -->
+<div>
+
+  <img class="thank-you-icon" src="../assets/scbl-icons/success.svg">
+  <!-- <ion-icon name="scbl-challenge"></ion-icon> -->
+
+  <p id="title" ion-text color="primary" class="title-message heading1-type2 margin-0-px">
+    {{processActionInput.title | translate}}
+  </p>
+  <p id="msg2" ion-text class="text-bold margin-0-5vh" color="secondary-dark">
+    {{"login.weSentYouEmailConfirmingYourPasswordChange"| translate}}
+  </p>
+  <p id="msg3" ion-text class="text-bold margin-bottom-3vh" color="secondary-dark">
+    {{"login.setPinHeadMsz" | translate}}
+  </p>
+
+  <button ion-button round class="cta-button-primary" (click)="action()">{{processActionInput.buttonText | translate}}</button>
+</div>

@@ -1,0 +1,21 @@
+<ion-navbar no-padding no-margin hideBackButton>
+    <button (click)="navigateTo('MyAccountPage') " *ngIf="scbHeaderInputs.isProfile" class="left-button" start ion-button small
+        icon-only clear>
+        <ion-icon name="Profile-grey" color="secondary" *ngIf="scbHeaderInputs.daynightFlag == 'night'"></ion-icon>
+        <ion-icon name="Profile-grey" color="primary" *ngIf="scbHeaderInputs.daynightFlag == 'day'"></ion-icon>
+    </button>
+    <button (click)="navigatePage()" *ngIf="scbHeaderInputs.isBackButton" class="left-button" small clear ion-button icon-start>
+        <ion-icon name="ios-arrow-back-outline"></ion-icon>
+        {{"registration.backHeaderIcon" | translate}}
+    </button>
+    <!-- SCB HEAD ICON -->
+    <div [ngClass]="scbHeaderInputs.isLogoNeedBlur == true ? 'scb-header-logo-blur' : '' ">
+        <img *ngIf="scbHeaderInputs.daynightFlag == 'day'" class="center" src="assets/imgs/SCBLife-logo.png" [ngClass]="scbHeaderInputs.loginPageIconSize == true ? 'large-icon-with-width' : '' ">
+        <img *ngIf="scbHeaderInputs.daynightFlag == 'night'" class="center" src="assets/imgs/SCBLife-logo-reversed-white.png">
+        <span *ngIf="scbHeaderInputs.daynightFlag == 'showNonEligibleLoans'" class="center h3 width-20">{{"nonEligibleLoanList.details"
+            | translate}}</span>
+    </div>
+    <div *ngIf="scbHeaderInputs.title">
+        <span class="section-title">{{ scbHeaderInputs.title | translate}}</span>
+    </div>
+</ion-navbar>

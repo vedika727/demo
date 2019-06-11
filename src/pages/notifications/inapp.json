@@ -1,0 +1,114 @@
+[
+    {
+        "call2action": "policy_payment_apl",
+        "messageGroupId": "policy_payment_fail",
+        "messageTitle": "Premium",
+        "messageBody": "System has failed to deduct money for premium payment for ABC123456789 through your credit card",
+        "policyNumber": "ABC123456789"
+    },
+    {
+        "call2action": "policy_payment_apl",
+        "messageGroupId": "policy_payment_due",
+        "messageTitle": "Premium",
+        "messageBody": "An automatic credit card deduction will occur for policy ACB123456789 with amount XX,XXX.XX on DD MMMMMM YY. ",
+        "policyNumber": "ABC123456789"
+    },
+    {
+        "call2action": "policy_payment_apl",
+        "messageGroupId": "policy_payment_fail",
+        "messageTitle": "Premium",
+        "messageBody": "System could not perform automatic deduction for policy ABC123456789 through credit card. System will try again on DD MMMMMM YY.",
+        "policyNumber": "ABC123456789"
+    },
+    {
+        "call2action": "fitsense",
+        "messageGroupId": "fitsense_reward",
+        "messageTitle": "Special Points",
+        "messageBody": "Thank you for verifying your email address! You have just earned X points!",
+        "fitsenseScreenPath": "{\"ScreenIDLevel1\":\"PointsRewards\",\"ScreenIDLevel2\": \"Rewards\",\"ScreenIDLevel3\": \"All\",,\"ScreenIDLevel4\":\"Details\",\"RewardID\":\"tesco_lotus_0640\"}"
+    },
+    {
+        "call2action": "notifications",
+        "messageGroupId": "notifications",
+        "messageTitle": "_",
+        "messageBody": "_"
+    },
+    {
+        "call2action": "fitsense",
+        "messageGroupId": "fitsense_reward",
+        "messageTitle": "Special Points",
+        "messageBody": "Thank you for signing up! You have just earned X points!",
+        "fitsenseScreenPath": "{\"ScreenIDLevel1\":\"PointsRewards\",\"ScreenIDLevel2\": \"Rewards\",\"ScreenIDLevel3\": \"All\",,\"ScreenIDLevel4\":\"Details\",\"RewardID\":\"tesco_lotus_0640\"}"
+    },
+    {
+        "call2action": "my_account",
+        "messageGroupId": "my_account",
+        "messageTitle": "Your information",
+        "messageBody": "you have not entered all your information. Click to continue"
+    },
+    {
+        "call2action": "my_account",
+        "messageGroupId": "my_account",
+        "messageTitle": "Your information",
+        "messageBody": "please enter all your information"
+    },
+    {
+        "call2action": "policy_dashboard",
+        "messageGroupId": "policy_dashboard_loans",
+        "messageTitle": "Setup",
+        "messageBody": "You can now learn and setup app to view your policy"
+    },
+    {
+        "call2action": "",
+        "messageGroupId": "",
+        "messageTitle": "How to Use",
+        "messageBody": "Welcome to SCBLife app please view \"how to use\" function"
+    },
+    {
+        "call2action": "policy_full_view",
+        "messageGroupId": "policy_lapse",
+        "messageTitle": "Policy has force surrended",
+        "messageBody": "Policy XXX has lapsed on xx/xx/xxxx date. Please contact call centre",
+        "policyNumber": "ABC123456789"
+    },
+    {
+        "call2action": "policy_full_view",
+        "messageGroupId": "policy_payment_done",
+        "messageTitle": "Premium Payment",
+        "messageBody": "Thank you for complete payment of XX,XXX baht on XX/XX/XXXX",
+        "policyNumber": "ABC123456789"
+    },
+    {
+        "call2action": "policy_payment_apl",
+        "messageGroupId": "payment_deduct",
+        "messageTitle": "Premium",
+        "messageBody": "System has failed to deduct money for premium payment for ABC123456789 through your Savings account "
+    },
+    {
+        "call2action": "policy_payment_apl",
+        "messageGroupId": "policy_payment_due",
+        "messageTitle": "Premium",
+        "messageBody": "An automatic debit deduction will occur for policy ACB123456789 with amount XX,XXX.XX on DD MMMMMM YY. Please reserve money 1 day in advance."
+    },
+    {
+        "call2action": "policy_full_view",
+        "messageGroupId": "policy_payment_done",
+        "messageTitle": "Premium Payment",
+        "messageBody": "Thank you for paying XX,XXX baht on XX/XX/XXXX",
+        "policyNumber": "ABC123456789"
+    },
+    {
+        "call2action": "policy_payment_apl",
+        "messageGroupId": "policy_payment_due",
+        "messageTitle": "Premium",
+        "messageBody": "Your premium for policy ABC123456789 with amount XX,XXX.XX Baht is due on DD MMMMMM YY (Notify after due date) {DueDate+31 day}",
+        "policyNumber": "1103703699440"
+    },
+    {
+        "call2action": "policy_document",
+        "messageGroupId": "policy_payment_due",
+        "messageTitle": "Premium",
+        "messageBody": "Your premium for policy ABC123456789 with amount XX,XXX.XX Baht is due on DD MMMMMM YY",
+        "policyNumber": "1471200103909"
+    }
+]

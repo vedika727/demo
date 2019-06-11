@@ -1,0 +1,171 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding-left padding-right>
+    <ion-label ion-text class="h1" color="secondary-dark">{{"hamburgerMenu.profile"|translate}}</ion-label>
+    <!--Form Start  -->
+    <div *ngIf='myAccount'>
+        <form [formGroup]="myAccount">
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col col-4>
+                        <ion-item no-lines>
+                            <ion-avatar margin-bottom>
+                                <img id="hamburgerMenu.profile" class=" avatar radius shadow" (click)="profilePictureChange()" [src]="loginService.profilePic || placeholder"
+                                    onerror="this.src='assets/scbl-icons/default-profile-picture.svg'" />
+                            </ion-avatar>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col margin-top class="ac-input button-alignment" col-5>
+                        <span *ngIf="!editName" ion-text item-left color="primary" class="user-profile-name margin-tp">{{userName}}</span>
+                        <ion-input *ngIf="editName" placeholder="โปรไฟล์" type="text" formControlName="name"></ion-input>
+                        <div padding-left *ngIf="(name.touched || name.dirty)">
+                            <div class="field-error" ion-text color="accent-danger" *ngIf="name.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+                        </div>
+
+                    </ion-col>
+                    <ion-col col-2>
+                        <button *ngIf="!this.isSCBCustomer" ion-button clear item-end class="secondary-edit right margin-btm" color="secondary-highlight"
+                            (click)="editUserName()">{{"hamburgerMenu.edit"|translate}}</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <!-- TODO - Removed from Release 1 -->
+            <!-- Navigation to Insurance Card Page -->
+            <!-- <ion-label id="hamburgerMenu.policyCard" (click)="toInsuranceCard()" *ngIf="isSCBCustomer" text-center margin-bottom color="primary"
+                class="hyperlink-primary anchor">{{"hamburgerMenu.policyCard"|translate}}</ion-label> -->
+            <!-- Personal Details Block start -->
+            <ion-label no-margin color="primary" class="section-header">{{"hamburgerMenu.personal"|translate}}</ion-label>
+            <!-- Gender input field -->
+            <ion-list padding no-margin>
+                <!-- <div radio-group> -->
+                <ion-label no-margin color="secondary-dark" class="h3">{{"hamburgerMenu.gender"|translate}}</ion-label>
+                <ion-grid class="underline" no-padding radio-group formControlName="gender" [disabled]=isSCBCustomer>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item no-padding no-lines>
+                                <ion-label color="secondary-dark" class="combo-box-text">{{"hamburgerMenu.woman"|translate}}</ion-label>
+                                <ion-radio mode="md" id="hamburgerMenu.woman" item-start value="F" class="new-margin"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col>
+                            <ion-item no-padding no-lines>
+                                <ion-label color="secondary-dark" class="combo-box-text">{{"hamburgerMenu.man"|translate}}</ion-label>
+                                <ion-radio mode="md" id="hamburgerMenu.man" item-start value="M" class="new-margin"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <!-- </div> -->
+            </ion-list>
+
+            <!-- Weight input Field  -->
+            <ion-item padding-right class="ac-input button-alignment">
+                <ion-label no-padding stacked color="secondary-dark" class="h3">{{"hamburgerMenu.weight"|translate}}</ion-label>
+                <ion-input placeholder="{{'hamburgerMenu.weightPlaceholder'| translate}}" type="number" pattern="[0-9]*" no-margin id="hamburgerMenu.weight" formControlName="weight"
+                    [disabled]="editWeight"></ion-input>
+                <button class="secondary-edit right" color="secondary-dark" (click)="editWeight=false" id="hamburgerMenu.edit1" ion-button
+                    clear item-end>{{"hamburgerMenu.edit"|translate}}</button>
+            </ion-item>
+            <div padding-left *ngIf="(weight.touched || weight.dirty)">
+                <div class="field-error" ion-text color="accent-danger" *ngIf="weight.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+            </div>
+            <!-- Height input Field  -->
+            <ion-item padding-right class="ac-input button-alignment">
+                <ion-label no-padding stacked color="secondary-dark" class="h3">{{"hamburgerMenu.height"|translate}}</ion-label>
+                <ion-input placeholder="{{'hamburgerMenu.heightPlaceholder'| translate}}" type="number" no-margin id="hamburgerMenu.height" formControlName="height" [disabled]="editHeight"></ion-input>
+                <button class="secondary-edit right" color="secondary-dark" (click)="editHeight=false" id="hamburgerMenu.edit2" ion-button
+                    clear item-right>{{"hamburgerMenu.edit"|translate}}</button>
+            </ion-item>
+            <div padding-left *ngIf="(height.touched || height.dirty)">
+                <div ion-text class="field-error" color="accent-danger" *ngIf="height.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+            </div>
+            <!-- Date of birth input Field  -->
+            <!-- <ion-label padding-left ion-text stacked color="secondary-dark" class="h3">{{"hamburgerMenu.myBirthday"|translate}}</ion-label>
+            <ion-item class="button-alignment ">
+                <ion-datetime [min]="2400" [max]="date" placeholder='{{"hamburgerMenu.myBirthday"|translate}}' no-margin id="hamburgerMenu.myBirthday"
+                    displayFormat="DD/MM/YYYY" formControlName="dateOfBirth" [disabled]=editMyBirthday></ion-datetime>
+                <button *ngIf="!isSCBCustomer" ion-button class="pd-left" icon-only item-right clear (click)="editMyBirthday=false">
+                    <ion-icon color="secondary-highlight" class="right cal-icon-pos" id="hamburgerMenu.edit3" margin-top name="scbl-calendar"></ion-icon>
+                </button>
+            </ion-item> -->
+
+
+            <ion-item class="button-alignment">
+                <ion-label color="secondary-dark" class="h3" stacked>{{"hamburgerMenu.myBirthday"|translate}}</ion-label>
+                <ion-datetime id="hamburgerMenu.myBirthday" placeholder='{{"hamburgerMenu.birthDatePlaceholder"|translate}}' formControlName="dateOfBirth"
+                    displayFormat="DD/MM/YYYY" class="mg-btm" [disabled]="editMyBirthday"></ion-datetime>
+                <button *ngIf="!isSCBCustomer" margin-top class="pd-left" (click)="editMyBirthday=false" ion-button icon-only item-right
+                    clear item-end class="pd-left" color="secondary-dark">
+                    <ion-icon color="secondary-highlight" class="right cal-icon-pos" id="hamburgerMenu.edit3" margin-top name="scbl-calendar"></ion-icon>
+                </button>
+            </ion-item>
+            <div class="p" padding-left *ngIf="(dateOfBirth.touched || dateOfBirth.dirty)">
+                <div ion-text class="field-error" color="accent-danger" *ngIf="dateOfBirth.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+            </div>
+            <!-- Personal Details Block end -->
+            <!-- Contact Details block start  -->
+            <ion-label padding-left color="primary" class="section-header align-text">{{"hamburgerMenu.contactInformation"|translate}}</ion-label>
+            <!--Telephone number input field  -->
+            <ion-item class="button-alignment ac-input" padding-right>
+                <ion-label no-padding stacked color="secondary-dark" class="h3">{{"hamburgerMenu.telephoneNumber"|translate}}</ion-label>
+                <!-- <ion-input class="placeholder" type="tel" maxlength="10" placeholder='{{"hamburgerMenu.telephoneNumber"|translate}}' id="hamburgerMenu.telephoneNumber" formControlName="telephoneNumber" [disabled]=edittelephoneNumber ></ion-input> -->
+                <ion-input type="tel" maxlength="10" placeholder='{{"hamburgerMenu.mobileNoPlaceholder"|translate}}' id="hamburgerMenu.telephoneNumber"
+                    formControlName="phone" [value]="masked()" [disabled]=edittelephoneNumber></ion-input>
+                <button *ngIf="!isSCBCustomer" class="secondary-edit right" color="secondary-dark" id="hamburgerMenu.edit4" (click)="editNumber()"
+                    ion-button clear item-right>{{"hamburgerMenu.edit"|translate}}</button>
+            </ion-item>
+            <div padding-left class="p" *ngIf="(phone.touched || phone.dirty)">
+                <div ion-text class="field-error" color="accent-danger" *ngIf="phone.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+                <div ion-text class="field-error" color="accent-danger" *ngIf="phone.errors?.minlength">{{"hamburgerMenu.enterValidPhoneNumber"|translate}}</div>
+            </div>
+            <!-- Email input Field  -->
+            <ion-item padding-right class="button-alignment ac-input">
+                <ion-label no-padding stacked color="secondary-dark" class="h3">{{"hamburgerMenu.email"|translate}}</ion-label>
+                <ion-input type="text" placeholder="{{'hamburgerMenu.mailingAddressPlaceholder'|translate}}" id="hamburgerMenu.email" formControlName="email"
+                    [disabled]=editEmail></ion-input>
+                <button class="secondary-edit right" color="secondary-dark" id="hamburgerMenu.edit5" ion-button clear item-right (click)="editEmail=false">{{"hamburgerMenu.edit"|translate}}</button>
+            </ion-item>
+            <div class="p" padding-left *ngIf="(email.touched || email.dirty)">
+                <div ion-text class="field-error" color="accent-danger" *ngIf="email.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+                <div ion-text class="field-error" color="accent-danger" *ngIf="email.errors?.email  && !email.errors?.required">{{"hamburgerMenu.enterValidEmail"|translate}}</div>
+            </div>
+
+            <!-- you get 100 points if you verify email (NON SCB CUSTOMER) -->
+            <div *ngIf="!isSCBCustomer">
+                <div padding-left ion-text class="field-success" color="accent-success" *ngIf="userInfo.isEmailVerify && !email.errors?.email && !email.errors?.required">{{"hamburgerMenu.alreadyChecking"|translate}}</div>
+                <button clear padding-left ion-text class="field-error anchor" color="accent-danger" *ngIf="!userInfo.isEmailVerify && !email.errors?.email && !email.errors?.required"
+                    (click)="updateEmail()" [disabled]=linkClicked>{{"hamburgerMenu.notConfirmedNonSCBCustomer"|translate}}</button>
+            </div>
+            <!-- end 100 points for non SCB customer -->
+
+            <!-- you get 200 points if you verify email (SCB CUSTOMER) -->
+            <div *ngIf="isSCBCustomer">
+                <div padding-left ion-text class="field-success" color="accent-success" *ngIf="userInfo.isEmailVerify && !email.errors?.email && !email.errors?.required">{{"hamburgerMenu.alreadyChecking"|translate}}</div>
+                <button clear padding-left ion-text class="field-error anchor" color="accent-danger" *ngIf="!userInfo.isEmailVerify && !email.errors?.email && !email.errors?.required"
+                    (click)="updateEmail()" [disabled]=linkClicked>{{"hamburgerMenu.notConfirmedSCBCustomer"|translate}}</button>
+            </div>
+            <!-- end  200 points for SCB customer-->
+
+            <!-- Residence input Field  -->
+            <ion-item class="button-alignment ac-input" padding-right>
+                <ion-label no-padding stacked color="secondary-dark" class="h3"> {{"hamburgerMenu.residence"|translate}}</ion-label>
+                <ion-textarea id="hamburgerMenu.address" placeholder="{{'hamburgerMenu.address2'|translate}}" formControlName="address" [disabled]=editResidence></ion-textarea>
+                <button *ngIf="!isSCBCustomer" class="secondary-edit right " id="hamburgerMenu.edit6" color="secondary-dark" (click)="editResidence=false"
+                    ion-button clear item-right>{{"hamburgerMenu.edit"|translate}}</button>
+            </ion-item>
+            <div class="p" padding-left *ngIf="(address.touched || address.dirty)">
+                <div ion-text class="field-error" color="accent-danger" *ngIf="address.errors?.required">{{"hamburgerMenu.fieldRequired"|translate}}</div>
+            </div>
+            <!-- Contact Details block end  -->
+            <div text-center>
+                <button id="hamburgerMenu.save" ion-button round type="submit" id="saveBtn" (click)="checkFormValidation()">{{"hamburgerMenu.save"|translate}}</button>
+            </div>
+        </form>
+    </div>
+    <!-- Form End -->
+</ion-content>

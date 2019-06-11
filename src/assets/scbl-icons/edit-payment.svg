@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="32px" viewBox="0 0 33 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PL2.1-(try)" transform="translate(-283.000000, -706.000000)">
+            <g id="Group-7" transform="translate(284.000000, 707.000000)">
+                <g id="pencil-edit-button" transform="translate(14.000000, 13.000000)" fill="#4E2A81" fill-rule="nonzero">
+                    <path d="M10.8197498,2.90383584 L14.3593034,6.46069071 L5.39971577,15.4641563 L1.86216897,11.9073014 L10.8197498,2.90383584 Z M17.0451399,2.04600399 L15.4666352,0.459768842 C14.8565976,-0.153256281 13.8660227,-0.153256281 13.2539125,0.459768842 L11.7418629,1.9792235 L15.2814165,5.53611143 L17.0451399,3.76375044 C17.5182867,3.28825347 17.5182867,2.5214679 17.0451399,2.04600399 Z M0.00984974253,16.9067472 C-0.0545655931,17.1980689 0.207175168,17.4591079 0.497109975,17.3882611 L4.44134849,16.42725 L0.903801691,12.8703952 L0.00984974253,16.9067472 Z" id="Shape"></path>
+                </g>
+                <g id="Group" transform="translate(7.000000, 4.000000)" fill="#4E2A81">
+                    <text id="B" font-family="ErgoCom-MediumCondensed, Ergo Com" font-size="18.144" font-style="condensed" font-weight="500" line-spacing="12.096" letter-spacing="-0.235199985">
+                        <tspan x="0.548" y="16.592">B</tspan>
+                    </text>
+                    <rect id="Rectangle-2" x="4.32" y="0" width="1.728" height="2.592"></rect>
+                    <rect id="Rectangle-2-Copy-2" x="4.32" y="14.688" width="1.728" height="2.592"></rect>
+                </g>
+                <circle id="Oval-2" stroke="#4E2A81" cx="13.24" cy="13.24" r="13.24"></circle>
+                <path d="M19,4 C21.6666667,6 23.3333333,8.66666667 24,12" id="Path-2" stroke="#4E2A81"></path>
+            </g>
+        </g>
+    </g>
+</svg>

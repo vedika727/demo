@@ -1,0 +1,342 @@
+product-detail {
+
+    .sticky{ 
+        background-color: $secondary-dark;
+        opacity: 0.6;
+        position: fixed;
+    }
+    
+    .toolbar-md { 
+        min-height: 44px;
+    }
+
+    ion-content { 
+        background-image: linear-gradient(#f3f0f6, white);
+     }
+    .product-detail {
+        .scroll-content {
+            margin-top: 0 !important;
+        }  
+    }
+
+    .circle-value { 
+        background-repeat: no-repeat;
+        width: 40vw;
+        height: 40vw;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .title{
+        &__headline{
+            font-size: 40px;
+            line-height: 36px;
+        }
+        &__subheadline{
+            font-size: 28px;
+            margin-bottom: 70px;
+        }
+        &__product-detail{
+            margin-top: -100pt;
+            color: white;
+            margin-left: 22pt;
+        }
+    }
+
+    .segment { 
+        height: 11vw;
+        .segment-button { 
+            font-size: $font_20px;
+            height: 11vw;
+            line-height: 10.35vw;
+            border: 0;
+            color: $primary;
+            opacity: 1;
+            font-weight: bold;
+            border-top-left-radius: 64px;
+            border-top-right-radius: 64px;
+            border-bottom-left-radius: 64px;
+            border-bottom-right-radius: 64px;
+
+            &:first-of-type, &:last-of-type { 
+                border-radius: inherit;
+            }
+
+            &.segment-activated { 
+                color: white;
+                background-color: $primary;  
+            }
+        }    
+    }
+
+    .additional-text { 
+        font-size: $font_16px;
+        font-weight: bold;
+        padding: 0 2vw;
+        line-height: $font_16px;
+
+        &.primary { 
+            color: $primary;
+            padding: 0 5vw;
+        }
+        &__sample-benefits{
+            margin-top: 17px;
+            font-size: 20px;
+        }
+        &__sample-benefits2{
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+       
+    }
+
+    .calculation-table {
+        ion-card {
+            margin: 2vw 0 0 0;
+            width: 100%;
+        }
+        &__head{
+            font-size: 20px !important;
+        }
+        &__values{
+            display: inline-block;
+            font-size: 20px !important;
+            margin-bottom: 17px;
+        }
+
+    }
+   
+    .calculation { 
+        margin: 6px 12px 12px 12px;
+        text-align: center;
+        font-weight: bold;
+        .table-header { 
+            color: $primary;
+            background-color: rgb(243, 243, 243);
+        }
+        ion-segment { 
+            margin: 0;
+            width: 100%;
+
+            &.tabSwitcher { 
+                border: 1px solid $primary;
+                border-top-left-radius: 64px;
+                border-top-right-radius: 64px;
+                border-bottom-left-radius: 64px;
+                border-bottom-right-radius: 64px;
+            }
+        }
+        &__header{
+            margin-top: 15px;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+    }
+
+    .flex { 
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .cta, .title, .product-detail-card { 
+        flex-basis: 100%;
+    }
+    
+    .button.cta {
+        margin-top: auto;
+        &.row { 
+            padding-bottom: 15pt;
+        }
+    }
+
+
+    .product-detail-card {
+        margin-top: -50pt;
+        ion-card-content { 
+            margin: 0pt 15pt 0 15pt;
+        }
+        ion-col {
+            padding-bottom: 15px;
+        }
+
+        .h2-font { 
+            font-size: 32px;
+        }
+    }
+
+    .benefits {
+        text-align: center;
+        font-weight: bold;
+        line-height: normal;
+        ion-icon{ 
+            width: 32pt;
+            height: 32pt;
+        }
+        &__svg-1,
+        &__svg-2,
+        {
+            width: 50pt !important;
+            height: 50pt !important;
+            margin-bottom: 14px;
+        }
+       
+        &__svg-3{
+            height:51pt!important;
+            width:35pt !important;
+            margin-bottom: 14px;
+        }
+       &__text{
+           margin-bottom: 30px;
+           font-size: 20px;
+           line-height: 16px;
+       }
+    }
+
+    .product-detail{
+        &__description{
+            font-weight: bold;
+            line-height: normal;
+            border-top: 1px solid #D8D8D8;
+            padding: 9pt 0;
+        }
+        &__content:not(:last-child){
+            display: inline-block;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__content:last-child{
+            display: inline-block;
+            margin-top: 2px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+
+    .button { 
+        text-align: center;
+        .cta-button-primary {
+            width: 90%;
+            max-width: none;
+            // margin-top: 25px;
+            margin-bottom: 40px;
+        }
+    }   
+
+    scb-header { 
+        .button { 
+            color: white;
+        }
+    }
+    .card-ios {
+        border-radius: 2vw;
+    }
+    .card-md {
+        border-radius: 2vw;
+    }
+
+    .SpinnerDiv {
+        height: 20vh;
+        margin-top: 10vh;
+        margin-bottom: 4vh;
+    }
+
+    .card-md {
+        border-radius: 1rem!important;
+    }
+
+    .card-content-ios {
+        padding: 0px;
+    }
+    .insurance{
+        background-image: url('../../assets/imgs/backgroundPattern.png');
+        background-size: cover;
+        &__premiums{
+            margin-top:31px;
+            margin-bottom: 25px;
+        }
+        &__premiums-text{
+            font-size: 28px;
+            line-height: 35px;
+        }
+        &__premiums-amount{
+            font-size: 42px !important;
+        }
+        &__tax-calculation{
+            margin-bottom: 15px;
+        }
+        &__tax-deduction{
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__circle-value{
+            background-repeat: no-repeat;
+            width: 40vw;
+            height: 40vw;
+            background-size: contain;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        &__circle-back-image-1{
+            background-image: url('../../assets/imgs/Assets-purple-circular-pattern.png');
+        }
+        &__circle-back-image-2{
+            background-image: url('../../assets/imgs/Assets-orange-circular-pattern.png');
+        }
+        &__refund-value{
+            font-size: 32px !important;
+        }
+        &__insurance-amount{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+
+    .more-info{
+        display: inline-block;
+        margin-top: 30px;
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    .note-line{
+        padding-left: 5pt;
+        font-size: 16px;
+        line-height: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #A1A1A1;
+    }
+    .currency{
+        position: absolute;
+        top: 60%;
+        font-size: 24px;
+    }
+    .table-data{
+        line-height: 20px;
+    }
+    .tabs-container{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+   
+
+    .benefit-title{
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    
+}

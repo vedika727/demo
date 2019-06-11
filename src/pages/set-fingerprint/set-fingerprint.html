@@ -1,0 +1,51 @@
+<!--
+  Generated template for the SetFingerprintPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="scb-background-contain">
+    <!-- fingerprint recognition -->
+    <div *ngIf="authenticationType!='face'">
+        <ion-label class="h1">
+            {{"registration.fingerprintVerification" | translate}}
+        </ion-label>
+        <div text-center align="center" class="padding-top-30">
+            <ion-label class="h1">
+                {{"registration.touchFingerOnSensor" | translate }}
+            </ion-label>
+            <ion-icon (click)="biometricRegister()" class="fingerprint" name="scbl-fingerprint"></ion-icon>
+            <ion-label class="heading3-type2 text">
+                {{"registration.fingerprintsCanBeEnteredIntoApplicationPart1" | translate}}
+            </ion-label>
+            <ion-label class="heading3-type2 text">
+                <!-- {{"registration.fingerprintsCanBeEnteredIntoApplicationPart2" | translate}} -->
+            </ion-label>
+        </div>
+    </div>
+    <!-- face recognition -->
+    <div *ngIf="authenticationType=='face'">
+        <ion-label class="h1">
+            {{"registration.verifyFace" | translate}}
+        </ion-label>
+        <div text-center class="padding-top-30">
+            <ion-label class="h1">
+                {{"registration.facialRecognition" | translate }}
+            </ion-label>
+            <ion-icon (click)="biometricRegister()" class="fingerprint" name="scbl-face-recognition"></ion-icon>
+            <ion-label class="heading3-type2 text" text-wrap>
+                {{"registration.fingerprintsCanBeEnteredIntoApplicationFace" | translate}}
+            </ion-label>
+        </div>
+    </div>
+    <div align="center">
+        <ion-label ion-text class="skip-biometric hyperlink-primary" (click)="registrationSuccessWithoutFingerprint()">{{
+            "registration.setFingerPrintskip" |translate}}</ion-label>
+    </div>
+</ion-content>

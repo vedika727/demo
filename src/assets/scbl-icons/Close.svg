@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons/Close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25.5988928,20 L34,28.4011072 L28.4011072,34 L20,25.5988928 L11.5988928,34 L6,28.4011072 L14.4011072,20 L6,11.5988928 L11.5988928,6 L20,14.4011072 L28.4011072,6 L34,11.5988928 L25.5988928,20 Z" id="Combined-Shape" fill="#9F9F9F"></path>
+    </g>
+</svg>

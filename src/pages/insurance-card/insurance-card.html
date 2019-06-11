@@ -1,0 +1,32 @@
+<!--
+  Generated template for the InsuranceCardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-row padding>
+        <div text-wrap class="h1 SCB_FontBold" ion-text color="$secondary-dark">{{'policyDashboard.PolicyInsuranceCard' | translate}}</div>
+    </ion-row>
+
+    <div *ngIf="singleInsurance">
+        <insurance-card [insuranceCardData]="insuranceCardData" [fromAccountRedirect]="fromAccount"></insurance-card>
+    </div>
+    <div *ngIf="!singleInsurance">
+        <div class="SpinnerDiv" *ngIf="spinnerFlagDashboard ">
+            <generic-view [In]=genericDialog></generic-view>
+        </div>
+        <div *ngFor="let insuData of policyDetailsFull">
+
+            <insurance-card [insuranceCardData]="insuData" [fromAccountRedirect]="fromAccount"></insurance-card>
+
+        </div>
+    </div>
+</ion-content>

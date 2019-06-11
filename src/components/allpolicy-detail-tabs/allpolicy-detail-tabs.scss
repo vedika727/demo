@@ -1,0 +1,177 @@
+allpolicy-detail-tabs {
+    .scbl-icon-div {
+        float: right;
+        width: 15%;
+        padding: 0.4%;
+        background-color: $primary-super-light;
+        color: white;
+        .scbl-browser-icon {
+            font-size: 30px;
+        }
+    }
+    ion-segment {
+        display: block;
+        white-space: nowrap;
+        overflow: auto;
+        text-align: center;
+        width: 85%;
+        ion-segment-button.segment-button {
+            display: inline-block;
+            min-width: 50%;
+            width: auto;
+            background-color: #eae5f1  !important;
+        }
+    }
+    .gridCard {
+        height: 18vh;
+    }
+    .rounded-card-div{
+        height: 85% !important;
+    }
+    .segment-md .segment-button {
+        height: 4rem!important;
+    }
+    .segment-ios .segment-button {
+        height: 4rem!important;
+    }
+    .segment-md-primary .segment-button {
+        color: $primary;
+        background-color: $secondary-light;
+    }
+    .segment-ios-primary .segment-button {
+        border-color: #eae5f1 ;
+        background-color: $secondary-light;
+    }
+    .collapseDiv {
+        width: 57%;
+        background-color: $secondary;
+        right: 0px;
+        z-index: 999;
+        margin-top: 11%;
+        position: absolute;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .foldericon {
+        height: $font_30px;
+        padding-left: 30%;
+        margin-left: 34%;
+    }
+    .colDiv {
+        padding: 5%;
+        border-bottom: 1px solid $secondary-light;
+    }
+    .bg-color {
+        background-color: #e9e4f0;
+    }
+    #CoverageTitle {
+        padding: 4vh 0vh 0vh 2vh;
+    }
+    ion-segment {
+        display: flex;
+        white-space: nowrap;
+        overflow: auto;
+        text-align: center;
+        width: 78%;
+        margin-left: 7%;
+        height: 40px;
+    }
+    ion-segment ion-segment-button.segment-activated {
+        border-top: 3px #f4f4f4 !important;
+        border-bottom: none !important;
+        color: #4E2A81 !important;
+        background-color: white !important;
+    }
+    .segment-ios .segment-button:last-of-type {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+        border-left-width: 0;
+        /* border-radius: 10px; */
+    }
+    .segment-md .segment-button:last-of-type {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+        border-left-width: 0;
+        /* border-radius: 10px; */
+    }
+    .segment-ios .segment-button:first-of-type {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+        border-left-width: 0;
+        /* border-radius: 10px; */
+    }
+    .segment-md .segment-button:first-of-type {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+        border-left-width: 0;
+        /* border-radius: 10px; */
+    }
+    .segment-ios-primary .segment-button {
+        border-color: #eae5f1 ;
+        border-bottom-color: transparent !important;
+        // background-color:#f4f4f4;
+        padding: 5px;
+        // height:5px;
+    }
+    .segment-md-primary .segment-button {
+        border-color: #eae5f1 ;
+        border-bottom-color: transparent !important;
+        // background-color: #f4f4f4;
+        padding: 5px;
+        // height:5px;
+    }
+    .segment-ios .segment-button {
+        height: 4rem !important;
+    }
+    .segment-md .segment-button {
+        height: 4rem !important;
+    }
+    .segment-button {
+        display: inline-block;
+        min-width: 50%;
+        width: auto;
+        // background-color: #f4f4f4 !important;
+    }
+    //grid
+    .backcolor {
+        background-color: $secondary;
+    }
+    .SCBL_Card{
+       padding: 0px 16px !important;
+    }
+     .card-ios {
+        // padding: 8px !important;
+        //height: 120px !important;
+        margin: 12px;
+        border-radius: 2px;
+        width: calc(100% - 24px);
+        font-size: 1.4rem;
+        //background: #fff;
+        // -webkit-box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15);
+        // box-shadow: 0px 1px 5px 10px rgba(0, 0, 0, 0.15)
+    }
+    .card-md {
+        // padding: 8px !important;
+        //height: 120px !important;
+        margin: 12px;
+        border-radius: 2px;
+        width: calc(100% - 24px);
+        font-size: 1.4rem;
+        background: #fff;
+        -webkit-box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15)
+    }
+}

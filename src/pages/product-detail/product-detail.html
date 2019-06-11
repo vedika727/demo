@@ -1,0 +1,169 @@
+<ion-header no-border  >
+    <ion-navbar transparent hideBackButton id="navbar" class="">
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content class="product-detail" *ngIf="productDetail" (ionScroll)="onScroll($event)">
+    <img src="{{productDetail.image}}" />
+
+    <div class="flex">
+        <ion-row class="title">
+            <ion-col class="title__product-detail h1">
+                <div class="title__headline">{{productDetail.title}}</div>
+                <div class="title__subheadline">{{"salesDetail.savingsAndValue" | translate}}</div>
+            </ion-col>
+        </ion-row>
+        <ion-card class="product-detail-card">
+            <ion-card-content>
+                <ion-row>
+                    <ion-col class="benefit-title">
+                        {{productDetail.benefitHeader}}
+                    </ion-col>
+                </ion-row>
+                <ion-row justify-content-center>
+                    <ion-col col-4  class="benefits">
+                        <ion-row justify-content-center>
+                            <ion-icon  name="scbl-tax-saving" svgversion color="primary" class="benefits__svg-1"></ion-icon>
+                        </ion-row>
+                        <ion-row justify-content-center class="benefits__text">
+                            {{"salesDetail.optionalTaxDeductible"|translate}}
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-4  class="benefits">
+                        <ion-row justify-content-center>
+                            <ion-icon  name="scbl-cashback" svgversion color="primary" class="benefits__svg-2"></ion-icon>
+                        </ion-row>
+                        <ion-row justify-content-center class="benefits__text">
+                            {{"salesDetail.guaranteeEveryYear"|translate}}
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-4  class="benefits">
+                        <ion-row justify-content-center>
+                            <ion-icon  name="scbl-sales-premiumPaymentMode" svgversion color="primary" class="benefits__svg-3"></ion-icon>
+                        </ion-row>
+                        <ion-row justify-content-center class="benefits__text">
+                            {{"salesDetail.buyItEasily"|translate}}
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let description of productDetail.description" class="product-detail">
+                    <ion-col class="product-detail__description">
+                        <span class="product-detail__content">{{description}}</span>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <ion-row class="calculation">
+            <ion-col text-left col-12 class="additional-text primary">
+                <span class="additional-text__sample-benefits">{{"salesDetail.sampleBenefits" | translate}} </span><br/>
+                <span class="additional-text__sample-benefits2">{{"salesDetail.sampleBenefits2"| translate}}</span><br/>
+            </ion-col>
+            <ion-col col-12 class="calculation__header">
+                {{"salesDetail.calculationHeader" | translate}}
+            </ion-col>
+            <div class="insurance">
+                <ion-row>
+                    <ion-col col-6 class="insurance__premiums">
+                        <div class="insurance__premiums-text">{{"salesDetail.premiumsPerYear" | translate}}</div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-col col-6 class="insurance__premiums">
+                            <div>
+                                <span class="h2 insurance__premiums-amount ">{{"salesDetail.insuredAmount" | translate}}</span>
+                                <span>{{"salesDetail.currency" | translate}}</span>
+                            </div>
+                        </ion-col>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="insurance__tax-calculation">
+                    <ion-col col-6 class="insurance__tax-deduction">
+                        {{"salesDetail.taxDeduction" | translate}}
+                        <br /> {{"salesDetail.taxDeductionNote" | translate}}
+                    </ion-col>
+                    <ion-col col-6 class="insurance__tax-deduction">
+                        {{"salesDetail.refund" | translate}}
+                        <br /> ({{"salesDetail.currency" | translate}})
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6 class="insurance__circle-value insurance__circle-back-image-1">
+                        <div class="h2 insurance__refund-value">{{"salesDetail.taxDeductionValue" | translate}}</div>
+                        <div class="currency">{{"salesDetail.currency" | translate}}</div>
+                    </ion-col>
+                    <ion-col col-6 class="insurance__circle-value insurance__circle-back-image-2">
+                        <div class="h2 insurance__refund-value">{{"salesDetail.refundValue" | translate}}</div>
+                        <div class="currency">{{"salesDetail.currency" | translate}}</div>
+                    </ion-col>
+                    <ion-col col-12 class="insurance__insurance-amount">
+                        {{"salesDetail.insuranceAmount" | translate}}
+                    </ion-col>
+                </ion-row>
+            </div>
+            <ion-col col-12 class="tabs-container">
+                <ion-segment class="tabSwitcher" [(ngModel)]="calculationResult" color="primary" (ionChange)="segmentChanged($event)">
+                    <ion-segment-button value="taxSavings">
+                        {{"salesDetail.taxSavings" | translate}}
+                    </ion-segment-button>
+                    <ion-segment-button value="cashBenefits">
+                        {{"salesDetail.cashBenefits" | translate}}
+                    </ion-segment-button>
+                    <ion-segment-button value="coverage">
+                        {{"salesDetail.coverage" | translate}}
+                    </ion-segment-button>
+                </ion-segment>
+
+            </ion-col>
+            <ion-col col-12 class="calculation-table">
+                <ion-card no-padding>
+                    <ion-row class="table-header">
+                        <ion-col col-4 *ngFor="let title of calculationTable[calculationResult].title" class="calculation-table__head">
+                            {{"salesDetail." + title | translate}}
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="table-data">
+                        <ion-col col-4 *ngFor="let values of calculationTable[calculationResult].tableValues">
+                            <span class="calculation-table__values">{{values}}</span>
+                        </ion-col>
+                    </ion-row>
+
+                </ion-card>
+            </ion-col>
+            <ion-col col-12>
+                <a align="center" class="hyperlink-primary anchor text text-ios h3 more-info" ion-text="" (click)="navigateToIonicPage('ProductDetailMorePage')">
+                    {{"salesDetail.moreInfo" | translate}}
+                </a>
+            </ion-col>
+            <!-- <ion-col col-12 text-left>
+                <div class="sample-benefits" *ngIf="calculationResult === 'cashBenefits' || calculationResult === 'coverage'">
+                    {{"salesDetail.insurenceNote" | translate}}
+                </div>
+                <div class="additional-text">
+                    {{"salesDetail.taxAmount" | translate}}
+                </div>
+            </ion-col> -->
+            <ion-col col-12 text-left>
+                {{"salesDetail.note" | translate}}:
+                <div class="note-line">
+                    - {{"salesDetail.noteLine1" | translate}}<br /> - {{"salesDetail.noteLine2" | translate}}<br />
+                    - {{"salesDetail.noteLine3" | translate}}<br /> - {{"salesDetail.noteLine4" | translate}}
+                    <br /> - {{"salesDetail.noteLine5" | translate}}
+                   <br /> - {{"salesDetail.noteLine6" | translate}}
+                    <br /> - {{"salesDetail.noteLine7" | translate}}
+                   <br /> - {{"salesDetail.noteLine8" | translate}}
+                   <br /> - {{"salesDetail.noteLine9" | translate}}
+                    <br /> - {{"salesDetail.noteLine10" | translate}}
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="button cta">
+            <ion-col>
+                <button ion-button item-end class="cta-button-primary" round (click)="navigateToIonicPage('ContactUsProductPage')">
+                    {{"salesDetail.contactUs" | translate}}
+                </button>
+                <!-- <button *ngIf="productDetail.online" ion-button item-end class="cta-button-primary" round>
+                    Product calculation
+                </button> -->
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

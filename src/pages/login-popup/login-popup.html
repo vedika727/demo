@@ -1,0 +1,18 @@
+<ion-content padding class="popover-bg-color"  [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="loginPopupModalBackground">
+  <!-- div which closes modal onclick behind the content -->
+  <div class="overlay"  (click)="dismissModal()"  id="loginPopupOverlay"></div>
+
+    <!-- Call support pop over -->
+    <ion-card class="popover-content-style">
+      <ion-card-content>
+        <div >
+            <div id="loginPopupScanFingerprint" class="banner-text title">{{fingerprintScan | translate}}</div>
+            <ion-icon [name]="icon" svgversion class="scbl-icon" (click)="loginWithFingerprint()"></ion-icon>
+            <div text-center class="login-button">
+              <button ion-button round id="loginPopup" class="login-button" (click)="LoginWithPin()">{{"login.loginUsingPin" | translate}}</button>
+            </div>
+        </div>
+       
+      </ion-card-content>
+    </ion-card>
+</ion-content>

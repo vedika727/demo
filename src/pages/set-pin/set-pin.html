@@ -1,0 +1,23 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content class="padding-16-lr" class="scb-background-contain">
+    <div class="pin-header">
+        <!-- <ion-label id="setPinHeader" class="h1">{{'login.setANewPin' | translate}}</ion-label> -->
+        <ion-label id="setPinHeader" *ngIf="flag == 'setpin' " class="h1">{{'login.setANewPin' | translate}}</ion-label>
+        <ion-label id="setPinHeader" *ngIf="flag == 'confirmpin' " class="h1">{{'login.confirm' | translate}}</ion-label>
+    </div>
+    <div class="set-pin-text ">
+        <div text-center id="setPinLabel1" *ngIf="flag == 'setpin' " class="heading1-type1">{{'login.enterYour6DigitPinToSetPin'
+            | translate}}</div>
+        <div text-center id="setPinLabel1" *ngIf="flag == 'confirmpin' " class="heading1-type1">{{'login.confirmThe6DigitPinNumber'
+            | translate}}</div>
+    </div>
+    <!-- Pin Pad component -->
+    <div class="keypad-component">
+        <pin-pad id="setPinPadComponent" (keyPress)="keypadButtonPress($event)" [pinNotMatched]="pinNotMatchedFlag"></pin-pad>
+    </div>
+    <generic-view *ngIf="genericDialog" [In]=genericDialog></generic-view>
+</ion-content>

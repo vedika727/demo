@@ -1,0 +1,55 @@
+page-rewards-full-view {
+    .challenges-card {
+        border-radius: 5px;
+        position: relative;
+        .challenges-div {
+            position: absolute;
+            bottom:0%;
+            left: 10px;
+            padding: 5px;
+            .top-label {
+                font-size: $font_12px;
+                color: $primary;
+                font-weight: bold;
+            }
+            .bottom-label {
+                font-size: $font_10px;
+            }
+            .btn-text {
+                background-color: $primary;
+                color: $secondary;
+                border-radius: 20px;
+                padding: 7px 30px;
+            }
+        }
+    }
+    .card-thumbnail {
+        height: 200px;
+        background-size: cover;
+        background-position-x: 50%;
+        background-position-y: 11%;
+        width: 100%;
+        margin: 0%;
+    }
+     // .card-corosol1 {
+    //     background-image: url('../../assets/imgs/Assets-Image-Homepage-HP45.jpg');
+    // }
+    // .card-corosol2 {
+    //     background-image: url('../../assets/imgs/Assets-Image-Homepage-HP44.png');
+    // }
+    .carousel-card-score {
+        // margin-top: 0px !important; 
+    }
+    // .card-corosol3 {
+    //     background-image: url('../../assets/imgs/Assets-Image-Homepage-HP10.jpg');
+    // }
+    .set-width{
+        width:60%;
+    }
+    .margin-top-30{
+        margin-top:2.7vh
+    }
+    @media screen and (max-width: 320px){
+        width:40%;
+    }
+}

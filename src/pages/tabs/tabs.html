@@ -1,0 +1,9 @@
+<ion-tabs [selectedIndex]="activeIndex" #tabRef mode="md">
+    <ion-tab  tabIcon="scbl-home" [root]="tab1Root" (ionSelect)="closeFitSenseScreen('Home')" tabTitle="{{'Home_Fitsense.homeTabName' | translate}}" ></ion-tab>
+
+    <!-- TODO - Removed from Release 1 -->
+    <!-- <ion-tab tabIcon="scbl-policydash" [root]="tab2Root" [rootParams]="{isSingle:isSingle, SelectedTab:SelectedTab}" (ionSelect)="closeFitSenseScreen('PolicyDashboard')" tabTitle="กรมธรรม์"></ion-tab> -->
+    <ion-tab tabIcon="scbl-fitness" [root]="tab3Root" (ionSelect)="closeFitSenseScreen('Activity')" tabTitle="{{'Home_Fitsense.activityTabName' | translate}}" ></ion-tab>
+    <ion-tab tabIcon="scbl-rewardtab" [root]="tab4Root" (ionSelect)="closeFitSenseScreen('Rewards')" tabTitle="{{'Home_Fitsense.rewardTabName' | translate}}" ></ion-tab>
+    <ion-tab id="menuIndex" tabIcon="scbl-more" [root]="tab5Root" (ionSelect)="closeFitSenseScreen('Menu')" tabTitle="{{'Home_Fitsense.menuTabName' | translate}}" ></ion-tab>
+</ion-tabs>

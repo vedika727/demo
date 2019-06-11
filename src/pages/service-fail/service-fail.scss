@@ -1,0 +1,65 @@
+service-fail {
+ ion-content { 
+    background-image: linear-gradient(#f3f0f6, white);
+ }
+
+ .scroll-content { 
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+ }
+
+ .toolbar-background { 
+     background-color: transparent;
+ }
+
+ .inner-marker {
+    left: 9vw;
+    top: 4vw;
+    position: absolute;
+    width: 5vw;
+    height: 12vw;
+    border-width: 4px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-style: solid;
+    border-color: white;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+ }
+
+ .confirmation-button, .retry-button { 
+    text-align: center;
+    padding-bottom: 8pt;
+    .cta-button-primary, .cta-button-secondary {
+        width: 75%;
+        max-width: none;
+    }
+}
+
+.retry-button { 
+    padding-bottom: 15pt;
+    .cta-button-secondary {
+        border: 1px solid $primary;
+    }
+}
+
+ .confirmation-text {
+     padding: 55pt;
+     padding-bottom: 25vh;
+     font-weight: bold;
+ }
+ .fail-circle { 
+     color: rgb(208, 2, 27);
+     font-size: 22vw;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 4vh;
+ }
+
+ .h1 { 
+     color: $primary;
+ }
+}

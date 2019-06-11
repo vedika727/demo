@@ -1,0 +1,54 @@
+scb-header-icon {
+    .headerImageIcon {
+        margin-top: 2%;
+    }
+    .DayFlag {
+        color: $secondary;
+    }
+    .toolbar-md {
+        //padding: 4px;
+        min-height: 44px!important;
+    }
+    .toolbar-ios {
+        //padding: 4px;
+        min-height: 44px!important;
+    }
+    .DayFlagIcon {
+        height: 27px;
+        width: 97px;
+    }
+    .backIcon {
+        padding-left: 20px;
+        position: absolute;
+    }
+    .backText {
+        top: 0%;
+        padding-left: 20px;
+        position: absolute;
+    }
+    .right {
+        position: absolute;
+        right: -5px;
+        top: 3%;
+    }
+    //css for scb-later-process-page
+    .nav-header-later-process {
+        position: absolute;
+        display: flex;
+        width: 100%;
+    }
+    .backIcon-later-process {
+        padding-left: 20px;
+        // position: absolute;
+        display: flex;
+        width: 30%;
+        margin-top: 20px;
+    }
+    .backText-later-process {}
+    .headerImageIcon-later-process {
+        position: absolute;
+        right: 37%;
+        margin-top: 4%;
+    }
+    .right-later-process {}
+}

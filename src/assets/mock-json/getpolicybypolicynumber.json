@@ -1,0 +1,103 @@
+{
+    "status": {
+        "code": "703000",
+        "message": "success",
+        "description": null
+    },
+    "result": {
+        "policyNumber": "40000408",
+        "policyNumberIL": "40000408",
+        "policyNextDueDate": "2561-08-18T00:00:00.000+0000",
+        "policyPremium": 1000,
+        "policyPaymentDuration": 15,
+        "policyLastPaymentTermDate": "2573-05-18T00:00:00.000+0000",
+        "policyMaturityDuration": 25,
+        "policyMaturityDate": "2583-05-18T00:00:00.000+0000",
+        "policyLastPaidAmount": 1000,
+        "policyLastPaidDate": "2561-07-18T00:00:00.000+0000",
+        "policyType": "Individual Life",
+        "policyIssueDate": "2558-05-25T00:00:00.000+0000",
+        "policyEffectiveDate": "2558-05-18T00:00:00.000+0000",
+        "policyStatus": "In-force",
+        "policyName": "ประกันอุ่นใจ 10/5",
+        "planCode": "BE29",
+        "policySumInsured": 100000,
+        "policyLastUpdated": "2561-07-19T00:00:00.000+0000",
+        "assured": {
+            "assuredFirstName": "xxxวุฒิ",
+            "assuredLastName": "xxxารักษ์"
+        },
+        "payer": {
+            "payerFirstName": "xxxวุฒิ",
+            "payerLastName": "xxxารักษ์"
+        },
+        "policyAddress": {
+            "policyAddress": "xxx/9 หมู่ที่ 4 xxxยายหมี สนามชัยเขต xxxชิงเทรา 00060",
+            "address1": "xxx/9 หมู่ที่ 4",
+            "address2": "xxxยายหมี สนามชัยเขต",
+            "address3": "xxxชิงเทรา",
+            "address4": "00060"
+        },
+        "policyRiders": [
+            {
+                "riderProductName": "สัญญาเพิ่มเติมค่ารักษาพยาบาลรายวันพิเศษ",
+                "riderPlanCode": "OHB2",
+                "riderSumInsured": 1000,
+                "riderPremium": 144,
+                "riderIssueDate": "2558-05-18T00:00:00.000+0000",
+                "riderMaturityDuration": 15,
+                "riderMaturityDate": "2573-05-18T00:00:00.000+0000",
+                "riderPaymentDuration": 15,
+                "riderPaymentTermDate": "2573-05-18T00:00:00.000+0000",
+                "riderLastPaidDate": "2561-07-18T00:00:00.000+0000",
+                "riderCategoryName": "HB",
+                "riderGroupName": "Income Compensation"
+            }
+        ],
+        "cashBacks": [
+            {
+                "cashBackDueDate": "2562-05-18T00:00:00.000+0000",
+                "cashBackAmount": 2000,
+                "cashBackPaidAmount": 0,
+                "cashBackPaidDate": null,
+                "cashBackMethod": ""
+            },
+            {
+                "cashBackDueDate": "2566-05-18T00:00:00.000+0000",
+                "cashBackAmount": 2000,
+                "cashBackPaidAmount": 0,
+                "cashBackPaidDate": null,
+                "cashBackMethod": ""
+            },
+            {
+                "cashBackDueDate": "2570-05-18T00:00:00.000+0000",
+                "cashBackAmount": 2000,
+                "cashBackPaidAmount": 0,
+                "cashBackPaidDate": null,
+                "cashBackMethod": ""
+            },
+            {
+                "cashBackDueDate": "2574-05-18T00:00:00.000+0000",
+                "cashBackAmount": 2000,
+                "cashBackPaidAmount": 0,
+                "cashBackPaidDate": null,
+                "cashBackMethod": ""
+            },
+            {
+                "cashBackDueDate": "2578-05-18T00:00:00.000+0000",
+                "cashBackAmount": 2000,
+                "cashBackPaidAmount": 0,
+                "cashBackPaidDate": null,
+                "cashBackMethod": ""
+            },
+            {
+                "cashBackDueDate": "2582-05-18T00:00:00.000+0000",
+                "cashBackAmount": 2000,
+                "cashBackPaidAmount": 0,
+                "cashBackPaidDate": null,
+                "cashBackMethod": ""
+            }
+        ],
+        "currentCashback": null
+    }
+}

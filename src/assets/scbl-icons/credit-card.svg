@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="36px" viewBox="0 0 40 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Computer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons/Computer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group" transform="translate(5.000000, 6.000000)" stroke="#4E2683" stroke-width="2">
+            <path d="M30.75,22.035 C30.75,23.1202174 29.8865909,24 28.8215,24 L10.9285,24 C9.86340909,24 9,23.1202174 9,22.035 L9,10.9643478 C9,9.87913043 9.86340909,9 10.9285,9 L28.8215,9 C29.8865909,9 30.75,9.87913043 30.75,10.9643478 L30.75,22.035 Z" id="Stroke-1"></path>
+            <path d="M6.55088823,20.8745371 C5.52052572,21.2560378 4.33795808,20.7406417 3.96273936,19.6930285 L0.115258512,8.94506866 C-0.259960208,7.89678261 0.315110458,6.71392838 1.34481121,6.33242762 L18.1350217,0.119415139 C19.1653842,-0.262085628 20.2612611,0.303100693 20.6364799,1.35071391 L22.5,6.19785944" id="Stroke-3"></path>
+            <path d="M30.75,12 L9,12" id="Stroke-5"></path>
+            <path d="M30.75,15 L9,15" id="Stroke-7"></path>
+            <path d="M10.5,18 L14.25,18" id="Stroke-9"></path>
+        </g>
+    </g>
+</svg>

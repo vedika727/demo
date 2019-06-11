@@ -1,0 +1,130 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="padding-content">
+    <div>
+        <policy-title [In]=policyDetails></policy-title>
+    </div>
+    <policy-details [In]=policyDetails></policy-details>
+
+    <ion-row  class="policy-status-css padding-left-15 border-bottom" *ngIf="filteredData">
+        <ion-col col-2 class="icon-css padding-left-0">
+            <ion-icon name="scbl-my-money" class="icon-size-money icon-color" svgversion></ion-icon>
+        </ion-col>
+        <ion-col col-6>
+            <span class="section-header">{{"PolicyLoan.cashValue"|translate}}</span>
+        </ion-col>
+        <ion-col col-4 class="loan-amt" text-right>
+            <span class="section-header amount-text amount-font" ion-text text-wrap>{{filteredData.totalLoanAmount | currencyConvert}}</span>
+            <span class="currency-color">{{"PolicyLoan.baht"|translate}}</span>
+        </ion-col>
+    </ion-row>
+
+    <ion-row  class="policy-status-css padding-left-15 botton-border-none" *ngIf="filteredData">
+        <ion-col col-2 class="icon-css padding-left-0">
+            <ion-icon name="scbl-loan" class="icon-size-loan icon-color" svgversion></ion-icon>
+        </ion-col>
+        <ion-col col-6>
+            <span class="section-header">{{"PolicyLoan.amountYouCanBorrow" | translate}}</span>
+        </ion-col>
+        <ion-col col-4 class="loan-amt" text-right>
+            <span class="section-header amount-text amount-font" ion-text text-wrap>{{filteredData.totalLoanAmount | currencyConvert}}</span>
+            <span class="currency-color">{{"PolicyLoan.baht"|translate}}</span>
+        </ion-col>
+    </ion-row>
+    <div align="center" *ngIf="filteredData"><button class="cta-button-primary more-info-btn" ion-button (click)="goToLoans()" round>{{'policyDashboard.moreInformation' | translate}}</button></div>
+    <!-- <ion-list>
+        <ion-item>
+            <ion-thumbnail class="center" item-start>
+                <ion-icon name="scbl-policy-i-have" class="icon-size" svgversion></ion-icon>
+            </ion-thumbnail>
+            <div class="section-header">{{'policyDashboard.cashPolicyCash2,000,000Baht' | translate}}</div>
+            <p class="hyperlink-primary">{{'policyDashboard.lastUpdate2June61' | translate}}</p>
+            <button ion-button clear item-end>20000 {{'policyDashboard.baht' | translate}}</button>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item>
+            <ion-thumbnail item-start>
+                <ion-icon name="scbl-policy-i-have" svgversion></ion-icon>
+            </ion-thumbnail>
+            <div class="section-header">{{'policyDashboard.theAmountYouCanBorrowIs990,000Baht' | translate}}</div>
+            <p  class="hyperlink-primary">{{'policyDashboard.lastUpdate2June61' | translate}}</p>
+            <button class="amount-text" ion-button clear item-end>20000  {{'policyDashboard.baht' | translate}}</button>
+        </ion-item>
+        <ion-item text-center>
+            <button class="button" color="primary" ion-button (click)="toLoans()" round>{{'policyDashboard.moreInformation' | translate}}</button>
+        </ion-item>
+    </ion-list> -->
+    <ion-row  *ngFor="let debts of totalDebts" [ngClass]="debts.borderTopCss" class="padding-left-15">
+        <ion-col col-2 class="icon-css padding-left-0">
+            <ion-icon name="{{debts.icon}}" class="icon-size icon-color" svgversion></ion-icon>
+        </ion-col>
+        <ion-col col-6>
+            <span class="section-header">{{debts.header}}</span>
+        </ion-col>
+        <ion-col col-4 class="padding-right-15" text-right>
+            <span class="section-header debt-amount amount-size amount-font">{{debts.amount | currencyConvert}}</span>
+            <span class="currency-color">{{"PolicyLoan.baht"|translate}}</span>
+        </ion-col>
+    </ion-row>
+    <!-- <ion-list>
+        <ion-item class="botton-border-none">
+            <ion-thumbnail item-start>
+                <ion-icon name="scbl-debt" svgversion></ion-icon>
+            </ion-thumbnail>
+            <div class="hyperlink-primary">{{'policyDashboard.totalDebt5,000Baht' | translate}}</div>
+            <button class="amount-text" ion-button clear item-end>5,000 {{'policyDashboard.baht' | translate}}</button>
+        </ion-item>
+    </ion-list> -->
+
+    <div  *ngFor="let loanInfo of loanInfo" class="loan-info-bg">
+        <ion-row>
+            <ion-col col-2>
+
+            </ion-col>
+            <ion-col col-6 class="text-center-scss">
+                <span class="bold-scss input-content" text-center>{{loanInfo.info}}</span>
+            </ion-col>
+
+            <ion-col col-4 class="padding-right-15" text-right>
+                <span class="section-header debt-amount amount-size amount-font-Apl">{{loanInfo.amount | currencyConvert}}</span>
+                <span class="currency-color-apl">{{"PolicyLoan.baht"|translate}}</span>
+            </ion-col>
+        </ion-row>
+        <div align="center"><button class="cta-button-accent more-info-btn" ion-button round (click)="goToPolicyLoanDashboard(loanInfo)">{{loanInfo.btnText}}</button></div>
+    </div>
+    <!-- <ion-list>
+        <ion-item class="botton-border-none back-color">
+            <ion-thumbnail item-start>
+                <ion-icon name="scbl-policy-i-have" svgversion></ion-icon>
+            </ion-thumbnail>
+            <div class="banner-text">{{'policyDashboard.my' | translate}} RPL</div>
+            <p text-wrap class="PI-p-tag-style">Your Cashback is 200000 baht.</p>
+            <button ion-button clear item-end>20000 {{'policyDashboard.baht' | translate}}</button>
+        </ion-item>
+        <ion-item text-center class="botton-border-none back-color">
+            <button class="button" color="accent" ion-button round>{{'policyDashboard.payMyDebts' | translate}}</button>
+
+        </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+        <ion-item class="botton-border-none back-color">
+            <ion-thumbnail item-start>
+                <ion-icon name="scbl-policy-i-have" svgversion></ion-icon>
+            </ion-thumbnail>
+            <div class="banner-text">{{'policyDashboard.my' | translate}} APL</div>
+            <p text-wrap class="PI-p-tag-style">Your Cashback is 200000 baht.</p>
+            <button ion-button clear item-end>20000 {{'policyDashboard.baht' | translate}}</button>
+        </ion-item>
+        <ion-item text-center class="botton-border-none back-color">
+            <button class="button" color="accent" ion-button round>{{'policyDashboard.payMyDebts' | translate}}</button>
+        </ion-item>
+    </ion-list> -->
+
+</ion-content>

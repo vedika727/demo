@@ -1,0 +1,33 @@
+
+
+<!-- transparent background -->
+<ion-content class="popover-bg-color fade-in-animate"  id="supportDocBackground">
+  
+    <!-- div which closes modal onclick behind the content -->
+      <div class="overlay" (click)="dismissEmailVerifyModal()" id="supportDocOverlay"></div>
+      
+       <!-- ion-card containing all the content -->
+      <ion-card class="popover-content-style" id="verifyEmailCard">
+   <!-- close icon -->
+   <div text-right class="close-icon-div">
+      <ion-icon id="verifyEmailCardCloseIcon" color="secondary-highlight" class="close-button close-icon" (click)="dismissEmailVerifyModal()" name="scbl-close" svgversion text-right></ion-icon>
+    </div>
+       
+         <ion-card-header no-padding class="heading1-type2 bold-text" text-center id="verifyEmailCardHeader" text-center>{{"policyDashboard.verifyEmail1" | translate}}</ion-card-header>
+          
+         <ion-card-content id="verifyEmailCardCardContent">
+         <div text-center  class="heading2-type1 bold-text" text-center>{{"policyDashboard.pleaseVerifyYourEmail" | translate}}</div>
+         <div text-center  class="heading2-type1 bold-text" text-center>{{"policyDashboard.forDownloadingDocumensWeWillSendOTPTo" | translate}}</div>
+         <div text-center  class="heading2-type1 bold-text" text-center>{{"policyDashboard.toRecieveDocEmail" | translate}} {{this.loginService.customerInfo.email}}</div>
+        
+         <div text-center padding id="rewardPointsForVerifyEmail" class="heading2-type1 bold-text" text-center>{{"policyDashboard.getPointsWhenYouVerify" | translate}}</div>
+      
+         <!-- button to navigate enter otp page -->
+         <div text-center>
+            <button round ion-button class="button-cta" (click)="verifyEmail()" >{{"policyDashboard.verifyEmail2" | translate}}</button>
+          </div>
+       </ion-card-content>  
+       </ion-card>
+         <!-- close of card -->
+      </ion-content>
+        <!-- close of transparent background -->

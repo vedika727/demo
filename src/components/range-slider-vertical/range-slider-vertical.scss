@@ -1,0 +1,125 @@
+@media (max-width: 400px){
+  .container{
+    width: 100%;
+    display: flex;
+    background-color: white;
+  }
+  .cashback-date-node-dynamic{
+    text-align:right;
+    font-size:16px !important;
+  }
+  .value-container-dynamic{
+    margin-top: 25%;
+  }
+  .range-slider-container {
+    flex: 2;
+    padding:10px;
+  }
+  .date-label{
+    font-size: $font_14px;
+    color: $secondary-highlight;
+    height:18px;
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  background-color: white;
+}
+
+.range-slider-container {
+  flex: 1;
+  padding:10px;
+}
+
+.date-container {
+  flex: 3;
+}
+
+.value-container {
+  flex: 3;
+}
+
+.scroll-zoom-wrapper {
+  width: 100%;
+}
+
+.cashback-date-node{
+  text-align:right;
+  font-size:16px !important;
+  margin: 1px auto;
+}
+
+.cashback-date-node-dynamic{
+  text-align:right;
+  font-size:16px !important;
+}
+.value-container-dynamic{
+  margin-top: 25%;
+}
+
+.date-label{
+  font-size: $font_18px;
+  color: $secondary-highlight;
+  height:18px;
+}
+
+.font-18px{
+  font-size:$font_18px !important;
+}
+
+// .ng5-slider.ng5-slider-vertical .ng5-slider-bubble[ng5sliderflrlabelem],
+// .ng5-slider.ng5-slider-vertical .ng5-slider-bubble[ng5sliderminlabelem],
+// .ng5-slider.ng5-slider-vertical .ng5-slider-bubble[ng5sliderceillabelem]
+// { display:none !important}
+
+
+.ng5-slider.ng5-slider-vertical
+  {
+    .ng5-slider-bubble[ng5sliderflrlabelem],
+    .ng5-slider-bubble[ng5sliderminlabelem],
+    .ng5-slider-bubble[ng5sliderceillabelem]
+      {
+          display :none;
+     }
+  }
+
+  .ng5-slider .ng5-slider-pointer.ng5-slider-active:after{
+    display :none;
+  }
+
+  range-slider-vertical {
+    .ng5-slider.ng5-slider-vertical .ng5-slider-pointer{
+    left : 0px !important;
+    background: $primary;
+    }
+    .ng5-slider .ng5-slider-selection{
+      z-index:30 !important;
+      background: $secondary-highlight !important;
+    }
+    .ng5-slider .ng5-slider-bar{
+      background: $primary;
+      z-index:20 !important;
+    }
+  }
+  .ng5-slider .ng5-slider-pointer:after{
+    display: none !important;
+  }
+  .ng5-slider .ng5-slider-pointer{
+    width:20px !important;
+    height:20px !important;
+    border-radius:10px !important;
+    left: 0px !important;
+  }
+
+  .button-inner{
+    font-weight:bold !important;
+  }
+
+  .internal-node{
+    z-index:2;
+  }
+
+  .internal-node-dynamic{
+    position:relative !important;
+  }

@@ -1,0 +1,59 @@
+<ion-content class="popover-bg-color"   [ngClass]="'animate'?'fade-in-animate' : 'fade-out-animate'"   id="feedbackModalBackground">
+    <!-- div which closes modal onclick behind the content -->
+    <div class="overlay"   (click)="dismissModal()"   id="feedbackOverlay"></div>
+
+        <!-- ion-card containing all the content -->
+        <ion-card class="popover-content-style">
+
+            <ion-card-header>
+                <ion-row>
+                    <ion-col no-padding col-8>
+                        <div class="heading1-type2 SCB_Header_padding">
+                            รายละเอียดข้อมูลกรมธรรม์
+                        </div>
+                    </ion-col>
+                    <ion-col no-padding>
+                        <ion-icon id="" class="close-button right" (click)="dismissModal()" name="scbl-close" svgversion text-right></ion-icon>
+                    </ion-col>
+                </ion-row>
+
+            </ion-card-header>
+            <div >
+                <ion-card-content no-padding >
+                    <div *ngFor="let coverageItemInput of coverageFilterData"   class="SCB_Border" margin>
+                       <div *ngIf="coverageItemInput" >
+                        <ion-row class="SCB-Height">
+                            <ion-col no-padding col-1>
+
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='Accident Benefit'" name="scbl-accident" color="primary" svgversion item-start></ion-icon>
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='Income Compensation'" name="scbl-hospital" color="primary" svgversion item-start></ion-icon>
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='Hospital Benefit'" name="scbl-ipd" color="primary" svgversion item-start></ion-icon>
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='OPD Benefit'" name="scbl-medicine" color="primary" svgversion item-start></ion-icon>
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='Cancer Benefit'" name="scbl-cancer" color="primary" svgversion item-start></ion-icon>
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='Critical Illness Benefit'" name="scbl-illness" color="primary" svgversion item-start></ion-icon>
+                                <ion-icon class="SCB_ICon" *ngIf="coverageItemInput.coverageType =='Death Benefit'" name="scbl-life-coverage" color="primary" svgversion item-start></ion-icon>
+
+
+                            </ion-col>
+                            <ion-col no-padding col-7>
+                                <div  text-wrap class="hyperlink-primary left  SCB-left-padd">{{coverageItemInput.coverageShortName}} </div>
+                            </ion-col>
+                            <ion-col no-padding col-4>
+                                <div text-wrap class="field-summary right">{{coverageItemInput.coverageAmount}} {{"policyDashboard.baht"|translate}}</div>
+
+                            </ion-col>
+                        </ion-row>
+
+                        <div  class="p SCB_Text" text-wrap>{{coverageItemInput.coverageDescription}} {{coverageItemInput.coverageAmount}} {{"policyDashboard.baht"|translate}}
+                        </div>
+                    </div>
+                    </div>
+
+                </ion-card-content>
+            </div>
+            <div class="cardfooter">
+                <div padding class="h5 left"> *ข้อมูลโดยประมาณการ </div>
+            </div>
+            </ion-card>
+
+            </ion-content>

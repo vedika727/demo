@@ -1,0 +1,14 @@
+home-pie-chart {
+    -webkit-appearance: none;
+    .icon-grey{
+    color: $secondary-highlight !important;
+    }
+
+    .icon-white{
+    color: $secondary !important;
+    }
+    .svg-wrapper {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0,0,0,0.5));      
+    filter: drop-shadow(0px 0px 7px rgba(0,0,0,0.5)); 
+      }
+}

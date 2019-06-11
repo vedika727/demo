@@ -1,0 +1,16 @@
+<!-- /**
+* @author Ayush Vyas
+* @description Terms And Conditions Page is used to see the terms and conditions of the company
+*/ -->
+<!-- <scb-header [in]="s"></scb-header> -->
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+      <scb-header [in]="headerInputs"></scb-header>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="h1 name">{{"hamburgerMenu.termAndCondition"|translate}}</div><br>  
+
+  <div [innerHtml]="terms | safeHtml"></div>
+
+</ion-content>

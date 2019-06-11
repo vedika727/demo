@@ -1,0 +1,819 @@
+@import "../../../theme/variables.scss";
+@import "color-variables";
+// ion-icon {
+//     width: 22px !important;
+// }
+* {
+    font-family: $psl;
+    font-size: $font_20px;
+}
+
+%input-border {
+    border: 1px solid $secondary-highlight;
+    border-radius: 20px;
+    //width and height given in styleguide as below
+    color: $secondary-light;
+}
+
+.popover-md .popover-content {
+    margin-left: 1%;
+    margin-top: 13%;
+    width: 84%;
+    border-radius: 5px;
+}
+
+// Date class started
+.date-picker ion-datetime {
+    @extend %input-border; // padding-top: 10px;
+    // padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+ion-label .label .label-ios .label-ios[stacked] {
+    margin: 0px;
+}
+
+.datetime-ios {
+    padding: 0px 8px;
+}
+
+.date-picker ion-datetime .datetime-placeholder {
+    padding-left: 1px;
+}
+
+.date-picker ion-datetime .datetime-text {
+    padding-left: 1px;
+}
+
+.date-picker ion-label ion-icon {
+    width: 24px;
+    position: absolute;
+    top: 60%;
+    right: 20px;
+}
+
+// ************************************************************************************************
+// select class stated
+.select-item ion-select {
+    @extend %input-border;
+    font-size: 2.4rem;
+    padding-left: 15%;
+}
+
+.select-item ion-select .select-placeholder {
+    padding-left: 15px;
+}
+
+.select-item ion-select .select-text {
+    padding-left: 25px;
+}
+
+.select-item ion-select .select-icon {
+    right: 20px;
+    position: relative;
+    width: 12px;
+    height: 30px;
+}
+
+// ************************************************************************************************
+//new styleguide classes 4 August 2018 starts here
+//mixins
+%psl-primary-bold {
+    font-family: $psl !important;
+    color: $primary !important;
+    font-weight: bold !important;
+}
+
+%psl-bold {
+    font-family: $psl;
+    font-weight: bold;
+}
+
+%psl-secondary-dark-bold {
+    font-family: $psl;
+    color: $secondary-dark;
+    font-weight: bold;
+}
+
+%psl-secondary-bold {
+    font-family: $psl;
+    color: $secondary;
+    font-weight: bold;
+}
+%psl-secondary {
+    font-family: $psl;
+    color: $secondary;
+}
+%ergo-primary {
+    font-family: $ergo;
+    color: $primary;
+}
+
+%ergo-secondary {
+    font-family: $ergo;
+    color: $secondary;
+}
+
+%ergo-secondary-dark {
+    font-family: $ergo;
+    color: $secondary-dark;
+}
+
+// button mixin
+%cta-button {
+    font-size: 20px;
+    overflow-x: hidden;
+    height: auto;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    padding: 10px 30px;
+    min-width: 142px;
+    max-width: 300px;
+}
+
+//icon mixins
+.splash-title {
+    //same styles for also for onboarding-title
+    @extend %psl-primary-bold;
+    font-size: 72px !important;
+    line-height: 55px !important;
+}
+
+.total-payable {
+    @extend %psl-primary-bold;
+    font-size: $font_44px;
+}
+
+.message-type3 {
+    @extend %psl-bold;
+    font-size: $font_44px;
+    color: $accent;
+}
+
+.loan-amount {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_40px;
+}
+
+.carousel-card-score {
+    @extend %ergo-primary;
+    font-size: $font_40px;
+}
+
+.number-pad {
+    @extend %psl-primary-bold;
+    font-size: $font_40px;
+}
+
+.heading1-type1 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_32px;
+}
+
+.heading1-type2 {
+    @extend %psl-primary-bold;
+    font-size: $font_32px !important;
+}
+
+.user-profile-name {
+    @extend %psl-primary-bold;
+    font-size: $font_28px;
+}
+
+.heading2-type1{
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_28px;
+}
+
+.heading3-type2 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_24px !important;
+}
+
+.heading3-type3 {
+    @extend %psl-secondary-bold;
+    font-size: $font_24px;
+}
+
+.heading3-type4 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_20px !important;
+}
+
+.section-header {
+    @extend %psl-primary-bold;
+    font-size: $font_24px;
+    //also for list-sub-title
+    //also heading3-type1
+}
+
+.card-no {
+    @extend %ergo-secondary-dark;
+    font-size: $font_24px;
+}
+
+.prefilled-text {
+    @extend %psl-bold;
+    color: $primary-super-light;
+    font-size: $font_24px;
+}
+
+.hyperlink-secondary {
+    @extend %psl-secondary-bold;
+    // font-size: $font_20px;
+    font-size: 2.35vh;
+}
+
+.message-type3 {
+    @extend %psl-bold;
+    font-size: $font_44px;
+    color: $accent;
+}
+
+.loan-amount {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_40px;
+}
+
+.carousel-card-score {
+    @extend %ergo-primary;
+    font-size: $font_40px;
+}
+
+.number-pad {
+    @extend %psl-primary-bold;
+    font-size: $font_40px;
+}
+
+.heading1-type1 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_32px;
+}
+
+
+.name-title {
+    @extend %psl-secondary;
+    // font-size: $font_32px;
+    font-size: 3.55vh;
+}
+
+.user-profile-name {
+    @extend %psl-primary-bold;
+    font-size: $font_28px;
+}
+
+.heading3-type2 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_24px !important;
+}
+
+.heading3-type3 {
+    @extend %psl-secondary-bold;
+    font-size: $font_24px;
+}
+
+.section-header {
+    @extend %psl-primary-bold;
+    font-size: $font_24px;
+    //also for list-sub-title
+    //also heading3-type1
+}
+
+.card-no {
+    @extend %ergo-secondary-dark;
+    font-size: $font_24px;
+}
+
+.prefilled-text {
+    @extend %psl-bold;
+    color: $primary-super-light;
+    font-size: $font_24px;
+}
+
+.hyperlink-secondary {
+    @extend %psl-secondary-bold;
+    // font-size: $font_20px;
+    font-size: 2.35vh;
+}
+
+.input-content {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_20px;
+    //also for message-type1
+}
+
+.placeholder {
+    font-family: $psl;
+    font-size: $font_20px;
+    color: $secondary-highlight;
+}
+
+.hyperlink-primary {
+    @extend %psl-primary-bold;
+    font-size: $font_20px;
+}
+
+.hyperlink-primary-big {
+    @extend %psl-primary-bold;
+    font-size: $font_24px;
+}
+
+.carousel-card-title {
+    @extend %psl-primary-bold;
+    font-size: $font_20px;
+}
+
+.message-type2 {
+    font-family: $psl;
+    font-size: $font_20px;
+    color: $secondary-dark;
+}
+
+.heading4-type1 {
+    @extend %ergo-secondary;
+    font-size: $font_20px;
+}
+
+.secondary-title {
+    font-family: $ergo;
+    font-size: $font_20px;
+    color: $secondary-highlight;
+}
+
+.combo-box-text {
+    @extend %psl-primary-bold;
+    font-size: $font_20px;
+}
+
+.field-success {
+    @extend %psl-bold;
+    font-size: $font_20px;
+    color: $accent-success;
+}
+
+.field-error {
+    @extend %psl-bold;
+    font-size: $font_20px;
+    color: $accent-danger;
+}
+
+.field-alert {
+    @extend %psl-bold;
+    font-size: $font_20px;
+    color: $accent;
+}
+
+.message-type4 {
+    font-family: $psl;
+    font-size: $font_20px;
+    color: $primary;
+}
+
+.field-summary {
+    @extend %psl-bold;
+    font-size: $font_20px;
+    color: $primary-super-light;
+}
+
+.error-message {
+    @extend %psl-bold;
+    font-size: $font_16px;
+    color: $accent-danger;
+}
+
+.heading5-type1 {
+    @extend %psl-bold;
+    font-size: $font_16px;
+    color: $secondary-highlight;
+}
+
+.hyperlink-primary-small {
+    @extend %psl-primary-bold;
+    font-size: $font_16px;
+}
+
+.heading5-type2 {
+    @extend %psl-primary-bold;
+    font-size: $font_16px;
+}
+
+.heading5-type3 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_16px;
+}
+
+.status-text-yellow {
+    font-family: $psl;
+    font-size: $font_16px;
+    color: $accent-highlight;
+}
+
+.amount-text {
+    @extend %ergo-primary;
+    font-size: $font_16px;
+}
+
+.debt-amount {
+    font-family: $ergo;
+    font-size: $font_16px;
+    color: $primary-super-light;
+}
+
+.wheel-text {
+    @extend %ergo-secondary;
+    font-size: $font_18px;
+}
+
+.slider-indicator-active {
+    font-family: $psl !important;
+    font-size: $font_13px !important;
+    background-color: $primary !important;
+}
+
+.slider-indicator-inactive {
+    font-family: $psl !important;
+    font-size: $font_13px !important;
+    background-color: $secondary !important;
+}
+
+.coverage-no {
+    @extend %ergo-primary;
+    font-size: $font_14px;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    color: $primary;
+}
+
+.popup-error {
+    @extend %psl-bold;
+    font-size: $font_30px;
+    color: $accent-danger;
+}
+.popup-warn {
+    @extend %psl-bold;
+    font-size: $font_30px;
+    color: $primary-mild;
+}
+.popup-heading {
+    @extend %psl-primary-bold;
+    font-size: $font_30px;
+}
+
+.fingerprint-icon {
+    width: 120px;
+    height: 120px;
+}
+
+.cta-button-secondary {
+    @extend %cta-button;
+    color: $primary;
+    background-color: $secondary;
+}
+
+.cta-button-disabled {
+    @extend %cta-button;
+    background-color: $secondary-light;
+    color: $secondary-highlight;
+}
+.cta-button-disabled-2 {
+    @extend %cta-button;
+    background-color: $secondary-highlight;
+    color: $secondary-mild;
+    padding: 5% !important;
+}
+
+.cta-button-accent {
+    @extend %cta-button;
+    color: $secondary;
+    background-color: $accent;
+}
+
+.cta-button-accent-2 {
+    @extend %cta-button;
+    color: $secondary;
+    background-color: $accent;
+    padding: 5% !important;
+}
+
+.hamburger-menu-icons {
+    height: 20px;
+    width: 20px;
+}
+
+.hr-primary {
+    color: $primary;
+    width: 100px;
+    height: 2px;
+}
+
+.hr-accent-highlight {
+    color: $accent-highlight;
+    width: 18px;
+    height: 2px;
+}
+
+.close-icon {
+    //width and height given in styleguide as follows
+    width: 18.22px;
+    height: 20.36px;
+}
+
+.anchor {
+    text-decoration: underline !important;
+}
+
+.field-alert {
+    @extend %psl-bold;
+    font-size: $font_20px;
+    color: $accent;
+}
+
+.message-type4 {
+    font-family: $psl;
+    font-size: $font_20px;
+    color: $primary;
+}
+
+.field-summary {
+    @extend %psl-bold;
+    font-size: $font_20px;
+    color: $primary-super-light;
+}
+
+.error-message {
+    @extend %psl-bold;
+    font-size: $font_16px;
+    color: $accent-danger;
+}
+
+.heading5-type1 {
+    @extend %psl-bold;
+    font-size: $font_16px;
+    color: $secondary-highlight;
+}
+
+.hyperlink-primary-small {
+    @extend %psl-primary-bold;
+    font-size: $font_16px;
+}
+
+.heading5-type2 {
+    @extend %psl-primary-bold;
+    font-size: $font_16px;
+}
+
+.heading5-type3 {
+    @extend %psl-secondary-dark-bold;
+    font-size: $font_16px;
+}
+
+.status-text-yellow {
+    font-family: $psl;
+    font-size: $font_16px;
+    color: $accent-highlight;
+}
+
+.amount-text {
+    @extend %ergo-primary;
+    font-size: $font_16px;
+}
+
+.debt-amount {
+    font-family: $ergo;
+    font-size: $font_16px;
+    color: $primary-super-light;
+}
+
+.wheel-text {
+    @extend %ergo-secondary;
+    font-size: $font_18px;
+}
+
+.slider-indicator-active {
+    font-family: $psl !important;
+    font-size: $font_13px !important;
+    background-color: $primary !important;
+}
+
+.slider-indicator-inactive {
+    font-family: $psl !important;
+    font-size: $font_13px !important;
+    background-color: $secondary !important;
+}
+
+.coverage-no {
+    @extend %ergo-primary;
+    font-size: $font_14px;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    color: $primary;
+}
+
+.popup-error {
+    @extend %psl-bold;
+    font-size: $font_30px;
+    color: $accent-danger;
+}
+
+.popup-heading {
+    @extend %psl-primary-bold;
+    font-size: $font_30px;
+}
+
+.fingerprint-icon {
+    width: 120px;
+    height: 120px;
+}
+
+.cta-button-primary {
+    @extend %cta-button;
+    color: $secondary;
+    background-color: $primary;
+    font-weight: bold !important;
+}
+
+.cta-button-secondary {
+    @extend %cta-button;
+    color: $primary;
+    background-color: $secondary;
+    font-weight: bold;
+}
+
+.cta-button-secondary-highlight {
+    @extend %cta-button;
+    color: $primary;
+    background-color: $secondary-highlight;
+    font-weight: bold;
+}
+
+.cta-button-disabled {
+    @extend %cta-button;
+    color: $secondary-highlight;
+    background-color: $secondary-light;
+}
+
+.cta-button-accent {
+    @extend %cta-button;
+    color: $secondary;
+    background-color: $accent;
+    padding: 5px;
+}
+
+.hamburger-menu-icons {
+    height: 20px;
+    width: 20px;
+}
+
+.hr-primary {
+    color: $primary;
+    width: 100px;
+    height: 2px;
+}
+
+.hr-accent-highlight {
+    color: $accent-highlight;
+    width: 18px;
+    height: 2px;
+}
+
+.close-icon {
+    //width and height given in styleguide as follows
+    width: 18.22px;
+    height: 20.36px;
+}
+
+.anchor {
+    text-decoration: underline !important;
+}
+
+//common style for cards with rounded borders and slight shadow.
+.loans-card-primary {
+    background: $primary !important;
+    border-radius: 10px;
+    margin: 0px !important;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.loans-card-secondary {
+    background: $secondary;
+    border-radius: 10px;
+    margin: 0px !important;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.rounded-card-div {
+    border: 0px solid $secondary-highlight;
+    -webkit-box-shadow: 0px 0px 5px 0px $secondary-highlight;
+    -moz-box-shadow: 0px 0px 5px 0px $secondary-highlight;
+    box-shadow: 0px 0px 5px 0px $secondary-highlight;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.line-height-85 {
+    line-height: 0.85
+}
+
+//margins to html elements in vh with respect to px given in jason's document
+// margins in vh from px
+//10px  = 1.25vh
+//20px = 2.5vh
+//30px = 3.75vh
+//margin in vh from px specific to homepage
+//end
+.margin-top-1vh {
+    //8px
+    margin-top: 1vh;
+}
+
+.margin-top-1-25vh {
+    //10px
+    margin-top: 1.25vh;
+}
+
+.margin-top-1-6vh {
+    //13px
+    margin-top: 1.6vh;
+}
+
+.margin-top-2-5vh {
+    //20px
+    margin-top: 2.5vh;
+}
+
+.margin-top-3-75vh {
+    //30px
+    margin-top: 3.75px;
+}
+
+.margin-top-5vh {
+    //40px
+    margin-top: 5vh;
+}
+
+.piechart-inside-text-font {
+    font-size: 2.35vh;
+}
+
+.SCB_PDGray {
+    color: $secondary-highlight !important;
+}
+.bold-text {
+    font-weight: bold;
+}
+
+.heading-type-no {
+    @extend %ergo-secondary-dark;
+    font-size: $font_20px;
+}
+.card-title2 {
+    width: 40%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 1.5em;
+    /* width: 100%; */
+    background-color: #a080aa;
+    font-weight: bold;
+    color: $secondary;
+    padding-left: 3%
+}
+
+.secondary-edit {
+    font-family: $psl;
+    font-size: $font_20px;
+    color: $secondary-highlight !important;
+    font-weight: bold; 
+}
+.hr-full{
+    width:100%;
+    height: 1px;
+    border-top:1px solid $secondary-light
+}
+
+.call-button{
+    margin: 30px 0 20px 0;
+}
+.toastStyle{
+     .toast-message{
+        color: $secondary-highlight !important;
+        background-color: white !important;
+        border-radius: 5px !important;
+        opacity: .98;
+        text-align: center;
+        font-size: 20px;
+    }
+  }

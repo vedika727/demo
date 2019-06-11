@@ -1,0 +1,55 @@
+scb-header {
+    .section-title { 
+        text-align: center;
+        display: block;
+        font-weight: bold;
+        font-size: $font_24px;        
+    }
+
+    .center {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        //old
+        // height: 6.5vw;
+        // width: 30vw;
+        //
+
+        //new
+        width: 28%;
+        //
+        margin: 10px;
+    }
+    .width-20{
+        width: 20% !important;
+    }
+    .left-button {
+        position: absolute;
+        top: 5px;
+        margin: 3px 10px 10px 0px;
+        font-weight: bold;
+        color: $secondary-dark;
+    }
+    .right-button {
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        margin: 3px 0px 10px 10px;
+    }
+    #home-notification-btn {
+        position: relative;
+     }
+     
+     #home-notification-badge {
+        position: absolute;
+        top: 0px;
+        right: 2px;
+     }
+     .scb-header-logo-blur {
+      opacity: 0.4;
+      margin-top: 20%;
+    }
+    .large-icon-with-width {
+      width: 40% !important;
+    }
+}

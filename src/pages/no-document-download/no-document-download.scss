@@ -1,0 +1,27 @@
+no-document-download-modal {
+
+.close-icon-div{
+        margin-bottom: 31px;
+        
+    }
+
+    .heading3-type2 {
+        line-height: $font_24px;
+    }
+
+    .close-button{
+        margin-top:10px;
+        margin-right:10px;
+        float:right;
+    }
+    .button-cta{
+        @extend  #{'.cta-button-primary'};
+        white-space: normal;
+        height: auto;
+        position: relative;
+        padding: 10px 40px;
+        margin: 5.35vw;
+        overflow-x:hidden;
+        word-wrap:break-word;
+      }
+}

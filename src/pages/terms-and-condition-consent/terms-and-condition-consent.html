@@ -1,0 +1,10 @@
+
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+      <scb-header [in]="headerInputs"></scb-header>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="h1">{{"hamburgerMenu.termAndCondition"|translate}}</div><br>
+    <div [innerHtml]="terms"></div>
+</ion-content>

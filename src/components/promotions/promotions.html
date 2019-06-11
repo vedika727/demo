@@ -1,0 +1,30 @@
+<div class="overlay">
+  <div class="content-block">
+    <span class="close">
+      <ion-icon name="scbl-close" color="secondary-highlight"></ion-icon>
+    </span>
+    <img src="../../assets/imgs/2.png">
+
+    <ion-label class="heading1-type2 center-all" center>ewhbf</ion-label>
+
+    <div class="center-all input-content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias quasi
+    </div>
+
+    <ion-label class="hyperlink-primary underline-class" text-center (click)="openPrivacyPolicy()">terms and condition
+      link</ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button round ion-button outline block (click)="cancel()" id="logoutCancelBtn">{{"hamburgerMenu.cancel" | translate}}</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round (click)="logout()" block>{{"hamburgerMenu.okay" | translate}}</button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+    <!-- cancel button to dismiss modal -->
+
+  </div>
+</div>

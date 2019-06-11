@@ -1,0 +1,119 @@
+page-policy-info {
+    .icon-size-money{
+        width:35px;
+        height: 35px;
+        // margin: auto 2px; 
+    }
+    .icon-size-loan{
+        width:40px;
+        height: 40px;
+        // margin: auto 2px; 
+    }
+    .icon-size{
+        width:40px;
+        height: 40px;
+        // margin: auto 2px; 
+    }
+    .policy-status-css{
+        padding-top: 10px;
+        .icon-css{
+            margin:auto;
+        }
+       .status-amount{
+            margin:auto;
+       }
+    }
+    .border-bottom{
+        border-bottom: 1px solid $secondary-light;
+    }
+    .top-border{
+        padding-top: 20px;
+        border-top: 1px solid $secondary-light;
+    }
+    .more-info-btn{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: bold !important;
+        padding:15px;
+    }
+    .loan-info-bg{
+        background-color: rgba(187,162,220,0.1);
+        margin:10px 0px;
+        // opacity:10%;
+    }
+    .bold-scss{
+        font-weight: bold;
+        float:left; 
+        display:inline;
+    }
+    .inline-scss{
+        float:left; 
+        display:inline;
+    }
+   .text-center-scss{
+       padding: 10px 20px;
+   }
+
+    .PI-p-tag-style{
+        font-size: $font_10px;
+    }
+    // ios css 
+    .list-ios {
+        margin: 0;
+    }
+    .list-ios .item-block .item-inner {
+        border-bottom: 0.55px solid $secondary;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: none;
+    }
+    .botton-border-none {
+        border-bottom: none!important;
+    }
+    .back-color {
+        background-color: rgb(246, 244, 244)
+    }
+    .back-color .item-inner {
+        border-bottom: none!important;
+        border-top: none;
+    }
+    .item-ios .item-button {
+        padding: 0px 7% 0px 7% !important;
+    }
+    .text-muted {
+        color: $secondary-highlight;
+    }
+    .loan-amt{
+        margin-top: 0px;
+        padding-right: 15px;
+    }
+    .padding-left-15{
+        padding-left:15px !important;
+    }
+    .padding-left-0{
+        padding-left:0px!important;
+    }
+    .padding-right-15{
+        padding-right:15px!important;
+    }
+    // .amount-size{
+    //     font-size:6.2vw !important;
+    // }
+    .currency-color{
+        color:$primary;
+        font-weight:bold !important;
+    }
+    .icon-color{
+        color:$primary;
+    }
+    .amount-font{
+        font-family:$ergo !important;
+    }
+    .amount-font-Apl{
+        font-family:$ergo !important; 
+        color:#A68CCC !important;
+    }
+    .currency-color-apl{
+        color:#A68CCC !important;
+    }
+}

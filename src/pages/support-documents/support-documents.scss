@@ -1,0 +1,28 @@
+page-support-documents {
+    .sd-cl-head-row{
+        span{
+            font-size:$font_12px;
+        }
+    }
+    .Scb_Bottom_Border{
+        border-bottom: 0.5px solid $secondary-light;
+    }
+    .Scb_Icon_Color{
+        color:"#4E2A81",
+    }
+    .section-title{
+        font-size: 5.8vw !important;
+    }
+    .sd-cl-docRow{
+        padding: 20px 0px !important;
+        border-bottom: 0.5px solid $secondary-light;
+    .sd-cl-docName{
+        span{
+            font-size:$font_12px;
+        }
+    }
+    .sd-cl-arrow{
+        float:right;
+    }
+}
+}

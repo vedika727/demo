@@ -1,0 +1,196 @@
+ detail-policy-piechart{
+    -webkit-appearance: none;
+  .box1 {
+      width: 30%;
+      height: 0;
+      padding-top: 3%;
+      line-height: 2.5vh;
+      padding-bottom: 30%;
+      color: white;
+      position: relative;
+      text-align: center !important;
+      justify-content: center !important;
+      z-index: 10;
+  }
+  
+  .box2 {
+      width: 40%;
+      height: 0;
+      padding-bottom: 38%;
+      margin: -71% auto 33%;
+      border: 3px solid white;
+      background: indigo;
+      border-radius: 50%;
+      position: relative;
+      color: white;
+      font-family: arial;
+      transition: all 0.5s ease-out;
+      -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));      
+      filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5)); 
+  }
+  
+  .chart-container {
+      width: 100%;
+      padding: 5%;
+      height: auto;
+  }
+  /* Large desktops and laptops */
+  
+  @media (min-width: 1200px) {}
+  /* Landscape tablets and medium desktops */
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+      .sb9:after {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 25px solid transparent;
+          border-right: 25px solid transparent;
+          border-top: 25px solid indigo;
+          border-bottom: 25px solid transparent;
+          top: 97%;
+          left: 40%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .sb9:before {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 25px solid transparent;
+          border-right: 25px solid transparent;
+          border-top: 25px solid;
+          border-bottom: 25px solid transparent;
+          top: 100%;
+          left: 40%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .box1 {
+          margin: -55% auto 35%;
+      }
+  }
+  /* Portrait tablets and small desktops */
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+      .sb9:after {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid indigo;
+          border-bottom: 20px solid transparent;
+          top: 97%;
+          left: 40%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .sb9:before {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid;
+          border-bottom: 20px solid transparent;
+          top: 100%;
+          left: 40%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .box1 {
+          margin: -55% auto 35%;
+      }
+  }
+  /* Landscape phones and portrait tablets */
+  
+  @media (max-width: 767px) {
+      .sb9:after {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-top: 15px solid indigo;
+          border-bottom: 15px solid transparent;
+          top: 97%;
+          left: 40%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .sb9:before {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-top: 15px solid;
+          border-bottom: 15px solid transparent;
+          top: 100%;
+          left: 40%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .box1 {
+          margin: -60% auto 35%;
+      }
+  }
+  /* Portrait phones and smaller */
+  
+  @media (max-width: 480px) {
+      .sb9:after {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-top: 12px solid indigo;
+          border-bottom: 12px solid transparent;
+          top: 96%;
+          left: 38%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .sb9:before {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-top: 12px solid;
+          border-bottom: 12px solid transparent;
+          top: 100%;
+          left: 38%;
+          transition: transform 1s linear;
+          transform: skew(0deg);
+          transform-style: preserve-3D;
+      }
+      .box1 {
+          margin: -66% auto 35%;
+      }
+
+      .text-underline{
+          text-decoration: underline;
+      }
+  }
+  .svg-wrapper {
+  -webkit-filter: drop-shadow(0px 0px 7px rgba(0,0,0,0.5));      
+  filter: drop-shadow(0px 0px 7px rgba(0,0,0,0.5)); 
+    }
+}

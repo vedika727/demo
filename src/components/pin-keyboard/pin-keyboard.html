@@ -1,0 +1,11 @@
+<!-- Generated template for the PinKeyboardComponent component -->
+<ion-grid [ngClass]=" keypad == true ? 'font-white' : 'font-default' ">
+  <ion-row>
+      <button class="number-pad" [ngClass]=" keypad == false ? 'keypad-button' : 'keypad-otp' " id="pinPadKeypadButton" ion-button clear *ngFor="let value of keypadValues" (click)="keypadButtonPress(value)">{{value}}</button>
+      <button class="number-pad" [ngClass]=" keypad == false ? 'keypad-button' : 'keypad-otp' " id="pinPadKeypadBlankButton" ion-button clear></button>
+      <button class="number-pad" [ngClass]=" keypad == false ? 'keypad-button' : 'keypad-otp' " id="pinPadKeypadZeroButton" ion-button clear (click)="keypadButtonPress(0)">{{0}}</button>
+      <button [ngClass]=" keypad == false ? 'back-keypad' : 'back-keypad-otp' " id="pinPadKeypadBackButton" ion-button clear (click)="keypadButtonPress(-1)">
+          <ion-icon class="back-icon" id="pinPadKeypadBackIcon" name="ios-backspace-outline"></ion-icon>
+      </button>
+  </ion-row>
+</ion-grid>

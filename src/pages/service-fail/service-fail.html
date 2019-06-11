@@ -1,0 +1,30 @@
+<ion-content center text-center>
+    <ion-row class="confirmation-text" align-items-center>
+        <ion-icon name="ios-close-circle" class="fail-circle"></ion-icon>
+        <ion-col col-12 class="h1">
+            {{"contactUsFail.header" | translate}}
+        </ion-col>
+
+        <ion-col col-12>
+            {{"contactUsFail.information" | translate}}
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-row class="confirmation-button">
+            <ion-col>
+                <button ion-button item-end class="cta-button-primary" round (click)="navigateToHomePage()">
+                    {{"contactUsFail.ctaHome" | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row class="retry-button">
+            <ion-col>
+                <button ion-button item-end class="cta-button-secondary" round (click)="retryPost()">
+                    {{"contactUsFail.ctaRepeat" | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,39 @@
+<!-- Generated template for the CoverageItemComponent component -->
+<div *ngIf = "PolicyCoverageData"> 
+<div *ngFor="let coverageItemInput of PolicyCoverageData" class="padd">
+<div *ngIf="coverageItemInput.riderGroupName" >
+    <ion-item no-lines no-padding>
+        <!-- <ion-icon color="primary" [name]="coverageItemInput.icon" item-start></ion-icon> -->
+        <!-- <ion-icon name="scbl-hospital" svgversion item-start></ion-icon> -->
+
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='Accident Benefit'" name="scbl-accident" color="primary" svgversion item-start></ion-icon>
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='Income Compensation'" name="scbl-hospital" color="primary" svgversion item-start></ion-icon>
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='Hospital Benefit'" name="scbl-ipd" color="primary" svgversion item-start></ion-icon>
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='OPD Benefit'" name="scbl-medicine" color="primary" svgversion item-start></ion-icon>
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='Cancer Benefit'" name="scbl-cancer" color="primary" svgversion item-start></ion-icon>
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='Critical Illness Benefit'" name="scbl-illness" color="primary" svgversion item-start></ion-icon>
+        <ion-icon *ngIf="coverageItemInput.riderGroupName =='Death Benefit'" name="scbl-life-coverage" color="primary" svgversion item-start></ion-icon>
+
+
+
+        <ion-row>
+            <ion-col col-8 text-wrap>
+                <span [ngClass]="isIndented ?'input-content':'input-content SCB_PDGray'">{{coverageItemInput.riderProductName}}</span>
+            </ion-col>
+            <ion-col col-4>
+                <!-- <span class="field-summary right">{{coverageItemInput.value}}</span> -->
+
+                <span [ngClass]="isIndented ?'field-summary right':'field-summary SCB_PDGray right'">{{coverageItemInput.riderSumInsured}} {{"policyDashboard.baht"|translate}}</span>
+            </ion-col>
+        </ion-row>
+
+
+        <div [ngClass]="isIndented ?'input-content font-light':'input-content font-light SCB_PDGray'" text-wrap>{{coverageItemInput.riderProductName}} {{coverageItemInput.riderSumInsured}} {{"policyDashboard.bhatperDay"|translate}} 
+
+        </div>
+
+    </ion-item>
+
+</div>
+</div>
+</div>

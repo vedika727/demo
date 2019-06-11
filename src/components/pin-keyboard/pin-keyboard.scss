@@ -1,0 +1,78 @@
+pin-keyboard {
+    @import '../../theme/variables.scss';
+    @import "../../common/common-scss/style-guide/color-variables.scss";
+    .round{
+        border-radius: 30px;
+    }
+    .container-input{
+        margin-bottom:12%
+    }
+    .circle-input{
+        width:16px;
+        height:16px;
+        border-radius:25px;
+        border:2px solid $primary;
+        margin:8px
+    }
+    .conditional-circle-input{
+        background-color:$primary;
+    }
+
+    .column-width{
+        display:flex;
+        margin:auto
+    }
+    .error-msg{
+        color:red;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+    .forgot-pin{
+        color:$primary;
+        text-decoration: underline;
+        height: 30px;
+    }
+    .keypad-container{
+        height:16.25rem
+    }
+    .keypad-button{
+        width: 31%;
+        height:50px
+    }
+    .keypad-otp{
+        width: 30%;
+        height: 50px
+    }
+    .keypad-button .button-inner{
+        font-size: $font_40px !important;
+        font-weight: bold;
+      
+    }
+    .keypad-otp .button-inner{
+        font-size: $font_40px !important;
+        font-weight: bold;
+      
+    }
+    .back-keypad{
+        width: 28%;
+        height:50px;
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    .back-keypad-otp{
+        width: 28%;
+        height:50px;
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    .back-icon{
+        font-weight: bold;
+        
+    }
+    .error-box{
+        height:40px;
+    }
+
+}

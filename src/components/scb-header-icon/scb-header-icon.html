@@ -1,0 +1,19 @@
+<div [ngClass]=" absolutePosition == false ? 'nav-header' : 'nav-header-later-process' ">
+    <!-- <div *ngIf="this.inputsDetails?.isBackButton" [ngClass]=" absolutePosition == false ? 'backIcon' : 'backIcon-later-process' " (click)="backBtnEvent()">
+
+        <ion-icon name="ios-arrow-back-outline"></ion-icon>
+        <div text-center [ngClass]=" absolutePosition == false ? 'backText' : 'backText-later-process' ">{{"registration.backHeaderIcon" | translate}}</div>
+    </div> -->
+    <div text-center [ngClass]=" absolutePosition == false ? 'headerImageIcon' : 'headerImageIcon-later-process' ">
+        <!-- SCB HEAD ICON -->
+        <img *ngIf="daynightFlag == 'day'" src="assets/imgs/SCBLife-logo.png" class="DayFlagIcon">
+        <img *ngIf="daynightFlag == 'night'" src="assets/imgs/SCBLife-logo-reversed-white.png" class="DayFlagIcon">
+    </div>
+    <!--  RIGHT SIDE MENU ICON -->
+    <div *ngIf="this.inputsDetails?.isSideMenu" [ngClass]=" absolutePosition == false ? 'right' : 'right-later-process' ">
+        <button ion-button icon-only clear menuToggle>
+        <ion-icon *ngIf="daynightFlag == 'day'" name="menu"></ion-icon>
+        <ion-icon *ngIf="daynightFlag == 'night'" class="DayFlag" name="menu"></ion-icon>
+    </button>
+    </div>
+</div>

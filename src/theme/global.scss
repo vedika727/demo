@@ -1,0 +1,71 @@
+// .fix-height-100 {
+//     height: 100%;
+//     width: 100%;
+//     margin: 0;
+//     scroll-behavior: unset;
+// }
+// #display_table_row {
+//     display: table-row;
+// }
+// .fix-only-height-100 {
+//     height: 100%;
+// }
+// .fix-height-50 {
+//     height: 50%;
+// }
+// .background-red {
+//     background: red !important;
+// }
+// .background-green {
+//     background: green !important;
+// }
+// .no-scroll .scroll-content {
+//     overflow: hidden;
+//     padding: 0 0 !important;
+// }
+// .center-img {
+//     border-radius: 50%;
+//     border: 3px solid white;
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 6rem;
+//     height: 6rem;
+// }
+// .normal-text-padding {
+//     padding: 5px;
+//     display: inline-block;
+//     width: 100%;
+// }
+// .home_card_height {
+//     height: calc(100% - 2rem)
+// }
+// // ion-icon {
+// //     &[class*="scbl-"] {
+// //       mask-size: contain;
+// //       //mask-position: 10% 10% 10% 10%;
+// //       mask-repeat: no-repeat;
+// //       background: currentColor;
+// //       width: 1em;
+// //       height: 1em;
+// //     }
+// //     // &[class*="scbl-cal"] {
+// //     //   mask-image: url(../../assets/imgs/cal.svg);
+// //     // }
+// //     // &[class*="scbl-home"] {
+// //     //     mask-image: url(../../assets/imgs/hello.svg);
+// //     //   }
+// //   }
+// ion-icon {
+//     &[ng-reflect-name*="scbl-"] {
+//         mask-size: contain;
+//         mask-position: 10% 10% 10% 10%;
+//         mask-repeat: no-repeat;
+//         background: currentColor;
+//         width: 1em;
+//         height: 1em;
+//     }
+//     &[ng-reflect-name*="scbl-home"] {
+//         mask-image: url(../../assets/imgs/hello.svg);
+//     }
+// }

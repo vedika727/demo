@@ -1,0 +1,30 @@
+page-confirm-pin {
+    .header{
+        // font-size: 3.2rem !important;
+        padding-left: 5px !important;
+        font-weight: bold;
+    }
+    .text{
+        // font-size: 3rem !important;
+        padding-top:20% !important;
+        font-weight: bold;
+    }
+    .keypad-component{
+        position: absolute;
+        bottom: 3%;
+    }
+    .scroll-content{
+        overflow-y: hidden;
+    } 
+    @media screen and (max-height: 619px) {
+        .text{
+            padding-top:0% !important;
+        }
+    }
+
+    @media screen and (min-height: 620px) and (max-height: 680px) {
+        .text{
+            padding-top:5% !important;
+        }
+    }  
+}

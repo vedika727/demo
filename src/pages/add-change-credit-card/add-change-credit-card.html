@@ -1,0 +1,67 @@
+
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+
+<ion-content padding>
+    <div class="heading1-type1 SCB_Margin" ion-text>
+        {{'Payments.ChangeCreditCard'  | translate}}
+    </div>
+    <form #paymentCardForm="ngForm" (ngSubmit)="addChangeCreditCard()">
+        <div class="rounded-card-div">
+           <ion-row class="card-row">
+              <ion-col col-3>
+                  <ion-label class="input-content" fixed>{{'Payments.toppings' | translate}}</ion-label>
+              </ion-col> 
+              <ion-col col-9>
+                  <ion-select class="selectOpt prefilled-text" placeholder="{{'Payments.placeholderForSelectBoxPleaseSelectCard' | translate}}" id="Payments.toppings" required [(ngModel)]="cardDetails.cardType" name="cardType" multiple="false" cancelText="Nah" okText="Okay!">
+                      <ion-option value="bacon" selected="true">{{'Payments.CreditCard' | translate}}</ion-option>
+                      <ion-option value="olives">{{'Payments.debitcard' | translate}}</ion-option>
+                  </ion-select>
+              </ion-col> 
+           </ion-row>     
+                    
+           <ion-row class="card-row">
+              <ion-col col-3>
+                  <ion-label class="input-content" fixed>{{'Payments.CardNumber' | translate}}</ion-label>
+              </ion-col> 
+              <ion-col col-9>
+                  <ion-input margin-left class="SCB_Border" id="Payments.CardNumber" placeholder="กรุณากรอกหมายเลขบัตรเครดิต" required type="text" [(ngModel)]="cardDetails.cardNumber" maxlength="19" name="cardNumber" (keypress)="lengthValidation($event)" value=""></ion-input>                  
+              </ion-col> 
+           </ion-row> 
+           <ion-row class="card-row">
+              <ion-col col-3>
+                  <ion-label class="input-content" fixed>{{'Payments.ExpiryDate' | translate}}</ion-label>
+              </ion-col> 
+              <ion-col col-4 class="expiry-datetime">
+                  <ion-datetime id="Payments.ExpiryDate" placeholder="MM/YYYY" required class="expiry-date-style" displayFormat="MM/YYYY" [min]="currentYear" [max]="maximumCurrentYear" name="expiryDate" [(ngModel)]="cardDetails.expiryDate"></ion-datetime>
+              </ion-col> 
+           </ion-row>     
+           <ion-row class="card-row">
+              <ion-col col-3>
+                  <ion-label class="input-content" fixed>{{'Payments.username' | translate}}</ion-label>
+              </ion-col> 
+              <ion-col col-9>
+                  <ion-input margin-left class="SCB_Border" id="Payments.username" placeholder="กรุณากรอกชื่อผู้ถือบัตร" required type="text" [(ngModel)]="cardDetails.username" name="username" value=""></ion-input>                  
+              </ion-col> 
+           </ion-row>   
+          
+        </div>
+      
+              <ion-row class="checkbox-row">
+                <ion-col col-1>
+                    <ion-checkbox mode="md" id="Payments.AgreewithTermsandPolicy" required color="dark" [(ngModel)]="tAndC" name="termsAndCondition"></ion-checkbox>                    
+                </ion-col>
+                <ion-col col-11>
+                    <div class="whitespace-normal-class input-content">{{'Payments.Iagreetogiveconsentandallowrecurring' | translate}}</div>                      
+                </ion-col>
+              </ion-row>
+            
+       
+        <div text-center>
+            <button ion-button id="Payments.PayNow" type="submit" id="submitbtn" [disabled]="isCCValid()" (click)="getPhoneAndOtp()" class="cta-button-primary" round>{{'Payments.ConfirmtoReceiveOTP' | translate}}</button>
+        </div>
+    </form>
+</ion-content>

@@ -1,0 +1,28 @@
+<!--
+  Generated template for the PolicyListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="h1">{{'policyDashboard.viewAllPolicies' | translate}}</div>
+    <ion-row margin-top class="policylist_row" *ngFor="let policy of policyLists;let i = index">
+        <ion-col col-8>
+            <span>{{policy.policyNumber}}</span>
+        </ion-col>
+        <!-- <ion-col col-4 class="poliylist_col" >
+      <a href="" class="anchor" (click)="retrievePolicy(policy.policyNumber)">view</a>
+    </ion-col> -->
+        <ion-col col-4 class="poliylist_col">
+            <a class="anchor p" (click)="getbackdetail(policy.policyNumberIL,i)">{{"policyDashboard.viewDocument"| translate}}</a>
+            <!-- <span class="cb-camera-icon" (click)="getPicture()"><ion-icon name="camera"></ion-icon></span> -->
+        </ion-col>
+        <hr>
+    </ion-row>
+</ion-content>

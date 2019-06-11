@@ -1,0 +1,171 @@
+    <div class="field-error overdue" text-center *ngIf="policyDues.payments[policyDues.payments.length-1].paymentOverDue && autopayFailure">{{'Payments.AmountDue' | translate}}</div>
+    <ion-card class="card-border backcolor" margin-bottom>
+        <div text-center class="heading3-type3" margin>{{'Payments.PolicyNumber' | translate}} <span class="heading3-type3">{{policyDues.policyNumber}}</span></div>
+        <div text-center round>
+            <button ion-button class="amount-container" color="secondary" id="paymentDue" round>
+            <div class="input-content padding-top-amount ">{{'Payments.AmountDue' | translate}}</div>
+            <div id="TotalAmount"><span class="message-type3">{{totalAmount.toFixed(2) | currencyConvert}}</span><span class="color-accent">{{'Payments.baht' | translate}}</span></div>
+            </button>
+        </div>
+        
+        <div padding class="card-body card-border">
+            <div *ngIf="single" class="single">
+                <ion-row class="paymentDueData" margin-top>
+                    <ion-col col-1>
+                        <ion-icon name="time" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-5>
+                        <div class="static-text" padding-left>
+                            {{'Payments.DueDate' | translate}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                       <div ion-text color="primary" class="field-summary">{{dateConverter.convertIsoToDate(policyDues.payments[0].dueDate,false,2)}}</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-1>
+                        <ion-icon name="card" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-5>
+                        <div class="static-text" padding-left>
+                            {{'Payments.PaymentMethod' | translate}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6 >
+                       <div ion-text color="primary" class="field-summary">{{policyDues.payments[0].paymentType}}</div>
+                    </ion-col>
+                </ion-row>
+                <div text-center padding margin-bottom>
+                    <button ion-button class="cta-button-accent" round (click)="paynow()">{{'Payments.PayNow' | translate}}</button>
+                </div>
+            </div>
+            <div *ngIf="autopay" class="autopay">
+                <ion-row class="paymentDueData" margin-top>
+                    <ion-col col-1>
+                        <ion-icon name="time" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-5>
+                        <div class="static-text" padding-left>
+                            {{'Payments.DueDate' | translate}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                       <div ion-text color="primary" class="field-summary">{{dateConverter.convertIsoToDate(policyDues.payments[0].dueDate,false,2)}}</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-1>
+                        <ion-icon name="card" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-5>
+                        <div class="static-text" padding-left>
+                            {{'Payments.PaymentMethod' | translate}}
+                        </div>
+                        <div class="static-text" padding-left>
+                            {{'Payments.AutoDeduction' | translate}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6 >
+                       <div ion-text color="primary" class="field-summary">
+                       {{policyDues.payments[0].paymentType}}</div>
+                        <div class="static-text">
+                            {{policyDues.paymentDetails.cardNumber}} 
+                        </div>
+                        <div class="static-text">
+                            {{'Payments.ccTranscationInfo' | translate}} {{dateConverter.convertIsoToDate(policyDues.payments[0].dueDate,false,2)}}
+                        </div>
+                        <div class="static-text" padding-top padding-bottom>
+                            <a (click)="changeCreditCard()" class="hyperlink">{{'Payments.changeCC' | translate}}</a>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div *ngIf="autopayFailure" class="autopay-fail">
+                
+                <ion-row class="paymentDueData" margin-top>
+                    <ion-col col-1>
+                        <ion-icon name="time" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-5>
+                        <div class="static-text" padding-left>
+                            {{'Payments.DueDate' | translate}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                       <div ion-text color="primary" class="field-summary">{{dateConverter.convertIsoToDate(policyDues.payments[0].dueDate,false,2)}}</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="paymentDueData">
+                    <ion-col col-1>
+                        <ion-icon name="card" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-5>
+                        <div class="static-text" padding-left>
+                            {{'Payments.PaymentMethod' | translate}}
+                        </div>
+                        <div class="static-text" padding-left>
+                            {{'Payments.AutoDeduction' | translate}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6 >
+                       <div ion-text color="primary" class="field-summary">
+                       {{policyDues.payments[0].paymentType}}</div>
+                        <div class="static-text">
+                            {{policyDues.paymentDetails.cardNumber}} 
+                        </div>
+                        <div class="static-text field-error">
+                            {{'Payments.ccTranscationFailed' | translate}} {{dateConverter.convertIsoToDate(policyDues.payments[0].dueDate,false,2)}}
+                        </div>
+                    </ion-col>
+                    <ion-col col-6 text-right>
+                            {{'Payments.nextDeduction' | translate}}
+                    </ion-col>
+                    <ion-col col-6>
+                    </ion-col>
+                </ion-row>
+                <div text-center padding>
+                    {{'Payments.wishToPay' | translate}}
+                </div>
+                <div text-center margin-bottom>
+                    <button ion-button class="cta-button-accent" round (click)="paynow()">{{'Payments.PayNow' | translate}}</button>
+                </div>         
+            </div>
+            <div *ngIf="multiple" class="multiple">
+                <div text-center padding>
+                    <div class="input-content">
+                    {{'Payments.plsPayDue' | translate}}</div>
+                </div>
+                <div *ngFor="let item of policyDues.payments; let j = index">
+                    <ion-row class="paymentDueData secondary-light" [ngClass]="disabledField(j)">
+                        <ion-col col-2>
+                            <ion-item class="secondary-light no-padding" color="primary">
+                                <ion-checkbox [disabled]="j>0?!policyDues.payments[j-1].checked:false" [(ngModel)]="item.checked" (click)="clickSelectBox(j)"></ion-checkbox>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col col-6>
+                            <div class="heading3-type2">{{'Payments.firstDueDate' | translate}}</div>
+                            <div class=""> - {{dateConverter.convertIsoToDate(item.dueDate,false,2)}}</div>
+                        </ion-col>
+                        <ion-col col-4 float-right>
+                            <div ion-text class="prefilled-text">{{item.paymentAmount.toFixed(2) | currencyConvert}} {{'Payments.baht' | translate}}</div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-row padding-left>
+                    <ion-col col-1 >
+                        <ion-icon name="card" color="secondary-light"></ion-icon>
+                    </ion-col>
+                    <ion-col col-7 padding-left>
+                        <div><b>{{'Payments.PaymentMethod' | translate}}</b></div>
+                    </ion-col>
+                    <ion-col col-4>
+                        <div ion-text color="primary" class="hyperlink-primary"><b>{{'Payments.NoMethodSaved' | translate}}</b></div>
+                    </ion-col>
+                </ion-row>
+                <div text-center padding margin-bottom>
+                    <button ion-button [ngClass]="!policyDues.payments[0].checked ? 'cta-button-disabled-2':'cta-button-accent-2'" [disabled]="!policyDues.payments[0].checked" round (click)="paynow()">{{'Payments.PayNow' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </ion-card>

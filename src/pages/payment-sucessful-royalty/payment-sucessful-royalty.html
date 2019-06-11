@@ -1,0 +1,71 @@
+<!--
+  Generated template for the PaymentSucessfulRoyaltyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+      <scb-header [in]="headerInput"></scb-header>
+  </ion-navbar>
+</ion-header> 
+
+<ion-content padding>
+    <div class="SCB_MarginLR" >
+      <ion-grid>
+        <ion-row  margin-top>
+            <ion-icon class="SCB_Margincenter" name="scbl-success" svgversion></ion-icon>
+          
+        </ion-row>
+        
+        <div text-center class="h1 ">{{"Payments.paymentSuccess"|translate}}</div>
+     
+     
+        
+          <div margin-top text-center ion-text color="secondary-highlight" class=" p  ">{{"Payments.paymentID"|translate}}</div>
+          <div text-center class="h3  ">{{acknowledgeRef}}</div>
+          <div text-center margin-top  ion-text color="secondary-highlight" class=" p ">{{"Payments.amountPaid"|translate}}</div>
+          <div text-center class="h3  ">{{paymentDetails.amount}} บาท</div>
+
+          <ion-row margin-top>
+   
+           
+            <ion-col col-6>
+                <ion-icon padding class="right SCB_IconHeight"   name="scbl-payment-download" svgversion></ion-icon>
+            </ion-col>
+            <ion-col>
+                <a >
+                    <u class="p">{{"Payments.viewPayslip"|translate}}</u>
+                </a>
+            </ion-col>
+          </ion-row> 
+ 
+      </ion-grid>
+      <div class="contain">
+      <div class="SCB_box SCB-float-left">
+        <div class="p" >{{"Payments.creditCard"|translate}}</div>
+        <div ion-text color="secondary-highlight" class=" p"> SCB  XXXX - XXXX - XXXX - 1234 </div>
+      </div>
+      <div text-wrap class="h5">
+        {{"Payments.setForRecurring"|translate}}</div>
+      </div>
+    </div>
+      <div class="SCB_Background" >
+          <!-- <img class="SCB_BottomImage" src="assets/imgs/payment-successful.jpg"> -->
+          <div margin>
+          <div class="h3">{{"Payments.congratulations"|translate}}</div>
+          <div class="p">{{"Payments.recieved"|translate}} <span ion-text color="primary-light" class="h5 " >20 คะแนน</span></div>
+          <div class="p">
+         <a>  <u> {{"Payments.viewmyPoints"|translate}} </u></a>
+                  </div>
+        </div>
+        <div padding-right
+        
+        > <button class="SCB_button" round ion-button (click)="goToPaySlip()" > {{"Payments.finish"|translate}}</button></div>
+        
+        </div>
+   
+    
+   
+      
+</ion-content>

@@ -1,0 +1,44 @@
+<!-- Generated template for the PinPadComponent component -->
+<ion-grid>
+<!-- 6 Input Circles -->
+<div class="container-input" *ngIf="!keypad">
+    <ion-grid class="grid-margin">
+        <div class="column-width" text-center>
+          <div class="circle-input" id="pinPadInputCircleOne" [ngClass]="input[0] != undefined ?'conditional-circle-input':''"></div>
+          <div class="circle-input" id="pinPadInputCircleTwo" [ngClass]="input[1] != undefined ?'conditional-circle-input':''"></div>
+          <div class="circle-input" id="pinPadInputCircleThree" [ngClass]="input[2] != undefined ?'conditional-circle-input':''"></div>
+          <div class="circle-input" id="pinPadInputCircleFour" [ngClass]="input[3] != undefined ?'conditional-circle-input':''"></div>
+          <div class="circle-input" id="pinPadInputCircleFive" [ngClass]="input[4] != undefined ?'conditional-circle-input':''"></div>
+          <div class="circle-input" id="pinPadInputCircleSix" [ngClass]="input[5] != undefined ?'conditional-circle-input':''"></div>
+        </div>
+    </ion-grid>
+  <!-- End Of Input Circles -->
+
+  <!-- Error Message -->
+<div class="error-box">
+    <div ion-text id="pinPadErrorMessage1" class="p" color="accent-danger" *ngIf="counter==2" text-center>{{"login.wrongPin2" | translate}}</div>
+    <div ion-text id="pinPadErrorMessage2" class="p" color="accent-danger"  *ngIf="counter==1" text-center>{{"login.wrongPin1" | translate}}</div>
+    <div ion-text id="pinPadErrorMessage3" class="p" color="accent-danger" *ngIf="pinNotMatched" text-center>{{"login.enterSamePin" | translate}}</div> 
+</div>
+<!-- End of Error Message -->
+
+  <!-- Forgot pin -->
+  <div class="forgot-pin">
+    <div  id="pinPadForgotPin" class="section-header" *ngIf="forgotPinFlag" (click)="callbackForgotPin()">{{forgotPin | translate}}</div>
+  </div>
+  <!-- End of Forgot pin -->
+  </div>
+</ion-grid>
+  <!-- Keypad Buttons -->
+  <ion-grid [ngClass]=" keypad == true ? 'font-white' : 'font-default' ">
+    <ion-row>
+        <button class="number-pad" [ngClass]=" keypad == false ? 'keypad-button' : 'keypad-otp' " id="pinPadKeypadButton" ion-button clear *ngFor="let value of keypadValues" [disabled]="delayedForConfirmPin" (click)="keypadButtonPress(value)">{{value}}</button>
+        <button class="number-pad" [ngClass]=" keypad == false ? 'keypad-button' : 'keypad-otp' " id="pinPadKeypadBlankButton" [disabled]="delayedForConfirmPin" ion-button clear></button>
+        <button class="number-pad" [ngClass]=" keypad == false ? 'keypad-button' : 'keypad-otp' " id="pinPadKeypadZeroButton" ion-button clear (click)="keypadButtonPress(0)" [disabled]="delayedForConfirmPin">{{0}}</button>
+        <button [ngClass]=" keypad == false ? 'back-keypad' : 'back-keypad-otp' " id="pinPadKeypadBackButton" ion-button clear [disabled]="delayedForConfirmPin" (click)="keypadButtonPress(-1)">
+            <ion-icon class="back-icon" id="pinPadKeypadBackIcon" name="ios-backspace-outline"></ion-icon>
+        </button>
+    </ion-row>
+  </ion-grid>
+
+    <!-- End of Keypad Buttons -->

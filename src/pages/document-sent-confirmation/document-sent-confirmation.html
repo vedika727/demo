@@ -1,0 +1,47 @@
+<!--
+  Generated template for the DocumentSentConfirmationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- Removed from Release 1 according to designs -->
+<!-- <ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>  -->
+
+<ion-content padding class="bg-gradient ">
+  <!-- Removed from Release 1 according to designs -->
+  <!-- <div class="h1">{{'policyDashboard.AlldocumentsSent' | translate}}</div> -->
+
+  <!-- <span class="checkmark-span">
+    <ion-icon name="checkmark" class="checkmark-icon" text-center></ion-icon>
+  </span> -->
+  <ion-item no-lines>
+    <img class="done " src="../assets/scbl-icons/success.svg">
+  </ion-item>
+  <div text-center ion-text color="primary" class="h2 ">{{'policyDashboard.Success' | translate}}</div>
+  <div color="$secondary-dark" class="heading3-type2" ion-text text-center>{{'policyDashboard.WehaveSentTheDocumentstoYourEmail' |
+    translate}}</div>
+  <div class="heading3-type2 text-font-size" color="$secondary-dark" ion-text text-center>{{this.loginService.customerInfo.email}}</div>
+  <div class="heading3-type2  document-sent-ack" text-center>{{'policyDashboard.PleaseCheckYourEmailtoSeetheDocumentsfromUs' |
+    translate}}</div>
+  <!-- <span class="done-btn">
+  <button ion-button class="bold-text" (click)="backToDocumentDownloadPage()">{{'policyDashboard.Finished' | translate}}</button>
+  </span> -->
+  <!-- Removed from Release 1 according to designs -->
+  <!-- <div text-center padding-top>
+      <button round ion-button class="button-cta bold-text" (click)="backToDocumentDownloadPage()" >{{'policyDashboard.Finished' | translate}}</button>
+    </div> -->
+</ion-content>
+
+<ion-footer no-border>
+  <ion-row class="confirmation-button">
+    <ion-col>
+      <button ion-button item-end class="cta-button-primary" round (click)="confirm()">
+        {{'policyDashboard.Finished' | translate}}
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

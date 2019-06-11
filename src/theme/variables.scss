@@ -1,0 +1,146 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+@import "ionic.globals";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$colors: ( primary: #4E2A81, primary-mild:#6B43A3, primary-light:#A573EA, primary-super-light:#A68CCC, primary-soft-light:#E0DAE9, secondary: #FFFFFF, secondary-light:#D8D8D8, secondary-highlight:#A1A1A1, secondary-mild:#3A3A3A, secondary-dark:#333333, accent: #F8B100, accent-danger: #D0021B, accent-success: #55AA10);
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+$tabs-ios-tab-min-height: 60px !default;
+$toolbar-md-height:60px;
+$text-input-ios-show-focus-highlight: false;
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+$tabs-md-tab-min-height: 60px !default;
+$toolbar-md-height:60px;
+$text-input-md-show-focus-highlight: false;
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+@import "roboto";
+@import "noto-sans";
+//custom fonts added by Arun Thakur
+@font-face {
+    font-family: 'PSL Kittithada Pro ()';
+    src: url('../assets/fonts/PSL/PSLKittithadaPro.woff2') format('woff2'), url('../assets/fonts/PSL/PSLKittithadaPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PSL Kittithada Pro ()';
+    src: url('../assets/fonts/PSL/PSLKittithadaProItalic.woff2') format('woff2'), url('../assets/fonts/PSL/PSLKittithadaProItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PSL Kittithada Pro ()';
+    src: url('../assets/fonts/PSL/PSLKittithadaProBold.woff2') format('woff2'), url('../assets/fonts/PSL/PSLKittithadaProBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PSL Kittithada Pro ()';
+    src: url('../assets/fonts/PSL/PSLKittithadaProBoldItalic.woff2') format('woff2'), url('../assets/fonts/PSL/PSLKittithadaProBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ergo Com Condensed';
+    src: url('../assets/fonts/ERGO/ErgoCom-Condensed.woff2') format('woff2'), url('../assets/fonts/ERGO/ErgoCom-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ergo Com Demi Condensed';
+    src: url('../assets/fonts/ERGO/ErgoCom-DemiCondensed.woff2') format('woff2'), url('../assets/fonts/ERGO/ErgoCom-DemiCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ergo Com Medium Condensed';
+    src: url('../assets/fonts/ERGO/ErgoCom-MediumCondensed.woff2') format('woff2'), url('../assets/fonts/ERGO/ErgoCom-MediumCondensed.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin ergo-medium() {
+    font-family: 'Ergo Com Medium Condensed';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin ergo-desi() {
+    font-family: 'Ergo Com Desi Condensed';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin ergo() {
+    font-family: 'Ergo Com Condensed';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin PSL() {
+    font-family: 'PSL Kittithada Pro ()';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin PSL_italic() {
+    font-family: 'PSL Kittithada Pro ()';
+    font-weight: normal;
+    font-style: italic;
+}
+
+@mixin PSL_bold() {
+    font-family: 'PSL Kittithada Pro ()';
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin PSL_italic_bold() {
+    font-family: 'PSL Kittithada Pro ()';
+    font-weight: bold;
+    font-style: italic;
+}

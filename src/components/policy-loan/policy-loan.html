@@ -1,0 +1,90 @@
+<div class="rounded-card-div round-card-header card-color">
+    <div class="heading3-type3" ion-text text-center>{{"PolicyLoan.loanAmountWish" | translate}}</div>
+    <div ion-text text-center color="secondary">
+        <span class="loan-amount card-text-color">{{loanDetails.totalAvailedLoanAmount}}</span>
+        <span class="hyperlink-secondary">{{"PolicyLoan.baht" | translate}}</span>
+    </div>
+</div>
+<div class="rounded-card-div round-card-content">
+    <!-- div for single loan -->
+    <div>
+        <ion-row class="row-border-bottom">
+            <ion-col col-6 class="padding-top-10 padding-bottom-10">
+                {{"PolicyLoan.policyNumber" | translate}}
+            </ion-col>
+            <ion-col col-6 class="padding-top-10 padding-bottom-10">
+                <div class="h2" text-right ion-text color="primary">{{loanDetails.loanPolicies[0].policyNumber}}</div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-top row-border-bottom">
+            <ion-col col-6 class="padding-top-10 padding-bottom-10">
+                <div ion-text text-left>
+                    {{"PolicyLoan.interestRate" | translate}}
+                </div>
+                <div class="h3" ion-text text-left color="primary">
+                    {{loanDetails.loanPolicies[0].loanInterestRate}}{{"%"}}
+                </div>
+            </ion-col>
+            <ion-col class="col-border-left padding-top-10 padding-bottom-10" col-6>
+                <div ion-text text-right>
+                    {{"PolicyLoan.loanRequest" | translate}}
+                </div>
+                <div class="h3" ion-text text-right color="primary">
+                    {{loanRequestDate}}
+                </div>
+            </ion-col>
+        </ion-row>
+        <div class="hr"></div>
+        <ion-row class="row-border-bottom">
+            <ion-col col-5 class="padding-top padding-top-10 ">
+                <div ion-text text-left>
+                    {{"PolicyLoan.accountNumber" | translate}}
+                </div>
+
+            </ion-col>
+            <ion-col col-7 class="padding-top-10">
+                <div class="h3" ion-text text-right color="primary">
+                    {{loanDetails.loanPayoutAccount}}
+                </div>
+            </ion-col>
+            <ion-col col-12 text-right class=" padding-bottom-10">
+                <div ion-text text-right class="heading5-type1">
+                    {{"PolicyLoan.transferTime" | translate}}
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="hr info">
+        <!-- <div></div> -->
+        <ion-row class="loan-info">
+            <ion-col col-7 class="padding-top-10 padding-bottom-10">
+
+                {{"PolicyLoan.loanAmount1" | translate}}
+            </ion-col>
+            <ion-col class="section-header padding-top-10 padding-bottom-10" col-5 ion-text text-right color="primary">
+                {{loanDetails.totalAvailedLoanAmount}} {{"PolicyLoan.baht" | translate}}
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col col-7 class="padding-top-10 padding-bottom-10">
+
+                {{"PolicyLoan.serivceFees" | translate}}
+            </ion-col>
+            <ion-col class="section-header row-bottom-thick row-border-bottom" col-5 ion-text text-right color="primary">
+                {{loanDetails.stampDuty}} {{"PolicyLoan.baht" | translate}}
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col col-7 class="padding-top-10 padding-bottom-10">
+
+                {{"PolicyLoan.receivedAmount" | translate}}
+            </ion-col>
+            <ion-col class="section-header padding-top-10 padding-bottom-10" col-5 ion-text text-right color="primary">
+                {{loanDetails.totalAvailedLoanAmountWithStampDuty}} {{"PolicyLoan.baht" | translate}}
+            </ion-col>
+
+        </ion-row>
+    </div>
+</div>

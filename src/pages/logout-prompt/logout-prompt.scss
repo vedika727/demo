@@ -1,0 +1,43 @@
+page-logout-prompt {
+
+    .close-icon{
+        float:right;
+    }
+
+    .close-button{
+
+        margin-top:10px;
+        margin-right:10px;
+    }
+
+    // style for header
+    .header-style{
+        color:$primary;
+    }
+
+ //  styles for the question
+ .popover-question{
+    font-size: 15px;
+    font-weight: 500;
+    color: #959595;
+   
+}
+
+
+    //  logout button style
+   .logout-btn-mg{
+     margin-top: 15px;
+    }
+
+     //  cancel button style
+   .cancel-btn-mg{
+     margin-top: 16px;
+     margin-bottom:20px;
+ }  
+
+
+ a{
+    text-decoration: underline;
+}
+
+}

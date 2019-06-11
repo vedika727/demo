@@ -1,0 +1,5 @@
+<div [ngSwitch]="tabSwitcher">
+    <div *ngSwitchCase="'Products'">
+        <dashboard-sales-card *ngIf="recommendedProducts" [in]="recommendedProducts"></dashboard-sales-card>       
+    </div>
+</div>

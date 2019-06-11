@@ -1,0 +1,15 @@
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+      <scb-header [in]="headerInputs"></scb-header>
+  </ion-navbar>
+</ion-header> 
+
+
+<ion-content>
+  <p padding class="heading2-type1">{{promotionData.title}}</p>
+  <img [src]="promotionData.image" >
+  <p padding-left class="user-profile-name">{{promotionData.title}}</p>
+  <div padding [innerHtml]="promotionData.body">
+  </div>
+
+</ion-content>

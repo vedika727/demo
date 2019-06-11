@@ -1,0 +1,35 @@
+<!--
+  Generated template for the RegistrationEntryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header> 
+<ion-content padding>
+  <div class="bodyContaint">
+    <h1 text-wrap id="registerHeading">{{"registration.register_Header" | translate}}</h1>
+    <ion-list>
+      <ion-item id="registerItem" no-lines text-wrap>{{"registration.Purple_Label" | translate}} </ion-item>
+      <ion-item padding>
+        <ion-label stacked id="registerLabel1">{{"registration.register_Label" | translate}}</ion-label>
+        <ion-input id="registerInput" placeholder="{{'registration.register_text_box' | translate}}"></ion-input>
+      </ion-item>
+      <div padding>
+        <ion-label stacked id="registerLabel2">{{"registration.register_Purple_Label" | translate}}</ion-label>
+        <div radio-group>
+          <ion-radio value='{{"registration.register_Option1" | translate}}'></ion-radio>
+          <label>{{"registration.register_Option1" | translate}}</label>
+          <ion-radio value='{{"registration.register_Option2" | translate}}'></ion-radio>
+          <label>{{"registration.register_Option2" | translate}}</label>
+        </div>
+      </div>
+      <div text-center id="registerLabel3">
+        <a (click)="applyLater()">{{"registration.register_btn_text" | translate}}</a>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

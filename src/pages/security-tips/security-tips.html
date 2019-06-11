@@ -1,0 +1,26 @@
+<!-- /**
+* @author Ayush Vyas
+* @description SecurityTips Page is used to get the security tips on some topics
+*/ -->
+<ion-header no-border>
+        <ion-navbar transparent hideBackButton>
+            <scb-header [in]="headerInput"></scb-header>
+        </ion-navbar>
+</ion-header> 
+
+<ion-content padding>
+    <!-- Accordian for displaying security tips -->
+    <div class="h1">{{"hamburgerMenu.securityTips"|translate}}</div><br>
+    <ion-list id="securityTipsList" *ngFor="let item of securityTips; let i = index" no-lines>
+        <button class="btn" id="securityTipsButton" ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+               <div class="h2" ion-text color="primary">{{item.title}}</div>
+            <ion-icon id="securityTipsIcon1"  item-right name="ios-arrow-down" *ngIf="!item.open"></ion-icon>
+            <ion-icon id="securityTipsIcon2"  item-right name="ios-arrow-up" *ngIf="item.open"></ion-icon>
+          </button>
+        <hr>
+        <!-- Expandable Data of Security Tips based on the selection of above button -->
+        <ion-item id="securityTipsItem" *ngIf="item.open" no-lines [ngClass]="{'child-active': item.open, 'child': !item.open}" text-wrap>
+            <div class="h3">{{item.body}}</div>
+        </ion-item>
+    </ion-list>
+</ion-content>

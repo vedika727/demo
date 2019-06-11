@@ -1,0 +1,156 @@
+@import "../../common/common-scss/style-guide/color-variables.scss";
+page-onboarding-screen {
+    .slideImageHeader {
+        word-wrap: break-all;
+        color: $primary-mild;
+        text-align: left;
+        z-index: 40;
+        position: absolute;
+        top: 5vh;
+        margin-left: 35px; // font-weight: bold;
+    }
+    .head-top-text {
+        // font-size: 65px;
+        line-height: 55px;
+    }
+    .slideImageHeaderBottomText {
+        position: absolute;
+        word-wrap: break-word;
+        line-height: 28px;
+        color: black;
+        z-index: 40;
+        position: absolute; // top: 102%;
+        padding-top: 15px;
+    }
+    .button-cta {
+        @extend #{'.cta-button-primary'};
+        white-space: normal;
+        height: auto;
+        position: relative;
+        padding: 10px 40px;
+        overflow-x: hidden;
+        word-wrap: break-word;
+    }
+    .button-inner {
+        flex-flow: column;
+    }
+    .button-container {
+        text-align: center;
+        z-index: 40;
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        bottom: 10%;
+    }
+    .cta-link {
+        @extend #{'.hyperlink-secondary'}; // color:#ffffff;
+    }
+    .no-scroll .scroll-content {
+        overflow: hidden;
+    }
+    .horizontal-line {
+        @extend #{'.hr-primary'};
+        position: relative;
+        z-index: 9;
+        background: #FEAC00;
+        width: 118px;
+        height: 2px;
+    }
+    .horizontal-line:before {
+        @extend #{'.hr-accent-highlight'};
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 20%;
+        bottom: 0%;
+        left: 0;
+        width: 100px;
+        background: #723fd6;
+    }
+    .swiper-pagination-bullet-active {
+        @extend #{'.slider-indicator-active'};
+        background-color: $primary !important;
+    }
+    .swiper-pagination-bullet {
+        @extend #{'.slider-indicator-inactive'}; // background-color:$secondary !important;
+    }
+    .swiper-pagination-bullet {
+        opacity: 1;
+        margin: 0px 12px !important;
+        background-clip: #FFFFFF;
+        width: 13px;
+        height: 13px;
+    }
+    .swiper-pagination-bullets {
+        bottom: 5% !important;
+    }
+    .padding-top-10 {
+        padding-top: 10px;
+    }
+    .diag3 {
+        background-image: url('../assets/imgs/onboarding_3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%; 
+        width: 100%;
+    }
+    .diag2 {
+        background-image: url('../assets/imgs/onboarding_2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%; 
+        width: 100%;
+    }
+    .diag1 {
+        background-image: url('../assets/imgs/onboarding_1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%; 
+        width: 100%;
+    }
+    .line-height-4vh{
+        line-height: 4vh;
+    }
+    .width-60-vw{
+        width: 60vw;
+    } 
+    .font-size-7-55vw{
+        font-size: 32px !important;
+        line-height: 28px;
+    }
+    .forcing-margin-bottom-5-percent{
+        margin-bottom: 5%;
+        margin-top:0 !important;
+    }
+
+    #btnApply{
+        margin-bottom: 2.95vh !important;
+    }
+
+    .line{
+        width: 118px;
+        margin-top:15px;
+    }
+    .primary-line{
+        @extend #{'.hr-primary'};
+        position: absolute;
+        z-index: 9;
+        background: $primary;
+        width: 98px;
+        height: 2px;
+    }
+
+    .accent-line{
+        @extend #{'.hr-primary'};
+        position: absolute;
+        z-index: 9;
+        left: 100px;
+        background: $accent;
+        width: 19px;
+        height: 2px;
+    }
+}

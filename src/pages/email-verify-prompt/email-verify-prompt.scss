@@ -1,0 +1,31 @@
+page-email-verify-prompt {
+
+.close-icon-div{
+        margin-bottom: 38px;
+        
+    }
+
+    .close-button{
+        margin-top:10px;
+        margin-right:10px;
+        float:right;
+    }
+    .heading2-type1 { 
+        line-height: $font_24px;
+    }
+
+    .heading1-type2 {
+        margin-bottom: 10px;
+    }
+    
+    .button-cta{
+        @extend  #{'.cta-button-primary'};
+        white-space: normal;
+        height: auto;
+        position: relative;
+        margin: 5.35vw;
+        padding: 10px 40px;
+        overflow-x:hidden;
+        word-wrap:break-word;
+      }
+}

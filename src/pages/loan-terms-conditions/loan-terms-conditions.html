@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-navbar transparent hideBackButton>
+    <scb-header [in]="headerInput"></scb-header>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="h1">{{"Policy_Loan.TermsandConditions" | translate}}
+  </div>
+
+  <div *ngIf="data "[innerHtml]="data.body" class="padd "></div>
+
+  <div text-center>
+    <button round ion-button small class="cta-button-primary" (click)="confirmationPage()">{{"Policy_Loan.AgreetoTermsandConditions" | translate}}</button>
+  </div>
+
+</ion-content>

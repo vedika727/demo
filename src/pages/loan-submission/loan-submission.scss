@@ -1,0 +1,42 @@
+page-loan-submission {
+
+  .hr {
+    position: relative;
+    height: 2px !important;
+    width: 100% !important;
+    background: #ccc !important;
+    display: block !important;
+    font-size: 2em !important;
+    visibility: visible !important;
+    margin-left: 60px !important;
+  }
+  .scb-account-box{
+    margin-top: 24px;
+    border: 1px #A1A1A1 solid;
+    border-radius: 10px;
+    padding-left: 16px;
+  }
+  .align-title{
+    padding-top:20px;
+  }
+  .loan-accept{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .intrest{
+    padding-right: 0px !important;
+  }
+  .multiple-loan{
+    padding-left:0px !important;
+  }
+  // .line{
+  // width:310px !important;
+  // margin-left: 15px !important;
+  // }
+  .font-weight-bold{
+    font-weight: bold;
+  }
+  .margin-top-neg{
+    margin-top:-21px;
+  }
+}

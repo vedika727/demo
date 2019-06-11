@@ -1,0 +1,19 @@
+<!-- Generated template for the PiechartComponent component -->
+<div text-center>
+    <div class="h1 FontBold">{{"policyDashboard.allPolicyDetails"|translate}}</div>
+
+    <span class="hyperlink-primary text-underline" (click)="showModal()">{{"policyDashboard.viewCoverageDetail"|translate}}</span>
+  
+</div>
+<div class="chart-container">
+    <div #containerPieChart class="svg-wrapper"></div>
+    <div class="box2 sb9" [style.transform]="rotation"></div>
+    <div class="box1">
+        <div class="piechart-inside-text-font">{{wheelTitle | translate}}</div>
+        <div class="wheel-text">{{wheelValue}}</div> 
+        <div *ngIf="wheelValue" class="piechart-inside-text-font">{{"policyDashboard.baht"|translate}}</div>
+    </div>
+    <div text-center>
+        <span class="heading3-type2">{{"policyDashboard.allPolicyDetails"|translate}}</span>
+    </div>
+</div>

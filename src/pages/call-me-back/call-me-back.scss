@@ -1,0 +1,27 @@
+page-call-me-back {
+
+    %input-border {
+        border: 1px solid $secondary-highlight;
+        border-radius: 20px;
+        //width and height given in styleguide as below
+        color: $secondary-light;
+        padding:10px !important;
+    }
+    .date-picker ion-label ion-icon {
+        width: 24px;
+        position: absolute;
+        top: 57% !important;
+        right:20px;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+        color: #333333 !important;
+    }
+    .item-input-has-focus .label-md[stacked], .input-has-focus .label-md[stacked], .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating] {
+    color:#333333 !important;
+    }
+    textarea {
+        resize:vertical;
+     }
+}

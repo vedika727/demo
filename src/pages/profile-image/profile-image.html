@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInputs"></scb-header>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-label ion-text text-left class="h1" color="secondary-dark">{{"hamburgerMenu.profilePicture"|translate}}</ion-label>
+    <!-- <div class="edit-header">
+        <span align="left" (click)="cropImage()">
+            <ion-icon name=""></ion-icon>
+        </span>
+        <span align="right" (click)="rotateImage()">
+            <ion-icon name=""></ion-icon>
+        </span>
+    </div> -->
+    <ion-avatar>
+        <img (click)="uploadProfilePicture()" id="hamburgerMenu.profilePicture" [src]="this.chosenPicture || placeholder" onerror="this.src='assets/scbl-icons/default-profile-picture.svg'"/>
+        <!-- <div class="profile-circle"></div> -->
+    </ion-avatar>
+    <button class="cta-button-primary "id="hamburgerMenu.savePicture" [disabled]="!isPicChanged" margin ion-button round (click)="saveProfileImage()">{{"hamburgerMenu.savePicture"|translate}}</button>
+</ion-content>

@@ -1,0 +1,11 @@
+<ion-item no-lines class="list-img list-border-bottom" no-padding no-margin>
+                
+    <!-- <ion-thumbnail item-start no-padding no-margin> -->
+    <img float-left [src]="story.field_image">
+    <img float-left class="list-vdo" *ngIf="story.field_isvdo =='True' " src="../../assets/imgs/play-btn.png"/>
+    <!-- </ion-thumbnail> -->
+    <div class="text-right">
+            <p class="activity-title-small line-height-85 ">{{story.title }}</p>
+        <p text-wrap class=" activity-desc-small line-height-85 two-line-text-limit">{{story.body }}</p>
+    </div>
+</ion-item>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Slip-payment" transform="translate(-299.000000, -108.000000)">
+            <g id="Group-2">
+                <g id="Group" transform="translate(23.000000, 86.000000)">
+                    <g id="Group-6" transform="translate(228.000000, 19.000000)">
+                        <g id="Group-4" transform="translate(48.000000, 3.000000)">
+                            <circle id="base" fill="#43CC08" cx="8" cy="8" r="8"></circle>
+                            <g id="icon-/-tick" transform="translate(4.444444, 5.333333)" fill="#FFFFFF">
+                                <path d="M6.71421433,0.160672705 C6.58167851,0.0304905727 6.36679998,0.0304905727 6.23423764,0.160672705 L2.16809109,4.15424856 L0.605130878,2.61919835 C0.472595055,2.48901622 0.25771653,2.48902924 0.125154192,2.61919835 C-0.00739488909,2.74936746 -0.00739488909,2.96040887 0.125154192,3.090591 L1.92810275,4.86131801 C2.0605988,4.99148712 2.27563641,4.99139598 2.40807944,4.86131801 L6.71421433,0.63207838 C6.84676341,0.501909268 6.84675015,0.290854838 6.71421433,0.160672705 L6.71421433,0.160672705 Z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

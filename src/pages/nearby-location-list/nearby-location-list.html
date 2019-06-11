@@ -1,0 +1,19 @@
+<!-- scb life header -->
+<ion-header no-border>
+    <ion-navbar transparent hideBackButton>
+        <scb-header [in]="headerInput"></scb-header>
+    </ion-navbar>
+</ion-header>
+
+
+<!-- showing hospital names list -->
+<ion-content padding>
+   <!-- hospitals -->
+ <div class="h1 marg-btm"> {{"hamburgerMenu.hospitalList" | translate}}</div>
+<!-- <ion-list text-wrap padding no-lines> -->
+  <ion-item *ngFor="let p of hospitalList"  text-wrap no-padding>
+<span class="heading3">{{p.field_hospitalname}}</span>
+<span class="icon-style hyperlink-primary" (click)=" navigateTo(p)">{{"hamburgerMenu.directions" | translate}}</span>
+  </ion-item>
+<!-- </ion-list> -->
+</ion-content>

@@ -1,0 +1,1 @@
+export const KEYCODE_DEL = 8;

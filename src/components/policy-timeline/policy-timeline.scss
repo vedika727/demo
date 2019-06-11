@@ -1,0 +1,209 @@
+$label-left: 50px; // variable for positioning
+policy-timeline {
+    font-size: 12px;
+    .info {
+        position: relative;
+        padding: 0 10px;
+        .rightbox {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            .indicator {
+                background: $accent;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .red {
+                background: $accent-danger;
+            }
+        }
+    }
+    .indicatorStatus {
+        background: $accent;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .red {
+        background: $accent-danger;
+    }
+    .green {
+        background: $accent-success;
+    }
+    .gray {
+        background: $secondary-highlight;
+    }
+    .SCB_TimeLineFont {
+        font-size: $font_16px !important;
+        font-weight: bold !important;
+    }
+    .FontBold {
+        // font-weight: bolder;
+        margin: 0% !important;
+        display: inline !important
+    }
+    .float-left {
+        float: left;
+    }
+    .float-right {
+        float: right;
+    }
+    .padd-top {
+        padding-top: 3px
+    }
+    .SCB_PDGray {
+        color: $secondary-highlight !important;
+    }
+    .SCB_PDBackCol {
+        background: $secondary-highlight !important;
+    }
+    .timeline {
+        width: 3.5px;
+        background: #F8B100;
+        position: relative;
+        margin-left: 37%;
+    }
+    .comline {
+        height: 3.5rem !important;
+    }
+    .box {
+        height: 12rem !important;
+    }
+    .minBox{
+        height: 8rem !important;
+    }
+    .cashBack {
+        height: 5rem;
+    }
+    .endDate {
+        height: 10px;
+    }
+    .date {
+        position: absolute;
+        white-space: nowrap;
+        left: -29.5vw;
+        top: -1vh;
+    }
+    .input-content {
+        font-size: $font_20px !important;
+    }
+    .tlabel {
+        position: absolute;
+        white-space: nowrap;
+        left: $label-left;
+        top: -8px;
+    }
+    .indicator {
+        background: #F8B100;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        left: -4px;
+    }
+    .flagdiv {
+        background: #4E2A81;
+        box-shadow: 0px 0px 0px 3px rgba(51, 55, 113, 0.3686);
+        .pay-box {
+            display: initial;
+        }
+        .label {
+            display: none;
+        }
+        a {
+            display: none;
+        }
+    }
+    .pay-box {
+        width: 52vw;
+        text-align: center;
+        position: absolute;
+        left: 28px;
+        top: -11px;
+        //display: none;
+        z-index: 99;
+        border-radius: 1rem;
+        //border-radius: 2px;
+        .pay-head {
+            background: #4E2A81;
+            color: #FFFFFF;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            &::before {
+                content: ' ';
+                position: absolute;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-right: 15px solid #4E2A81;
+                left: -12px;
+                top: 6px;
+            }
+        }
+        .pay-head-gray {
+            background: $secondary-highlight;
+            color: $secondary;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            &::before {
+                content: ' ';
+                position: absolute;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-right: 15px solid $secondary-highlight;
+                left: -12px;
+                top: 6px;
+            }
+        }
+    }
+    .MiddlePadding {
+     
+        // padding-bottom: 4.5vh !important;
+        border: 1px solid #4E2A81;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .MiddlePadding-gray {
+        // padding: 1.2vh 1.8vh 4vh 1.2vh !important;
+        // padding-bottom: 45px !important;
+        border: 1px solid $secondary-highlight;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .padd{
+        padding: 1.2vh 1.8vh 4vh 1.2vh  !important;
+    }
+    .Nopadd{
+        padding: 1.2vh 1.8vh 0vh 1.2vh  !important;
+    }
+    a {
+        white-space: nowrap;
+        left: $label-left;
+        top: 15px;
+        position: absolute;
+        text-decoration: underline;
+    }
+    .float-left {
+        float: left;
+    }
+    .float-right {
+        float: right;
+    }
+    .padd-top {
+        padding-top: 3px
+    }
+    .cta-button-accent{
+        border-radius: 50px !important;
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,152 @@
+page-add-policy {
+
+    /** styling for AddNewPolicy heading*/
+    .anp-head{
+       color: $primary;
+       font-size: 2.5rem;
+       font-weight: bold;
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
+    /** styling for AddNewPolicy Sub heading*/
+    .anp-sub-head{
+        padding-left: 20px;
+        font-weight: bold;
+    }
+    /** Font-color */
+    .font-color{
+        color : $primary
+    }
+    
+     /* Styling for add-other-benefits */
+     .add-other-benefits{
+        position: relative; 
+        border-radius: 25px;
+        border:1px solid black;  
+        height: 30px;
+        top:10px;
+        margin-left:15px;
+        width: 95%;
+    }
+    .label .label-ios .label-md{
+        padding-left: 20px;
+       
+    }
+    .add-other-benefits .add-icon{
+        position: absolute;
+    }
+    .left-add .add-icon{
+        left : 20px;
+        padding: 5px 8px;
+        background-color: $primary;
+        color:white;
+        border:1px solid $primary;
+        font-size:20px;
+        width: 30px;
+        height: 30px;
+        margin-top: -4px;
+        border-radius: 60px;
+    }
+    .right-add .add-span{
+        padding-right : 30px;
+        padding-left: 50px;
+    }
+
+    /** styling for Input Inner Text*/
+    .text-input .text-input-ios{
+        padding-left: 10px;
+    }
+    /** Styling for Date Row */
+    .anp-row{
+        padding-top: 15px;
+    }
+    .anp-pmode{
+        .item-inner{
+            top:40px;
+        }
+    }
+    /** Styling for ion-select */
+    .selectOpt{
+        border: 1px solid  $secondary-light;
+        border-radius: 25px;
+        width: 100%;
+        max-width: 100% !important;
+        padding: 5px 20px;
+        .select-icon{
+        .select-icon-inner{
+            right: 10px !important;
+            left: unset;
+            top:65%;
+            color: $primary;
+            font-size: 25px;
+        }   
+        }
+    }
+    /** Styling for ion-select */
+    
+    /** Styling for Save Button */
+    .anp-submit-btn{
+        top: 20px;
+        .button{
+            padding: 15px 40px;
+            height: 25px;
+            font-size: 2.0em;
+            background-color: $primary;
+            border-radius: 25px;
+        }
+    }
+    /** Styling for trash Click*/
+    .delete-policy{
+        position: relative; 
+        border-radius: 25px;
+        border:1px solid black;  
+        height: 20px;
+        top:10px;
+        margin:10px auto;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    
+    .label .label-ios .label-md{
+        padding-left: 20px;
+    }
+    .delete-policy .trash-icon{
+        position: absolute;
+    }
+    .trash-icon{
+        height: 20px;
+        color:$primary;
+    }
+    .left-trash .trash-icon{
+        left : 5px;
+        padding: 5px 8px;
+    }
+    .trash-span{
+        margin-top: -5px;
+    }
+    .right-trash .trash-span{
+        padding-left: 1px;
+    }
+} 
+   
+    
+        /* align icon */
+        // .left-addon .glyphicon  { left:  0px;}
+        .right-addon .add-icon { right: 0px;}
+    
+        /* add padding  */
+        .left-addon input  { padding-left:  30px; }
+        // .right-addon input { padding-right: 30px; }
+       
+        .add-policy-simple-text{
+            margin: auto 0;
+        }
+    
+       
+        .policy-benefit-col{
+            padding-bottom: 0px;
+        }
+
+    
+    }
+    

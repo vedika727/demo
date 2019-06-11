@@ -1,0 +1,110 @@
+<div class="scbl-icon-div" *ngIf="showList">
+    <ion-icon name="scbl-folder" *ngIf="showList" svgversion (click)="toggleShowDiv('divA')" class="foldericon"></ion-icon>
+    <ion-icon name="scbl-folder" *ngIf="!showList" svgversion class="foldericon"></ion-icon>
+</div>
+<div [@slideInOut]="animationState" class="divA" class="collapseDiv">
+    <div *ngFor="let employee of policyLists | slice:2:5;  let k = index">
+        <div class="colDiv h4" (click)="toggleShowDiv1(employee.policyNumberIL,k)">{{employee.policyNumber}}</div>
+    </div>
+    <div *ngIf="policyCount" class="colDiv h2" (click)="getPolicyList()">Load More</div>
+</div>
+
+<div no-margin start class="policy-box bg-color" *ngFor="let data of segmentPolicy | slice:0:1; let j = index">
+    <ion-segment [(ngModel)]="policies" color="primary" id="policyDashPoliciesSegment">
+        <ion-segment-button id="policyDashPoliciesSegmentBtn" *ngFor="let data of segmentPolicy  | slice:0:2; let i = index" [value]="i">
+            <b class="h3" (click)="toggleShowDiv2(data.policyNumberIL,i)">{{data.policyNumber}}</b>
+        </ion-segment-button>
+    </ion-segment>
+</div>
+<!-- <div class="SpinnerDiv" *ngIf="spinnerFlag">
+    <generic-view [In]=genericDialog></generic-view>
+</div> -->
+<div class="backcolor">
+    <div class="SpinnerDiv" *ngIf="spinnerFlagDetail">
+        <generic-view [In]=genericDialog></generic-view>
+    </div>
+    <div class="timeline-box" *ngIf="policyDetailData">
+        <policy-timeline [in]="policyDetailData" [timeStatus]="pdStatus"></policy-timeline>
+    </div>
+
+    <div *ngIf="!isCreditLife">
+       <div *ngIf="pdStatus">
+        <div *ngIf="!polCoverage">
+                <div ion-text  id="CoverageTitle" [ngClass]="pdStatus ?'hyperlink-primary-big':'hyperlink-primary-big  SCB_PDGray'">{{"policyDashboard.healthCover"| translate}}</div>
+
+           
+                 
+                <policy-coverage  [in]="policyDetailData" [policyStatus]="policyDetailData.policyStatus"></policy-coverage>
+           
+        </div>
+    </div>
+</div>
+</div>
+<div *ngIf="!isCreditLife">
+    <ion-list *ngIf="pdStatus" margin-top no-lines class="backcolor">
+        <ion-grid>
+            <div ion-text class="SCB-test-align hyperlink-primary-big">{{"policyDashboard.detailsEdit"| translate}}</div>
+            <div class="SCBL_Card">
+
+                <div>
+                    <ion-row>
+
+                        <ion-col col-6  no-padding>
+                            <ion-card (click)="navigate('PolicyInfoPage',policyDetailData)" id="policyinfo" class="rounded-card-div">
+                                <ion-icon class="iconsCard" name="scbl-policy-details" svgversion color="primary"></ion-icon>
+                                <div class="card-text input-content" text-wrap text-center>{{"policyDashboard.myPolicyDetails"| translate}}</div>
+                            </ion-card>
+                        </ion-col>
+                        <ion-col  col-6 no-padding>
+                            <ion-card (click)="navigate('PaymentInformationPage',policyDetailData)" id="paymentpage" class="rounded-card-div">
+                                <ion-icon class="iconsCard" name="scbl-change-payment" svgversion color="primary"></ion-icon>
+                                <div class="card-text input-content" text-wrap text-center>{{"policyDashboard.editPayoutReceiveMoney"| translate}}</div>
+                            </ion-card>
+                        </ion-col>
+
+                    </ion-row> 
+                    <ion-row>
+                        <ion-col col-6 no-padding>
+                            <ion-card (click)="navigate('SupportDocumentsPage',policyDetailData)" id="supportdocument" class="rounded-card-div">
+                                <ion-icon class="iconsCard" name="scbl-document" svgversion color="primary"></ion-icon>
+                                <div class="card-text input-content" text-wrap text-center>{{"policyDashboard.otherDocuments"| translate}}</div>
+
+                            </ion-card>
+                        </ion-col>
+                        <ion-col col-6 no-padding>
+                            <ion-card  (click)="navigate('InsuranceCardPage', policyDetailDatainfo)" id="viewinsurancecard" class="rounded-card-div">
+                                <ion-icon class="iconsCard" name="scbl-insurance-card" svgversion color="primary"></ion-icon>
+                                <div class="card-text input-content" text-wrap text-center>{{"policyDashboard.viewInsuranceCard"| translate}}</div>
+
+                            </ion-card>
+
+                        </ion-col>
+
+                    </ion-row>
+                </div>
+            </div>
+        </ion-grid>
+    </ion-list>
+</div>
+<div *ngIf="isCreditLife">
+    <ion-list *ngIf="pdStatus" margin-top no-lines class="backcolor">
+        <ion-grid>
+            <div ion-text class="SCB-test-align hyperlink-primary-big">{{"policyDashboard.detailsEdit"| translate}}</div>
+            <div padding>
+
+                <div>
+                    <ion-row>
+
+                        <ion-col col-6 no-padding>
+                            <ion-card (click)="navigate('SupportDocumentsPage',policyDetailData)" id="supportdocument" class="rounded-card-div">
+                                <ion-icon class="iconsCard" name="scbl-document" svgversion color="primary"></ion-icon>
+                                <div class="card-text input-content" text-wrap text-center>{{"policyDashboard.otherDocuments"| translate}}</div>
+
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+        </ion-grid>
+    </ion-list>
+</div>

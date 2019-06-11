@@ -1,0 +1,17 @@
+<!-- Generated template for the PolicyHolderComponent component -->
+<div class="content padding-top" text-center>
+    <div class="badgeIcon">
+        <img class=" banner-text" [src]="loginService.profilePic || placeholder" onerror="this.src='assets/scbl-icons/default-profile-picture.svg'" (click)="redirect()">
+        <span [ngClass]="ActivityStateIcon" ></span>
+        <!-- <ion-icon name="silver-state" class="state-icon1" svgversion></ion-icon> -->
+    </div>
+    <div class="pd-policy-holder-name top-margin-0-5vh" text-center>
+        <!-- <div class="name-title lineHeight" ion-text color="secondary">{{ getgreetingMessage() }}{{loginService.userProfile.firstName}} {{loginService.userProfile.lastName}}</div> -->
+        <div class="name-title lineHeight" ion-text color="secondary">{{ getgreetingMessage() }} <span class="boldText">{{loginService.customerInfo.firstName}} {{loginService.customerInfo.lastName}}</span></div>
+    </div>
+    <div class="pd-greetings top-margin-0-5vh">
+        <!-- <span ion-text color="secondary" class="hyperlink-secondary">{{"policyDashboard.greeting_2" | translate}}</span> -->
+        <span ion-text color="secondary" class="hyperlink-secondary">{{getGreetingMes2()}}</span>
+
+    </div>
+</div>

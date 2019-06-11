@@ -1,0 +1,52 @@
+page-activity-log {
+    .hr-padding{
+        padding: 8px 0px 8px 0px;
+    }
+    .content-ios hr{
+        height: 1px !important;
+    }
+    .panel-body{
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .bottom-border{
+        border-bottom: 1px solid $secondary-highlight;
+        padding: 10px 5px; 
+    }
+    .no-bottom-border{
+        padding: 10px 5px; 
+    }
+    .history-log-div{
+        padding: 10px 5px;
+    }
+    .activity-log-subheading{
+        color: $primary;
+        margin-top:30px;
+    }
+    .activity-log-time{
+        color:$primary;
+    }
+    .log-style{
+        padding-left: 0px !important;
+        padding: 5px 5px; 
+    }
+    .log-style .log-title{
+        padding-left: 0px !important;
+        font-size: $font_26px;
+    }
+    ion-col{
+        padding:0px !important;
+    }
+    .padding{
+        padding-left:4px !important;
+    }
+    .sectionClass{
+        padding-top:15px;
+    }
+    .activity-unread{
+        background-color: $secondary-light;
+    }
+    .activity-read{
+        background-color:white;
+    }
+}

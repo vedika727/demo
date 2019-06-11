@@ -1,0 +1,23 @@
+<!-- Generated template for the HomeSliderComponent component -->
+<div class="content">
+    <ion-slides effect="slide" slidesPerView="2" loop="false" (ionSlideDidChange)="slideChanged()">
+
+        <!-- TODO number of slides reduced 7 => 5 -->
+        <ion-slide *ngFor="let i of sliders | slice:0:5; let m = index" (click)="slideChanged(i.title)">
+            <ion-card [ngClass]="i.class" mode="md" (click)="changeslide(m)">
+                <img [src]="i.img">
+                <div ion-text color="primary" class="card-title carousel-card-title">{{"policyDashboard."+i.title | translate}}
+                    <div class="slide-values carousel-card-score" *ngIf='i.title==="FitSense"'>{{fitData.activityToday}}</div>
+                    <div class="slide-values carousel-card-score" *ngIf='i.title==="Rewards"'>{{fitData.rewards}}</div>
+                    <div class="slide-values carousel-card-score" *ngIf='i.title==="Challenges"'>{{fitData.numberOfChallenges}}</div>
+                </div>
+                <!-- <ion-row class="slide-img"> -->
+                <!-- <div ion-text color="primary" class="card-title carousel-card-title">{{"policyDashboard."+i.title | translate}}</div>
+                    <div class="slide-values carousel-card-score" *ngIf='i.title==="FitSense"'>{{fitData.activityToday}}</div>
+                    <div class="slide-values carousel-card-score" *ngIf='i.title==="Rewards"'>{{fitData.rewards}}</div>
+                    <div class="slide-values carousel-card-score" *ngIf='i.title==="Challenges"'>{{fitData.numberOfChallenges}}</div> -->
+                <!-- </ion-row> -->
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</div>

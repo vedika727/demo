@@ -1,0 +1,24 @@
+page-splash-screen {
+  .progress-outer {
+    position: absolute;
+    bottom: -17%;
+  }
+  .no-scroll .scroll-content {
+    overflow: hidden;
+  }
+  .fullImage {
+    position: relative;
+  }
+  .img {
+    height: 100vh !important;
+    width: 100% !important;
+  }
+  .topheaderImageIcon {
+    position: absolute;
+    top: 13%;
+    margin-left: 40%;
+  }
+  .BottomprogressBar {
+    position: relative;
+  }
+}

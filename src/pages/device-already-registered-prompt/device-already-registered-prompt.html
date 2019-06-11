@@ -1,0 +1,28 @@
+
+
+<!-- transparent background -->
+<ion-content class="popover-bg-color fade-in-animate"  id="loginBackground">
+  
+    <!-- div which closes modal onclick behind the content -->
+      <div class="overlay" (click)="dismissModal()" id="loginOverlay"></div>
+      
+       <!-- ion-card containing all the content -->
+      <ion-card class="popover-content-style p-30" id="deviceAlreadyRegisteredCard">
+       
+         <ion-card-header no-padding class="heading1-type2 bold-text" text-center id="deviceAlreadyRegisteredCardHeader" text-center>{{"login.logout" | translate}}</ion-card-header>
+          
+         <ion-card-content id="deviceAlreadyRegisteredCardContent" class="mt-30">
+         <div text-center *ngIf="isScbLifeCustomer" class="heading3-type2 bold-text" text-center>{{"login.thisThaiTdHasBeenRegistered" | translate}}</div>
+         <div text-center *ngIf="!isScbLifeCustomer" class="heading3-type2 bold-text" text-center>{{"login.thisEmailHasBeenRegistered" | translate}}</div>
+         <div text-center  class="heading3-type2 bold-text" text-center>{{"login.inOtherDeviceAlready" | translate}}</div>
+         <div text-center class="heading3-type2 bold-text" text-center>{{"login.youCanNoLongerUseThis" | translate}}</div>
+      
+         <!-- button to navigate enter otp page -->
+         <div text-center>
+            <button round ion-button class="button-cta mt-30" (click)="goToRegister()" >{{"login.done" | translate}}</button>
+          </div> 
+       </ion-card-content>  
+       </ion-card>
+         <!-- close of card -->
+      </ion-content>
+        <!-- close of transparent background -->

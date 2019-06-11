@@ -1,0 +1,19 @@
+page-support-document-creditlife {
+    .sd-cl-head-row{
+        span{
+            font-size: $font_12px;
+        }
+    }
+    .sd-cl-docRow{
+        padding: 2px 0px;
+        border-bottom: 0.5px solid $secondary-light;
+    .sd-cl-docName{
+        span{
+            font-size: $font_12px;
+        }
+    }
+    .sd-cl-arrow{
+        float:right;
+    }
+}
+}
